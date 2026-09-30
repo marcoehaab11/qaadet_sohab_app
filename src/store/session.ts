@@ -13,6 +13,7 @@ import { ar } from '../i18n/ar-EG';
 import { CardsState, createCards } from '../games/cards/reducer';
 import { TodState, createTod } from '../games/tod/reducer';
 import { LikelyState, createLikely } from '../games/likely/reducer';
+import { KnowMeState, createKnowMe } from '../games/knowme/reducer';
 import { useApp } from './index';
 // Ephemeral by design: scores, counters, undo and sit-out state never reach AsyncStorage.
 type SessionStore = {
@@ -28,6 +29,9 @@ type SessionStore = {
   likelyGame: LikelyState | null;
   setLikelyGame: (state: LikelyState | null) => void;
   startStandaloneLikely: () => void;
+  knowMeGame: KnowMeState | null;
+  setKnowMeGame: (state: KnowMeState | null) => void;
+  startStandaloneKnowMe: () => void;
   begin: () => void;
   play: () => void;
   advance: () => void;
@@ -46,6 +50,8 @@ export const useSession = create<SessionStore>((set, get) => ({
   setTodGame: (todGame) => set({ todGame }),
   likelyGame: null,
   setLikelyGame: (likelyGame) => set({ likelyGame }),
+  knowMeGame: null,
+  setKnowMeGame: (knowMeGame) => set({ knowMeGame }),
   startStandaloneCards: () => {
     const data = useApp.getState().data;
     set({
@@ -54,6 +60,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       session: null,
       todGame: null,
       likelyGame: null,
+      knowMeGame: null,
       cardsGame: createCards(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.cards?.cards ?? 8,
@@ -69,6 +76,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       session: null,
       cardsGame: null,
       likelyGame: null,
+      knowMeGame: null,
       todGame: createTod(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.tod?.turns ?? 1,
@@ -84,9 +92,26 @@ export const useSession = create<SessionStore>((set, get) => ({
       session: null,
       cardsGame: null,
       todGame: null,
+      knowMeGame: null,
       likelyGame: createLikely(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.likely?.questions ?? 3,
+        Date.now(),
+      ),
+    });
+  },
+  startStandaloneKnowMe: () => {
+    const data = useApp.getState().data;
+    set({
+      ledger: emptyLedger(),
+      away: [],
+      session: null,
+      cardsGame: null,
+      todGame: null,
+      likelyGame: null,
+      knowMeGame: createKnowMe(
+        data.players.map((p) => ({ ...p, away: false })),
+        data.config.knowme?.subjects ?? 3,
         Date.now(),
       ),
     });
@@ -99,6 +124,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       cardsGame: null,
       todGame: null,
       likelyGame: null,
+      knowMeGame: null,
       away: [],
       session: createSession(vibe, length, players.length, Date.now()),
     });
@@ -123,6 +149,14 @@ export const useSession = create<SessionStore>((set, get) => ({
           ? createLikely(
               participants,
               useApp.getState().data.config.likely?.questions ?? 3,
+              session.seed,
+            )
+          : null,
+      knowMeGame:
+        currentGame(session) === 'knowme'
+          ? createKnowMe(
+              participants,
+              useApp.getState().data.config.knowme?.subjects ?? 3,
               session.seed,
             )
           : null,
@@ -175,5 +209,6 @@ export const useSession = create<SessionStore>((set, get) => ({
       cardsGame: null,
       todGame: null,
       likelyGame: null,
+      knowMeGame: null,
     }),
 }));

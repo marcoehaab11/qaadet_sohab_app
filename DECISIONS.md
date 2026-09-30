@@ -30,3 +30,4 @@
 - Added Truth or Dare with four levels, private phone passing, truth/dare choice, done/skip scoring, and family filtering. The source seed has four prompts per type and level; this is enough for a flow preview, not launch content volume.
 - Added مين غالبًا with private per-player voting, self-votes, tied winners, one undo entry for a question's scoring, and animated result bars. Its seed has twelve questions, below the launch target.
 - Both games can launch standalone or inside the host queue. Five game screens remain unimplemented; their home and host controls are previews/disabled.
+- Added مين يعرفني أكتر with an optional private answer, hidden answer during spoken guesses, reveal, and multi-select correct guessers. The answer is held only in the in-memory game state and cleared after each turn.

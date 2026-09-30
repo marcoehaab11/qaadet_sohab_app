@@ -45,6 +45,7 @@ export default function Home() {
   const startStandaloneCards = useSession((s) => s.startStandaloneCards);
   const startStandaloneTod = useSession((s) => s.startStandaloneTod);
   const startStandaloneLikely = useSession((s) => s.startStandaloneLikely);
+  const startStandaloneKnowMe = useSession((s) => s.startStandaloneKnowMe);
   const { fontScale } = useWindowDimensions();
   const expandedVibes = data.settings.largeText || fontScale > 1.1;
   useEffect(() => {
@@ -154,7 +155,9 @@ export default function Home() {
                   ? '/game/tod'
                   : session.phase === 'game' && currentGame(session) === 'likely'
                     ? '/game/likely'
-                    : '/host',
+                    : session.phase === 'game' && currentGame(session) === 'knowme'
+                      ? '/game/knowme'
+                      : '/host',
             );
         }}
       />
@@ -178,6 +181,9 @@ export default function Home() {
               } else if (id === 'likely' && (!session || session.finished)) {
                 startStandaloneLikely();
                 router.push('/game/likely');
+              } else if (id === 'knowme' && (!session || session.finished)) {
+                startStandaloneKnowMe();
+                router.push('/game/knowme');
               } else setSelected(id);
             }}
             style={[

@@ -26,3 +26,9 @@ M2 screens and live-session coordination, integrating the already tested engine 
 - TypeScript strict, ESLint, 36 Jest tests, and seed content lint passed. Web and Android JavaScript exports succeeded; neither is a signed binary or physical device test.
 - Browser preview exercised standalone Truth or Dare level selection, pass-phone, truth prompt, +1 and next turn. It also exercised standalone مين غالبًا with four private votes for the same player and verified the 4-vote result, four +1 awards and the results screen.
 - Family filtering, done/skip scoring, absent-voter handling, self-vote scoring, and tied winners have unit coverage. Native device checks and complete content are still open.
+
+## مين يعرفني أكتر checkpoint — 2026-09-30
+
+- `npm run check`: strict typecheck, ESLint, 39 Jest tests, and seed lint passed. Web and Android JavaScript exports succeeded.
+- Browser preview exercised private answer entry, answer hiding during guesses, reveal, selection of a correct guesser, award of +1, and next subject.
+- Unit tests cover multiple correct guessers, optional answer, absent guesser exclusion, subject exclusion, and absent subject skipping. Physical device QA and four remaining games are open.
