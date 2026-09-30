@@ -3159,6 +3159,1826 @@
           "بسكويت"
         ],
         "level": "easy"
+      },
+      {
+        "id": "base-taboo-019",
+        "text": "كشري",
+        "forbidden": [
+          "رز",
+          "عدس",
+          "صلصة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-020",
+        "text": "طعمية",
+        "forbidden": [
+          "فول",
+          "زيت",
+          "سندوتش"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-021",
+        "text": "محشي",
+        "forbidden": [
+          "رز",
+          "كرنب",
+          "حلة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-022",
+        "text": "ملوخية",
+        "forbidden": [
+          "خضرة",
+          "تقلية",
+          "عيش"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-023",
+        "text": "حواوشي",
+        "forbidden": [
+          "لحمة",
+          "عيش",
+          "فرن"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-024",
+        "text": "فطير",
+        "forbidden": [
+          "عجين",
+          "سمنة",
+          "طبقات"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-025",
+        "text": "كنافة",
+        "forbidden": [
+          "حلو",
+          "شربات",
+          "رمضان"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-026",
+        "text": "بسبوسة",
+        "forbidden": [
+          "سميد",
+          "شربات",
+          "حلو"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-027",
+        "text": "آيس كريم",
+        "forbidden": [
+          "بارد",
+          "صيف",
+          "نكهة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-028",
+        "text": "بيتزا",
+        "forbidden": [
+          "جبنة",
+          "عجين",
+          "فرن"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-029",
+        "text": "برجر",
+        "forbidden": [
+          "لحمة",
+          "عيش",
+          "سندوتش"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-030",
+        "text": "شوربة",
+        "forbidden": [
+          "طبق",
+          "سخنة",
+          "معلقة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-031",
+        "text": "سلطة",
+        "forbidden": [
+          "خضار",
+          "طماطم",
+          "خيار"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-032",
+        "text": "بطاطس محمرة",
+        "forbidden": [
+          "زيت",
+          "أصابع",
+          "مقرمشة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-033",
+        "text": "قطة",
+        "forbidden": [
+          "مواء",
+          "شوارب",
+          "بيت"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-034",
+        "text": "كلب",
+        "forbidden": [
+          "نباح",
+          "ذيل",
+          "حراسة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-035",
+        "text": "أرنب",
+        "forbidden": [
+          "جزر",
+          "ودان",
+          "قفز"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-036",
+        "text": "أسد",
+        "forbidden": [
+          "غابة",
+          "زئير",
+          "ملك"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-037",
+        "text": "زرافة",
+        "forbidden": [
+          "رقبة",
+          "طويلة",
+          "بقع"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-038",
+        "text": "فيل",
+        "forbidden": [
+          "خرطوم",
+          "ضخم",
+          "ودان"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-039",
+        "text": "تمساح",
+        "forbidden": [
+          "نهر",
+          "أسنان",
+          "زاحف"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-040",
+        "text": "بطريق",
+        "forbidden": [
+          "ثلج",
+          "أبيض",
+          "أسود"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-041",
+        "text": "سمكة",
+        "forbidden": [
+          "مياه",
+          "زعانف",
+          "عوم"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-042",
+        "text": "عصفور",
+        "forbidden": [
+          "طيران",
+          "عش",
+          "منقار"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-043",
+        "text": "حصان",
+        "forbidden": [
+          "ركوب",
+          "جري",
+          "لجام"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-044",
+        "text": "جمل",
+        "forbidden": [
+          "صحراء",
+          "سنام",
+          "رمل"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-045",
+        "text": "نحلة",
+        "forbidden": [
+          "عسل",
+          "خلية",
+          "لسعة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-046",
+        "text": "فراشة",
+        "forbidden": [
+          "جناح",
+          "ملونة",
+          "شرنقة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-047",
+        "text": "سينما",
+        "forbidden": [
+          "فيلم",
+          "شاشة",
+          "تذكرة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-048",
+        "text": "مطار",
+        "forbidden": [
+          "طائرة",
+          "سفر",
+          "شنطة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-049",
+        "text": "مستشفى",
+        "forbidden": [
+          "دكتور",
+          "مريض",
+          "علاج"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-050",
+        "text": "مدرسة",
+        "forbidden": [
+          "طلاب",
+          "فصل",
+          "سبورة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-051",
+        "text": "مكتبة",
+        "forbidden": [
+          "كتب",
+          "قراءة",
+          "رفوف"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-052",
+        "text": "حديقة",
+        "forbidden": [
+          "شجر",
+          "زرع",
+          "نزهة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-053",
+        "text": "شاطئ",
+        "forbidden": [
+          "رمل",
+          "موج",
+          "شمسية"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-054",
+        "text": "جبل",
+        "forbidden": [
+          "قمة",
+          "تسلق",
+          "مرتفع"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-055",
+        "text": "سوق",
+        "forbidden": [
+          "شراء",
+          "باعة",
+          "محلات"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-056",
+        "text": "مول",
+        "forbidden": [
+          "تسوق",
+          "محلات",
+          "طوابق"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-057",
+        "text": "مسجد",
+        "forbidden": [
+          "صلاة",
+          "مئذنة",
+          "سجادة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-058",
+        "text": "متحف",
+        "forbidden": [
+          "آثار",
+          "عرض",
+          "تاريخ"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-059",
+        "text": "مطعم",
+        "forbidden": [
+          "منيو",
+          "أكل",
+          "جرسون"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-060",
+        "text": "محطة قطار",
+        "forbidden": [
+          "رصيف",
+          "تذكرة",
+          "سفر"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-061",
+        "text": "تاكسي",
+        "forbidden": [
+          "سواق",
+          "أجرة",
+          "مشوار"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-062",
+        "text": "أتوبيس",
+        "forbidden": [
+          "ركاب",
+          "محطة",
+          "كراسي"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-063",
+        "text": "قطار",
+        "forbidden": [
+          "سكة",
+          "محطة",
+          "عربات"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-064",
+        "text": "طائرة",
+        "forbidden": [
+          "جناح",
+          "سما",
+          "مطار"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-065",
+        "text": "هليكوبتر",
+        "forbidden": [
+          "مروحة",
+          "طيران",
+          "هبوط"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-066",
+        "text": "مركب",
+        "forbidden": [
+          "مياه",
+          "شراع",
+          "بحر"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-067",
+        "text": "عجلة",
+        "forbidden": [
+          "بدال",
+          "عجلتين",
+          "قيادة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-068",
+        "text": "سكوتر",
+        "forbidden": [
+          "عجل",
+          "واقف",
+          "مقود"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-069",
+        "text": "شاحنة",
+        "forbidden": [
+          "نقل",
+          "حمولة",
+          "كبيرة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-070",
+        "text": "غواصة",
+        "forbidden": [
+          "تحت",
+          "مياه",
+          "بحر"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-071",
+        "text": "تلفريك",
+        "forbidden": [
+          "جبل",
+          "كابينة",
+          "سلك"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-072",
+        "text": "ترام",
+        "forbidden": [
+          "قضبان",
+          "شارع",
+          "محطة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-073",
+        "text": "عربية إسعاف",
+        "forbidden": [
+          "طوارئ",
+          "صفارة",
+          "مريض"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-074",
+        "text": "عربية إطفاء",
+        "forbidden": [
+          "حريق",
+          "خرطوم",
+          "صفارة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-075",
+        "text": "ريموت",
+        "forbidden": [
+          "تلفزيون",
+          "قنوات",
+          "زرار"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-076",
+        "text": "غسالة",
+        "forbidden": [
+          "هدوم",
+          "صابون",
+          "دوران"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-077",
+        "text": "تلاجة",
+        "forbidden": [
+          "أكل",
+          "بارد",
+          "مطبخ"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-078",
+        "text": "مروحة",
+        "forbidden": [
+          "هوا",
+          "ريش",
+          "صيف"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-079",
+        "text": "مصباح",
+        "forbidden": [
+          "نور",
+          "كهربا",
+          "لمبة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-080",
+        "text": "مخدة",
+        "forbidden": [
+          "نوم",
+          "راس",
+          "سرير"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-081",
+        "text": "سرير",
+        "forbidden": [
+          "نوم",
+          "مرتبة",
+          "أوضة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-082",
+        "text": "كنبة",
+        "forbidden": [
+          "قعدة",
+          "صالة",
+          "وسادة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-083",
+        "text": "ستارة",
+        "forbidden": [
+          "شباك",
+          "قماش",
+          "خصوصية"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-084",
+        "text": "مكنسة",
+        "forbidden": [
+          "تنضيف",
+          "أرض",
+          "تراب"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-085",
+        "text": "صنبور",
+        "forbidden": [
+          "مياه",
+          "حوض",
+          "فتح"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-086",
+        "text": "شباك",
+        "forbidden": [
+          "هوا",
+          "زجاج",
+          "ستارة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-087",
+        "text": "باب",
+        "forbidden": [
+          "مفتاح",
+          "دخول",
+          "مقبض"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-088",
+        "text": "سجادة",
+        "forbidden": [
+          "أرض",
+          "فرش",
+          "قماش"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-089",
+        "text": "شمس",
+        "forbidden": [
+          "نهار",
+          "نور",
+          "حرارة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-090",
+        "text": "قمر",
+        "forbidden": [
+          "ليل",
+          "سما",
+          "هلال"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-091",
+        "text": "نجمة",
+        "forbidden": [
+          "سما",
+          "ليل",
+          "لامعة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-092",
+        "text": "مطر",
+        "forbidden": [
+          "سحاب",
+          "مياه",
+          "شمسية"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-093",
+        "text": "سحاب",
+        "forbidden": [
+          "سما",
+          "أبيض",
+          "مطر"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-094",
+        "text": "شجرة",
+        "forbidden": [
+          "جذع",
+          "ورق",
+          "فروع"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-095",
+        "text": "وردة",
+        "forbidden": [
+          "ريحة",
+          "بتلات",
+          "هدية"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-096",
+        "text": "نهر",
+        "forbidden": [
+          "مياه",
+          "جريان",
+          "ضفة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-097",
+        "text": "شلال",
+        "forbidden": [
+          "مياه",
+          "نازل",
+          "صخر"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-098",
+        "text": "صحراء",
+        "forbidden": [
+          "رمل",
+          "حر",
+          "واسعة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-099",
+        "text": "بركان",
+        "forbidden": [
+          "حمم",
+          "جبل",
+          "ثوران"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-100",
+        "text": "رملة",
+        "forbidden": [
+          "شاطئ",
+          "حبيبات",
+          "صحراء"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-101",
+        "text": "صدفة",
+        "forbidden": [
+          "بحر",
+          "قوقعة",
+          "رمل"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-102",
+        "text": "موجة",
+        "forbidden": [
+          "بحر",
+          "مياه",
+          "ارتفاع"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-103",
+        "text": "جزمة",
+        "forbidden": [
+          "قدم",
+          "رباط",
+          "لبس"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-104",
+        "text": "شبشب",
+        "forbidden": [
+          "رجل",
+          "بيت",
+          "صيف"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-105",
+        "text": "كاب",
+        "forbidden": [
+          "راس",
+          "شمس",
+          "لبس"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-106",
+        "text": "قميص",
+        "forbidden": [
+          "أزرار",
+          "ياقة",
+          "لبس"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-107",
+        "text": "جاكيت",
+        "forbidden": [
+          "شتا",
+          "دفا",
+          "سوستة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-108",
+        "text": "شال",
+        "forbidden": [
+          "رقبة",
+          "برد",
+          "قماش"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-109",
+        "text": "نظارة",
+        "forbidden": [
+          "عين",
+          "عدسة",
+          "رؤية"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-110",
+        "text": "ساعة يد",
+        "forbidden": [
+          "وقت",
+          "معصم",
+          "عقارب"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-111",
+        "text": "شنطة",
+        "forbidden": [
+          "حمل",
+          "جيب",
+          "أغراض"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-112",
+        "text": "حزام",
+        "forbidden": [
+          "وسط",
+          "بنطلون",
+          "جلد"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-113",
+        "text": "جورب",
+        "forbidden": [
+          "قدم",
+          "جزمة",
+          "قطن"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-114",
+        "text": "فستان",
+        "forbidden": [
+          "لبس",
+          "طويل",
+          "قماش"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-115",
+        "text": "بنطلون",
+        "forbidden": [
+          "رجلين",
+          "جيب",
+          "لبس"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-116",
+        "text": "قفاز",
+        "forbidden": [
+          "إيد",
+          "برد",
+          "صوابع"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-117",
+        "text": "لابتوب",
+        "forbidden": [
+          "كمبيوتر",
+          "شاشة",
+          "كيبورد"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-118",
+        "text": "كاميرا",
+        "forbidden": [
+          "تصوير",
+          "عدسة",
+          "صورة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-119",
+        "text": "سماعات",
+        "forbidden": [
+          "ودن",
+          "صوت",
+          "موسيقى"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-120",
+        "text": "شاحن",
+        "forbidden": [
+          "بطارية",
+          "كهربا",
+          "موبايل"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-121",
+        "text": "راوتر",
+        "forbidden": [
+          "إنترنت",
+          "إشارة",
+          "بيت"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-122",
+        "text": "تابلت",
+        "forbidden": [
+          "شاشة",
+          "لمس",
+          "جهاز"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-123",
+        "text": "كيبورد",
+        "forbidden": [
+          "حروف",
+          "كتابة",
+          "أزرار"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-124",
+        "text": "ماوس",
+        "forbidden": [
+          "سهم",
+          "كمبيوتر",
+          "ضغط"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-125",
+        "text": "شاشة",
+        "forbidden": [
+          "صورة",
+          "جهاز",
+          "عرض"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-126",
+        "text": "طابعة",
+        "forbidden": [
+          "ورق",
+          "حبر",
+          "نسخ"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-127",
+        "text": "ميكروفون",
+        "forbidden": [
+          "صوت",
+          "غناء",
+          "تسجيل"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-128",
+        "text": "ساعة ذكية",
+        "forbidden": [
+          "معصم",
+          "إشعار",
+          "شاشة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-129",
+        "text": "لعبة فيديو",
+        "forbidden": [
+          "شاشة",
+          "تحكم",
+          "مراحل"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-130",
+        "text": "بطارية",
+        "forbidden": [
+          "طاقة",
+          "شحن",
+          "جهاز"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-131",
+        "text": "عيد ميلاد",
+        "forbidden": [
+          "تورتة",
+          "شموع",
+          "سنة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-132",
+        "text": "فرح",
+        "forbidden": [
+          "عريس",
+          "عروسة",
+          "زفة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-133",
+        "text": "خطوبة",
+        "forbidden": [
+          "دبلة",
+          "خاتم",
+          "مناسبة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-134",
+        "text": "تخرج",
+        "forbidden": [
+          "شهادة",
+          "جامعة",
+          "قبعة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-135",
+        "text": "عزومة",
+        "forbidden": [
+          "ضيوف",
+          "سفرة",
+          "أكل"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-136",
+        "text": "رحلة",
+        "forbidden": [
+          "سفر",
+          "شنطة",
+          "خروج"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-137",
+        "text": "حفلة",
+        "forbidden": [
+          "موسيقى",
+          "ناس",
+          "احتفال"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-138",
+        "text": "عيدية",
+        "forbidden": [
+          "فلوس",
+          "أطفال",
+          "عيد"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-139",
+        "text": "هدية",
+        "forbidden": [
+          "علبة",
+          "مفاجأة",
+          "تغليف"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-140",
+        "text": "مفاجأة",
+        "forbidden": [
+          "غير متوقع",
+          "سر",
+          "فرحة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-141",
+        "text": "صورة جماعية",
+        "forbidden": [
+          "كاميرا",
+          "ناس",
+          "ابتسامة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-142",
+        "text": "كيكة",
+        "forbidden": [
+          "تورتة",
+          "فرن",
+          "حلو"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-143",
+        "text": "زينة",
+        "forbidden": [
+          "تعليق",
+          "ألوان",
+          "حفلة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-144",
+        "text": "بالونات",
+        "forbidden": [
+          "نفخ",
+          "هوا",
+          "ملونة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-145",
+        "text": "كرة سلة",
+        "forbidden": [
+          "سلة",
+          "تصويب",
+          "ملعب"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-146",
+        "text": "تنس",
+        "forbidden": [
+          "مضرب",
+          "شبكة",
+          "كرة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-147",
+        "text": "سباحة",
+        "forbidden": [
+          "حمام",
+          "مياه",
+          "عوم"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-148",
+        "text": "جري",
+        "forbidden": [
+          "سرعة",
+          "خطوات",
+          "سباق"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-149",
+        "text": "مشي",
+        "forbidden": [
+          "خطوات",
+          "بطء",
+          "طريق"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-150",
+        "text": "ملاكمة",
+        "forbidden": [
+          "قفاز",
+          "حلبة",
+          "لكمة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-151",
+        "text": "شطرنج",
+        "forbidden": [
+          "ملك",
+          "حصان",
+          "رقعة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-152",
+        "text": "بينج بونج",
+        "forbidden": [
+          "طاولة",
+          "مضرب",
+          "كرة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-153",
+        "text": "كاراتيه",
+        "forbidden": [
+          "حزام",
+          "فنون",
+          "حركة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-154",
+        "text": "جمباز",
+        "forbidden": [
+          "مرونة",
+          "حركات",
+          "بساط"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-155",
+        "text": "دراجة",
+        "forbidden": [
+          "بدال",
+          "عجلتين",
+          "رياضة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-156",
+        "text": "ريشة طائرة",
+        "forbidden": [
+          "مضرب",
+          "شبكة",
+          "لعبة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-157",
+        "text": "كرة طائرة",
+        "forbidden": [
+          "شبكة",
+          "ملعب",
+          "يد"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-158",
+        "text": "بولينج",
+        "forbidden": [
+          "كرات",
+          "قوارير",
+          "صالة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-159",
+        "text": "كتاب",
+        "forbidden": [
+          "صفحات",
+          "قراءة",
+          "غلاف"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-160",
+        "text": "قلم",
+        "forbidden": [
+          "حبر",
+          "كتابة",
+          "ورقة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-161",
+        "text": "كشكول",
+        "forbidden": [
+          "صفحات",
+          "مذاكرة",
+          "سلك"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-162",
+        "text": "ممحاة",
+        "forbidden": [
+          "مسح",
+          "قلم",
+          "غلط"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-163",
+        "text": "مسطرة",
+        "forbidden": [
+          "قياس",
+          "خط",
+          "طول"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-164",
+        "text": "براية",
+        "forbidden": [
+          "سن",
+          "قلم",
+          "لف"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-165",
+        "text": "سبورة",
+        "forbidden": [
+          "شرح",
+          "فصل",
+          "كتابة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-166",
+        "text": "شنطة مدرسة",
+        "forbidden": [
+          "كتب",
+          "ظهر",
+          "طلاب"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-167",
+        "text": "واجب",
+        "forbidden": [
+          "بيت",
+          "مدرسة",
+          "حل"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-168",
+        "text": "جدول",
+        "forbidden": [
+          "مواعيد",
+          "خانات",
+          "تنظيم"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-169",
+        "text": "درس",
+        "forbidden": [
+          "شرح",
+          "تعلم",
+          "مدرس"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-170",
+        "text": "ورقة",
+        "forbidden": [
+          "كتابة",
+          "بيضاء",
+          "شجر"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-171",
+        "text": "آلة حاسبة",
+        "forbidden": [
+          "أرقام",
+          "جمع",
+          "زرار"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-172",
+        "text": "فسحة",
+        "forbidden": [
+          "مدرسة",
+          "استراحة",
+          "لعب"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-173",
+        "text": "دكتور",
+        "forbidden": [
+          "علاج",
+          "مريض",
+          "عيادة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-174",
+        "text": "مدرس",
+        "forbidden": [
+          "طلاب",
+          "شرح",
+          "فصل"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-175",
+        "text": "طيار",
+        "forbidden": [
+          "طائرة",
+          "رحلة",
+          "قمرة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-176",
+        "text": "شيف",
+        "forbidden": [
+          "مطبخ",
+          "طبخ",
+          "أكل"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-177",
+        "text": "مهندس",
+        "forbidden": [
+          "رسم",
+          "بناء",
+          "مشروع"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-178",
+        "text": "نجار",
+        "forbidden": [
+          "خشب",
+          "منشار",
+          "أثاث"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-179",
+        "text": "مصور",
+        "forbidden": [
+          "كاميرا",
+          "صور",
+          "عدسة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-180",
+        "text": "مذيع",
+        "forbidden": [
+          "برنامج",
+          "تلفزيون",
+          "ميكروفون"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-181",
+        "text": "مبرمج",
+        "forbidden": [
+          "كود",
+          "كمبيوتر",
+          "تطبيق"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-182",
+        "text": "محامي",
+        "forbidden": [
+          "قانون",
+          "قضية",
+          "محكمة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-183",
+        "text": "صيدلي",
+        "forbidden": [
+          "دواء",
+          "روشتة",
+          "صيدلية"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-184",
+        "text": "خباز",
+        "forbidden": [
+          "عيش",
+          "فرن",
+          "عجين"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-185",
+        "text": "رسام",
+        "forbidden": [
+          "فرشة",
+          "ألوان",
+          "لوحة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-186",
+        "text": "مدرب",
+        "forbidden": [
+          "تدريب",
+          "فريق",
+          "تمارين"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-187",
+        "text": "فانوس",
+        "forbidden": [
+          "نور",
+          "زينة",
+          "رمضان"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-188",
+        "text": "طبل",
+        "forbidden": [
+          "إيقاع",
+          "صوت",
+          "عصيان"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-189",
+        "text": "بيانو",
+        "forbidden": [
+          "مفاتيح",
+          "موسيقى",
+          "عزف"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-190",
+        "text": "جيتار",
+        "forbidden": [
+          "أوتار",
+          "موسيقى",
+          "عزف"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-191",
+        "text": "بوصلة",
+        "forbidden": [
+          "اتجاه",
+          "شمال",
+          "إبرة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-192",
+        "text": "مفتاح",
+        "forbidden": [
+          "باب",
+          "قفل",
+          "حديد"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-193",
+        "text": "مظلة",
+        "forbidden": [
+          "مطر",
+          "شمس",
+          "فتح"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-194",
+        "text": "شمعة",
+        "forbidden": [
+          "نور",
+          "فتيل",
+          "شمع"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-195",
+        "text": "كرسي",
+        "forbidden": [
+          "قعدة",
+          "أرجل",
+          "ظهر"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-196",
+        "text": "كوب",
+        "forbidden": [
+          "شرب",
+          "مياه",
+          "زجاج"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-197",
+        "text": "طبق",
+        "forbidden": [
+          "أكل",
+          "سفرة",
+          "مائدة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-198",
+        "text": "مرآة",
+        "forbidden": [
+          "انعكاس",
+          "وش",
+          "صورة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-199",
+        "text": "بالونة",
+        "forbidden": [
+          "نفخ",
+          "هوا",
+          "حفلة"
+        ],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-200",
+        "text": "روبوت",
+        "forbidden": [
+          "آلي",
+          "آلة",
+          "برمجة"
+        ],
+        "level": "easy"
       }
     ]
   },
@@ -3468,6 +5288,906 @@
         "text": "لو هتغير اسمك النهاردة، هتختار إيه؟",
         "kind": "secret",
         "deck": "funny"
+      },
+      {
+        "id": "base-cards-051",
+        "text": "احكي عن خروجة لسه بتضحكك كل ما تفتكرها",
+        "deck": "friends",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-052",
+        "text": "احكي عن أول لعبة لعبتها مع الشلة",
+        "deck": "friends",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-053",
+        "text": "احكي عن مرة صاحبك ساعدك في حاجة بسيطة",
+        "deck": "friends",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-054",
+        "text": "احكي عن أكلة اتعلمتها من حد من صحابك",
+        "deck": "friends",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-055",
+        "text": "احكي عن صورة للشلة وراها قصة",
+        "deck": "friends",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-056",
+        "text": "احكي عن لقب اتقالك وسط الصحاب",
+        "deck": "friends",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-057",
+        "text": "اختار حد يفتكر أول مكان خرجتوا فيه سوا",
+        "deck": "friends",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-058",
+        "text": "اختار حد يحكي عن أحلى مفاجأة شافها",
+        "deck": "friends",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-059",
+        "text": "اختار حد يقول لعبة نفسه يجربها معاكم",
+        "deck": "friends",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-060",
+        "text": "اختار حد يوصف القعدة بكلمة واحدة",
+        "deck": "friends",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-061",
+        "text": "اختار حد يحكي عن أغنية بتفكره بالشلة",
+        "deck": "friends",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-062",
+        "text": "اختار حد يختار اسم فيلم عن صداقتكم",
+        "deck": "friends",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-063",
+        "text": "قول 3 حاجات بتجمع الشلة في 15 ثانية",
+        "deck": "friends",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-064",
+        "text": "ارسم بإيدك في الهوا شعار للشلة",
+        "deck": "friends",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-065",
+        "text": "قلد طريقة دخولك القعدة من غير كلام",
+        "deck": "friends",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-066",
+        "text": "اعمل إعلان قصير عن أحلى أكلة في القعدة",
+        "deck": "friends",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-067",
+        "text": "قول أسماء 4 صحاب بالعكس بسرعة",
+        "deck": "friends",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-068",
+        "text": "مثل إنك بتدور على صاحبك في زحمة",
+        "deck": "friends",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-069",
+        "text": "مين أكتر واحد بيجمع الشلة في يوم إجازة؟",
+        "deck": "friends",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-070",
+        "text": "مين أكتر واحد بيختار مكان الخروجة؟",
+        "deck": "friends",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-071",
+        "text": "مين أكتر واحد بيحفظ صور القعدة؟",
+        "deck": "friends",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-072",
+        "text": "مين أكتر واحد بيفتكر النكت القديمة؟",
+        "deck": "friends",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-073",
+        "text": "مين أكتر واحد بيجيب ألعاب جديدة؟",
+        "deck": "friends",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-074",
+        "text": "مين أكتر واحد يساعد من غير ما يتطلب منه؟",
+        "deck": "friends",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-075",
+        "text": "إيه اسم دلع بتحبه من صحابك؟",
+        "deck": "friends",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-076",
+        "text": "إيه لعبة كنت بتحبها وانت صغير؟",
+        "deck": "friends",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-077",
+        "text": "إيه عادة بسيطة بتعملها قبل أي خروجة؟",
+        "deck": "friends",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-078",
+        "text": "إيه أكلة محدش يعرف إنك بتحبها؟",
+        "deck": "friends",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-079",
+        "text": "إيه أغنية تعرفها كلمة كلمة؟",
+        "deck": "friends",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-080",
+        "text": "إيه مكان نفسك تروحه مع الشلة؟",
+        "deck": "friends",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-081",
+        "text": "احكي عن مرة ضحكتوا فيها على نفس الحاجة",
+        "deck": "couples",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-082",
+        "text": "احكي عن أكلة جربتوها سوا لأول مرة",
+        "deck": "couples",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-083",
+        "text": "احكي عن مكان هادي بتحبوا تزوروه",
+        "deck": "couples",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-084",
+        "text": "احكي عن أغنية بتفكركم بخروجة حلوة",
+        "deck": "couples",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-085",
+        "text": "احكي عن لعبة لعبتوها سوا واتنافستوا",
+        "deck": "couples",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-086",
+        "text": "احكي عن هدية بسيطة فرحتكم",
+        "deck": "couples",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-087",
+        "text": "اختار حد يخمن مين بيختار الفيلم عندكم",
+        "deck": "couples",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-088",
+        "text": "اختار حد يقول أحلى نشاط يتعمل سوا",
+        "deck": "couples",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-089",
+        "text": "اختار حد يتوقع أكلتكم المفضلة",
+        "deck": "couples",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-090",
+        "text": "اختار حد يخمن مين بيصحى الأول",
+        "deck": "couples",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-091",
+        "text": "اختار حد يختار عنوان لخروجة مثالية",
+        "deck": "couples",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-092",
+        "text": "اختار حد يخمن اسم أغنية بتحبوها",
+        "deck": "couples",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-093",
+        "text": "قول 3 حاجات بتضحكك في شريكك",
+        "deck": "couples",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-094",
+        "text": "ارسم قلب صغير في الهوا بإيدك",
+        "deck": "couples",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-095",
+        "text": "مثّل أول رد فعل لما تشوف هدية لطيفة",
+        "deck": "couples",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-096",
+        "text": "قول اسم فيلم تحبوا تشوفوه سوا وليه",
+        "deck": "couples",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-097",
+        "text": "مثلوا من غير كلام اختيار مكان خروجة",
+        "deck": "couples",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-098",
+        "text": "قول 3 أماكن نفسكم تزوروها سوا",
+        "deck": "couples",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-099",
+        "text": "مين أكتر واحد بيختار الأغاني في العربية؟",
+        "deck": "couples",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-100",
+        "text": "مين أكتر واحد بيفتكر أسماء الأماكن؟",
+        "deck": "couples",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-101",
+        "text": "مين أكتر واحد بيحب يجرب أكل جديد؟",
+        "deck": "couples",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-102",
+        "text": "مين أكتر واحد بيحب الصور الجماعية؟",
+        "deck": "couples",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-103",
+        "text": "مين أكتر واحد بيصحى بدري في الإجازة؟",
+        "deck": "couples",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-104",
+        "text": "مين أكتر واحد بيقترح لعبة للقعدة؟",
+        "deck": "couples",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-105",
+        "text": "إيه تفصيلة بسيطة بتحبها في خروجاتكم؟",
+        "deck": "couples",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-106",
+        "text": "إيه أكلة تحبوا تتعلموا تعملوها سوا؟",
+        "deck": "couples",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-107",
+        "text": "إيه فيلم ممكن تعيدوه من غير ملل؟",
+        "deck": "couples",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-108",
+        "text": "إيه مكان تحبوا ترجعوله تاني؟",
+        "deck": "couples",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-109",
+        "text": "إيه نشاط جديد تحبوا تجربوه؟",
+        "deck": "couples",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-110",
+        "text": "إيه كلمة لطيفة بتحب تسمعها؟",
+        "deck": "couples",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-111",
+        "text": "احكي عن موقف اتلخبطت فيه الأسامي كلها",
+        "deck": "crazy",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-112",
+        "text": "احكي عن أكلة شكلها غريب وطعمها حلو",
+        "deck": "crazy",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-113",
+        "text": "احكي عن مرة ضحكت على غلطة في الكلام",
+        "deck": "crazy",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-114",
+        "text": "احكي عن أغرب اسم حفظته لموبايل صاحبك",
+        "deck": "crazy",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-115",
+        "text": "احكي عن مرة لبست حاجة بالعكس من غير قصد",
+        "deck": "crazy",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-116",
+        "text": "احكي عن فكرة لعبة اخترعتها زمان",
+        "deck": "crazy",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-117",
+        "text": "اختار حد يعمل صوت روبوت بيطلب شاي",
+        "deck": "crazy",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-118",
+        "text": "اختار حد يمثل مذيع في نشرة عن القعدة",
+        "deck": "crazy",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-119",
+        "text": "اختار حد يخترع اسم لمطعم فضائي",
+        "deck": "crazy",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-120",
+        "text": "اختار حد يقلد قطة بتستنى العشا",
+        "deck": "crazy",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-121",
+        "text": "اختار حد يسمي 3 كواكب خيالية",
+        "deck": "crazy",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-122",
+        "text": "اختار حد يشرح استخدام معلقة لكائن فضائي",
+        "deck": "crazy",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-123",
+        "text": "اتكلم 15 ثانية كأنك روبوت",
+        "deck": "crazy",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-124",
+        "text": "اعمل إعلان لمخدة بتصحّي صاحبها",
+        "deck": "crazy",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-125",
+        "text": "قلد صوت منبه بيغني بدل ما يرن",
+        "deck": "crazy",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-126",
+        "text": "مثل تمثال اتحرك فجأة من غير ما تسيب مكانك",
+        "deck": "crazy",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-127",
+        "text": "قول 5 ألوان بسرعة بترتيب عكسي",
+        "deck": "crazy",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-128",
+        "text": "ارسم بإيدك في الهوا حيوان خيالي",
+        "deck": "crazy",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-129",
+        "text": "مين أكتر واحد ممكن يسمي نباته اسم شخص؟",
+        "deck": "crazy",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-130",
+        "text": "مين أكتر واحد ممكن يخترع أكلة جديدة؟",
+        "deck": "crazy",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-131",
+        "text": "مين أكتر واحد ممكن يحكي حلم غريب؟",
+        "deck": "crazy",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-132",
+        "text": "مين أكتر واحد ممكن يعمل أغنية للقعدة؟",
+        "deck": "crazy",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-133",
+        "text": "مين أكتر واحد ممكن يضحك من غير سبب واضح؟",
+        "deck": "crazy",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-134",
+        "text": "مين أكتر واحد ممكن يكسب مسابقة تقليد أصوات؟",
+        "deck": "crazy",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-135",
+        "text": "لو موبايلك اتكلم، هيقول عنك إيه؟",
+        "deck": "crazy",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-136",
+        "text": "لو كنت لونًا جديدًا، تسمي نفسك إيه؟",
+        "deck": "crazy",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-137",
+        "text": "لو شنطتك فيها باب سري، يوصل لفين؟",
+        "deck": "crazy",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-138",
+        "text": "لو عندك زر يغير صوتك، تختار صوت إيه؟",
+        "deck": "crazy",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-139",
+        "text": "لو لازم تسمي سحابة، هتسميها إيه؟",
+        "deck": "crazy",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-140",
+        "text": "لو هتخترع عيد جديد، هيكون لسبب إيه؟",
+        "deck": "crazy",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-141",
+        "text": "احكي عن مهارة اتعلمتها بالصبر",
+        "deck": "deep",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-142",
+        "text": "احكي عن نصيحة بسيطة نفعتك",
+        "deck": "deep",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-143",
+        "text": "احكي عن مرة غيرت رأيك بعد ما سمعت غيرك",
+        "deck": "deep",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-144",
+        "text": "احكي عن إنجاز صغير فخور بيه",
+        "deck": "deep",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-145",
+        "text": "احكي عن عادة كويسة بدأت تعملها",
+        "deck": "deep",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-146",
+        "text": "احكي عن شخص شجعك تتعلم حاجة",
+        "deck": "deep",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-147",
+        "text": "اختار حد يقول صفة حلوة فيك",
+        "deck": "deep",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-148",
+        "text": "اختار حد يحكي عن حاجة اتعلمها السنة دي",
+        "deck": "deep",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-149",
+        "text": "اختار حد يقول مهارة نفسه يتعلمها",
+        "deck": "deep",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-150",
+        "text": "اختار حد يذكر موقف حس فيه بالتعاون",
+        "deck": "deep",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-151",
+        "text": "اختار حد يحكي عن مكان بيريحه",
+        "deck": "deep",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-152",
+        "text": "اختار حد يقول عادة حلوة عند الشلة",
+        "deck": "deep",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-153",
+        "text": "قول 3 حاجات صغيرة مبسوط بيها النهاردة",
+        "deck": "deep",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-154",
+        "text": "اكتب في الهوا كلمة تحب تسمعها",
+        "deck": "deep",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-155",
+        "text": "قول لصاحبك صفة بتقدرها فيه",
+        "deck": "deep",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-156",
+        "text": "في 20 ثانية احكي عن هدف قريب ليك",
+        "deck": "deep",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-157",
+        "text": "قول 3 حاجات تساعدك تركز",
+        "deck": "deep",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-158",
+        "text": "صف يوم هادي بتحبه في 3 جمل",
+        "deck": "deep",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-159",
+        "text": "مين أكتر واحد بيعرف يسمع كويس؟",
+        "deck": "deep",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-160",
+        "text": "مين أكتر واحد بيشجع غيره يتعلم؟",
+        "deck": "deep",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-161",
+        "text": "مين أكتر واحد بيحب يبدأ حاجة جديدة؟",
+        "deck": "deep",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-162",
+        "text": "مين أكتر واحد بيلاقي حل وسط؟",
+        "deck": "deep",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-163",
+        "text": "مين أكتر واحد بيلاحظ التفاصيل الحلوة؟",
+        "deck": "deep",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-164",
+        "text": "مين أكتر واحد بيقدر وقت غيره؟",
+        "deck": "deep",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-165",
+        "text": "إيه عادة صغيرة نفسك تحافظ عليها؟",
+        "deck": "deep",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-166",
+        "text": "إيه مكان بتحس فيه بالراحة؟",
+        "deck": "deep",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-167",
+        "text": "إيه مهارة تحب تتعلمها يومًا ما؟",
+        "deck": "deep",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-168",
+        "text": "إيه شيء بسيط بتشكر عليه النهاردة؟",
+        "deck": "deep",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-169",
+        "text": "إيه ذكرى بتحب ترجع لها؟",
+        "deck": "deep",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-170",
+        "text": "إيه كلمة تشجيع محتاج تسمعها أحيانًا؟",
+        "deck": "deep",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-171",
+        "text": "احكي عن مرة ضيعت حاجة وطلعت في إيدك",
+        "deck": "funny",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-172",
+        "text": "احكي عن موقف فهمت فيه كلمة غلط",
+        "deck": "funny",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-173",
+        "text": "احكي عن مرة ضحكت في وقت هادي",
+        "deck": "funny",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-174",
+        "text": "احكي عن أغرب اسم دلع سمعته",
+        "deck": "funny",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-175",
+        "text": "احكي عن مرة حاولت تطبخ واتلخبطت",
+        "deck": "funny",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-176",
+        "text": "احكي عن حاجة صغيرة دايمًا بتقع منك",
+        "deck": "funny",
+        "kind": "tell"
+      },
+      {
+        "id": "base-cards-177",
+        "text": "اختار حد يقلد منبه الصبح",
+        "deck": "funny",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-178",
+        "text": "اختار حد يعمل إعلان عن كوب فاضي",
+        "deck": "funny",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-179",
+        "text": "اختار حد يمثل إنه مستني الأكل من ساعة",
+        "deck": "funny",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-180",
+        "text": "اختار حد يقرأ اسم القعدة كأنه مذيع رياضي",
+        "deck": "funny",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-181",
+        "text": "اختار حد يعمل وشه لما النت يفصل",
+        "deck": "funny",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-182",
+        "text": "اختار حد يشرح لعبة وهو مش فاهمها",
+        "deck": "funny",
+        "kind": "pick"
+      },
+      {
+        "id": "base-cards-183",
+        "text": "قول جملة عادية بصوت مذيع مباريات",
+        "deck": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-184",
+        "text": "اعمل صوت بطة بتطلب تاكسي",
+        "deck": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-185",
+        "text": "مثل إنك بتفتح برطمان مش راضي يفتح",
+        "deck": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-186",
+        "text": "احكي نكتة قصيرة من غير ما تضحك",
+        "deck": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-187",
+        "text": "قول 3 أسماء أكلات بصوت روبوت",
+        "deck": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-188",
+        "text": "مثل إنك بتدور على ريموت خفي",
+        "deck": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-cards-189",
+        "text": "مين أكتر واحد بيضحك قبل ما يسمع النهاية؟",
+        "deck": "funny",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-190",
+        "text": "مين أكتر واحد ممكن ينسى الكوباية فين؟",
+        "deck": "funny",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-191",
+        "text": "مين أكتر واحد بيعمل تعبيرات بوشه؟",
+        "deck": "funny",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-192",
+        "text": "مين أكتر واحد ممكن يسمي كل كرسي في البيت؟",
+        "deck": "funny",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-193",
+        "text": "مين أكتر واحد يفتكر إفيه من زمان؟",
+        "deck": "funny",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-194",
+        "text": "مين أكتر واحد يقول أنا جاهز وهو لسه؟",
+        "deck": "funny",
+        "kind": "who"
+      },
+      {
+        "id": "base-cards-195",
+        "text": "إيه أغرب اسم حطيته لمنبهك؟",
+        "deck": "funny",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-196",
+        "text": "إيه حركة بتعملها وانت بتفكر؟",
+        "deck": "funny",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-197",
+        "text": "لو عندك موسيقى دخول، هتبقى إيه؟",
+        "deck": "funny",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-198",
+        "text": "إيه كلمة بتقولها لما تتفاجئ؟",
+        "deck": "funny",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-199",
+        "text": "إيه أكلة بتعملك وش مضحك؟",
+        "deck": "funny",
+        "kind": "secret"
+      },
+      {
+        "id": "base-cards-200",
+        "text": "لو كرسيك بيتكلم، هيشتكي من إيه؟",
+        "deck": "funny",
+        "kind": "secret"
       }
     ]
   },
@@ -3669,6 +6389,1254 @@
         "text": "غني وانت بتحرك إيديك كأنك قائد أوركسترا",
         "kind": "dare",
         "level": "chaos"
+      },
+      {
+        "id": "base-tod-033",
+        "text": "إيه اللون اللي بيحسن مزاجك؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-034",
+        "text": "إيه أول حاجة بتحب تعملها يوم الإجازة؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-035",
+        "text": "مين أكتر حد بيعرف يضحكك؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-036",
+        "text": "إيه أكلة بتفكرك بلمة حلوة؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-037",
+        "text": "إيه أغنية بتحب تسمعها في الطريق؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-038",
+        "text": "إيه لعبة كنت بتحبها وانت صغير؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-039",
+        "text": "إيه مكان بتحب تتمشى فيه؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-040",
+        "text": "إيه فيلم ممكن تتفرج عليه تاني؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-041",
+        "text": "إيه حاجة بسيطة فرحتك الأسبوع ده؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-042",
+        "text": "إيه حيوان بتحبه وليه؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-043",
+        "text": "إيه مهارة نفسك تتعلمها؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-044",
+        "text": "إيه مشروب بتختاره في الشتا؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-045",
+        "text": "إيه أحلى هدية بسيطة جاتلك؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-046",
+        "text": "إيه منظر طبيعي بتحب تشوفه؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-047",
+        "text": "إيه كلمة صحابك بيقولوها وبتضحكك؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-048",
+        "text": "إيه أكتر وقت بتحب تقعد فيه مع الشلة؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-049",
+        "text": "إيه أول أكلة تعلمت تعملها؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-050",
+        "text": "إيه حاجة بتحب تجمعها أو تحتفظ بيها؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-051",
+        "text": "إيه اسم فيلم مناسب للقعدة دي؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-052",
+        "text": "إيه نشاط بيخليك تنسى الوقت؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-053",
+        "text": "إيه مكان نفسك تزوره في بلدك؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-054",
+        "text": "إيه ريحة بتفكرك بذكرى حلوة؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-055",
+        "text": "إيه صفة بتحبها في أصحابك؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-056",
+        "text": "إيه آخر حاجة صورتها بالموبايل؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-057",
+        "text": "إيه فصل السنة المفضل عندك؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-058",
+        "text": "إيه حاجة دايمًا بتاخدها معاك في الخروجة؟",
+        "level": "chill",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-059",
+        "text": "قول 3 حاجات لونها أخضر",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-060",
+        "text": "اعمل علامة قلب بإيدك للشلة",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-061",
+        "text": "مثّل إنك بتفتح هدية حلوة",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-062",
+        "text": "قول اسم 4 فواكه بسرعة",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-063",
+        "text": "اعمل صوت منبه لطيف",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-064",
+        "text": "احكي عن يومك في 3 كلمات",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-065",
+        "text": "اختار اسم جديد للقعدة",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-066",
+        "text": "قلد طريقة مشي بطريق وانت قاعد",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-067",
+        "text": "قول جملة تشجيع للي جنبك",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-068",
+        "text": "مثّل إنك بتصور غروب الشمس",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-069",
+        "text": "قول اسم 3 حيوانات بتطير",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-070",
+        "text": "ارسم دايرة ومربع في الهوا بإيدك",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-071",
+        "text": "اعمل إعلان قصير عن كوباية شاي",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-072",
+        "text": "قول 3 حاجات بتحبها في الصيف",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-073",
+        "text": "مثّل إنك بتقلب صفحات كتاب كبير",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-074",
+        "text": "قول أسماء 3 مدن تعرفها",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-075",
+        "text": "احكي نكتة لطيفة في جملة واحدة",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-076",
+        "text": "قلد صوت قطة بتطلب أكل",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-077",
+        "text": "قول 3 ألعاب بتحب تلعبها",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-078",
+        "text": "اعمل تصفيق بإيقاع والقعدة تقلدك",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-079",
+        "text": "مثّل إنك بتختار فيلم من قائمة طويلة",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-080",
+        "text": "قول 3 حاجات محتاجها في رحلة",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-081",
+        "text": "اعمل وش مبسوط خمس ثواني",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-082",
+        "text": "قول عنوان خيالي لصورة القعدة",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-083",
+        "text": "مثّل إنك بتشم وردة",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-084",
+        "text": "قول لصاحبك كلمة تقدير بسيطة",
+        "level": "chill",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-085",
+        "text": "إيه أكتر حاجة بتقولها لما تتفاجئ؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-086",
+        "text": "لو عندك موسيقى دخول، هتبقى إيه؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-087",
+        "text": "إيه أكلة اسمها بيضحكك؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-088",
+        "text": "إيه أغرب اسم حفظته لرقم في موبايلك؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-089",
+        "text": "إيه موقف اتلخبطت فيه بين اسمين؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-090",
+        "text": "لو كرسيك اتكلم، هيقول عنك إيه؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-091",
+        "text": "إيه أغرب حاجة نسيتها وانت خارج؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-092",
+        "text": "إيه حركة بتعملها من غير ما تحس؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-093",
+        "text": "إيه أطرف غلط مطبعي عملته؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-094",
+        "text": "لو المنبه اختار صوت من القعدة، هيختار مين؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-095",
+        "text": "إيه كلمة بتنطقها بطريقتك الخاصة؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-096",
+        "text": "إيه لعبة بتخسر فيها وبتصر تلعبها؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-097",
+        "text": "لو بقيت شخصية كرتون، اسمك هيبقى إيه؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-098",
+        "text": "إيه أغرب حلم فاكره؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-099",
+        "text": "إيه أكتر موقف ضحكت فيه على نفسك؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-100",
+        "text": "لو هتسمي سندوتش باسمك، هتحط فيه إيه؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-101",
+        "text": "إيه أغرب سبب خلاك تتأخر خمس دقايق؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-102",
+        "text": "لو موبايلك له لقب، هيبقى إيه؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-103",
+        "text": "إيه الحاجة اللي بتضيع منك وهي قدامك؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-104",
+        "text": "لو هتعمل إعلان لنفسك، شعاره هيبقى إيه؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-105",
+        "text": "إيه أغرب صوت بتعرف تقلده؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-106",
+        "text": "إيه جملة بتقولها قبل ما تبدأ لعبة؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-107",
+        "text": "لو شنطتك فيها سر، هيبقى إيه؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-108",
+        "text": "إيه لقب مضحك اخترعته لحاجة في البيت؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-109",
+        "text": "إيه أغرب حاجة ضحكتك في فيلم؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-110",
+        "text": "لو دخلت مسابقة تمثيل صامت، هتمثل إيه؟",
+        "level": "funny",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-111",
+        "text": "اتكلم كأنك مذيع طقس لمدة 15 ثانية",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-112",
+        "text": "قلد صوت باب بيصرصر من غير حركة",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-113",
+        "text": "اعمل إعلان عن قلم خلص حبره",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-114",
+        "text": "مثل إنك بتشرب عصير حامض جدًا",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-115",
+        "text": "قول اسمك بصوت روبوت",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-116",
+        "text": "اعمل وشك لما النت يفصل فجأة",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-117",
+        "text": "مثل إنك بتدور على ريموت خفي",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-118",
+        "text": "اتكلم 10 ثواني بصوت شخصية كرتون من اختراعك",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-119",
+        "text": "اعمل صوت قطار بيقف في محطة",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-120",
+        "text": "مثل إنك بتفتح برطمان عنيد",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-121",
+        "text": "قول 3 أسماء أكلات كأنك في نشرة أخبار",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-122",
+        "text": "اعمل تعليق رياضي على حد بيشرب مياه",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-123",
+        "text": "قلد فرخة بتستنى دورها في الطابور",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-124",
+        "text": "مثل إنك بتصور سيلفي مع حيوان خيالي",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-125",
+        "text": "اعمل صوت روبوت بطاريته قربت تخلص",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-126",
+        "text": "قول جملة عادية كأنها سر كبير",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-127",
+        "text": "مثل إنك بتسمع أغنية من غير صوت",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-128",
+        "text": "اعمل إعلان عن كرسي مريح جدًا",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-129",
+        "text": "اتكلم كأنك مرشد سياحي للأوضة",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-130",
+        "text": "قول اسم فاكهة بصوت أوبرالي",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-131",
+        "text": "مثل إنك بتحاول توازن كتاب على راسك",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-132",
+        "text": "اعمل وشك لما حد يقولك فيه مفاجأة",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-133",
+        "text": "قلد صوت تكة ساعة لمدة خمس ثواني",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-134",
+        "text": "قول صباح الخير بثلاث نبرات مختلفة",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-135",
+        "text": "مثل إنك بتختار جزمة من غير ما تلمسها",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-136",
+        "text": "اعمل عنوان خبر عاجل عن القعدة",
+        "level": "funny",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-137",
+        "text": "إيه صفة عندك نفسك الناس تلاحظها أكتر؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-138",
+        "text": "إيه موقف خلاك تغير رأيك في حاجة؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-139",
+        "text": "مين في القعدة تحب تسمع نصيحته وليه؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-140",
+        "text": "إيه عادة بسيطة نفسك تغيرها؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-141",
+        "text": "إيه حاجة اتعلمتها بالطريقة الصعبة؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-142",
+        "text": "إيه كلمة حلوة حد قالهالك ولسه فاكرها؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-143",
+        "text": "إيه أكثر موقف حسيت فيه إنك شجاع؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-144",
+        "text": "إيه حاجة كنت بتتردد تعملها وبعدين عملتها؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-145",
+        "text": "إيه قرار صغير فخور إنك خدته؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-146",
+        "text": "مين في الشلة بيعرف يطمنك؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-147",
+        "text": "إيه حاجة محتاج تشجع نفسك عليها؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-148",
+        "text": "إيه مهارة عند حد هنا نفسك تتعلمها؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-149",
+        "text": "إيه صفة بتحاول تقويها في نفسك؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-150",
+        "text": "إيه موقف فهمت فيه صاحبك بطريقة جديدة؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-151",
+        "text": "إيه أكتر حاجة بتساعدك ترجع هادي؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-152",
+        "text": "إيه حلم قريب تقدر تبدأ خطوة فيه؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-153",
+        "text": "مين في القعدة بتثق في ذوقه في الأفلام؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-154",
+        "text": "إيه رأي غيرته بعد نقاش لطيف؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-155",
+        "text": "إيه حاجة نفسك تكون أشطر فيها؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-156",
+        "text": "إيه مرة اعتذرت فيها وحسيت إن ده صح؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-157",
+        "text": "إيه شيء بتحب تعمله حتى لو محدش شافه؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-158",
+        "text": "مين في القعدة عنده طاقة حلوة بالنسبة لك؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-159",
+        "text": "إيه نصيحة كنت محتاجها من سنة؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-160",
+        "text": "إيه أكثر حاجة بتقدّرها في الصداقة؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-161",
+        "text": "إيه موقف خلاك فخور بحد من صحابك؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-162",
+        "text": "إيه سؤال نفسك تسأله لنفسك بعد سنة؟",
+        "level": "bold",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-163",
+        "text": "قول لحد في القعدة صفة بتعجبك فيه",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-164",
+        "text": "اسأل حد هنا عن حاجة اتعلمها مؤخرًا",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-165",
+        "text": "احكي في 20 ثانية عن تحدي صغير عدّيته",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-166",
+        "text": "قول جملة تشجيع لنفسك بصوت واضح",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-167",
+        "text": "اختار حد يقولك اقتراحًا لهواية جديدة",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-168",
+        "text": "اعترف بحركة مضحكة بتعملها لما تتوتر",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-169",
+        "text": "قول حاجة حلوة اتعلمتها من صاحبك",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-170",
+        "text": "مثل لحظة فرحتك بنجاح بسيط",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-171",
+        "text": "قول 3 صفات تحب تلاقيها في فريقك",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-172",
+        "text": "اختار حد وخمن مهارة نفسه يتعلمها",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-173",
+        "text": "احكي عن موقف ساعدت فيه شخصًا بطريقة بسيطة",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-174",
+        "text": "قول شكرًا لحد هنا على موقف لطيف",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-175",
+        "text": "قول هدفًا صغيرًا تقدر تبدأه الأسبوع ده",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-176",
+        "text": "اختار حد يختار لك لقبًا مشجعًا",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-177",
+        "text": "قول رأيك في أحلى لعبة لعبتوها سوا",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-178",
+        "text": "احكي عن مرة ضحكت فيها على غلطتك",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-179",
+        "text": "قول عادة كويسة تعلمتها من حد هنا",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-180",
+        "text": "اسأل حد في القعدة عن فيلم ينصحك بيه",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-181",
+        "text": "قول 3 حاجات بتحبها في شخصيتك",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-182",
+        "text": "اختار حد وخمن أكلة يحب يتعلم يعملها",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-183",
+        "text": "قول جملة اعتذار تمثيلية لكرسي خيالي",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-184",
+        "text": "احكي عن ذكرى لطيفة مع الشلة في جملة",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-185",
+        "text": "قول صفة بتقدّرها في الشخص اللي على شمالك",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-186",
+        "text": "اعمل خطاب فوز مدته 10 ثواني",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-187",
+        "text": "اختار حد يقولك سؤال خفيف وتجاوب عليه",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-188",
+        "text": "قول كلمة تشجع بيها الفريق الخاسر",
+        "level": "bold",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-189",
+        "text": "لو صحيت ولقيت كل الأبواب بتغني، هتعمل إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-190",
+        "text": "لو القعدة اتعملت فيلم، نوعه هيبقى إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-191",
+        "text": "لو تقدر تغير اسم يوم من الأسبوع، تختار إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-192",
+        "text": "لو عندك زر يوقف الوقت لدقيقة، تستخدمه في إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-193",
+        "text": "لو الأكل يقدر يتكلم، أي أكلة هتسألها سؤال؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-194",
+        "text": "لو لازم تعيش يوم بصوت روبوت، هتقول إيه أول حاجة؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-195",
+        "text": "لو الكراسي اختارت أصحابها، كرسيك هيختار مين؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-196",
+        "text": "لو تقدر تمشي على السحاب، هتشوف إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-197",
+        "text": "لو شنطتك باب لمكان خيالي، يوصل لفين؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-198",
+        "text": "لو بقى للقعدة نشيد، عنوانه إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-199",
+        "text": "لو الحيوانات لعبت معاكم، مين يكسب؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-200",
+        "text": "لو كل كلمة بتقولها لون، لونك هيبقى إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-201",
+        "text": "لو هتبدل مكانك مع شخصية كرتون ليوم، مين؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-202",
+        "text": "لو اخترعت آلة للمهمات المملة، بتعمل إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-203",
+        "text": "لو عندك جزيرة صغيرة، هتسميها إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-204",
+        "text": "لو المراية قالت نكتة، هتكون عن إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-205",
+        "text": "لو تقدر تسأل القمر سؤالًا، هتسأل إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-206",
+        "text": "لو المطر بقى عصير، تختار نكهة إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-207",
+        "text": "لو الساعة بتمشي بالعكس يوم، هتعمل إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-208",
+        "text": "لو النبتة اللي جنبك اتكلمت، تقول لها إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-209",
+        "text": "لو عندك فريق أبطال من الشلة، اسمهم إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-210",
+        "text": "لو الشنطة بتختار محتوياتها، هتحط إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-211",
+        "text": "لو كنت صاحب سوبر باور مضحكة، هتبقى إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-212",
+        "text": "لو الطريق للبيت بقى لعبة، أول مرحلة إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-213",
+        "text": "لو هتسمي نجمة باسم القعدة، تختار إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-214",
+        "text": "لو كتبت قصة من 3 كلمات، هتقول إيه؟",
+        "level": "chaos",
+        "kind": "truth"
+      },
+      {
+        "id": "base-tod-215",
+        "text": "اعمل نشرة أخبار عن كوباية على الترابيزة",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-216",
+        "text": "قلد صوت بطريق بيطلب شاي",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-217",
+        "text": "تكلم 15 ثانية كأنك من كوكب آخر",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-218",
+        "text": "اعمل إعلان عن شمسية للمطر الوردي",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-219",
+        "text": "مثل إنك بتشرح الموبايل لإنسان من الماضي",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-220",
+        "text": "قول اسم كل لاعب بنبرة شخصية خيالية",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-221",
+        "text": "اعمل صوت آلة بتعمل فشار",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-222",
+        "text": "مثل إنك بتسلم جائزة لأحسن مخدة",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-223",
+        "text": "اخترع تحية جديدة للشلة من مكانك",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-224",
+        "text": "قول 3 عناوين لأفلام عن القعدة",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-225",
+        "text": "مثل إنك بتتكلم مع شجرة بترد عليك",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-226",
+        "text": "اعمل أغنية قصيرة عن كرسي فاضي",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-227",
+        "text": "قلد روبوت بيحاول يضحك",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-228",
+        "text": "اعمل إعلان لساعة بتعد الضحكات",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-229",
+        "text": "مثل إنك بتطلب ساندوتش من كوكب بعيد",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-230",
+        "text": "احكي عن فوزك بجائزة أفضل جرس باب",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-231",
+        "text": "قول جملة بصوت 3 شخصيات من اختراعك",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-232",
+        "text": "مثل إنك بتفتح صندوق طالع منه سحاب",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-233",
+        "text": "اعمل حوار 10 ثواني بين قلم وممحاة",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-234",
+        "text": "اعمل صوت سيارة صغيرة بتركن نفسها",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-235",
+        "text": "مثل إنك بتقدم برنامج طبخ على القمر",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-236",
+        "text": "قول نكتة كأنك قائد سفينة فضاء",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-237",
+        "text": "اعمل تعليق رياضي على بالونة بتطير",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-238",
+        "text": "مثل إنك بتختبر اختراعًا يخلي الكتب ترقص",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-239",
+        "text": "قول 3 أسماء لحيوانات خيالية بسرعة",
+        "level": "chaos",
+        "kind": "dare"
+      },
+      {
+        "id": "base-tod-240",
+        "text": "اخترع كلمة معناها القعدة الحلوة واشرحها",
+        "level": "chaos",
+        "kind": "dare"
       }
     ]
   }

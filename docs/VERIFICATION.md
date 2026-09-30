@@ -156,3 +156,9 @@ M2 screens and live-session coordination, integrating the already tested engine 
 
 - Expanded Imposter to eight 25-word categories (200 total) and Undercover to 80 paired-word items. Content lint validates both packs and the Imposter category count was asserted during draft generation. Editorial approval remains open.
 - `npm run check` passed (82 tests, strict TypeScript, ESLint and content lint), and Android/web JavaScript exports succeeded with the expanded packs.
+
+## Base content count target — 2026-09-30
+
+- Expanded easy Taboo to 200/200 with three distinct forbidden words per item, five Cards decks to 40 each (200 total), and Truth or Dare to 30 truth and 30 dare prompts at each of four levels (240 total). This brings the base v1 content draft to 1400/1400 across all required packs.
+- Count and schema validation is automated. All packs remain unapproved until two independent people review their exact hashes; v1.1 Proverbs remains at 16/120.
+- `npm run check` passed with 82 tests, strict TypeScript, ESLint and content lint. Expo Doctor passed 21/21, and Android/web JavaScript exports succeeded. The explicit release content lint still fails as intended on unreviewed packs and the 104 missing Proverbs.
