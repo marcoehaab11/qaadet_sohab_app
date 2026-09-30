@@ -93,3 +93,10 @@
 - Saved the last 40 completed session records with date, winners, game IDs and player score snapshots. Records are written once, only after the final game or resolved tie-break. Per-game play counts include queued and standalone launches.
 - Career totals and longest/current win streaks are stored separately so trimming the 40-record history does not lower all-time stats. Existing v1 local saves migrate through schema defaults for the new fields. Live scores, undo and away flags remain ephemeral.
 - The stats screen shows total completed sessions, current players' career wins/streaks, top five games and latest eight sessions. Clearing history requires an in-app confirmation and resets historical stats and play counts; it leaves player names, settings and review-asked version intact.
+
+## 2026-09-30 — M8/M9 feature and content preview
+
+- Added a visible 9:16 result card, optional native PNG share and optional WhatsApp text handoff. Sharing is initiated by the player, and the web preview reports that local image sharing is unavailable there. The native 1080×1920 output still needs device QA.
+- Added Eid, Sahel and Exams packs and a saved season override. Automatic detection remains the default; browser QA confirmed selecting Eid shows the Home badge and returning to automatic removes it outside the season.
+- Authored draft content to all numeric targets: 1400 base items, four 65-item seasons, 100 hard Taboo words, 200 drawing words, 120 proverbs and 20 punishments. These numbers mean the app can be exercised with full-sized pools, not that the wording is approved. All packs still need two independent editorial reviews, especially the proverbial wording and challenge safety.
+- `npm run check` passes 82 tests, and Expo Doctor and Android/web JavaScript exports pass. The explicit release content gate fails on missing human approvals. Native device QA, signed build, account linkage and Play Console checks remain open and are deferred until the app and editorial content are ready.
