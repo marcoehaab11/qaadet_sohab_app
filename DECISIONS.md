@@ -37,3 +37,4 @@
 - Added ممنوع تقول with secret word reveal, three visible forbidden words during play, a configurable turn timer, +1 for guessed, -1 for a forbidden word, and free word skipping.
 - Timer feedback uses bundled sounds and haptics. The native timer still needs device checks, especially after app backgrounding and screen navigation; player editing is disabled while a timed turn runs to avoid resetting that component by navigation.
 - Added تمثيل with a private scene that disappears once the timer starts, first-guesser selection, and a single scoring action for the actor and guesser. It uses the same in-memory timer limitations until native device QA.
+- Added أسرع واحد with a three-second countdown, one large colored buzzer per active player, first-tap lock, host confirmation, temporary exclusion after a wrong answer, and +1 for a correct answer.

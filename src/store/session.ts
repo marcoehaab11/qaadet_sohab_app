@@ -16,6 +16,7 @@ import { LikelyState, createLikely } from '../games/likely/reducer';
 import { KnowMeState, createKnowMe } from '../games/knowme/reducer';
 import { TabooState, createTaboo } from '../games/taboo/reducer';
 import { CharadesState, createCharades } from '../games/charades/reducer';
+import { SpeedState, createSpeed } from '../games/speed/reducer';
 import { useApp } from './index';
 // Ephemeral by design: scores, counters, undo and sit-out state never reach AsyncStorage.
 type SessionStore = {
@@ -40,6 +41,9 @@ type SessionStore = {
   charadesGame: CharadesState | null;
   setCharadesGame: (state: CharadesState | null) => void;
   startStandaloneCharades: () => void;
+  speedGame: SpeedState | null;
+  setSpeedGame: (state: SpeedState | null) => void;
+  startStandaloneSpeed: () => void;
   begin: () => void;
   play: () => void;
   advance: () => void;
@@ -64,6 +68,8 @@ export const useSession = create<SessionStore>((set, get) => ({
   setTabooGame: (tabooGame) => set({ tabooGame }),
   charadesGame: null,
   setCharadesGame: (charadesGame) => set({ charadesGame }),
+  speedGame: null,
+  setSpeedGame: (speedGame) => set({ speedGame }),
   startStandaloneCards: () => {
     const data = useApp.getState().data;
     set({
@@ -75,6 +81,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       knowMeGame: null,
       tabooGame: null,
       charadesGame: null,
+      speedGame: null,
       cardsGame: createCards(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.cards?.cards ?? 8,
@@ -93,6 +100,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       knowMeGame: null,
       tabooGame: null,
       charadesGame: null,
+      speedGame: null,
       todGame: createTod(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.tod?.turns ?? 1,
@@ -111,6 +119,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       knowMeGame: null,
       tabooGame: null,
       charadesGame: null,
+      speedGame: null,
       likelyGame: createLikely(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.likely?.questions ?? 3,
@@ -129,6 +138,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       likelyGame: null,
       tabooGame: null,
       charadesGame: null,
+      speedGame: null,
       knowMeGame: createKnowMe(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.knowme?.subjects ?? 3,
@@ -147,6 +157,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       likelyGame: null,
       knowMeGame: null,
       charadesGame: null,
+      speedGame: null,
       tabooGame: createTaboo(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.taboo?.turns ?? 1,
@@ -165,11 +176,27 @@ export const useSession = create<SessionStore>((set, get) => ({
       likelyGame: null,
       knowMeGame: null,
       tabooGame: null,
+      speedGame: null,
       charadesGame: createCharades(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.charades?.turns ?? 5,
         Date.now(),
       ),
+    });
+  },
+  startStandaloneSpeed: () => {
+    const data = useApp.getState().data;
+    set({
+      ledger: emptyLedger(),
+      away: [],
+      session: null,
+      cardsGame: null,
+      todGame: null,
+      likelyGame: null,
+      knowMeGame: null,
+      tabooGame: null,
+      charadesGame: null,
+      speedGame: createSpeed(data.config.speed?.challenges ?? 5, Date.now()),
     });
   },
   begin: () => {
@@ -183,6 +210,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       knowMeGame: null,
       tabooGame: null,
       charadesGame: null,
+      speedGame: null,
       away: [],
       session: createSession(vibe, length, players.length, Date.now()),
     });
@@ -229,6 +257,10 @@ export const useSession = create<SessionStore>((set, get) => ({
               useApp.getState().data.config.charades?.turns ?? 5,
               session.seed,
             )
+          : null,
+      speedGame:
+        currentGame(session) === 'speed'
+          ? createSpeed(useApp.getState().data.config.speed?.challenges ?? 5, session.seed)
           : null,
     });
   },
@@ -282,5 +314,6 @@ export const useSession = create<SessionStore>((set, get) => ({
       knowMeGame: null,
       tabooGame: null,
       charadesGame: null,
+      speedGame: null,
     }),
 }));

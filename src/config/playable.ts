@@ -3,7 +3,13 @@ import { GameId } from './release';
 export const playableRoutes: Partial<
   Record<
     GameId,
-    '/game/cards' | '/game/tod' | '/game/likely' | '/game/knowme' | '/game/taboo' | '/game/charades'
+    | '/game/cards'
+    | '/game/tod'
+    | '/game/likely'
+    | '/game/knowme'
+    | '/game/taboo'
+    | '/game/charades'
+    | '/game/speed'
   >
 > = {
   cards: '/game/cards',
@@ -12,4 +18,5 @@ export const playableRoutes: Partial<
   knowme: '/game/knowme',
   taboo: '/game/taboo',
   charades: '/game/charades',
+  speed: '/game/speed',
 };

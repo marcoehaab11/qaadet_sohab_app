@@ -49,6 +49,7 @@ export default function Home() {
   const startStandaloneKnowMe = useSession((s) => s.startStandaloneKnowMe);
   const startStandaloneTaboo = useSession((s) => s.startStandaloneTaboo);
   const startStandaloneCharades = useSession((s) => s.startStandaloneCharades);
+  const startStandaloneSpeed = useSession((s) => s.startStandaloneSpeed);
   const { fontScale } = useWindowDimensions();
   const expandedVibes = data.settings.largeText || fontScale > 1.1;
   useEffect(() => {
@@ -187,6 +188,9 @@ export default function Home() {
               } else if (id === 'charades' && (!session || session.finished)) {
                 startStandaloneCharades();
                 router.push('/game/charades');
+              } else if (id === 'speed' && (!session || session.finished)) {
+                startStandaloneSpeed();
+                router.push('/game/speed');
               } else setSelected(id);
             }}
             style={[

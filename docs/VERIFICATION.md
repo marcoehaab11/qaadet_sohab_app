@@ -44,3 +44,9 @@ M2 screens and live-session coordination, integrating the already tested engine 
 - `npm run check`: strict typecheck, ESLint, 44 Jest tests, and seed lint passed. Web and Android JavaScript exports succeeded.
 - Browser preview exercised pass-phone, hidden scene, timer start with scene removed, selection of the first guesser, +1 each for actor and guesser, and turn-end screen.
 - Unit tests cover single-award behavior, self-guess rejection, time-up with no points, next actor, and absent actor skip. Imposter and أسرع واحد are the remaining game screens.
+
+## أسرع واحد checkpoint — 2026-09-30
+
+- `npm run check`: strict typecheck, ESLint, 46 Jest tests, and seed lint passed. Web and Android JavaScript exports succeeded.
+- Browser preview exercised the countdown, challenge reveal, first buzz lock, wrong answer exclusion, second buzzer, host confirmation, +1 and results.
+- Unit tests cover lockout, wrong answer, correct answer, absent player, and no-answer advancement. Imposter is the remaining game screen.
