@@ -3,7 +3,7 @@ import { shuffle } from './random';
 export type Vibe = 'laugh' | 'compete' | 'deceive' | 'friends' | 'random';
 const pools: Record<Vibe, readonly GameId[]> = {
   laugh: ['charades', 'likely', 'cards', 'tod'],
-  compete: ['speed', 'taboo', 'proverb'],
+  compete: ['memory', 'speed', 'taboo', 'proverb'],
   deceive: ['imposter', 'knowme', 'likely', 'taboo'],
   friends: ['knowme', 'cards', 'likely', 'tod', 'proverb'],
   random: enabledGameIds,

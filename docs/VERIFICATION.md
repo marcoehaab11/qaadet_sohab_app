@@ -87,3 +87,7 @@ M2 screens and live-session coordination, integrating the already tested engine 
 
 - Standalone and session routes, reveal and first-correct scoring are implemented. Unit tests cover scoring only once, absent players and an unanswered proverb.
 - `npm run check`: strict TypeScript, ESLint, 59 Jest tests and content lint passed. Release content lint still fails as intended for missing volume and human approval.
+
+## M7 Memory Battle preview — 2026-09-30
+
+- Both question modes, deterministic board generation, single scoring, absent-player handling and round completion have unit coverage. TypeScript, ESLint, 61 Jest tests and content lint passed before the final absent-player guard; rechecked after it.

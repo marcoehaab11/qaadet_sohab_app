@@ -51,3 +51,8 @@
 - Began v1.1 gameplay while the independent M6 editorial and device QA gates remain open. `release.version` is `1.1-preview`; it does not set the native store version.
 - Added a 16-item draft proverb pack, pure reducer, standalone and session route. The first correct player receives +1 and one `elder` stat; an unanswered proverb gives no points. Draws use the shared persisted anti-repeat pool.
 - The proverb pack is short of its 120-item target and has no two-person approval. This implementation is a development preview, not a release claim.
+
+## 2026-09-30 — M7 memory preview
+
+- Memory Battle generates its emoji board, target and answer options from the session seed, alternating position and missing-symbol questions. It has configurable 6/9/12 symbols, 3/5/8 second look time, and 1/2/3 turns per player.
+- The board disappears when the look timer ends; every answer reveals the full board. The correct active player receives +1 and one `mem` stat. No content pack or network request is needed.

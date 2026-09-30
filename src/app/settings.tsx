@@ -19,6 +19,9 @@ const configOptions: { game: GameId; key: string; choices: number[] }[] = [
   { game: 'speed', key: 'challenges', choices: [3, 5, 8] },
   { game: 'knowme', key: 'subjects', choices: [2, 3, 5] },
   { game: 'proverb', key: 'rounds', choices: [4, 6, 10] },
+  { game: 'memory', key: 'time', choices: [3, 5, 8] },
+  { game: 'memory', key: 'turns', choices: [1, 2, 3] },
+  { game: 'memory', key: 'difficulty', choices: [6, 9, 12] },
 ];
 export default function SettingsScreen() {
   const settings = useApp((s) => s.data.settings);

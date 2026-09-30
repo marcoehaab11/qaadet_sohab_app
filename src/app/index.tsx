@@ -21,6 +21,7 @@ const icons: Record<GameId, string> = {
   speed: '⚡',
   knowme: '🫶',
   proverb: '📜',
+  memory: '🧠',
 };
 const accents = [
   '#d3b4ff',
@@ -32,6 +33,7 @@ const accents = [
   '#ffda70',
   '#f6b9e0',
   '#ffd766',
+  '#b9eeab',
 ];
 const vibeIcons: Record<Vibe, string> = {
   laugh: '😂',
@@ -55,6 +57,7 @@ export default function Home() {
   const startStandaloneSpeed = useSession((s) => s.startStandaloneSpeed);
   const startStandaloneImposter = useSession((s) => s.startStandaloneImposter);
   const startStandaloneProverb = useSession((s) => s.startStandaloneProverb);
+  const startStandaloneMemory = useSession((s) => s.startStandaloneMemory);
   const { fontScale } = useWindowDimensions();
   const expandedVibes = data.settings.largeText || fontScale > 1.1;
   const season = activeSeason();
@@ -213,6 +216,9 @@ export default function Home() {
               } else if (id === 'proverb' && (!session || session.finished)) {
                 startStandaloneProverb();
                 router.push('/game/proverb');
+              } else if (id === 'memory' && (!session || session.finished)) {
+                startStandaloneMemory();
+                router.push('/game/memory');
               } else setSelected(id);
             }}
             style={[

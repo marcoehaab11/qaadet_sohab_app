@@ -25,6 +25,7 @@ const defaults = (): SavedData => ({
     speed: { challenges: 5 },
     knowme: { subjects: 3 },
     proverb: { rounds: 6 },
+    memory: { time: 5, turns: 1, difficulty: 9 },
   },
   customDecks: {},
   used: {},
