@@ -9,6 +9,7 @@ import { loadContent, packs } from '../../content/loader';
 import { drawFromPack } from '../../content/draw';
 import { speedReducer } from '../../games/speed/reducer';
 import { playerColor, theme } from '../../theme';
+import { teamsActive } from '../../engine/teams';
 
 export default function Speed() {
   const data = useApp((s) => s.data);
@@ -21,6 +22,7 @@ export default function Speed() {
   const undo = useSession((s) => s.undo);
   const advance = useSession((s) => s.advance);
   const participants = players.map((p) => ({ ...p, away: away.includes(p.id) }));
+  const teamMode = teamsActive(participants, data.settings.teams);
 
   if (!state)
     return (
@@ -36,7 +38,7 @@ export default function Speed() {
     else router.replace('/results');
   };
   const dispatch = (action: Parameters<typeof speedReducer>[1]) => {
-    const result = speedReducer(state, action, participants);
+    const result = speedReducer(state, action, participants, teamMode);
     setState(result.state);
     if (result.changes.length || result.stats.length) award(result.changes, result.stats);
     if (result.finished) finish();
@@ -80,13 +82,17 @@ export default function Speed() {
             <Text style={styles.muted}>{ar.speedTap}</Text>
           </Panel>
           <View style={[styles.row, { alignItems: 'stretch' }]}>
-            {participants
-              .filter((p) => !p.away && !state.excludedIds.includes(p.id))
+            {(teamMode
+              ? ([0, 1] as const).map((team) => participants.find((p) =>
+                  !p.away && p.team === team &&
+                  !state.excludedIds.some((id) => participants.find((other) => other.id === id)?.team === team)))
+                  .filter((p): p is (typeof participants)[number] => !!p)
+              : participants.filter((p) => !p.away && !state.excludedIds.includes(p.id)))
               .map((p) => (
                 <Pressable
                   key={p.id}
                   accessibilityRole="button"
-                  accessibilityLabel={`${ar.speedBuzz} ${p.name}`}
+                  accessibilityLabel={`${ar.speedBuzz} ${teamMode ? ar.teamNames[p.team!] : p.name}`}
                   onPress={() => dispatch({ type: 'buzz', playerId: p.id })}
                   style={{
                     flexBasis: '46%',
@@ -100,7 +106,7 @@ export default function Speed() {
                   }}
                 >
                   <Text style={{ textAlign: 'center', fontFamily: theme.bold, color: theme.night }}>
-                    {p.emoji} {p.name}
+                    {teamMode ? ar.teamNames[p.team!] : `${p.emoji} ${p.name}`}
                   </Text>
                 </Pressable>
               ))}
@@ -127,7 +133,7 @@ export default function Speed() {
       )}
       {state.step === 'result' && (
         <Panel>
-          <Text style={styles.title}>{winner ? ar.speedWinner(winner.name) : ar.speedNobody}</Text>
+          <Text style={styles.title}>{winner ? ar.speedWinner(teamMode ? ar.teamNames[winner.team!] : winner.name) : ar.speedNobody}</Text>
           <Button label={ar.speedNext} onPress={() => dispatch({ type: 'next' })} />
         </Panel>
       )}

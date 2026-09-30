@@ -29,6 +29,8 @@ export default function SettingsScreen() {
   const change = useApp((s) => s.changeSetting);
   const config = useApp((s) => s.data.config);
   const update = useApp((s) => s.update);
+  const reshuffleTeams = useApp((s) => s.reshuffleTeams);
+  const playerCount = useApp((s) => s.data.players.length);
   return (
     <Screen>
       <Text style={styles.title}>{ar.settings}</Text>
@@ -48,6 +50,10 @@ export default function SettingsScreen() {
           </View>
         ))}
       </Panel>
+      {settings.teams && <Panel>
+        {playerCount < 4 && <Text style={styles.muted}>{ar.teamsNeedFour}</Text>}
+        <Button secondary label={ar.reshuffleTeams} onPress={reshuffleTeams} />
+      </Panel>}
       <Text style={styles.title}>{ar.gameSettings}</Text>
       {configOptions.map(({ game, key, choices }) => (
         <Panel key={`${game}:${key}`}>

@@ -1,6 +1,7 @@
 import { Participant, PlayerId, ScoreChange, StatChange } from '../../engine/types';
 import { nextPlayer } from '../../engine/players';
 import { shuffle } from '../../engine/random';
+import { teamsActive } from '../../engine/teams';
 
 export type CharadesState = {
   step: 'pass' | 'reveal' | 'playing' | 'turnEnd';
@@ -51,6 +52,7 @@ export function charadesReducer(
   state: CharadesState,
   action: CharadesAction,
   players: readonly Participant[],
+  teamMode = false,
 ): CharadesResult {
   const result = (
     next: CharadesState,
@@ -70,7 +72,9 @@ export function charadesReducer(
   if (action.type === 'guessed' && state.step === 'playing' && state.actorId) {
     if (
       action.playerId === state.actorId ||
-      !players.some((p) => p.id === action.playerId && !p.away)
+      !players.some((p) => p.id === action.playerId && !p.away) ||
+      (teamsActive(players, teamMode) && players.find((p) => p.id === action.playerId)?.team !==
+        players.find((p) => p.id === state.actorId)?.team)
     )
       return result(state);
     return result(

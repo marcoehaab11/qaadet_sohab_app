@@ -13,6 +13,8 @@ export default function Players() {
   const setAway = useSession((s) => s.setAway);
   const ledger = useSession((s) => s.ledger);
   const award = useSession((s) => s.award);
+  const teams = useApp((s) => s.data.settings.teams);
+  const reshuffleTeams = useApp((s) => s.reshuffleTeams);
   const live = !!session && !session.finished;
   const addJoiningPlayer = () => {
     const active = players.filter((p) => !away.includes(p.id));
@@ -39,6 +41,13 @@ export default function Players() {
           canRemove={players.length > 2 && session?.phase !== 'game'}
         />
       ))}
+      {teams && <>
+        {players.length - away.length < 4 && <Text style={styles.muted}>{ar.teamsNeedFour}</Text>}
+        {players.map((player) => <Text key={`team:${player.id}`}>
+          {player.emoji} {player.name}: {player.team === 0 || player.team === 1 ? ar.teamNames[player.team] : ''}
+        </Text>)}
+        <Button secondary label={ar.reshuffleTeams} onPress={reshuffleTeams} />
+      </>}
       {live &&
         players.map((player) => (
           <Button

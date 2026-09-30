@@ -1,6 +1,7 @@
 import { Participant, PlayerId, ScoreChange, StatChange } from '../../engine/types';
 import { nextPlayer } from '../../engine/players';
 import { shuffle } from '../../engine/random';
+import { teamTurnOrder, teamsActive } from '../../engine/teams';
 
 export type TabooState = {
   step: 'pass' | 'reveal' | 'playing' | 'turnEnd';
@@ -29,18 +30,20 @@ export function createTaboo(
   players: readonly Participant[],
   turnsPerPlayer: number,
   seed: number,
+  teamMode = false,
 ): TabooState {
   const shuffled = shuffle(
     players.filter((p) => !p.away).map((p) => p.id),
     seed,
   );
+  const order = teamsActive(players, teamMode) ? teamTurnOrder(players, seed) : shuffled.items;
   return {
     step: 'pass',
-    order: shuffled.items,
-    actorId: nextPlayer(shuffled.items, null, players),
+    order,
+    actorId: nextPlayer(order, null, players),
     wordId: null,
     completedTurns: 0,
-    maximumTurns: shuffled.items.length * turnsPerPlayer,
+    maximumTurns: order.length * turnsPerPlayer,
     seed: shuffled.seed,
   };
 }

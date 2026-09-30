@@ -61,3 +61,9 @@
 
 - Added easy, hard and mixed word pools. Hard words are abstract concepts in a separate draft pack; the easy pool includes the existing base and custom words. Settings store the choice as 0/1/2 under the existing numeric game config schema.
 - The content report now splits the original 300-word target into 200 easy and 100 hard. Current counts are 18 and 12. The hard pack remains unreviewed, and the seasonal words remain available in easy/mixed mode during their season.
+
+## 2026-09-30 — M7 teams preview
+
+- Added a saved teams toggle and reshuffle control. Four or more active players form two balanced random teams; the three team games are ممنوع تقول, تمثيل and أسرع واحد. Team mode is inactive below four active players.
+- ممنوع تقول interleaves actors from the two teams. تمثيل accepts a guess only from the actor's team. أسرع واحد shows two buzzers and excludes the whole team after a wrong claim. Individual score changes from those games expand to all active teammates; stats remain with the acting player. In تمثيل, actor and guesser each earn a point, so every teammate receives two points on a correct guess.
+- Adding/removing a player reassigns teams for balance. A physical-device session should check team labels and rebalance behavior when participants sit out or rejoin before release.

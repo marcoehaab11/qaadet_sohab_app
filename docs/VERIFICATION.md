@@ -95,3 +95,7 @@ M2 screens and live-session coordination, integrating the already tested engine 
 ## M7 ممنوع تقول difficulty preview — 2026-09-30
 
 - Unit coverage checks easy, hard and mixed pools. `npm run check` passed with 62 Jest tests, strict TypeScript, ESLint and content lint. The 12 hard words require editorial review and expansion to 100.
+
+## M7 teams preview — 2026-09-30
+
+- Tests cover balanced assignment, alternating turns, team penalties, teammate-only تمثيل guesses, and speed team lockout. Native layout and dynamic attendance still need device QA.

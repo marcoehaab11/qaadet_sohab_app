@@ -9,6 +9,7 @@ import { CountdownTimer } from '../../components/CountdownTimer';
 import { loadContent, packs } from '../../content/loader';
 import { drawFromPack } from '../../content/draw';
 import { charadesReducer } from '../../games/charades/reducer';
+import { teamsActive } from '../../engine/teams';
 
 export default function Charades() {
   const data = useApp((s) => s.data);
@@ -21,6 +22,7 @@ export default function Charades() {
   const undo = useSession((s) => s.undo);
   const advance = useSession((s) => s.advance);
   const participants = players.map((p) => ({ ...p, away: away.includes(p.id) }));
+  const teamMode = teamsActive(participants, data.settings.teams);
 
   if (!state)
     return (
@@ -36,7 +38,7 @@ export default function Charades() {
     else router.replace('/results');
   };
   const dispatch = (action: Parameters<typeof charadesReducer>[1]) => {
-    const result = charadesReducer(state, action, participants);
+    const result = charadesReducer(state, action, participants, teamMode);
     setState(result.state);
     if (result.changes.length || result.stats.length) award(result.changes, result.stats);
     if (result.finished) finish();
@@ -93,8 +95,10 @@ export default function Charades() {
           <Panel>
             <Text style={styles.title}>{ar.charadesActing}</Text>
             <Text style={styles.muted}>{ar.charadesHidden}</Text>
+            {teamMode && <Text style={styles.muted}>{ar.charadesTeamHint}</Text>}
             {participants
-              .filter((p) => !p.away && p.id !== state.actorId)
+              .filter((p) => !p.away && p.id !== state.actorId &&
+                (!teamMode || p.team === actor?.team))
               .map((p) => (
                 <Button
                   key={p.id}

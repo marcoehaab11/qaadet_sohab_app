@@ -1,4 +1,5 @@
 import { Participant, PlayerId, ScoreChange, StatChange } from '../../engine/types';
+import { teamsActive } from '../../engine/teams';
 
 export type SpeedState = {
   step: 'ready' | 'countdown' | 'buzz' | 'confirm' | 'result';
@@ -41,6 +42,7 @@ export function speedReducer(
   state: SpeedState,
   action: SpeedAction,
   players: readonly Participant[],
+  teamMode = false,
 ): SpeedResult {
   const result = (
     next: SpeedState,
@@ -59,6 +61,8 @@ export function speedReducer(
   if (action.type === 'buzz' && state.step === 'buzz') {
     if (
       state.excludedIds.includes(action.playerId) ||
+      (teamsActive(players, teamMode) && state.excludedIds.some((id) =>
+        players.find((p) => p.id === id)?.team === players.find((p) => p.id === action.playerId)?.team)) ||
       !players.some((p) => p.id === action.playerId && !p.away)
     )
       return result(state);

@@ -31,7 +31,7 @@ test('saved custom decks reject malformed entries', () => {
   const saved: SavedData = {
     schemaVersion: 1,
     players: ['a', 'b'].map((id) => ({ id, name: id, emoji: '😀', color: '#ffffff' })),
-    settings: { sound: true, hold: true, family: false, largeText: false, clearColors: false },
+    settings: { sound: true, hold: true, family: false, largeText: false, clearColors: false, teams: false },
     config: {}, customDecks: decks, used: {}, completedSessions: 0, onboardingDone: true,
     reviewAskedVersion: null, lastSetup: { vibe: 'laugh', length: 3 },
   };

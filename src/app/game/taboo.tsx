@@ -10,6 +10,7 @@ import { loadContent, packs } from '../../content/loader';
 import { drawFromPack } from '../../content/draw';
 import { tabooReducer } from '../../games/taboo/reducer';
 import { theme } from '../../theme';
+import { teamsActive } from '../../engine/teams';
 
 export default function Taboo() {
   const data = useApp((s) => s.data);
@@ -22,6 +23,7 @@ export default function Taboo() {
   const undo = useSession((s) => s.undo);
   const advance = useSession((s) => s.advance);
   const participants = players.map((p) => ({ ...p, away: away.includes(p.id) }));
+  const teamMode = teamsActive(participants, data.settings.teams);
 
   if (!state)
     return (
@@ -85,6 +87,7 @@ export default function Taboo() {
       {state.step === 'reveal' && word && (
         <Panel>
           <Text style={styles.title}>{ar.tabooSecret}</Text>
+          {teamMode && <Text style={styles.muted}>{ar.tabooTeamHint}</Text>}
           <HoldToReveal
             secret={`${word.text}\n${ar.tabooForbidden}: ${forbidden.join('، ')}`}
             enabled={data.settings.hold}

@@ -231,6 +231,8 @@ export default function Home() {
           >
             <Text style={{ fontSize: 38, lineHeight: 54 }}>{icons[id]}</Text>
             <Text style={local.cardName}>{ar.games[id].name}</Text>
+            {data.settings.teams && ['taboo', 'charades', 'speed'].includes(id) &&
+              <Text style={local.cardDesc}>{ar.teamBadge}</Text>}
             <Text style={local.cardDesc}>{ar.games[id].desc}</Text>
             <Text style={local.cardMeta}>{ar.minPlayers(minPlayers[id])}</Text>
           </Pressable>

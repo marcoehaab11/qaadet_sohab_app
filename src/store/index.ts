@@ -4,6 +4,7 @@ import { create } from 'zustand';
 import { ar } from '../i18n/ar-EG';
 import { avatars, colors } from '../theme';
 import { Player } from '../engine/types';
+import { assignTeams } from '../engine/teams';
 import { SavedData, Settings, migrateSaved, serializeSaved, storageKey } from './persistence';
 
 const defaults = (): SavedData => ({
@@ -14,7 +15,7 @@ const defaults = (): SavedData => ({
     emoji: avatars[i]!,
     color: colors[i]!,
   })),
-  settings: { sound: true, hold: true, family: false, largeText: false, clearColors: false },
+  settings: { sound: true, hold: true, family: false, largeText: false, clearColors: false, teams: false },
   config: {
     imposter: { time: 120 },
     cards: { cards: 8, time: 20 },
@@ -42,6 +43,7 @@ type Store = {
   hydrate: () => Promise<void>;
   update: (fn: (data: SavedData) => SavedData) => void;
   changeSetting: (key: keyof Settings) => void;
+  reshuffleTeams: () => void;
   updatePlayer: (id: string, change: Partial<Pick<Player, 'name' | 'emoji'>>) => void;
   addPlayer: () => void;
   removePlayer: (id: string) => void;
@@ -76,10 +78,15 @@ export const useApp = create<Store>((set, get) => ({
       });
   },
   changeSetting: (key) =>
-    get().update((data) => ({
-      ...data,
-      settings: { ...data.settings, [key]: !data.settings[key] },
-    })),
+    get().update((data) => {
+      const enabled = !data.settings[key];
+      return {
+        ...data,
+        settings: { ...data.settings, [key]: enabled },
+        players: key === 'teams' && enabled ? assignTeams(data.players, Date.now()) : data.players,
+      };
+    }),
+  reshuffleTeams: () => get().update((data) => ({ ...data, players: assignTeams(data.players, Date.now()) })),
   updatePlayer: (id, change) =>
     get().update((data) => ({
       ...data,
@@ -88,9 +95,8 @@ export const useApp = create<Store>((set, get) => ({
   addPlayer: () => {
     const n = get().data.players.length;
     if (n >= 8) return;
-    get().update((data) => ({
-      ...data,
-      players: [
+    get().update((data) => {
+      const players = [
         ...data.players,
         {
           id: Crypto.randomUUID(),
@@ -98,12 +104,16 @@ export const useApp = create<Store>((set, get) => ({
           emoji: avatars[n]!,
           color: colors[n]!,
         },
-      ],
-    }));
+      ];
+      return { ...data, players: data.settings.teams ? assignTeams(players, Date.now()) : players };
+    });
   },
   removePlayer: (id) => {
     if (get().data.players.length > 2)
-      get().update((data) => ({ ...data, players: data.players.filter((p) => p.id !== id) }));
+      get().update((data) => {
+        const players = data.players.filter((p) => p.id !== id);
+        return { ...data, players: data.settings.teams ? assignTeams(players, Date.now()) : players };
+      });
   },
   notify: (toast) => set({ toast }),
 }));

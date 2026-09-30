@@ -13,6 +13,7 @@ export const settingsSchema = z.object({
   family: z.boolean(),
   largeText: z.boolean(),
   clearColors: z.boolean(),
+  teams: z.boolean().default(false),
 });
 export const savedSchema = z.object({
   schemaVersion: z.literal(1),

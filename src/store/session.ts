@@ -20,6 +20,7 @@ import { SpeedState, createSpeed } from '../games/speed/reducer';
 import { ImposterState, createImposter } from '../games/imposter/reducer';
 import { ProverbState, createProverb } from '../games/proverb/reducer';
 import { MemoryState, createMemory } from '../games/memory/reducer';
+import { expandTeamPoints, teamsActive } from '../engine/teams';
 import { useApp } from './index';
 // Ephemeral by design: scores, counters, undo and sit-out state never reach AsyncStorage.
 type SessionStore = {
@@ -195,6 +196,7 @@ export const useSession = create<SessionStore>((set, get) => ({
         data.players.map((p) => ({ ...p, away: false })),
         data.config.taboo?.turns ?? 1,
         Date.now(),
+        data.settings.teams,
       ),
     });
   },
@@ -325,7 +327,8 @@ export const useSession = create<SessionStore>((set, get) => ({
           : null,
       tabooGame:
         currentGame(session) === 'taboo'
-          ? createTaboo(participants, useApp.getState().data.config.taboo?.turns ?? 1, session.seed)
+          ? createTaboo(participants, useApp.getState().data.config.taboo?.turns ?? 1, session.seed,
+              useApp.getState().data.settings.teams)
           : null,
       charadesGame:
         currentGame(session) === 'charades'
@@ -367,8 +370,14 @@ export const useSession = create<SessionStore>((set, get) => ({
     return true;
   },
   award: (changes, stats = []) => {
-    set({ ledger: addPoints(get().ledger, changes, stats) });
     const players = useApp.getState().data.players;
+    const participants = players.map((player) => ({ ...player, away: get().away.includes(player.id) }));
+    const game = get().session?.phase === 'game' ? currentGame(get().session!)
+      : get().tabooGame ? 'taboo' : get().charadesGame ? 'charades' : get().speedGame ? 'speed' : null;
+    if (game && ['taboo', 'charades', 'speed'].includes(game) &&
+      teamsActive(participants, useApp.getState().data.settings.teams))
+      changes = expandTeamPoints(changes, participants);
+    set({ ledger: addPoints(get().ledger, changes, stats) });
     const message =
       changes.length > 2
         ? ar.awardsCount(changes.length)
