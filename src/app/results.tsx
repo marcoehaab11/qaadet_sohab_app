@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Platform } from 'react-native';
 import { router } from 'expo-router';
 import Constants from 'expo-constants';
@@ -10,12 +10,17 @@ import { ar } from '../i18n/ar-EG';
 import { Button, Panel, Screen, styles, Text } from '../components/ui';
 import { Scoreboard } from '../components/Scoreboard';
 import { eligibleForReview } from '../engine/review';
+import { lowestScorers, sessionAwards } from '../engine/awards';
+import { random } from '../engine/random';
+import punishments from '../content/punishments.json';
 
 let reviewPending = false;
 export default function Results() {
   const players = useApp((s) => s.data.players);
   const away = useSession((s) => s.away);
   const ledger = useSession((s) => s.ledger);
+  const session = useSession((s) => s.session);
+  const [redraw, setRedraw] = useState(0);
   const reset = useSession((s) => s.reset);
   const completedSessions = useApp((s) => s.data.completedSessions);
   const askedVersion = useApp((s) => s.data.reviewAskedVersion);
@@ -45,6 +50,11 @@ export default function Results() {
     players.filter((p) => !away.includes(p.id)).map((p) => p.id),
     ledger,
   );
+  const activeIds = players.filter((player) => !away.includes(player.id)).map((player) => player.id);
+  const awards = sessionAwards(activeIds, ledger);
+  const losers = lowestScorers(activeIds, ledger);
+  const loser = losers.length ? losers[Math.floor(random(session?.seed ?? 1).value * losers.length)] : null;
+  const punishment = punishments[Math.floor(random((session?.seed ?? 1) + redraw + 997).value * punishments.length)];
   return (
     <Screen>
       <Text style={styles.title}>{ar.sessionDone}</Text>
@@ -63,6 +73,17 @@ export default function Results() {
         players={players.map((p) => ({ ...p, away: away.includes(p.id) }))}
         scores={ledger.scores}
       />
+      {session?.finished && awards.length > 0 && <Panel>
+        <Text style={styles.title}>{ar.awardsTitle}</Text>
+        {awards.map((award) => <Text key={award.stat}>
+          {ar.awardNames[award.stat]} · {award.playerIds.map((id) => players.find((player) => player.id === id)?.name).join('، ')}
+        </Text>)}
+      </Panel>}
+      {session?.finished && loser && <Panel>
+        <Text style={styles.title}>{ar.punishmentTitle}</Text>
+        <Text>{players.find((player) => player.id === loser)?.name}: {punishment}</Text>
+        <Button secondary label={ar.punishmentAgain} onPress={() => setRedraw((value) => value + 1)} />
+      </Panel>}
       <Button
         label={ar.newSession}
         onPress={() => {

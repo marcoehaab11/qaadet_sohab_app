@@ -72,3 +72,8 @@
 
 - Used `react-native-svg` for the drawing canvas because Expo SDK 57 includes it in Expo Go. Touch handling uses React Native's View responder events; the SVG ignores touches so canvas coordinates stay relative to its container. The canvas offers four colors, an eraser and clear.
 - Added 20 draft words and a pure turn/scoring reducer. The artist sees the word through HoldToReveal before drawing; during drawing the word is hidden. The artist and first correct guesser receive +1 each. The 200-word target, editorial review and physical-device touch QA remain open.
+
+## 2026-09-30 — M8 results preview
+
+- Results now derive up to six awards from the session's in-memory stat counters, showing two names for a tie. The lowest active scorer receives a light punishment card from a validated 20-item local list; a redraw changes the card while keeping the same chosen player.
+- These results are shown only for a finished multi-game session. History and sharing are separate M8 work; no result is sent to another app yet.

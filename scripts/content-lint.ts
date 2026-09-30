@@ -14,6 +14,12 @@ if (!parsed.success) {
   process.exit(1);
 }
 const banned = ['كحول', 'مخدرات', 'انتحار', 'اشرب خمرة'];
+const punishments = JSON.parse(fs.readFileSync('src/content/punishments.json', 'utf8')) as unknown;
+if (!Array.isArray(punishments) || punishments.length !== 20 ||
+  punishments.some((item) => typeof item !== 'string' || !item.trim() || item.length > 90 ||
+    banned.some((word) => item.includes(word)))) {
+  console.error('Invalid punishment cards'); process.exit(1);
+}
 const targets: Record<string, number> = {
   'base-taboo': 200,
   'base-taboo-hard': 100,
