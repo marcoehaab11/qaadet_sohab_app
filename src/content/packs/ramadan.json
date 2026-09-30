@@ -1,0 +1,87 @@
+[
+  {
+    "id": "ramadan-imposter", "version": 1, "locale": "ar-EG", "game": "imposter", "season": "ramadan", "tier": "free",
+    "items": [
+      {"id":"ramadan-imposter-001","text":"فانوس رمضان","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-002","text":"مدفع الإفطار","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-003","text":"المسحراتي","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-004","text":"طبق تمر","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-005","text":"صينية قطايف","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-006","text":"زينة الشارع","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-007","text":"لمة السحور","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-008","text":"كوباية خشاف","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-009","text":"طبق ياميش","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-010","text":"مائدة الرحمن","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-011","text":"عزومة فطار","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-012","text":"هلال رمضان","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-013","text":"مسلسل بعد الفطار","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-014","text":"فوانيس ورق","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-015","text":"صلاة التراويح","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-016","text":"طابور الكنافة","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-017","text":"تمر هندي","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-018","text":"سجادة صلاة","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-019","text":"عربية فول السحور","category":"🌙 رمضان"},
+      {"id":"ramadan-imposter-020","text":"ساعة قبل المغرب","category":"🌙 رمضان"}
+    ]
+  },
+  {
+    "id": "ramadan-likely", "version": 1, "locale": "ar-EG", "game": "likely", "season": "ramadan", "tier": "free",
+    "items": [
+      {"id":"ramadan-likely-001","text":"مين غالبًا يجهز السفرة قبل الكل؟"},
+      {"id":"ramadan-likely-002","text":"مين غالبًا يسأل عن الحلويات قبل الفطار؟"},
+      {"id":"ramadan-likely-003","text":"مين غالبًا يعرف مواعيد كل المسلسلات؟"},
+      {"id":"ramadan-likely-004","text":"مين غالبًا يعمل أحلى عصير على الفطار؟"},
+      {"id":"ramadan-likely-005","text":"مين غالبًا ينام قبل السحور بدقايق؟"},
+      {"id":"ramadan-likely-006","text":"مين غالبًا يفتكر زينة رمضان من السنة اللي فاتت؟"},
+      {"id":"ramadan-likely-007","text":"مين غالبًا يختار مكان عزومة الفطار؟"},
+      {"id":"ramadan-likely-008","text":"مين غالبًا يحط تمر زيادة في شنطته؟"},
+      {"id":"ramadan-likely-009","text":"مين غالبًا يطلب قطايف بدل الكنافة؟"},
+      {"id":"ramadan-likely-010","text":"مين غالبًا يضبط المنبه للسحور لكل الشلة؟"},
+      {"id":"ramadan-likely-011","text":"مين غالبًا يصور السفرة قبل ما حد يبدأ؟"},
+      {"id":"ramadan-likely-012","text":"مين غالبًا يساعد في لمّ السفرة من غير ما حد يقوله؟"},
+      {"id":"ramadan-likely-013","text":"مين غالبًا يعرف أحسن مكان للكنافة؟"},
+      {"id":"ramadan-likely-014","text":"مين غالبًا ينسى فين حط الفانوس؟"},
+      {"id":"ramadan-likely-015","text":"مين غالبًا يختار لعبة بعد الفطار؟"}
+    ]
+  },
+  {
+    "id": "ramadan-charades", "version": 1, "locale": "ar-EG", "game": "charades", "season": "ramadan", "tier": "free",
+    "items": [
+      {"id":"ramadan-charades-001","text":"حد بيعلّق زينة رمضان وكل شوية العقدة تفك"},
+      {"id":"ramadan-charades-002","text":"حد بيدور على الفانوس في الدولاب"},
+      {"id":"ramadan-charades-003","text":"حد بيقلب القطايف من غير ما تقع"},
+      {"id":"ramadan-charades-004","text":"حد بيسمع مدفع الإفطار وبيجري للسفرة"},
+      {"id":"ramadan-charades-005","text":"حد بيصحّي صاحبه للسحور وهو مش راضي يقوم"},
+      {"id":"ramadan-charades-006","text":"حد بيختار مسلسل والقعدة كلها مختلفة عليه"},
+      {"id":"ramadan-charades-007","text":"حد بيعد كوبايات العصير للضيوف"},
+      {"id":"ramadan-charades-008","text":"حد شايل صينية كنافة وبيحاول يوازنها"},
+      {"id":"ramadan-charades-009","text":"حد بيصور سفرة الفطار من كل زاوية"},
+      {"id":"ramadan-charades-010","text":"حد بيجهز شنطة عزومة ومش لاقي المفتاح"},
+      {"id":"ramadan-charades-011","text":"حد بيزين فانوس صغير بالألوان"},
+      {"id":"ramadan-charades-012","text":"حد بيشم ريحة الأكل وبيحاول يعرف الطبخة"},
+      {"id":"ramadan-charades-013","text":"حد بيفتح علبة ياميش وبيختار أول حاجة"},
+      {"id":"ramadan-charades-014","text":"حد بيرتب الكراسي لضيف جاي على الفطار"},
+      {"id":"ramadan-charades-015","text":"حد بيحاول يفتح زجاجة عصير عنيدة"}
+    ]
+  },
+  {
+    "id": "ramadan-taboo", "version": 1, "locale": "ar-EG", "game": "taboo", "season": "ramadan", "tier": "free",
+    "items": [
+      {"id":"ramadan-taboo-001","text":"فانوس رمضان","forbidden":["نور","زينة","لمبة"],"level":"easy"},
+      {"id":"ramadan-taboo-002","text":"مدفع الإفطار","forbidden":["صوت","مغرب","ضرب"],"level":"easy"},
+      {"id":"ramadan-taboo-003","text":"مسحراتي","forbidden":["طبلة","ليل","صحيان"],"level":"easy"},
+      {"id":"ramadan-taboo-004","text":"ياميش","forbidden":["مكسرات","فواكه","طبق"],"level":"easy"},
+      {"id":"ramadan-taboo-005","text":"خشاف","forbidden":["عصير","تمر","كوباية"],"level":"easy"},
+      {"id":"ramadan-taboo-006","text":"تراويح","forbidden":["صلاة","ليل","مسجد"],"level":"easy"},
+      {"id":"ramadan-taboo-007","text":"إمساكية","forbidden":["مواعيد","فجر","مغرب"],"level":"easy"},
+      {"id":"ramadan-taboo-008","text":"تمر هندي","forbidden":["مشروب","عصير","حامض"],"level":"easy"},
+      {"id":"ramadan-taboo-009","text":"قمر الدين","forbidden":["مشمش","عصير","لفة"],"level":"easy"},
+      {"id":"ramadan-taboo-010","text":"مائدة الرحمن","forbidden":["فطار","شارع","أكل"],"level":"easy"},
+      {"id":"ramadan-taboo-011","text":"عزومة فطار","forbidden":["ضيوف","سفرة","بيت"],"level":"easy"},
+      {"id":"ramadan-taboo-012","text":"هلال","forbidden":["قمر","سما","شهر"],"level":"easy"},
+      {"id":"ramadan-taboo-013","text":"زينة رمضان","forbidden":["ورق","شارع","فوانيس"],"level":"easy"},
+      {"id":"ramadan-taboo-014","text":"سفرة السحور","forbidden":["فول","ليل","أكل"],"level":"easy"},
+      {"id":"ramadan-taboo-015","text":"طابور الكنافة","forbidden":["محل","حلو","انتظار"],"level":"easy"}
+    ]
+  }
+]

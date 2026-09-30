@@ -1,12 +1,18 @@
 import seed from './packs/seed.json';
+import ramadan from './packs/ramadan.json';
 import { packSchema } from './schema';
 import { isPackAvailable } from '../entitlements';
 import { GameId } from '../config/release';
 import { CustomDecks, customContent } from './custom';
-export const packs = packSchema.array().parse(seed);
-export function loadContent(game: GameId, family = false, customDecks: CustomDecks = {}) {
+import { detectSeason, Season } from './seasons';
+export const packs = packSchema.array().parse([...seed, ...ramadan]);
+export function activeSeason(date = new Date()): Season | null {
+  const detected = detectSeason(date);
+  return detected && packs.some((pack) => pack.season === detected) ? detected : null;
+}
+export function loadContent(game: GameId, family = false, customDecks: CustomDecks = {}, season: Season | null = activeSeason()) {
   const base = packs
-    .filter((pack) => pack.game === game && isPackAvailable(pack))
+    .filter((pack) => pack.game === game && (!pack.season || pack.season === season) && isPackAvailable(pack))
     .flatMap((pack) => pack.items);
   const custom = game === 'tod'
     ? [...customContent('truth', customDecks), ...customContent('dare', customDecks)]

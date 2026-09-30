@@ -1,7 +1,10 @@
 import fs from 'node:fs';
 import { packSchema } from '../src/content/schema';
 import { Approval, approvedPack, packHash } from './content-review';
-const raw: unknown = JSON.parse(fs.readFileSync('src/content/packs/seed.json', 'utf8'));
+const raw: unknown = [
+  ...JSON.parse(fs.readFileSync('src/content/packs/seed.json', 'utf8')),
+  ...JSON.parse(fs.readFileSync('src/content/packs/ramadan.json', 'utf8')),
+];
 const parsed = packSchema.array().safeParse(raw);
 if (!parsed.success) {
   console.error(parsed.error.issues);
@@ -18,6 +21,10 @@ const targets: Record<string, number> = {
   'base-undercover': 80,
   'base-knowme': 80,
   'base-speed': 60,
+  'ramadan-imposter': 20,
+  'ramadan-likely': 15,
+  'ramadan-charades': 15,
+  'ramadan-taboo': 15,
 };
 const reviews = JSON.parse(fs.readFileSync('docs/content-reviews.json', 'utf8')) as {
   schemaVersion: number;

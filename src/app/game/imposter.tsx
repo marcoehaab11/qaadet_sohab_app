@@ -6,7 +6,7 @@ import { Button, Panel, Screen, styles, Text } from '../../components/ui';
 import { PassPhoneScreen } from '../../components/PassPhoneScreen';
 import { HoldToReveal } from '../../components/HoldToReveal';
 import { CountdownTimer } from '../../components/CountdownTimer';
-import { packs } from '../../content/loader';
+import { activeSeason, loadContent, packs } from '../../content/loader';
 import { customContent } from '../../content/custom';
 import { drawFromPack } from '../../content/draw';
 import { shuffle } from '../../engine/random';
@@ -14,9 +14,6 @@ import { imposterReducer } from '../../games/imposter/reducer';
 
 const classicPack = packs.find((p) => p.id === 'base-imposter')!;
 const undercoverPack = packs.find((p) => p.id === 'base-undercover')!;
-const categories = [
-  ...new Set(classicPack.items.map((item) => item.category).filter(Boolean)),
-] as string[];
 
 export default function Imposter() {
   const data = useApp((s) => s.data);
@@ -39,10 +36,11 @@ export default function Imposter() {
 
   const pack = state.mode === 'undercover' ? undercoverPack : classicPack;
   const customWords = data.customDecks.imposter?.length ?? 0;
-  const classicItems = [...classicPack.items,
-    ...(customWords >= 3 ? customContent('imposter', data.customDecks) : [])];
-  const availableCategories = customWords >= 3 ? [...categories, '🫶 كلمات الشلة'] : categories;
-  const word = (state.mode === 'undercover' ? undercoverPack.items : classicItems)
+  const classicItems = loadContent('imposter', data.settings.family, data.customDecks, activeSeason())
+    .filter((item) => !item.pair && (item.source !== 'custom' || customWords >= 3));
+  const availableCategories = [...new Set(classicItems.map((item) => item.category).filter(Boolean))] as string[];
+  const word = [...packs.filter((p) => p.game === 'imposter').flatMap((p) => p.items),
+    ...customContent('imposter', data.customDecks)]
     .find((item) => item.id === state.wordId);
   const finish = () => {
     advance();

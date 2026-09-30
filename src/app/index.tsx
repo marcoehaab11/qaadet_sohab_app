@@ -10,6 +10,7 @@ import { Vibe } from '../engine/queue';
 import { useSession } from '../store/session';
 import { currentGame } from '../engine/session';
 import { playableRoutes } from '../config/playable';
+import { activeSeason } from '../content/loader';
 const icons: Record<GameId, string> = {
   imposter: '🕵️',
   cards: '🃏',
@@ -53,6 +54,7 @@ export default function Home() {
   const startStandaloneImposter = useSession((s) => s.startStandaloneImposter);
   const { fontScale } = useWindowDimensions();
   const expandedVibes = data.settings.largeText || fontScale > 1.1;
+  const season = activeSeason();
   useEffect(() => {
     if (!data.onboardingDone) router.replace('/onboarding');
   }, [data.onboardingDone]);
@@ -77,6 +79,9 @@ export default function Home() {
       </View>
       {data.settings.family && <View style={local.badge}>
         <Text style={{ color: theme.gold, fontSize: 12 }}>👨‍👩‍👧 قعدة عائلية</Text>
+      </View>}
+      {season && <View style={local.badge}>
+        <Text style={{ color: theme.gold, fontSize: 12 }}>{ar.seasons[season]}</Text>
       </View>}
       <Text style={styles.muted}>{ar.preview}</Text>
       <View>

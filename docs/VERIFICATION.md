@@ -77,3 +77,8 @@ M2 screens and live-session coordination, integrating the already tested engine 
 
 - Normal `npm run check` passes with 55 tests. The explicit release check fails as intended: all nine packs are below target and have no two-person approval.
 - Content lint now detects duplicate IDs across packs, reports full per-pack hashes, and invalidates an approval when pack contents change. The approval manifest is empty until two real reviewers complete the process in `docs/CONTENT_REVIEW.md`.
+
+## Ramadan pack checkpoint — 2026-09-30
+
+- Added 20 Imposter words and 15 each for Likely, Charades and ممنوع تقول. Content lint validates all four packs and reports their full hashes; editorial approval remains open.
+- Unit tests cover Ramadan/Eid/Gregorian season priority, Intl fallback conversion, availability of the Ramadan content, and exclusion outside its season. TypeScript, lint and 57 tests passed.

@@ -19,6 +19,7 @@ export const packSchema = z
     version: z.number().int().positive(),
     locale: z.literal('ar-EG'),
     game: z.enum(enabledGameIds),
+    season: z.enum(['ramadan', 'eid', 'sahel', 'exams']).optional(),
     tier: z.enum(['free', 'premium']),
     items: z.array(itemSchema).min(1),
   })

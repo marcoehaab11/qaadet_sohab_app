@@ -39,3 +39,9 @@
 - Added تمثيل with a private scene that disappears once the timer starts, first-guesser selection, and a single scoring action for the actor and guesser. It uses the same in-memory timer limitations until native device QA.
 - Added أسرع واحد with a three-second countdown, one large colored buzzer per active player, first-tap lock, host confirmation, temporary exclusion after a wrong answer, and +1 for a correct answer.
 - Added Imposter classic and undercover with private role reveals, one or two imposters where eligible, category selection, discussion timer, exact-count suspect vote, escape/caught scoring, joint word guess, and another round. The mode is a local single-phone game; secret visibility and TalkBack behavior need native device QA.
+
+## 2026-09-30 — M6 Ramadan pack
+
+- Added the 65-item Ramadan pack separately from the prototype seed, so re-importing the original demo does not overwrite new content. Items are drafts until two human reviewers approve the pack hashes.
+- Season detection first checks whether the runtime truly resolves `islamic-umalqura` in `Intl`; if not, it uses the local, zero-dependency `@tabby_ai/hijri-converter` table. The converter supports a bounded date range and returns no religious season outside it. No network calendar request is made.
+- Detection knows Eid, Sahel, and Exams, but only Ramadan activates a pack now. The remaining seasons and manual override belong to M9. For local religious observance, a manual choice will be preferable to calculated dates when M9 lands.
