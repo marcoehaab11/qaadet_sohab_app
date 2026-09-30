@@ -142,3 +142,7 @@ M2 screens and live-session coordination, integrating the already tested engine 
 
 - Expanded the hard abstract-word pool from 12 to its 100-item target. Each item has three distinct forbidden terms and passes schema validation. Human editorial review remains open.
 - After both content expansions, `npm run check` passed (82 tests, strict TypeScript, ESLint and content lint) and web/Android JavaScript exports succeeded.
+
+## Speed content expansion — 2026-09-30
+
+- Expanded the quick challenge draft from 12 to its 60-item target with pointing and verbal prompts that can be played from the table. Content lint verifies the pack; human editorial review remains open.
