@@ -2,6 +2,10 @@ import { Participant, PlayerId, ScoreChange, StatChange } from '../../engine/typ
 import { nextPlayer } from '../../engine/players';
 import { shuffle } from '../../engine/random';
 export type DeckId = 'friends' | 'couples' | 'crazy' | 'deep' | 'funny' | 'custom';
+export function availableDeck(deck: DeckId, family: boolean, customCount: number): DeckId {
+  return (family && deck === 'couples') || (deck === 'custom' && customCount === 0)
+    ? 'friends' : deck;
+}
 export type CardsState = {
   deck: DeckId;
   step: 'deck' | 'pass' | 'back' | 'face';

@@ -7,7 +7,14 @@ import {
 } from '../src/engine/session';
 import { addPoints } from '../src/engine/scoring';
 import { emptyLedger, Participant } from '../src/engine/types';
-import { cardsReducer, createCards } from '../src/games/cards/reducer';
+import { availableDeck, cardsReducer, createCards } from '../src/games/cards/reducer';
+
+test('family mode and deleted custom cards fall back to friends deck', () => {
+  expect(availableDeck('couples', true, 0)).toBe('friends');
+  expect(availableDeck('couples', false, 0)).toBe('couples');
+  expect(availableDeck('custom', false, 0)).toBe('friends');
+  expect(availableDeck('custom', true, 1)).toBe('custom');
+});
 const people: Participant[] = ['a', 'b', 'c'].map((id) => ({
   id,
   name: id,

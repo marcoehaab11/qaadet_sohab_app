@@ -71,3 +71,4 @@ M2 screens and live-session coordination, integrating the already tested engine 
 - `npm run check`: 53 Jest tests, strict TypeScript, ESLint and seed lint passed. `npx expo-doctor`: 21/21. `npx expo config --type public --json` resolves the Android ID, icon and splash config. Web/Android JavaScript exports succeeded.
 - Browser preview verified the privacy screen opens from Settings. PNG icon and monochrome Android asset were inspected locally. Native splash, adaptive icon, package permissions and store-review dialog still require a signed device build.
 - `eas config` could not be executed because no Expo account is authenticated here. EAS build/submit, Play Console metadata and Data safety declarations remain unverified.
+- Cards selection now falls back to Friends if Family mode hides Couples or a custom deck is deleted before the next draw; 54 tests, typecheck and lint pass after this edge-case fix.

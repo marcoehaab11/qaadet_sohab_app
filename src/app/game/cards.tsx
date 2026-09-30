@@ -6,7 +6,7 @@ import { Button, Panel, Screen, styles, Text } from '../../components/ui';
 import { PassPhoneScreen } from '../../components/PassPhoneScreen';
 import { loadContent, packs } from '../../content/loader';
 import { drawFromPack } from '../../content/draw';
-import { cardsReducer, DeckId } from '../../games/cards/reducer';
+import { availableDeck, cardsReducer, DeckId } from '../../games/cards/reducer';
 const deckIds: DeckId[] = ['friends', 'couples', 'crazy', 'deep', 'funny'];
 export default function Cards() {
   const players = useApp((s) => s.data.players);
@@ -42,10 +42,11 @@ export default function Cards() {
     if (session && session.index + 1 >= session.queue.length) router.replace('/results');
     else router.replace(session ? '/host' : '/results');
   };
+  const activeDeck = availableDeck(state.deck, family, useApp.getState().data.customDecks.cards?.length ?? 0);
   const flip = () => {
     const pack = packs.find((p) => p.id === 'base-cards')!;
-    const deckItems = loadContent('cards', family, useApp.getState().data.customDecks).filter((item) => item.deck === state.deck);
-    const scopedPack = { ...pack, id: `${pack.id}:${state.deck}`, items: deckItems };
+    const deckItems = loadContent('cards', family, useApp.getState().data.customDecks).filter((item) => item.deck === activeDeck);
+    const scopedPack = { ...pack, id: `${pack.id}:${activeDeck}`, items: deckItems };
     const result = drawFromPack(scopedPack, state.seed);
     dispatch({ type: 'flip', cardId: result.item.id, seed: result.seed });
   };
@@ -75,13 +76,13 @@ export default function Cards() {
             .map((id) => (
               <Button
                 key={id}
-                secondary={state.deck !== id}
+                secondary={activeDeck !== id}
                 label={ar.cardsDecks[id]}
                 onPress={() => dispatch({ type: 'choose', deck: id })}
               />
             ))}
           {(useApp.getState().data.customDecks.cards?.length ?? 0) > 0 && <Button
-            secondary={state.deck !== 'custom'}
+            secondary={activeDeck !== 'custom'}
             label={ar.cardsDecks.custom}
             onPress={() => dispatch({ type: 'choose', deck: 'custom' })}
           />}
