@@ -32,3 +32,9 @@ M2 screens and live-session coordination, integrating the already tested engine 
 - `npm run check`: strict typecheck, ESLint, 39 Jest tests, and seed lint passed. Web and Android JavaScript exports succeeded.
 - Browser preview exercised private answer entry, answer hiding during guesses, reveal, selection of a correct guesser, award of +1, and next subject.
 - Unit tests cover multiple correct guessers, optional answer, absent guesser exclusion, subject exclusion, and absent subject skipping. Physical device QA and four remaining games are open.
+
+## ممنوع تقول checkpoint — 2026-09-30
+
+- `npm run check`: strict typecheck, ESLint, 41 Jest tests, and seed lint passed. Web and Android JavaScript exports succeeded.
+- Browser preview exercised pass-phone, hidden word, timed word view, +1 guessed, -1 forbidden, next word, and time-up transition.
+- Unit tests cover scoring, free word skip, turn rotation, and absent actor skip. Three game screens, physical device timer verification, and full content remain open.

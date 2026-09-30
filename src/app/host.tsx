@@ -42,14 +42,24 @@ export default function Host() {
       <Text style={styles.muted}>{ar.passPhone}</Text>
       <Button
         label={
-          (id === 'cards' || id === 'tod' || id === 'likely' || id === 'knowme') && eligible
+          (id === 'cards' ||
+            id === 'tod' ||
+            id === 'likely' ||
+            id === 'knowme' ||
+            id === 'taboo') &&
+          eligible
             ? ar.playGame
-            : id === 'cards' || id === 'tod' || id === 'likely' || id === 'knowme'
+            : id === 'cards' || id === 'tod' || id === 'likely' || id === 'knowme' || id === 'taboo'
               ? ar.minPlayers(minPlayers[id])
               : ar.gamePreparing
         }
         disabled={
-          (id !== 'cards' && id !== 'tod' && id !== 'likely' && id !== 'knowme') || !eligible
+          (id !== 'cards' &&
+            id !== 'tod' &&
+            id !== 'likely' &&
+            id !== 'knowme' &&
+            id !== 'taboo') ||
+          !eligible
         }
         onPress={() => {
           play();
@@ -60,7 +70,9 @@ export default function Host() {
                 ? '/game/tod'
                 : id === 'likely'
                   ? '/game/likely'
-                  : '/game/knowme',
+                  : id === 'knowme'
+                    ? '/game/knowme'
+                    : '/game/taboo',
           );
         }}
       />

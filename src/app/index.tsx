@@ -46,6 +46,7 @@ export default function Home() {
   const startStandaloneTod = useSession((s) => s.startStandaloneTod);
   const startStandaloneLikely = useSession((s) => s.startStandaloneLikely);
   const startStandaloneKnowMe = useSession((s) => s.startStandaloneKnowMe);
+  const startStandaloneTaboo = useSession((s) => s.startStandaloneTaboo);
   const { fontScale } = useWindowDimensions();
   const expandedVibes = data.settings.largeText || fontScale > 1.1;
   useEffect(() => {
@@ -157,7 +158,9 @@ export default function Home() {
                     ? '/game/likely'
                     : session.phase === 'game' && currentGame(session) === 'knowme'
                       ? '/game/knowme'
-                      : '/host',
+                      : session.phase === 'game' && currentGame(session) === 'taboo'
+                        ? '/game/taboo'
+                        : '/host',
             );
         }}
       />
@@ -184,6 +187,9 @@ export default function Home() {
               } else if (id === 'knowme' && (!session || session.finished)) {
                 startStandaloneKnowMe();
                 router.push('/game/knowme');
+              } else if (id === 'taboo' && (!session || session.finished)) {
+                startStandaloneTaboo();
+                router.push('/game/taboo');
               } else setSelected(id);
             }}
             style={[

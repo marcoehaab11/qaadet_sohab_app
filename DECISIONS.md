@@ -31,3 +31,8 @@
 - Added مين غالبًا with private per-player voting, self-votes, tied winners, one undo entry for a question's scoring, and animated result bars. Its seed has twelve questions, below the launch target.
 - Both games can launch standalone or inside the host queue. Five game screens remain unimplemented; their home and host controls are previews/disabled.
 - Added مين يعرفني أكتر with an optional private answer, hidden answer during spoken guesses, reveal, and multi-select correct guessers. The answer is held only in the in-memory game state and cleared after each turn.
+
+## 2026-09-30 — M4 Taboo preview
+
+- Added ممنوع تقول with secret word reveal, three visible forbidden words during play, a configurable turn timer, +1 for guessed, -1 for a forbidden word, and free word skipping.
+- Timer feedback uses bundled sounds and haptics. The native timer still needs device checks, especially after app backgrounding and screen navigation; player editing is disabled while a timed turn runs to avoid resetting that component by navigation.
