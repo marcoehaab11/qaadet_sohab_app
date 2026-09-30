@@ -3,6 +3,7 @@ import { useApp } from '../store';
 import { useSession } from '../store/session';
 import { currentGame } from '../engine/session';
 import { minPlayers } from '../config/release';
+import { playableRoutes } from '../config/playable';
 import { ar } from '../i18n/ar-EG';
 import { Button, Panel, Screen, styles, Text } from '../components/ui';
 import { Scoreboard } from '../components/Scoreboard';
@@ -23,6 +24,7 @@ export default function Host() {
   const id = currentGame(session);
   if (!id) return null;
   const eligible = players.length - away.length >= minPlayers[id];
+  const route = playableRoutes[id];
   const skip = () => {
     advance();
     if (session.index + 1 >= session.queue.length) router.replace('/results');
@@ -42,38 +44,14 @@ export default function Host() {
       <Text style={styles.muted}>{ar.passPhone}</Text>
       <Button
         label={
-          (id === 'cards' ||
-            id === 'tod' ||
-            id === 'likely' ||
-            id === 'knowme' ||
-            id === 'taboo') &&
-          eligible
-            ? ar.playGame
-            : id === 'cards' || id === 'tod' || id === 'likely' || id === 'knowme' || id === 'taboo'
-              ? ar.minPlayers(minPlayers[id])
-              : ar.gamePreparing
+          route && eligible ? ar.playGame : route ? ar.minPlayers(minPlayers[id]) : ar.gamePreparing
         }
-        disabled={
-          (id !== 'cards' &&
-            id !== 'tod' &&
-            id !== 'likely' &&
-            id !== 'knowme' &&
-            id !== 'taboo') ||
-          !eligible
-        }
+        disabled={!route || !eligible}
         onPress={() => {
-          play();
-          router.push(
-            id === 'cards'
-              ? '/game/cards'
-              : id === 'tod'
-                ? '/game/tod'
-                : id === 'likely'
-                  ? '/game/likely'
-                  : id === 'knowme'
-                    ? '/game/knowme'
-                    : '/game/taboo',
-          );
+          if (route) {
+            play();
+            router.push(route);
+          }
         }}
       />
       <Button secondary label={ar.skipGame} onPress={skip} />

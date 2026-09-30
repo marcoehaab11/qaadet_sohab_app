@@ -9,6 +9,7 @@ import { theme, playerColor } from '../theme';
 import { Vibe } from '../engine/queue';
 import { useSession } from '../store/session';
 import { currentGame } from '../engine/session';
+import { playableRoutes } from '../config/playable';
 const icons: Record<GameId, string> = {
   imposter: '🕵️',
   cards: '🃏',
@@ -47,6 +48,7 @@ export default function Home() {
   const startStandaloneLikely = useSession((s) => s.startStandaloneLikely);
   const startStandaloneKnowMe = useSession((s) => s.startStandaloneKnowMe);
   const startStandaloneTaboo = useSession((s) => s.startStandaloneTaboo);
+  const startStandaloneCharades = useSession((s) => s.startStandaloneCharades);
   const { fontScale } = useWindowDimensions();
   const expandedVibes = data.settings.largeText || fontScale > 1.1;
   useEffect(() => {
@@ -148,20 +150,12 @@ export default function Home() {
           if (!session || session.finished) {
             begin();
             router.push('/host');
-          } else
+          } else {
+            const game = currentGame(session);
             router.push(
-              session.phase === 'game' && currentGame(session) === 'cards'
-                ? '/game/cards'
-                : session.phase === 'game' && currentGame(session) === 'tod'
-                  ? '/game/tod'
-                  : session.phase === 'game' && currentGame(session) === 'likely'
-                    ? '/game/likely'
-                    : session.phase === 'game' && currentGame(session) === 'knowme'
-                      ? '/game/knowme'
-                      : session.phase === 'game' && currentGame(session) === 'taboo'
-                        ? '/game/taboo'
-                        : '/host',
+              session.phase === 'game' && game ? (playableRoutes[game] ?? '/host') : '/host',
             );
+          }
         }}
       />
       <View>
@@ -190,6 +184,9 @@ export default function Home() {
               } else if (id === 'taboo' && (!session || session.finished)) {
                 startStandaloneTaboo();
                 router.push('/game/taboo');
+              } else if (id === 'charades' && (!session || session.finished)) {
+                startStandaloneCharades();
+                router.push('/game/charades');
               } else setSelected(id);
             }}
             style={[
