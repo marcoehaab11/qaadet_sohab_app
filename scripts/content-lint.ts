@@ -5,6 +5,7 @@ const raw: unknown = [
   ...JSON.parse(fs.readFileSync('src/content/packs/seed.json', 'utf8')),
   ...JSON.parse(fs.readFileSync('src/content/packs/ramadan.json', 'utf8')),
   ...JSON.parse(fs.readFileSync('src/content/packs/proverbs.json', 'utf8')),
+  ...JSON.parse(fs.readFileSync('src/content/packs/taboo-hard.json', 'utf8')),
 ];
 const parsed = packSchema.array().safeParse(raw);
 if (!parsed.success) {
@@ -13,7 +14,8 @@ if (!parsed.success) {
 }
 const banned = ['كحول', 'مخدرات', 'انتحار', 'اشرب خمرة'];
 const targets: Record<string, number> = {
-  'base-taboo': 300,
+  'base-taboo': 200,
+  'base-taboo-hard': 100,
   'base-tod': 240,
   'base-cards': 200,
   'base-imposter': 200,

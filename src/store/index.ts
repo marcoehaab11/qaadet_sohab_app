@@ -19,7 +19,7 @@ const defaults = (): SavedData => ({
     imposter: { time: 120 },
     cards: { cards: 8, time: 20 },
     likely: { questions: 3 },
-    taboo: { time: 30, turns: 1 },
+    taboo: { time: 30, turns: 1, difficulty: 0 },
     tod: { turns: 1 },
     charades: { time: 60, turns: 5 },
     speed: { challenges: 5 },

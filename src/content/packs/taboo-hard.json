@@ -1,0 +1,16 @@
+[
+  {"id":"base-taboo-hard","version":1,"locale":"ar-EG","game":"taboo","tier":"free","items":[
+    {"id":"base-taboo-hard-001","text":"الحنين","level":"hard","forbidden":["ذكريات","زمان","اشتياق"]},
+    {"id":"base-taboo-hard-002","text":"الصدفة","level":"hard","forbidden":["اتفاق","فجأة","حظ"]},
+    {"id":"base-taboo-hard-003","text":"الفضول","level":"hard","forbidden":["معرفة","سؤال","تدخل"]},
+    {"id":"base-taboo-hard-004","text":"الهدوء","level":"hard","forbidden":["صمت","راحة","دوشة"]},
+    {"id":"base-taboo-hard-005","text":"الثقة","level":"hard","forbidden":["أمان","تصدق","شك"]},
+    {"id":"base-taboo-hard-006","text":"الوقت","level":"hard","forbidden":["ساعة","دقيقة","يمر"]},
+    {"id":"base-taboo-hard-007","text":"الفكرة","level":"hard","forbidden":["عقل","اختراع","جديدة"]},
+    {"id":"base-taboo-hard-008","text":"الخيال","level":"hard","forbidden":["حلم","تخيل","واقع"]},
+    {"id":"base-taboo-hard-009","text":"الطموح","level":"hard","forbidden":["هدف","نجاح","مستقبل"]},
+    {"id":"base-taboo-hard-010","text":"الغيرة","level":"hard","forbidden":["حسد","مقارنة","نجاح"]},
+    {"id":"base-taboo-hard-011","text":"التردد","level":"hard","forbidden":["قرار","اختيار","حيرة"]},
+    {"id":"base-taboo-hard-012","text":"الاعتذار","level":"hard","forbidden":["آسف","غلط","سامحني"]}
+  ]}
+]

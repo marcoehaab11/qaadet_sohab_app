@@ -13,6 +13,7 @@ const configOptions: { game: GameId; key: string; choices: number[] }[] = [
   { game: 'likely', key: 'questions', choices: [3, 5, 8] },
   { game: 'taboo', key: 'time', choices: [30, 60, 90] },
   { game: 'taboo', key: 'turns', choices: [1, 2, 3] },
+  { game: 'taboo', key: 'difficulty', choices: [0, 1, 2] },
   { game: 'tod', key: 'turns', choices: [1, 2, 3] },
   { game: 'charades', key: 'time', choices: [30, 60, 90] },
   { game: 'charades', key: 'turns', choices: [3, 5, 8] },
@@ -59,7 +60,8 @@ export default function SettingsScreen() {
               <View key={choice} style={{ flex: 1, minWidth: 65 }}>
                 <Button
                   secondary={config[game]?.[key] !== choice}
-                  label={String(choice)}
+                  label={game === 'taboo' && key === 'difficulty'
+                    ? ar.tabooDifficulty[choice as 0 | 1 | 2] : String(choice)}
                   onPress={() =>
                     update((data) => ({
                       ...data,

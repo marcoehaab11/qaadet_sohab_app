@@ -43,8 +43,10 @@ export default function Taboo() {
     if (result.finished) finish();
   };
   const drawWord = (outcome?: 'guessed' | 'forbidden' | 'skip') => {
-    const pack = packs.find((p) => p.id === 'base-taboo')!;
-    const result = drawFromPack({ ...pack, items: loadContent('taboo', false, data.customDecks) }, state.seed);
+    const difficulty = data.config.taboo?.difficulty ?? 0;
+    const pack = packs.find((p) => p.id === (difficulty === 1 ? 'base-taboo-hard' : 'base-taboo'))!;
+    const items = loadContent('taboo', data.settings.family, data.customDecks, undefined, difficulty);
+    const result = drawFromPack({ ...pack, id: difficulty === 2 ? 'base-taboo-mix' : pack.id, items }, state.seed);
     if (outcome)
       dispatch({ type: 'resolve', outcome, nextWordId: result.item.id, seed: result.seed });
     else dispatch({ type: 'showWord', wordId: result.item.id, seed: result.seed });
@@ -61,7 +63,7 @@ export default function Taboo() {
     setState(tabooReducer(state, { type: 'skipTurn' }, nextParticipants).state);
   };
   const actor = players.find((p) => p.id === state.actorId);
-  const word = loadContent('taboo', false, data.customDecks)
+  const word = loadContent('taboo', data.settings.family, data.customDecks, undefined, data.config.taboo?.difficulty ?? 0)
     .find((item) => item.id === state.wordId);
   const forbidden = word?.forbidden ?? [];
 

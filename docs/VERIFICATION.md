@@ -91,3 +91,7 @@ M2 screens and live-session coordination, integrating the already tested engine 
 ## M7 Memory Battle preview — 2026-09-30
 
 - Both question modes, deterministic board generation, single scoring, absent-player handling and round completion have unit coverage. TypeScript, ESLint, 61 Jest tests and content lint passed before the final absent-player guard; rechecked after it.
+
+## M7 ممنوع تقول difficulty preview — 2026-09-30
+
+- Unit coverage checks easy, hard and mixed pools. `npm run check` passed with 62 Jest tests, strict TypeScript, ESLint and content lint. The 12 hard words require editorial review and expansion to 100.

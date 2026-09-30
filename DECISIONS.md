@@ -56,3 +56,8 @@
 
 - Memory Battle generates its emoji board, target and answer options from the session seed, alternating position and missing-symbol questions. It has configurable 6/9/12 symbols, 3/5/8 second look time, and 1/2/3 turns per player.
 - The board disappears when the look timer ends; every answer reveals the full board. The correct active player receives +1 and one `mem` stat. No content pack or network request is needed.
+
+## 2026-09-30 — M7 ممنوع تقول difficulty preview
+
+- Added easy, hard and mixed word pools. Hard words are abstract concepts in a separate draft pack; the easy pool includes the existing base and custom words. Settings store the choice as 0/1/2 under the existing numeric game config schema.
+- The content report now splits the original 300-word target into 200 easy and 100 hard. Current counts are 18 and 12. The hard pack remains unreviewed, and the seasonal words remain available in easy/mixed mode during their season.
