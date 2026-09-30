@@ -50,6 +50,7 @@ export default function Home() {
   const startStandaloneTaboo = useSession((s) => s.startStandaloneTaboo);
   const startStandaloneCharades = useSession((s) => s.startStandaloneCharades);
   const startStandaloneSpeed = useSession((s) => s.startStandaloneSpeed);
+  const startStandaloneImposter = useSession((s) => s.startStandaloneImposter);
   const { fontScale } = useWindowDimensions();
   const expandedVibes = data.settings.largeText || fontScale > 1.1;
   useEffect(() => {
@@ -170,6 +171,10 @@ export default function Home() {
             accessibilityRole="button"
             accessibilityLabel={ar.games[id].name}
             onPress={() => {
+              if (data.players.length < minPlayers[id]) {
+                useApp.getState().notify(ar.minPlayers(minPlayers[id]));
+                return;
+              }
               if (id === 'cards' && (!session || session.finished)) {
                 startStandaloneCards();
                 router.push('/game/cards');
@@ -191,6 +196,9 @@ export default function Home() {
               } else if (id === 'speed' && (!session || session.finished)) {
                 startStandaloneSpeed();
                 router.push('/game/speed');
+              } else if (id === 'imposter' && (!session || session.finished)) {
+                startStandaloneImposter();
+                router.push('/game/imposter');
               } else setSelected(id);
             }}
             style={[

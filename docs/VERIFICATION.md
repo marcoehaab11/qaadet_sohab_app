@@ -50,3 +50,10 @@ M2 screens and live-session coordination, integrating the already tested engine 
 - `npm run check`: strict typecheck, ESLint, 46 Jest tests, and seed lint passed. Web and Android JavaScript exports succeeded.
 - Browser preview exercised the countdown, challenge reveal, first buzz lock, wrong answer exclusion, second buzzer, host confirmation, +1 and results.
 - Unit tests cover lockout, wrong answer, correct answer, absent player, and no-answer advancement. Imposter is the remaining game screen.
+
+## Imposter checkpoint — 2026-09-30
+
+- `npm run check`: strict typecheck, ESLint, 49 Jest tests, and seed lint passed. Web and Android JavaScript exports succeeded.
+- Browser preview exercised classic setup and category choice, four private role passes, discussion and vote, an escaped imposter receiving +2, result reveal, then another round in undercover mode.
+- Unit tests cover one/two-imposter assignment, exact suspect count, caught group points, escaped imposter points, correct/wrong group-word guess, and minimum active players for two imposters.
+- All eight basic game flows are now implemented. Signed AAB, physical Android/iOS tests, complete editorial-reviewed content, store assets, rating flow, and release readiness remain open.

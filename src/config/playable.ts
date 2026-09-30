@@ -10,6 +10,7 @@ export const playableRoutes: Partial<
     | '/game/taboo'
     | '/game/charades'
     | '/game/speed'
+    | '/game/imposter'
   >
 > = {
   cards: '/game/cards',
@@ -19,4 +20,5 @@ export const playableRoutes: Partial<
   taboo: '/game/taboo',
   charades: '/game/charades',
   speed: '/game/speed',
+  imposter: '/game/imposter',
 };
