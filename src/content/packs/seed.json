@@ -1,0 +1,1317 @@
+[
+  {
+    "id": "base-likely",
+    "version": 1,
+    "locale": "ar-EG",
+    "game": "likely",
+    "tier": "free",
+    "items": [
+      {
+        "id": "base-likely-001",
+        "text": "مين غالبًا يختفي يوم كامل وميردش؟"
+      },
+      {
+        "id": "base-likely-002",
+        "text": "مين غالبًا ينام في فرح؟"
+      },
+      {
+        "id": "base-likely-003",
+        "text": "مين غالبًا يصرف مرتبه في أول أسبوع؟"
+      },
+      {
+        "id": "base-likely-004",
+        "text": "مين غالبًا يبقى مليونير؟"
+      },
+      {
+        "id": "base-likely-005",
+        "text": "مين غالبًا يتخانق مع الديليفري؟"
+      },
+      {
+        "id": "base-likely-006",
+        "text": "مين غالبًا يعيط في فيلم كرتون؟"
+      },
+      {
+        "id": "base-likely-007",
+        "text": "مين غالبًا ينسى عيد ميلاد أعز صحابه؟"
+      },
+      {
+        "id": "base-likely-008",
+        "text": "مين غالبًا يسافر فجأة من غير ما يقول لحد؟"
+      },
+      {
+        "id": "base-likely-009",
+        "text": "مين غالبًا يكون آخر واحد يعرف الخبر؟"
+      },
+      {
+        "id": "base-likely-010",
+        "text": "مين غالبًا يرد على جروب العيلة بستيكر ورد؟"
+      },
+      {
+        "id": "base-likely-011",
+        "text": "مين غالبًا يتوه وهو ماشي بالـGPS؟"
+      },
+      {
+        "id": "base-likely-012",
+        "text": "مين غالبًا يفتح مشروع ويقفله بعد شهر؟"
+      }
+    ]
+  },
+  {
+    "id": "base-charades",
+    "version": 1,
+    "locale": "ar-EG",
+    "game": "charades",
+    "tier": "free",
+    "items": [
+      {
+        "id": "base-charades-001",
+        "text": "واحد صحي متأخر عن الامتحان"
+      },
+      {
+        "id": "base-charades-002",
+        "text": "حد بيحاول يصطاد ناموسة"
+      },
+      {
+        "id": "base-charades-003",
+        "text": "سواق ميكروباص في زحمة"
+      },
+      {
+        "id": "base-charades-004",
+        "text": "حد بيفتح هدية مش عاجباه قدام اللي جابها"
+      },
+      {
+        "id": "base-charades-005",
+        "text": "حد بيتصور سيلفي والموبايل وقع"
+      },
+      {
+        "id": "base-charades-006",
+        "text": "شيف بيعمل بيتزا وبيحدفها في الهوا"
+      },
+      {
+        "id": "base-charades-007",
+        "text": "حد في الجيم أول يوم"
+      },
+      {
+        "id": "base-charades-008",
+        "text": "واحد بيدور على الريموت"
+      },
+      {
+        "id": "base-charades-009",
+        "text": "عريس متوتر في الكوشة"
+      },
+      {
+        "id": "base-charades-010",
+        "text": "حد بيحاول يدخل البيت متأخر من غير ما حد يحس"
+      },
+      {
+        "id": "base-charades-011",
+        "text": "لعيب كورة بيمثل إنه اتصاب"
+      },
+      {
+        "id": "base-charades-012",
+        "text": "حد بيشرب شاي سخن جدًا"
+      }
+    ]
+  },
+  {
+    "id": "base-speed",
+    "version": 1,
+    "locale": "ar-EG",
+    "game": "speed",
+    "tier": "free",
+    "items": [
+      {
+        "id": "base-speed-001",
+        "text": "هات حاجة لونها أحمر! 🔴"
+      },
+      {
+        "id": "base-speed-002",
+        "text": "هات حاجة اسمها بيبدأ بحرف الميم!"
+      },
+      {
+        "id": "base-speed-003",
+        "text": "هات حاجة أصغر من صباعك!"
+      },
+      {
+        "id": "base-speed-004",
+        "text": "هات حاجة بتتفتح وتتقفل!"
+      },
+      {
+        "id": "base-speed-005",
+        "text": "هات حاجة ريحتها حلوة! 🌸"
+      },
+      {
+        "id": "base-speed-006",
+        "text": "هات حاجة مكتوب عليها رقم!"
+      },
+      {
+        "id": "base-speed-007",
+        "text": "هات حاجة معمولة من خشب! 🪵"
+      },
+      {
+        "id": "base-speed-008",
+        "text": "المس حاجة لونها أزرق! 🔵"
+      },
+      {
+        "id": "base-speed-009",
+        "text": "هات حاجة بتتلبس! 👕"
+      },
+      {
+        "id": "base-speed-010",
+        "text": "شاور على حاجة بتشتغل بالكهربا من مكانك! 🔌"
+      },
+      {
+        "id": "base-speed-011",
+        "text": "هات حاجة لونها أصفر! 🟡"
+      },
+      {
+        "id": "base-speed-012",
+        "text": "هات حاجة ناعمة! 🧸"
+      }
+    ]
+  },
+  {
+    "id": "base-knowme",
+    "version": 1,
+    "locale": "ar-EG",
+    "game": "knowme",
+    "tier": "free",
+    "items": [
+      {
+        "id": "base-knowme-001",
+        "text": "إيه أكتر حاجة بخاف منها؟"
+      },
+      {
+        "id": "base-knowme-002",
+        "text": "إيه أكلتي المفضلة؟"
+      },
+      {
+        "id": "base-knowme-003",
+        "text": "لو كسبت مليون، أول حاجة هعملها إيه؟"
+      },
+      {
+        "id": "base-knowme-004",
+        "text": "إيه أكتر حاجة بتعصبني؟"
+      },
+      {
+        "id": "base-knowme-005",
+        "text": "إيه البلد اللي نفسي أسافرها؟"
+      },
+      {
+        "id": "base-knowme-006",
+        "text": "إيه أكتر كلمة بقولها كتير؟"
+      },
+      {
+        "id": "base-knowme-007",
+        "text": "إيه أوحش عادة عندي؟"
+      },
+      {
+        "id": "base-knowme-008",
+        "text": "لو كنت حيوان، هكون إيه؟"
+      },
+      {
+        "id": "base-knowme-009",
+        "text": "إيه الحاجة اللي ممكن أسهر عشانها للصبح؟"
+      },
+      {
+        "id": "base-knowme-010",
+        "text": "إيه أول حاجة بعملها لما بصحى؟"
+      }
+    ]
+  },
+  {
+    "id": "base-imposter",
+    "version": 1,
+    "locale": "ar-EG",
+    "game": "imposter",
+    "tier": "free",
+    "items": [
+      {
+        "id": "base-imposter-001",
+        "text": "كشري",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-002",
+        "text": "فول",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-003",
+        "text": "طعمية",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-004",
+        "text": "محشي",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-005",
+        "text": "ملوخية",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-006",
+        "text": "حواوشي",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-007",
+        "text": "فطير مشلتت",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-008",
+        "text": "كنافة",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-009",
+        "text": "بسبوسة",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-010",
+        "text": "أم علي",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-011",
+        "text": "رز بلبن",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-012",
+        "text": "كبدة إسكندراني",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-013",
+        "text": "الساحل",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-014",
+        "text": "الأهرامات",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-015",
+        "text": "المترو",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-016",
+        "text": "الجامعة",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-017",
+        "text": "الجيم",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-018",
+        "text": "السينما",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-019",
+        "text": "المطار",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-020",
+        "text": "الكافيه",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-021",
+        "text": "المستشفى",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-022",
+        "text": "المول",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-023",
+        "text": "الفرح",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-024",
+        "text": "الشاطئ",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-025",
+        "text": "التلاجة",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-026",
+        "text": "الغسالة",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-027",
+        "text": "الريموت",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-028",
+        "text": "المروحة",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-029",
+        "text": "الشاحن",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-030",
+        "text": "المخدة",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-031",
+        "text": "الغلاية",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-032",
+        "text": "التكييف",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-033",
+        "text": "الستارة",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-034",
+        "text": "المراية",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-035",
+        "text": "الشبشب",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-036",
+        "text": "البوتاجاز",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-037",
+        "text": "دكتور أسنان",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-038",
+        "text": "طيار",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-039",
+        "text": "شيف",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-040",
+        "text": "مدرس",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-041",
+        "text": "حلاق",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-042",
+        "text": "مصور",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-043",
+        "text": "مبرمج",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-044",
+        "text": "ممثل",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-045",
+        "text": "سباك",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-046",
+        "text": "محامي",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-047",
+        "text": "سواق تاكسي",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-048",
+        "text": "مذيع",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-049",
+        "text": "قطة",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-050",
+        "text": "جمل",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-051",
+        "text": "زرافة",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-052",
+        "text": "بطريق",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-053",
+        "text": "تمساح",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-054",
+        "text": "حمار",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-055",
+        "text": "أسد",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-056",
+        "text": "دولفين",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-057",
+        "text": "بومة",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-058",
+        "text": "قرد",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-059",
+        "text": "فيل",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-060",
+        "text": "كنغر",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-061",
+        "text": "فرح",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-062",
+        "text": "عيد ميلاد",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-063",
+        "text": "رمضان",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-064",
+        "text": "العيد",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-065",
+        "text": "شم النسيم",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-066",
+        "text": "خطوبة",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-067",
+        "text": "حفلة تخرج",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-068",
+        "text": "رأس السنة",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-069",
+        "text": "سبوع",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-070",
+        "text": "رحلة مدرسة",
+        "category": "مناسبات"
+      }
+    ]
+  },
+  {
+    "id": "base-undercover",
+    "version": 1,
+    "locale": "ar-EG",
+    "game": "imposter",
+    "tier": "free",
+    "items": [
+      {
+        "id": "base-undercover-001",
+        "text": "شاي",
+        "pair": "قهوة"
+      },
+      {
+        "id": "base-undercover-002",
+        "text": "كشري",
+        "pair": "مكرونة بالصلصة"
+      },
+      {
+        "id": "base-undercover-003",
+        "text": "فول",
+        "pair": "طعمية"
+      },
+      {
+        "id": "base-undercover-004",
+        "text": "الساحل",
+        "pair": "العين السخنة"
+      },
+      {
+        "id": "base-undercover-005",
+        "text": "المترو",
+        "pair": "الأتوبيس"
+      },
+      {
+        "id": "base-undercover-006",
+        "text": "قطة",
+        "pair": "كلب"
+      },
+      {
+        "id": "base-undercover-007",
+        "text": "التلاجة",
+        "pair": "الفريزر"
+      },
+      {
+        "id": "base-undercover-008",
+        "text": "دكتور",
+        "pair": "صيدلي"
+      },
+      {
+        "id": "base-undercover-009",
+        "text": "فرح",
+        "pair": "خطوبة"
+      },
+      {
+        "id": "base-undercover-010",
+        "text": "كنافة",
+        "pair": "بسبوسة"
+      },
+      {
+        "id": "base-undercover-011",
+        "text": "السينما",
+        "pair": "المسرح"
+      },
+      {
+        "id": "base-undercover-012",
+        "text": "الجيم",
+        "pair": "النادي"
+      },
+      {
+        "id": "base-undercover-013",
+        "text": "بيتزا",
+        "pair": "فطير"
+      },
+      {
+        "id": "base-undercover-014",
+        "text": "موبايل",
+        "pair": "تابلت"
+      },
+      {
+        "id": "base-undercover-015",
+        "text": "بحر",
+        "pair": "حمام سباحة"
+      },
+      {
+        "id": "base-undercover-016",
+        "text": "طيار",
+        "pair": "مضيف طيران"
+      },
+      {
+        "id": "base-undercover-017",
+        "text": "شبشب",
+        "pair": "كوتشي"
+      },
+      {
+        "id": "base-undercover-018",
+        "text": "مروحة",
+        "pair": "تكييف"
+      },
+      {
+        "id": "base-undercover-019",
+        "text": "واتساب",
+        "pair": "ماسنجر"
+      },
+      {
+        "id": "base-undercover-020",
+        "text": "عصير مانجا",
+        "pair": "عصير قصب"
+      }
+    ]
+  },
+  {
+    "id": "base-taboo",
+    "version": 1,
+    "locale": "ar-EG",
+    "game": "taboo",
+    "tier": "free",
+    "items": [
+      {
+        "id": "base-taboo-001",
+        "text": "موبايل",
+        "forbidden": ["تليفون", "شاشة", "مكالمة"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-002",
+        "text": "بحر",
+        "forbidden": ["مية", "عوم", "شط"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-003",
+        "text": "فول",
+        "forbidden": ["فطار", "عربية", "طعمية"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-004",
+        "text": "مترو",
+        "forbidden": ["محطة", "زحمة", "تذكرة"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-005",
+        "text": "كورة",
+        "forbidden": ["ماتش", "جون", "لعيب"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-006",
+        "text": "رمضان",
+        "forbidden": ["صيام", "فطار", "شهر"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-007",
+        "text": "امتحان",
+        "forbidden": ["مذاكرة", "درجات", "مدرسة"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-008",
+        "text": "قهوة",
+        "forbidden": ["بن", "فنجان", "كافيين"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-009",
+        "text": "عريس",
+        "forbidden": ["فرح", "عروسة", "جواز"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-010",
+        "text": "تكييف",
+        "forbidden": ["حر", "بارد", "صيف"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-011",
+        "text": "مكرونة بشاميل",
+        "forbidden": ["فرن", "لحمة", "صينية"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-012",
+        "text": "تيك توك",
+        "forbidden": ["فيديو", "ترند", "رقص"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-013",
+        "text": "واي فاي",
+        "forbidden": ["نت", "باسورد", "راوتر"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-014",
+        "text": "حلاق",
+        "forbidden": ["شعر", "دقن", "مقص"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-015",
+        "text": "الأهرامات",
+        "forbidden": ["الجيزة", "فراعنة", "أبو الهول"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-016",
+        "text": "ميكروباص",
+        "forbidden": ["سواق", "أجرة", "موقف"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-017",
+        "text": "شاورما",
+        "forbidden": ["فراخ", "لحمة", "عيش"],
+        "level": "easy"
+      },
+      {
+        "id": "base-taboo-018",
+        "text": "كحك",
+        "forbidden": ["العيد", "سكر", "بسكويت"],
+        "level": "easy"
+      }
+    ]
+  },
+  {
+    "id": "base-cards",
+    "version": 1,
+    "locale": "ar-EG",
+    "game": "cards",
+    "tier": "free",
+    "items": [
+      {
+        "id": "base-cards-001",
+        "text": "احكي عن أول مرة اتقابلت فيها حد من القعدة دي",
+        "kind": "tell",
+        "deck": "friends"
+      },
+      {
+        "id": "base-cards-002",
+        "text": "احكي أكتر موقف محرج حصلك قدام أصحابك",
+        "kind": "tell",
+        "deck": "friends"
+      },
+      {
+        "id": "base-cards-003",
+        "text": "اختار حد يقول أكتر صفة بيحبها فيك",
+        "kind": "pick",
+        "deck": "friends"
+      },
+      {
+        "id": "base-cards-004",
+        "text": "اختار حد يحكي آخر حاجة ضحكته من قلبه",
+        "kind": "pick",
+        "deck": "friends"
+      },
+      {
+        "id": "base-cards-005",
+        "text": "قلّد حد من القعدة لحد ما يعرفوه",
+        "kind": "dare",
+        "deck": "friends"
+      },
+      {
+        "id": "base-cards-006",
+        "text": "قول 5 أسماء بلاد بتبدأ بحرف الميم في 20 ثانية",
+        "kind": "dare",
+        "deck": "friends"
+      },
+      {
+        "id": "base-cards-007",
+        "text": "مين أكتر واحد بيتأخر على المواعيد؟",
+        "kind": "who",
+        "deck": "friends"
+      },
+      {
+        "id": "base-cards-008",
+        "text": "مين أكتر واحد ممكن يتوه في المول؟",
+        "kind": "who",
+        "deck": "friends"
+      },
+      {
+        "id": "base-cards-009",
+        "text": "إيه آخر حاجة دورت عليها في جوجل؟",
+        "kind": "secret",
+        "deck": "friends"
+      },
+      {
+        "id": "base-cards-010",
+        "text": "إيه أغرب عادة عندك محدش يعرفها؟",
+        "kind": "secret",
+        "deck": "friends"
+      },
+      {
+        "id": "base-cards-011",
+        "text": "احكوا عن أول مرة شفتوا فيها بعض",
+        "kind": "tell",
+        "deck": "couples"
+      },
+      {
+        "id": "base-cards-012",
+        "text": "احكي عن أحلى خروجة عملتوها سوا",
+        "kind": "tell",
+        "deck": "couples"
+      },
+      {
+        "id": "base-cards-013",
+        "text": "اختار حد يخمن أول هدية جبتها لشريكك",
+        "kind": "pick",
+        "deck": "couples"
+      },
+      {
+        "id": "base-cards-014",
+        "text": "اختار حد يقول إيه اللي بيميز الكابل اللي قدامه",
+        "kind": "pick",
+        "deck": "couples"
+      },
+      {
+        "id": "base-cards-015",
+        "text": "قول 3 حاجات بتحبها في شريكك في 20 ثانية",
+        "kind": "dare",
+        "deck": "couples"
+      },
+      {
+        "id": "base-cards-016",
+        "text": "قلّد شريكك وهو زعلان",
+        "kind": "dare",
+        "deck": "couples"
+      },
+      {
+        "id": "base-cards-017",
+        "text": "مين أكتر واحد رومانسي في القعدة؟",
+        "kind": "who",
+        "deck": "couples"
+      },
+      {
+        "id": "base-cards-018",
+        "text": "مين أكتر واحد بينسى المناسبات؟",
+        "kind": "who",
+        "deck": "couples"
+      },
+      {
+        "id": "base-cards-019",
+        "text": "إيه أكتر عادة عند شريكك بتضحكك؟",
+        "kind": "secret",
+        "deck": "couples"
+      },
+      {
+        "id": "base-cards-020",
+        "text": "إيه حاجة نفسك تعملوها سوا السنة دي؟",
+        "kind": "secret",
+        "deck": "couples"
+      },
+      {
+        "id": "base-cards-021",
+        "text": "احكي أغرب حلم حلمته",
+        "kind": "tell",
+        "deck": "crazy"
+      },
+      {
+        "id": "base-cards-022",
+        "text": "احكي عن أجنن قرار خدته في حياتك",
+        "kind": "tell",
+        "deck": "crazy"
+      },
+      {
+        "id": "base-cards-023",
+        "text": "اختار حد يعمل إعلان لحاجة في جيبه",
+        "kind": "pick",
+        "deck": "crazy"
+      },
+      {
+        "id": "base-cards-024",
+        "text": "اختار حد يغني أي أغنية بصوت أوبرا",
+        "kind": "pick",
+        "deck": "crazy"
+      },
+      {
+        "id": "base-cards-025",
+        "text": "اتكلم بلغة مخترعة 20 ثانية والقعدة تخمن بتقول إيه",
+        "kind": "dare",
+        "deck": "crazy"
+      },
+      {
+        "id": "base-cards-026",
+        "text": "امشي زي البطريق لآخر الأوضة وارجع",
+        "kind": "dare",
+        "deck": "crazy"
+      },
+      {
+        "id": "base-cards-027",
+        "text": "مين أكتر واحد ممكن يبقى مشهور على تيك توك فجأة؟",
+        "kind": "who",
+        "deck": "crazy"
+      },
+      {
+        "id": "base-cards-028",
+        "text": "مين أكتر واحد ممكن يتخانق مع الـGPS؟",
+        "kind": "who",
+        "deck": "crazy"
+      },
+      {
+        "id": "base-cards-029",
+        "text": "لو صحيت لقيت نفسك قطة، أول حاجة هتعملها إيه؟",
+        "kind": "secret",
+        "deck": "crazy"
+      },
+      {
+        "id": "base-cards-030",
+        "text": "إيه أغرب أكلة كلتها وعجبتك؟",
+        "kind": "secret",
+        "deck": "crazy"
+      },
+      {
+        "id": "base-cards-031",
+        "text": "احكي عن لحظة غيرت طريقة تفكيرك",
+        "kind": "tell",
+        "deck": "deep"
+      },
+      {
+        "id": "base-cards-032",
+        "text": "احكي عن حد أثر فيك وهو مش عارف",
+        "kind": "tell",
+        "deck": "deep"
+      },
+      {
+        "id": "base-cards-033",
+        "text": "اختار حد يقولك حاجة شايفها فيك وانت مش شايفها",
+        "kind": "pick",
+        "deck": "deep"
+      },
+      {
+        "id": "base-cards-034",
+        "text": "اختار حد يحكي عن أكتر حاجة فخور بيها السنة دي",
+        "kind": "pick",
+        "deck": "deep"
+      },
+      {
+        "id": "base-cards-035",
+        "text": "في 20 ثانية قول 3 حاجات ممتن ليها النهاردة",
+        "kind": "dare",
+        "deck": "deep"
+      },
+      {
+        "id": "base-cards-036",
+        "text": "قول لحد في القعدة حاجة حلوة عمرك ما قلتهاله",
+        "kind": "dare",
+        "deck": "deep"
+      },
+      {
+        "id": "base-cards-037",
+        "text": "مين أكتر واحد بيسمع من غير ما يحكم؟",
+        "kind": "who",
+        "deck": "deep"
+      },
+      {
+        "id": "base-cards-038",
+        "text": "مين أول واحد هيحقق حلمه؟",
+        "kind": "who",
+        "deck": "deep"
+      },
+      {
+        "id": "base-cards-039",
+        "text": "إيه أكتر حاجة بتخاف تخسرها؟",
+        "kind": "secret",
+        "deck": "deep"
+      },
+      {
+        "id": "base-cards-040",
+        "text": "لو تقدر تكلم نفسك وانت عندك 10 سنين، هتقوله إيه؟",
+        "kind": "secret",
+        "deck": "deep"
+      },
+      {
+        "id": "base-cards-041",
+        "text": "احكي أكتر موقف ضحكت فيه في وقت غلط",
+        "kind": "tell",
+        "deck": "funny"
+      },
+      {
+        "id": "base-cards-042",
+        "text": "احكي عن أوحش هدية جاتلك",
+        "kind": "tell",
+        "deck": "funny"
+      },
+      {
+        "id": "base-cards-043",
+        "text": "اختار حد يقلد نفسه وهو صاحي من النوم",
+        "kind": "pick",
+        "deck": "funny"
+      },
+      {
+        "id": "base-cards-044",
+        "text": "اختار حد يقرأ نشرة أخبار عن اللي بيحصل في القعدة",
+        "kind": "pick",
+        "deck": "funny"
+      },
+      {
+        "id": "base-cards-045",
+        "text": "اضحك ضحكة شريرة 10 ثواني من غير ما تضحك بجد",
+        "kind": "dare",
+        "deck": "funny"
+      },
+      {
+        "id": "base-cards-046",
+        "text": "اتكلم 20 ثانية من غير ما تقول «أنا» ولا «انت»",
+        "kind": "dare",
+        "deck": "funny"
+      },
+      {
+        "id": "base-cards-047",
+        "text": "مين أكتر واحد صوته عالي في التليفون؟",
+        "kind": "who",
+        "deck": "funny"
+      },
+      {
+        "id": "base-cards-048",
+        "text": "مين أكتر واحد بيضحك على النكتة قبل ما يقولها؟",
+        "kind": "who",
+        "deck": "funny"
+      },
+      {
+        "id": "base-cards-049",
+        "text": "إيه أكتر أغنية بتغنيها في الحمام؟",
+        "kind": "secret",
+        "deck": "funny"
+      },
+      {
+        "id": "base-cards-050",
+        "text": "لو هتغير اسمك النهاردة، هتختار إيه؟",
+        "kind": "secret",
+        "deck": "funny"
+      }
+    ]
+  },
+  {
+    "id": "base-tod",
+    "version": 1,
+    "locale": "ar-EG",
+    "game": "tod",
+    "tier": "free",
+    "items": [
+      {
+        "id": "base-tod-001",
+        "text": "إيه آخر حاجة خلتك تضحك من قلبك؟",
+        "kind": "truth",
+        "level": "chill"
+      },
+      {
+        "id": "base-tod-002",
+        "text": "مين أول حد بتكلمه لما يحصلك خبر حلو؟",
+        "kind": "truth",
+        "level": "chill"
+      },
+      {
+        "id": "base-tod-003",
+        "text": "إيه الأكلة اللي ممكن تاكلها كل يوم ومتزهقش؟",
+        "kind": "truth",
+        "level": "chill"
+      },
+      {
+        "id": "base-tod-004",
+        "text": "إيه أحلى رحلة عملتها؟",
+        "kind": "truth",
+        "level": "chill"
+      },
+      {
+        "id": "base-tod-005",
+        "text": "قول نكتة، ولو محدش ضحك قول واحدة كمان",
+        "kind": "dare",
+        "level": "chill"
+      },
+      {
+        "id": "base-tod-006",
+        "text": "اشكر كل واحد في القعدة بجملة",
+        "kind": "dare",
+        "level": "chill"
+      },
+      {
+        "id": "base-tod-007",
+        "text": "اعمل وش مضحك لمدة خمس ثواني",
+        "kind": "dare",
+        "level": "chill"
+      },
+      {
+        "id": "base-tod-008",
+        "text": "غني مقطع من أغنية بتحبها",
+        "kind": "dare",
+        "level": "chill"
+      },
+      {
+        "id": "base-tod-009",
+        "text": "إيه أغرب حاجة بتعملها وانت لوحدك في البيت؟",
+        "kind": "truth",
+        "level": "funny"
+      },
+      {
+        "id": "base-tod-010",
+        "text": "إيه أكتر كذبة بيضا بتقولها كتير؟",
+        "kind": "truth",
+        "level": "funny"
+      },
+      {
+        "id": "base-tod-011",
+        "text": "إيه أوحش لقب اتقالك وانت صغير؟",
+        "kind": "truth",
+        "level": "funny"
+      },
+      {
+        "id": "base-tod-012",
+        "text": "مين في القعدة ضحكته بتعدي؟",
+        "kind": "truth",
+        "level": "funny"
+      },
+      {
+        "id": "base-tod-013",
+        "text": "اتكلم زي معلق كورة وانت بتوصف اللي بيحصل في القعدة",
+        "kind": "dare",
+        "level": "funny"
+      },
+      {
+        "id": "base-tod-014",
+        "text": "اعمل عرض أزياء بحاجة موجودة في الأوضة",
+        "kind": "dare",
+        "level": "funny"
+      },
+      {
+        "id": "base-tod-015",
+        "text": "غني اسمك بتلات أنواع مزيكا مختلفة",
+        "kind": "dare",
+        "level": "funny"
+      },
+      {
+        "id": "base-tod-016",
+        "text": "اعمل صوت حيوان والقعدة تخمنه",
+        "kind": "dare",
+        "level": "funny"
+      },
+      {
+        "id": "base-tod-017",
+        "text": "مين في القعدة ممكن تسافر معاه شهر من غير خناق؟",
+        "kind": "truth",
+        "level": "bold"
+      },
+      {
+        "id": "base-tod-018",
+        "text": "إيه أكتر رسالة ندمت إنك بعتها؟",
+        "kind": "truth",
+        "level": "bold"
+      },
+      {
+        "id": "base-tod-019",
+        "text": "إيه رأيك الصريح في ستايل اللي على يمينك؟",
+        "kind": "truth",
+        "level": "bold"
+      },
+      {
+        "id": "base-tod-020",
+        "text": "إيه أكتر حاجة بتغير منها في حد هنا؟",
+        "kind": "truth",
+        "level": "bold"
+      },
+      {
+        "id": "base-tod-021",
+        "text": "غني أغنية عيد ميلاد لكرسي فاضي في القعدة",
+        "kind": "dare",
+        "level": "bold"
+      },
+      {
+        "id": "base-tod-022",
+        "text": "ارسم بإيدك في الهوا صورة بروفايل خيالية",
+        "kind": "dare",
+        "level": "bold"
+      },
+      {
+        "id": "base-tod-023",
+        "text": "بص في عين اللي جنبك 30 ثانية من غير ما تضحك",
+        "kind": "dare",
+        "level": "bold"
+      },
+      {
+        "id": "base-tod-024",
+        "text": "اعمل مشهد دراما عن آخر مرة اتخانقت فيها",
+        "kind": "dare",
+        "level": "bold"
+      },
+      {
+        "id": "base-tod-025",
+        "text": "اوصف صورة خيالية نفسك تصورها",
+        "kind": "truth",
+        "level": "chaos"
+      },
+      {
+        "id": "base-tod-026",
+        "text": "احكي عن موقف كذبت فيه على حد هنا",
+        "kind": "truth",
+        "level": "chaos"
+      },
+      {
+        "id": "base-tod-027",
+        "text": "إيه حاجة عملتها ومحدش في البيت يعرفها؟",
+        "kind": "truth",
+        "level": "chaos"
+      },
+      {
+        "id": "base-tod-028",
+        "text": "لو هتبدل حياتك يوم كامل مع حد هنا، هتختار مين وليه؟",
+        "kind": "truth",
+        "level": "chaos"
+      },
+      {
+        "id": "base-tod-029",
+        "text": "اتكلم بصوت روبوت لحد دورك الجاي",
+        "kind": "dare",
+        "level": "chaos"
+      },
+      {
+        "id": "base-tod-030",
+        "text": "خلّي حد يعملك تسريحة مجنونة وتفضل بيها لآخر القعدة",
+        "kind": "dare",
+        "level": "chaos"
+      },
+      {
+        "id": "base-tod-031",
+        "text": "اخترع عنوان خبر مضحك عن القعدة وقوله بصوت مذيع",
+        "kind": "dare",
+        "level": "chaos"
+      },
+      {
+        "id": "base-tod-032",
+        "text": "غني وانت بتحرك إيديك كأنك قائد أوركسترا",
+        "kind": "dare",
+        "level": "chaos"
+      }
+    ]
+  }
+]
