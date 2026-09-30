@@ -11,6 +11,8 @@ import {
 } from '../engine/session';
 import { ar } from '../i18n/ar-EG';
 import { CardsState, createCards } from '../games/cards/reducer';
+import { TodState, createTod } from '../games/tod/reducer';
+import { LikelyState, createLikely } from '../games/likely/reducer';
 import { useApp } from './index';
 // Ephemeral by design: scores, counters, undo and sit-out state never reach AsyncStorage.
 type SessionStore = {
@@ -20,6 +22,12 @@ type SessionStore = {
   cardsGame: CardsState | null;
   setCardsGame: (state: CardsState | null) => void;
   startStandaloneCards: () => void;
+  todGame: TodState | null;
+  setTodGame: (state: TodState | null) => void;
+  startStandaloneTod: () => void;
+  likelyGame: LikelyState | null;
+  setLikelyGame: (state: LikelyState | null) => void;
+  startStandaloneLikely: () => void;
   begin: () => void;
   play: () => void;
   advance: () => void;
@@ -34,15 +42,51 @@ export const useSession = create<SessionStore>((set, get) => ({
   session: null,
   cardsGame: null,
   setCardsGame: (cardsGame) => set({ cardsGame }),
+  todGame: null,
+  setTodGame: (todGame) => set({ todGame }),
+  likelyGame: null,
+  setLikelyGame: (likelyGame) => set({ likelyGame }),
   startStandaloneCards: () => {
     const data = useApp.getState().data;
     set({
       ledger: emptyLedger(),
       away: [],
       session: null,
+      todGame: null,
+      likelyGame: null,
       cardsGame: createCards(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.cards?.cards ?? 8,
+        Date.now(),
+      ),
+    });
+  },
+  startStandaloneTod: () => {
+    const data = useApp.getState().data;
+    set({
+      ledger: emptyLedger(),
+      away: [],
+      session: null,
+      cardsGame: null,
+      likelyGame: null,
+      todGame: createTod(
+        data.players.map((p) => ({ ...p, away: false })),
+        data.config.tod?.turns ?? 1,
+        Date.now(),
+      ),
+    });
+  },
+  startStandaloneLikely: () => {
+    const data = useApp.getState().data;
+    set({
+      ledger: emptyLedger(),
+      away: [],
+      session: null,
+      cardsGame: null,
+      todGame: null,
+      likelyGame: createLikely(
+        data.players.map((p) => ({ ...p, away: false })),
+        data.config.likely?.questions ?? 3,
         Date.now(),
       ),
     });
@@ -53,6 +97,8 @@ export const useSession = create<SessionStore>((set, get) => ({
     set({
       ledger: emptyLedger(),
       cardsGame: null,
+      todGame: null,
+      likelyGame: null,
       away: [],
       session: createSession(vibe, length, players.length, Date.now()),
     });
@@ -68,6 +114,18 @@ export const useSession = create<SessionStore>((set, get) => ({
       session: startCurrentGame(session),
       cardsGame:
         currentGame(session) === 'cards' ? createCards(participants, maximum, session.seed) : null,
+      todGame:
+        currentGame(session) === 'tod'
+          ? createTod(participants, useApp.getState().data.config.tod?.turns ?? 1, session.seed)
+          : null,
+      likelyGame:
+        currentGame(session) === 'likely'
+          ? createLikely(
+              participants,
+              useApp.getState().data.config.likely?.questions ?? 3,
+              session.seed,
+            )
+          : null,
     });
   },
   advance: () => {
@@ -90,12 +148,15 @@ export const useSession = create<SessionStore>((set, get) => ({
   award: (changes, stats = []) => {
     set({ ledger: addPoints(get().ledger, changes, stats) });
     const players = useApp.getState().data.players;
-    const message = changes
-      .map((change) => {
-        const player = players.find((p) => p.id === change.playerId);
-        return `${player?.emoji ?? ''} ${player?.name ?? ''} \u2066${change.points >= 0 ? '+' : ''}${change.points}\u2069`;
-      })
-      .join(' · ');
+    const message =
+      changes.length > 2
+        ? ar.awardsCount(changes.length)
+        : changes
+            .map((change) => {
+              const player = players.find((p) => p.id === change.playerId);
+              return `${player?.emoji ?? ''} ${player?.name ?? ''} \u2066${change.points >= 0 ? '+' : ''}${change.points}\u2069`;
+            })
+            .join(' · ');
     if (message) {
       useApp.getState().notify(message);
       void Haptics.selectionAsync().catch(() => {});
@@ -106,5 +167,13 @@ export const useSession = create<SessionStore>((set, get) => ({
     if (!ledger.undo.length) useApp.getState().notify(ar.noUndo);
     else set({ ledger: undoPoints(ledger) });
   },
-  reset: () => set({ ledger: emptyLedger(), away: [], session: null, cardsGame: null }),
+  reset: () =>
+    set({
+      ledger: emptyLedger(),
+      away: [],
+      session: null,
+      cardsGame: null,
+      todGame: null,
+      likelyGame: null,
+    }),
 }));

@@ -42,16 +42,16 @@ export default function Host() {
       <Text style={styles.muted}>{ar.passPhone}</Text>
       <Button
         label={
-          id === 'cards' && eligible
+          (id === 'cards' || id === 'tod' || id === 'likely') && eligible
             ? ar.playGame
-            : id === 'cards'
+            : id === 'cards' || id === 'tod' || id === 'likely'
               ? ar.minPlayers(minPlayers[id])
               : ar.gamePreparing
         }
-        disabled={id !== 'cards' || !eligible}
+        disabled={(id !== 'cards' && id !== 'tod' && id !== 'likely') || !eligible}
         onPress={() => {
           play();
-          router.push('/game/cards');
+          router.push(id === 'cards' ? '/game/cards' : id === 'tod' ? '/game/tod' : '/game/likely');
         }}
       />
       <Button secondary label={ar.skipGame} onPress={skip} />

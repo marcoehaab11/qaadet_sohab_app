@@ -24,3 +24,9 @@
 - Card turns are deterministic from a seed. A card draw persists its used ID; points and per-session stats remain in memory. Marking someone away skips their next turn without consuming a card; a late joiner enters the remaining turn order.
 - The original demo and spec are preserved as references. New UI follows the app architecture, rather than embedding the demo HTML.
 - Session state is intentionally ephemeral for now. Closing the app discards the active game and scores, while saved player names, settings, used card IDs, and completed-session count remain on device.
+
+## 2026-09-30 — M3 gameplay continuation
+
+- Added Truth or Dare with four levels, private phone passing, truth/dare choice, done/skip scoring, and family filtering. The source seed has four prompts per type and level; this is enough for a flow preview, not launch content volume.
+- Added مين غالبًا with private per-player voting, self-votes, tied winners, one undo entry for a question's scoring, and animated result bars. Its seed has twelve questions, below the launch target.
+- Both games can launch standalone or inside the host queue. Five game screens remain unimplemented; their home and host controls are previews/disabled.

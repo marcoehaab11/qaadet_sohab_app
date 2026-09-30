@@ -43,6 +43,8 @@ export default function Home() {
   const session = useSession((s) => s.session);
   const begin = useSession((s) => s.begin);
   const startStandaloneCards = useSession((s) => s.startStandaloneCards);
+  const startStandaloneTod = useSession((s) => s.startStandaloneTod);
+  const startStandaloneLikely = useSession((s) => s.startStandaloneLikely);
   const { fontScale } = useWindowDimensions();
   const expandedVibes = data.settings.largeText || fontScale > 1.1;
   useEffect(() => {
@@ -148,7 +150,11 @@ export default function Home() {
             router.push(
               session.phase === 'game' && currentGame(session) === 'cards'
                 ? '/game/cards'
-                : '/host',
+                : session.phase === 'game' && currentGame(session) === 'tod'
+                  ? '/game/tod'
+                  : session.phase === 'game' && currentGame(session) === 'likely'
+                    ? '/game/likely'
+                    : '/host',
             );
         }}
       />
@@ -166,6 +172,12 @@ export default function Home() {
               if (id === 'cards' && (!session || session.finished)) {
                 startStandaloneCards();
                 router.push('/game/cards');
+              } else if (id === 'tod' && (!session || session.finished)) {
+                startStandaloneTod();
+                router.push('/game/tod');
+              } else if (id === 'likely' && (!session || session.finished)) {
+                startStandaloneLikely();
+                router.push('/game/likely');
               } else setSelected(id);
             }}
             style={[
