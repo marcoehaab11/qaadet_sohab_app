@@ -146,3 +146,8 @@ M2 screens and live-session coordination, integrating the already tested engine 
 ## Speed content expansion — 2026-09-30
 
 - Expanded the quick challenge draft from 12 to its 60-item target with pointing and verbal prompts that can be played from the table. Content lint verifies the pack; human editorial review remains open.
+
+## Likely, Know Me and Charades content expansion — 2026-09-30
+
+- Expanded the three draft packs to their respective targets: Likely 120, Know Me 80 and Charades 120. Questions and scenes are locally authored, family-compatible drafts. The content parser checks each pack's unique IDs/texts and field lengths; two-person review is still required.
+- `npm run check` passed (82 tests, strict TypeScript, ESLint and content lint), and Android/web JavaScript exports succeeded after the larger seed pack was bundled.
