@@ -151,3 +151,8 @@ M2 screens and live-session coordination, integrating the already tested engine 
 
 - Expanded the three draft packs to their respective targets: Likely 120, Know Me 80 and Charades 120. Questions and scenes are locally authored, family-compatible drafts. The content parser checks each pack's unique IDs/texts and field lengths; two-person review is still required.
 - `npm run check` passed (82 tests, strict TypeScript, ESLint and content lint), and Android/web JavaScript exports succeeded after the larger seed pack was bundled.
+
+## Imposter and Undercover content expansion — 2026-09-30
+
+- Expanded Imposter to eight 25-word categories (200 total) and Undercover to 80 paired-word items. Content lint validates both packs and the Imposter category count was asserted during draft generation. Editorial approval remains open.
+- `npm run check` passed (82 tests, strict TypeScript, ESLint and content lint), and Android/web JavaScript exports succeeded with the expanded packs.

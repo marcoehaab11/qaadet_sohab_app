@@ -1911,6 +1911,656 @@
         "id": "base-imposter-070",
         "text": "رحلة مدرسة",
         "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-071",
+        "text": "شاورما",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-072",
+        "text": "فتة",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-073",
+        "text": "مسقعة",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-074",
+        "text": "مكرونة بشاميل",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-075",
+        "text": "شوربة عدس",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-076",
+        "text": "طاجن بامية",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-077",
+        "text": "بطاطس محمرة",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-078",
+        "text": "عيش بلدي",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-079",
+        "text": "جبنة قديمة",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-080",
+        "text": "زلابية",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-081",
+        "text": "قطايف",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-082",
+        "text": "طحينة",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-083",
+        "text": "سلطة بلدي",
+        "category": "أكل مصري"
+      },
+      {
+        "id": "base-imposter-084",
+        "text": "مكتبة",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-085",
+        "text": "حديقة حيوان",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-086",
+        "text": "استاد",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-087",
+        "text": "سوبر ماركت",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-088",
+        "text": "مخبز",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-089",
+        "text": "محل ملابس",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-090",
+        "text": "محطة قطار",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-091",
+        "text": "برج القاهرة",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-092",
+        "text": "القلعة",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-093",
+        "text": "المتحف",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-094",
+        "text": "الكورنيش",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-095",
+        "text": "محل عصير",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-096",
+        "text": "مدينة ملاهي",
+        "category": "أماكن"
+      },
+      {
+        "id": "base-imposter-097",
+        "text": "كوباية",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-098",
+        "text": "سرير",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-099",
+        "text": "كنبة",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-100",
+        "text": "سفرة",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-101",
+        "text": "فرن",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-102",
+        "text": "شفاط",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-103",
+        "text": "مكنسة",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-104",
+        "text": "دولاب",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-105",
+        "text": "سجاد",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-106",
+        "text": "لمبة",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-107",
+        "text": "منبه",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-108",
+        "text": "صنبور",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-109",
+        "text": "طبق",
+        "category": "حاجات في البيت"
+      },
+      {
+        "id": "base-imposter-110",
+        "text": "مهندس",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-111",
+        "text": "نجار",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-112",
+        "text": "كهربائي",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-113",
+        "text": "صحفي",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-114",
+        "text": "مترجم",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-115",
+        "text": "رسام",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-116",
+        "text": "ممرض",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-117",
+        "text": "صيدلي",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-118",
+        "text": "خباز",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-119",
+        "text": "بائع ورد",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-120",
+        "text": "عامل بريد",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-121",
+        "text": "مدرب",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-122",
+        "text": "رجل إطفاء",
+        "category": "مهن"
+      },
+      {
+        "id": "base-imposter-123",
+        "text": "كلب",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-124",
+        "text": "أرنب",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-125",
+        "text": "حصان",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-126",
+        "text": "بقرة",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-127",
+        "text": "خروف",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-128",
+        "text": "ثعلب",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-129",
+        "text": "غزالة",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-130",
+        "text": "ضفدع",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-131",
+        "text": "نملة",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-132",
+        "text": "نحلة",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-133",
+        "text": "فراشة",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-134",
+        "text": "سلحفاة",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-135",
+        "text": "سمكة",
+        "category": "حيوانات"
+      },
+      {
+        "id": "base-imposter-136",
+        "text": "حفل تكريم",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-137",
+        "text": "حفلة نجاح",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-138",
+        "text": "لمة عيلة",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-139",
+        "text": "عزومة",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-140",
+        "text": "زيارة مفاجئة",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-141",
+        "text": "حفلة تنكرية",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-142",
+        "text": "احتفال فريق",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-143",
+        "text": "يوم رياضي",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-144",
+        "text": "افتتاح محل",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-145",
+        "text": "حفل موسيقى",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-146",
+        "text": "حفلة مفاجأة",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-147",
+        "text": "حفلة استقبال",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-148",
+        "text": "تجمع صحاب",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-149",
+        "text": "يوم الأم",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-150",
+        "text": "يوم الأب",
+        "category": "مناسبات"
+      },
+      {
+        "id": "base-imposter-151",
+        "text": "كورة قدم",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-152",
+        "text": "كورة سلة",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-153",
+        "text": "سباحة",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-154",
+        "text": "تنس",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-155",
+        "text": "تنس طاولة",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-156",
+        "text": "جري",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-157",
+        "text": "مشي",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-158",
+        "text": "دراجة",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-159",
+        "text": "كرة طائرة",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-160",
+        "text": "كرة يد",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-161",
+        "text": "بادل",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-162",
+        "text": "ريشة طائرة",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-163",
+        "text": "ملاكمة",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-164",
+        "text": "جمباز",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-165",
+        "text": "كاراتيه",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-166",
+        "text": "تايكوندو",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-167",
+        "text": "مصارعة",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-168",
+        "text": "شطرنج",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-169",
+        "text": "رماية سهام",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-170",
+        "text": "ركوب خيل",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-171",
+        "text": "تسلق حائط",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-172",
+        "text": "تزلج",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-173",
+        "text": "بولينج",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-174",
+        "text": "بلياردو",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-175",
+        "text": "يوغا",
+        "category": "رياضة"
+      },
+      {
+        "id": "base-imposter-176",
+        "text": "أتوبيس",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-177",
+        "text": "ميكروباص",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-178",
+        "text": "تاكسي",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-179",
+        "text": "ترام",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-180",
+        "text": "قطار",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-181",
+        "text": "مترو",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-182",
+        "text": "طائرة",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-183",
+        "text": "هليكوبتر",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-184",
+        "text": "مركب",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-185",
+        "text": "عبارة",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-186",
+        "text": "قارب",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-187",
+        "text": "دراجة نارية",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-188",
+        "text": "سكوتر",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-189",
+        "text": "عربية إسعاف",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-190",
+        "text": "عربية إطفاء",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-191",
+        "text": "شاحنة",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-192",
+        "text": "تروسيكل",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-193",
+        "text": "جرار",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-194",
+        "text": "تلفريك",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-195",
+        "text": "غواصة",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-196",
+        "text": "سيارة سباق",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-197",
+        "text": "باص مدرسة",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-198",
+        "text": "تاكسي مائي",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-199",
+        "text": "عربة جولف",
+        "category": "مواصلات"
+      },
+      {
+        "id": "base-imposter-200",
+        "text": "عربية كارو",
+        "category": "مواصلات"
       }
     ]
   },
@@ -2020,6 +2670,306 @@
         "id": "base-undercover-020",
         "text": "عصير مانجا",
         "pair": "عصير قصب"
+      },
+      {
+        "id": "base-undercover-021",
+        "text": "عسل",
+        "pair": "مربى"
+      },
+      {
+        "id": "base-undercover-022",
+        "text": "جبنة",
+        "pair": "زبادي"
+      },
+      {
+        "id": "base-undercover-023",
+        "text": "شاورما",
+        "pair": "حواوشي"
+      },
+      {
+        "id": "base-undercover-024",
+        "text": "لبن",
+        "pair": "رايب"
+      },
+      {
+        "id": "base-undercover-025",
+        "text": "كيك",
+        "pair": "كوكيز"
+      },
+      {
+        "id": "base-undercover-026",
+        "text": "ملوخية",
+        "pair": "سبانخ"
+      },
+      {
+        "id": "base-undercover-027",
+        "text": "محشي",
+        "pair": "ورق عنب"
+      },
+      {
+        "id": "base-undercover-028",
+        "text": "بطاطس",
+        "pair": "بطاطا"
+      },
+      {
+        "id": "base-undercover-029",
+        "text": "بلح",
+        "pair": "تين"
+      },
+      {
+        "id": "base-undercover-030",
+        "text": "تمر هندي",
+        "pair": "كركديه"
+      },
+      {
+        "id": "base-undercover-031",
+        "text": "ملعب",
+        "pair": "استاد"
+      },
+      {
+        "id": "base-undercover-032",
+        "text": "حديقة",
+        "pair": "مزرعة"
+      },
+      {
+        "id": "base-undercover-033",
+        "text": "مطعم",
+        "pair": "كافيه"
+      },
+      {
+        "id": "base-undercover-034",
+        "text": "مطار",
+        "pair": "محطة قطار"
+      },
+      {
+        "id": "base-undercover-035",
+        "text": "متحف",
+        "pair": "معرض"
+      },
+      {
+        "id": "base-undercover-036",
+        "text": "شاطئ",
+        "pair": "كورنيش"
+      },
+      {
+        "id": "base-undercover-037",
+        "text": "مول",
+        "pair": "سوق"
+      },
+      {
+        "id": "base-undercover-038",
+        "text": "قاعة أفراح",
+        "pair": "قاعة مؤتمرات"
+      },
+      {
+        "id": "base-undercover-039",
+        "text": "فندق",
+        "pair": "شاليه"
+      },
+      {
+        "id": "base-undercover-040",
+        "text": "مخبز",
+        "pair": "محل حلويات"
+      },
+      {
+        "id": "base-undercover-041",
+        "text": "كنبة",
+        "pair": "كرسي"
+      },
+      {
+        "id": "base-undercover-042",
+        "text": "غسالة",
+        "pair": "مجفف"
+      },
+      {
+        "id": "base-undercover-043",
+        "text": "بوتاجاز",
+        "pair": "فرن"
+      },
+      {
+        "id": "base-undercover-044",
+        "text": "لمبة",
+        "pair": "كشاف"
+      },
+      {
+        "id": "base-undercover-045",
+        "text": "ستارة",
+        "pair": "باب"
+      },
+      {
+        "id": "base-undercover-046",
+        "text": "مكنسة",
+        "pair": "ممسحة"
+      },
+      {
+        "id": "base-undercover-047",
+        "text": "طبق",
+        "pair": "صينية"
+      },
+      {
+        "id": "base-undercover-048",
+        "text": "كوب",
+        "pair": "فنجان"
+      },
+      {
+        "id": "base-undercover-049",
+        "text": "غلاية",
+        "pair": "إبريق"
+      },
+      {
+        "id": "base-undercover-050",
+        "text": "منبه",
+        "pair": "ساعة حائط"
+      },
+      {
+        "id": "base-undercover-051",
+        "text": "تاكسي",
+        "pair": "ميكروباص"
+      },
+      {
+        "id": "base-undercover-052",
+        "text": "طائرة",
+        "pair": "هليكوبتر"
+      },
+      {
+        "id": "base-undercover-053",
+        "text": "مركب",
+        "pair": "عبارة"
+      },
+      {
+        "id": "base-undercover-054",
+        "text": "دراجة",
+        "pair": "سكوتر"
+      },
+      {
+        "id": "base-undercover-055",
+        "text": "سيارة",
+        "pair": "شاحنة"
+      },
+      {
+        "id": "base-undercover-056",
+        "text": "ترام",
+        "pair": "مترو"
+      },
+      {
+        "id": "base-undercover-057",
+        "text": "قطار",
+        "pair": "تلفريك"
+      },
+      {
+        "id": "base-undercover-058",
+        "text": "عربية إسعاف",
+        "pair": "عربية إطفاء"
+      },
+      {
+        "id": "base-undercover-059",
+        "text": "عربة أطفال",
+        "pair": "عربة تسوق"
+      },
+      {
+        "id": "base-undercover-060",
+        "text": "غواصة",
+        "pair": "سفينة"
+      },
+      {
+        "id": "base-undercover-061",
+        "text": "أسد",
+        "pair": "نمر"
+      },
+      {
+        "id": "base-undercover-062",
+        "text": "فيل",
+        "pair": "زرافة"
+      },
+      {
+        "id": "base-undercover-063",
+        "text": "بقرة",
+        "pair": "جاموسة"
+      },
+      {
+        "id": "base-undercover-064",
+        "text": "خروف",
+        "pair": "ماعز"
+      },
+      {
+        "id": "base-undercover-065",
+        "text": "سلحفاة",
+        "pair": "تمساح"
+      },
+      {
+        "id": "base-undercover-066",
+        "text": "عصفور",
+        "pair": "حمامة"
+      },
+      {
+        "id": "base-undercover-067",
+        "text": "نملة",
+        "pair": "نحلة"
+      },
+      {
+        "id": "base-undercover-068",
+        "text": "سمكة",
+        "pair": "دولفين"
+      },
+      {
+        "id": "base-undercover-069",
+        "text": "حصان",
+        "pair": "حمار"
+      },
+      {
+        "id": "base-undercover-070",
+        "text": "أرنب",
+        "pair": "فأر"
+      },
+      {
+        "id": "base-undercover-071",
+        "text": "رسم",
+        "pair": "تلوين"
+      },
+      {
+        "id": "base-undercover-072",
+        "text": "جري",
+        "pair": "مشي"
+      },
+      {
+        "id": "base-undercover-073",
+        "text": "تصوير",
+        "pair": "فيديو"
+      },
+      {
+        "id": "base-undercover-074",
+        "text": "كرة قدم",
+        "pair": "كرة سلة"
+      },
+      {
+        "id": "base-undercover-075",
+        "text": "سباحة",
+        "pair": "غوص"
+      },
+      {
+        "id": "base-undercover-076",
+        "text": "قراءة",
+        "pair": "كتابة"
+      },
+      {
+        "id": "base-undercover-077",
+        "text": "غناء",
+        "pair": "عزف"
+      },
+      {
+        "id": "base-undercover-078",
+        "text": "شطرنج",
+        "pair": "دومينو"
+      },
+      {
+        "id": "base-undercover-079",
+        "text": "تسلق",
+        "pair": "مشي جبلي"
+      },
+      {
+        "id": "base-undercover-080",
+        "text": "رقص",
+        "pair": "تمثيل"
       }
     ]
   },
