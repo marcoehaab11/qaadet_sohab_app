@@ -121,3 +121,9 @@ M2 screens and live-session coordination, integrating the already tested engine 
 
 - Tests cover record winners, duplicate prevention, 40-record retention, career wins and streaks, and migration defaults for existing saves. `npm run check` passed with 77 Jest tests, strict TypeScript, ESLint and content lint; Android/web JS export succeeded.
 - Browser preview opened the stats screen from Settings using existing saved data. Its prior completed-session count remained readable after migration; new history was empty as expected because the earlier version had not saved sessions.
+
+## M8 result card and sharing — 2026-09-30
+
+- Result screen now shows a 9:16 card with date, standings, up to five awards and hashtag. Native capture requests a 1080×1920 PNG using the device pixel ratio and opens the system share sheet. WhatsApp text sharing opens the encoded result through wa.me. Both actions are optional and user-triggered.
+- Web cannot share the local PNG through expo-sharing; it shows a clear unavailable message. Native capture/share and WhatsApp handoff still need physical-device QA.
+- `npm run check` passed with 78 tests, strict TypeScript, ESLint and content lint. Expo Doctor passed 21/21; web and Android JavaScript exports succeeded. A format test covers absent players, stable tied order, awards and hashtag in the WhatsApp text.

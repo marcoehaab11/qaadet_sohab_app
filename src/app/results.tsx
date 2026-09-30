@@ -1,8 +1,11 @@
-import { useEffect, useState } from 'react';
-import { Platform } from 'react-native';
+import { useEffect, useRef, useState } from 'react';
+import { PixelRatio, Platform, View } from 'react-native';
 import { router } from 'expo-router';
 import Constants from 'expo-constants';
 import * as StoreReview from 'expo-store-review';
+import * as Sharing from 'expo-sharing';
+import * as Linking from 'expo-linking';
+import { captureRef } from 'react-native-view-shot';
 import { useApp } from '../store';
 import { useSession } from '../store/session';
 import { leaders } from '../engine/session';
@@ -13,6 +16,8 @@ import { eligibleForReview } from '../engine/review';
 import { lowestScorers, sessionAwards } from '../engine/awards';
 import { random } from '../engine/random';
 import punishments from '../content/punishments.json';
+import { ResultCard } from '../components/ResultCard';
+import { resultShareText } from '../engine/resultShare';
 
 let reviewPending = false;
 export default function Results() {
@@ -21,6 +26,9 @@ export default function Results() {
   const ledger = useSession((s) => s.ledger);
   const session = useSession((s) => s.session);
   const [redraw, setRedraw] = useState(0);
+  const [sharing, setSharing] = useState(false);
+  const [shareMessage, setShareMessage] = useState('');
+  const cardRef = useRef<View>(null);
   const reset = useSession((s) => s.reset);
   const completedSessions = useApp((s) => s.data.completedSessions);
   const askedVersion = useApp((s) => s.data.reviewAskedVersion);
@@ -58,6 +66,34 @@ export default function Results() {
   const losers = lowestScorers(activeIds, ledger);
   const loser = losers.length ? losers[Math.floor(random(session?.seed ?? 1).value * losers.length)] : null;
   const punishment = punishments[Math.floor(random((session?.seed ?? 1) + redraw + 997).value * punishments.length)];
+  async function shareCard() {
+    if (!cardRef.current || sharing) return;
+    setSharing(true);
+    setShareMessage('');
+    try {
+      if (Platform.OS === 'web' || !(await Sharing.isAvailableAsync())) {
+        setShareMessage(ar.imageShareUnavailable);
+        return;
+      }
+      const ratio = PixelRatio.get();
+      const uri = await captureRef(cardRef, { format: 'png', quality: 1, result: 'tmpfile',
+        width: 1080 / ratio, height: 1920 / ratio });
+      await Sharing.shareAsync(uri, { mimeType: 'image/png', UTI: 'public.png' });
+    } catch {
+      setShareMessage(ar.imageShareError);
+    } finally {
+      setSharing(false);
+    }
+  }
+  async function shareWhatsApp() {
+    setShareMessage('');
+    try {
+      const message = resultShareText(players, activeIds, ledger.scores, awards);
+      await Linking.openURL(`https://wa.me/?text=${encodeURIComponent(message)}`);
+    } catch {
+      setShareMessage(ar.whatsappUnavailable);
+    }
+  }
   if (session?.phase === 'tiebreak') return null;
   return (
     <Screen>
@@ -87,6 +123,14 @@ export default function Results() {
         <Text style={styles.title}>{ar.punishmentTitle}</Text>
         <Text>{players.find((player) => player.id === loser)?.name}: {punishment}</Text>
         <Button secondary label={ar.punishmentAgain} onPress={() => setRedraw((value) => value + 1)} />
+      </Panel>}
+      {session?.finished && <Panel>
+        <Text style={styles.title}>{ar.shareResult}</Text>
+        <ResultCard ref={cardRef} players={players} activeIds={activeIds} scores={ledger.scores}
+          awards={awards} date={new Date(session.startedAt)} />
+        <Button label={sharing ? ar.sharingResult : ar.shareImage} disabled={sharing} onPress={() => void shareCard()} />
+        <Button secondary label={ar.shareWhatsApp} onPress={() => void shareWhatsApp()} />
+        {!!shareMessage && <Text accessibilityRole="alert">{shareMessage}</Text>}
       </Panel>}
       <Button
         label={ar.newSession}

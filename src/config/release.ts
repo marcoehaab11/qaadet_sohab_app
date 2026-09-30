@@ -1,11 +1,11 @@
 export const release = {
   version: '1.1-preview',
-  teams: false,
-  history: false,
-  sharing: false,
+  teams: true,
+  history: true,
+  sharing: true,
   tiebreak: true,
-  surprises: false,
-  phase: 'm7',
+  surprises: true,
+  phase: 'm8',
 } as const;
 export const enabledGameIds = [
   'imposter',
