@@ -21,6 +21,7 @@ import { ImposterState, createImposter } from '../games/imposter/reducer';
 import { ProverbState, createProverb } from '../games/proverb/reducer';
 import { MemoryState, createMemory } from '../games/memory/reducer';
 import { expandTeamPoints, teamsActive } from '../engine/teams';
+import { DrawState, createDraw } from '../games/draw/reducer';
 import { useApp } from './index';
 // Ephemeral by design: scores, counters, undo and sit-out state never reach AsyncStorage.
 type SessionStore = {
@@ -57,6 +58,9 @@ type SessionStore = {
   memoryGame: MemoryState | null;
   setMemoryGame: (state: MemoryState | null) => void;
   startStandaloneMemory: () => void;
+  drawGame: DrawState | null;
+  setDrawGame: (state: DrawState | null) => void;
+  startStandaloneDraw: () => void;
   begin: () => void;
   play: () => void;
   advance: () => void;
@@ -89,6 +93,8 @@ export const useSession = create<SessionStore>((set, get) => ({
   setProverbGame: (proverbGame) => set({ proverbGame }),
   memoryGame: null,
   setMemoryGame: (memoryGame) => set({ memoryGame }),
+  drawGame: null,
+  setDrawGame: (drawGame) => set({ drawGame }),
   startStandaloneCards: () => {
     const data = useApp.getState().data;
     set({
@@ -104,6 +110,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       imposterGame: null,
       proverbGame: null,
       memoryGame: null,
+      drawGame: null,
       cardsGame: createCards(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.cards?.cards ?? 8,
@@ -126,6 +133,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       imposterGame: null,
       proverbGame: null,
       memoryGame: null,
+      drawGame: null,
       todGame: createTod(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.tod?.turns ?? 1,
@@ -148,6 +156,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       imposterGame: null,
       proverbGame: null,
       memoryGame: null,
+      drawGame: null,
       likelyGame: createLikely(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.likely?.questions ?? 3,
@@ -170,6 +179,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       imposterGame: null,
       proverbGame: null,
       memoryGame: null,
+      drawGame: null,
       knowMeGame: createKnowMe(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.knowme?.subjects ?? 3,
@@ -192,6 +202,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       imposterGame: null,
       proverbGame: null,
       memoryGame: null,
+      drawGame: null,
       tabooGame: createTaboo(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.taboo?.turns ?? 1,
@@ -215,6 +226,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       imposterGame: null,
       proverbGame: null,
       memoryGame: null,
+      drawGame: null,
       charadesGame: createCharades(
         data.players.map((p) => ({ ...p, away: false })),
         data.config.charades?.turns ?? 5,
@@ -237,6 +249,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       imposterGame: null,
       proverbGame: null,
       memoryGame: null,
+      drawGame: null,
       speedGame: createSpeed(data.config.speed?.challenges ?? 5, Date.now()),
     });
   },
@@ -255,6 +268,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       imposterGame: createImposter(Date.now()),
       proverbGame: null,
       memoryGame: null,
+      drawGame: null,
     });
   },
   startStandaloneProverb: () => {
@@ -265,6 +279,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       tabooGame: null, charadesGame: null, speedGame: null, imposterGame: null,
       proverbGame: createProverb(data.config.proverb?.rounds ?? 6, Date.now()),
       memoryGame: null,
+      drawGame: null,
     });
   },
   startStandaloneMemory: () => {
@@ -274,6 +289,15 @@ export const useSession = create<SessionStore>((set, get) => ({
       cardsGame: null, todGame: null, likelyGame: null, knowMeGame: null,
       tabooGame: null, charadesGame: null, speedGame: null, imposterGame: null, proverbGame: null,
       memoryGame: createMemory(data.players.length * (config?.turns ?? 1), config?.difficulty ?? 9, Date.now()) });
+  },
+  startStandaloneDraw: () => {
+    const data = useApp.getState().data;
+    set({ ledger: emptyLedger(), away: [], session: null,
+      cardsGame: null, todGame: null, likelyGame: null, knowMeGame: null,
+      tabooGame: null, charadesGame: null, speedGame: null, imposterGame: null,
+      proverbGame: null, memoryGame: null,
+      drawGame: createDraw(data.players.map((player) => ({ ...player, away: false })),
+        data.config.draw?.turns ?? 1, Date.now()) });
   },
   begin: () => {
     const players = useApp.getState().data.players;
@@ -290,6 +314,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       imposterGame: null,
       proverbGame: null,
       memoryGame: null,
+      drawGame: null,
       away: [],
       session: createSession(vibe, length, players.length, Date.now()),
     });
@@ -349,6 +374,9 @@ export const useSession = create<SessionStore>((set, get) => ({
       memoryGame: currentGame(session) === 'memory'
         ? createMemory(participants.length * (useApp.getState().data.config.memory?.turns ?? 1),
             useApp.getState().data.config.memory?.difficulty ?? 9, session.seed)
+        : null,
+      drawGame: currentGame(session) === 'draw'
+        ? createDraw(participants, useApp.getState().data.config.draw?.turns ?? 1, session.seed)
         : null,
     });
   },
@@ -412,7 +440,9 @@ export const useSession = create<SessionStore>((set, get) => ({
       imposterGame: null,
       proverbGame: null,
       memoryGame: null,
+      drawGame: null,
     }),
 }));
+
 
 

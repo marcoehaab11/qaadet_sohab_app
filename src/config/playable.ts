@@ -13,6 +13,7 @@ export const playableRoutes: Partial<
     | '/game/imposter'
     | '/game/proverb'
     | '/game/memory'
+    | '/game/draw'
   >
 > = {
   cards: '/game/cards',
@@ -25,4 +26,5 @@ export const playableRoutes: Partial<
   imposter: '/game/imposter',
   proverb: '/game/proverb',
   memory: '/game/memory',
+  draw: '/game/draw',
 };

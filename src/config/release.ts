@@ -17,6 +17,7 @@ export const enabledGameIds = [
   'knowme',
   'proverb',
   'memory',
+  'draw',
 ] as const;
 export type GameId = (typeof enabledGameIds)[number];
 export const minPlayers: Record<GameId, number> = {
@@ -30,4 +31,5 @@ export const minPlayers: Record<GameId, number> = {
   knowme: 2,
   proverb: 2,
   memory: 2,
+  draw: 2,
 };

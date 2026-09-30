@@ -67,3 +67,8 @@
 - Added a saved teams toggle and reshuffle control. Four or more active players form two balanced random teams; the three team games are ممنوع تقول, تمثيل and أسرع واحد. Team mode is inactive below four active players.
 - ممنوع تقول interleaves actors from the two teams. تمثيل accepts a guess only from the actor's team. أسرع واحد shows two buzzers and excludes the whole team after a wrong claim. Individual score changes from those games expand to all active teammates; stats remain with the acting player. In تمثيل, actor and guesser each earn a point, so every teammate receives two points on a correct guess.
 - Adding/removing a player reassigns teams for balance. A physical-device session should check team labels and rebalance behavior when participants sit out or rejoin before release.
+
+## 2026-09-30 — M7 drawing preview
+
+- Used `react-native-svg` for the drawing canvas because Expo SDK 57 includes it in Expo Go. Touch handling uses React Native's View responder events; the SVG ignores touches so canvas coordinates stay relative to its container. The canvas offers four colors, an eraser and clear.
+- Added 20 draft words and a pure turn/scoring reducer. The artist sees the word through HoldToReveal before drawing; during drawing the word is hidden. The artist and first correct guesser receive +1 each. The 200-word target, editorial review and physical-device touch QA remain open.

@@ -23,6 +23,8 @@ const configOptions: { game: GameId; key: string; choices: number[] }[] = [
   { game: 'memory', key: 'time', choices: [3, 5, 8] },
   { game: 'memory', key: 'turns', choices: [1, 2, 3] },
   { game: 'memory', key: 'difficulty', choices: [6, 9, 12] },
+  { game: 'draw', key: 'time', choices: [45, 60, 90] },
+  { game: 'draw', key: 'turns', choices: [1, 2, 3] },
 ];
 export default function SettingsScreen() {
   const settings = useApp((s) => s.data.settings);

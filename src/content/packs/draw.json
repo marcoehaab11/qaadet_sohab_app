@@ -1,0 +1,24 @@
+[
+  {"id":"base-draw","version":1,"locale":"ar-EG","game":"draw","tier":"free","items":[
+    {"id":"base-draw-001","text":"أتوبيس"},
+    {"id":"base-draw-002","text":"فانوس"},
+    {"id":"base-draw-003","text":"كوب شاي"},
+    {"id":"base-draw-004","text":"مظلة"},
+    {"id":"base-draw-005","text":"قطار"},
+    {"id":"base-draw-006","text":"قطة"},
+    {"id":"base-draw-007","text":"مركب"},
+    {"id":"base-draw-008","text":"طائرة ورق"},
+    {"id":"base-draw-009","text":"قهوة"},
+    {"id":"base-draw-010","text":"شجرة"},
+    {"id":"base-draw-011","text":"تليفزيون"},
+    {"id":"base-draw-012","text":"دراجة"},
+    {"id":"base-draw-013","text":"سلم"},
+    {"id":"base-draw-014","text":"نظارة"},
+    {"id":"base-draw-015","text":"تاج"},
+    {"id":"base-draw-016","text":"مفتاح"},
+    {"id":"base-draw-017","text":"ساعة"},
+    {"id":"base-draw-018","text":"كورة"},
+    {"id":"base-draw-019","text":"هرم"},
+    {"id":"base-draw-020","text":"طبل"}
+  ]}
+]

@@ -99,3 +99,8 @@ M2 screens and live-session coordination, integrating the already tested engine 
 ## M7 teams preview — 2026-09-30
 
 - Tests cover balanced assignment, alternating turns, team penalties, teammate-only تمثيل guesses, and speed team lockout. Native layout and dynamic attendance still need device QA.
+
+## M7 drawing preview — 2026-09-30
+
+- Reducer tests cover private reveal gate, artist/guesser scoring, replay protection, away-player rejection and timeout. `npm run check` passed with 67 Jest tests, strict TypeScript, ESLint and content lint. Canvas touch and the hidden-word flow still need device QA.
+- Browser preview exercised standalone pass-phone, hidden word, start, a visible canvas stroke, first-guesser selection, and +1 each for artist and guesser. Android/web JS export and Expo Doctor 21/21 passed. Native touch QA remains open.
