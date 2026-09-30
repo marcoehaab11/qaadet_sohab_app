@@ -82,3 +82,8 @@ M2 screens and live-session coordination, integrating the already tested engine 
 
 - Added 20 Imposter words and 15 each for Likely, Charades and ممنوع تقول. Content lint validates all four packs and reports their full hashes; editorial approval remains open.
 - Unit tests cover Ramadan/Eid/Gregorian season priority, Intl fallback conversion, availability of the Ramadan content, and exclusion outside its season. TypeScript, lint and 57 tests passed.
+
+## M7 proverb preview — 2026-09-30
+
+- Standalone and session routes, reveal and first-correct scoring are implemented. Unit tests cover scoring only once, absent players and an unanswered proverb.
+- `npm run check`: strict TypeScript, ESLint, 59 Jest tests and content lint passed. Release content lint still fails as intended for missing volume and human approval.

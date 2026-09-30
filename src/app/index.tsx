@@ -20,6 +20,7 @@ const icons: Record<GameId, string> = {
   charades: '🎭',
   speed: '⚡',
   knowme: '🫶',
+  proverb: '📜',
 };
 const accents = [
   '#d3b4ff',
@@ -30,6 +31,7 @@ const accents = [
   '#bfccff',
   '#ffda70',
   '#f6b9e0',
+  '#ffd766',
 ];
 const vibeIcons: Record<Vibe, string> = {
   laugh: '😂',
@@ -52,6 +54,7 @@ export default function Home() {
   const startStandaloneCharades = useSession((s) => s.startStandaloneCharades);
   const startStandaloneSpeed = useSession((s) => s.startStandaloneSpeed);
   const startStandaloneImposter = useSession((s) => s.startStandaloneImposter);
+  const startStandaloneProverb = useSession((s) => s.startStandaloneProverb);
   const { fontScale } = useWindowDimensions();
   const expandedVibes = data.settings.largeText || fontScale > 1.1;
   const season = activeSeason();
@@ -207,6 +210,9 @@ export default function Home() {
               } else if (id === 'imposter' && (!session || session.finished)) {
                 startStandaloneImposter();
                 router.push('/game/imposter');
+              } else if (id === 'proverb' && (!session || session.finished)) {
+                startStandaloneProverb();
+                router.push('/game/proverb');
               } else setSelected(id);
             }}
             style={[

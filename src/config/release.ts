@@ -1,10 +1,10 @@
 export const release = {
-  version: '1.0',
+  version: '1.1-preview',
   teams: false,
   history: false,
   sharing: false,
   surprises: false,
-  phase: 'm6',
+  phase: 'm7',
 } as const;
 export const enabledGameIds = [
   'imposter',
@@ -15,6 +15,7 @@ export const enabledGameIds = [
   'charades',
   'speed',
   'knowme',
+  'proverb',
 ] as const;
 export type GameId = (typeof enabledGameIds)[number];
 export const minPlayers: Record<GameId, number> = {
@@ -26,4 +27,5 @@ export const minPlayers: Record<GameId, number> = {
   charades: 2,
   speed: 2,
   knowme: 2,
+  proverb: 2,
 };

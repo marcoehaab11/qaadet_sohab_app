@@ -4,6 +4,7 @@ import { Approval, approvedPack, packHash } from './content-review';
 const raw: unknown = [
   ...JSON.parse(fs.readFileSync('src/content/packs/seed.json', 'utf8')),
   ...JSON.parse(fs.readFileSync('src/content/packs/ramadan.json', 'utf8')),
+  ...JSON.parse(fs.readFileSync('src/content/packs/proverbs.json', 'utf8')),
 ];
 const parsed = packSchema.array().safeParse(raw);
 if (!parsed.success) {
@@ -25,6 +26,7 @@ const targets: Record<string, number> = {
   'ramadan-likely': 15,
   'ramadan-charades': 15,
   'ramadan-taboo': 15,
+  'base-proverb': 120,
 };
 const reviews = JSON.parse(fs.readFileSync('docs/content-reviews.json', 'utf8')) as {
   schemaVersion: number;

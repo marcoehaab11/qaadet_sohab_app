@@ -1,0 +1,23 @@
+[
+  {
+    "id": "base-proverb", "version": 1, "locale": "ar-EG", "game": "proverb", "tier": "free",
+    "items": [
+      {"id":"base-proverb-001","text":"اللي ميعرفش يقول","pair":"عدس"},
+      {"id":"base-proverb-002","text":"القرد في عين أمه","pair":"غزال"},
+      {"id":"base-proverb-003","text":"اللي فات","pair":"مات"},
+      {"id":"base-proverb-004","text":"يا بخت من بات مغلوب","pair":"ولا باتش غالب"},
+      {"id":"base-proverb-005","text":"اللي يحضّر العفريت","pair":"يصرفه"},
+      {"id":"base-proverb-006","text":"على قد لحافك","pair":"مد رجليك"},
+      {"id":"base-proverb-007","text":"اللي اختشوا","pair":"ماتوا"},
+      {"id":"base-proverb-008","text":"الباب اللي يجيلك منه الريح","pair":"سدّه واستريح"},
+      {"id":"base-proverb-009","text":"ابن الوز","pair":"عوّام"},
+      {"id":"base-proverb-010","text":"اكفي القدرة على فمها","pair":"تطلع البنت لأمها"},
+      {"id":"base-proverb-011","text":"اللي بيته من إزاز","pair":"ميحدفش الناس بالطوب"},
+      {"id":"base-proverb-012","text":"إن كان حبيبك عسل","pair":"متلحسهوش كله"},
+      {"id":"base-proverb-013","text":"الصبر","pair":"مفتاح الفرج"},
+      {"id":"base-proverb-014","text":"زي الأطرش","pair":"في الزفة"},
+      {"id":"base-proverb-015","text":"ياما في الجراب","pair":"يا حاوي"},
+      {"id":"base-proverb-016","text":"دخول الحمام مش زي","pair":"خروجه"}
+    ]
+  }
+]

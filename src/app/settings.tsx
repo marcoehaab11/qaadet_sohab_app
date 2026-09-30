@@ -18,6 +18,7 @@ const configOptions: { game: GameId; key: string; choices: number[] }[] = [
   { game: 'charades', key: 'turns', choices: [3, 5, 8] },
   { game: 'speed', key: 'challenges', choices: [3, 5, 8] },
   { game: 'knowme', key: 'subjects', choices: [2, 3, 5] },
+  { game: 'proverb', key: 'rounds', choices: [4, 6, 10] },
 ];
 export default function SettingsScreen() {
   const settings = useApp((s) => s.data.settings);

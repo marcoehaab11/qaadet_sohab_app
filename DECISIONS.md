@@ -45,3 +45,9 @@
 - Added the 65-item Ramadan pack separately from the prototype seed, so re-importing the original demo does not overwrite new content. Items are drafts until two human reviewers approve the pack hashes.
 - Season detection first checks whether the runtime truly resolves `islamic-umalqura` in `Intl`; if not, it uses the local, zero-dependency `@tabby_ai/hijri-converter` table. The converter supports a bounded date range and returns no religious season outside it. No network calendar request is made.
 - Detection knows Eid, Sahel, and Exams, but only Ramadan activates a pack now. The remaining seasons and manual override belong to M9. For local religious observance, a manual choice will be preferable to calculated dates when M9 lands.
+
+## 2026-09-30 — M7 proverb preview
+
+- Began v1.1 gameplay while the independent M6 editorial and device QA gates remain open. `release.version` is `1.1-preview`; it does not set the native store version.
+- Added a 16-item draft proverb pack, pure reducer, standalone and session route. The first correct player receives +1 and one `elder` stat; an unanswered proverb gives no points. Draws use the shared persisted anti-repeat pool.
+- The proverb pack is short of its 120-item target and has no two-person approval. This implementation is a development preview, not a release claim.

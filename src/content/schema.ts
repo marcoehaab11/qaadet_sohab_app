@@ -58,6 +58,8 @@ export const packSchema = z
           message: 'Truth or dare needs level and kind',
           path: ['items', index],
         });
+      if (pack.game === 'proverb' && !item.pair)
+        ctx.addIssue({ code: 'custom', message: 'Proverb needs its ending', path: ['items', index, 'pair'] });
     });
   });
 export type ContentPack = z.infer<typeof packSchema>;

@@ -3,9 +3,9 @@ import { shuffle } from './random';
 export type Vibe = 'laugh' | 'compete' | 'deceive' | 'friends' | 'random';
 const pools: Record<Vibe, readonly GameId[]> = {
   laugh: ['charades', 'likely', 'cards', 'tod'],
-  compete: ['speed', 'taboo'],
+  compete: ['speed', 'taboo', 'proverb'],
   deceive: ['imposter', 'knowme', 'likely', 'taboo'],
-  friends: ['knowme', 'cards', 'likely', 'tod'],
+  friends: ['knowme', 'cards', 'likely', 'tod', 'proverb'],
   random: enabledGameIds,
 };
 export function buildQueue(vibe: Vibe, count: 3 | 5, activeCount: number, seed: number) {

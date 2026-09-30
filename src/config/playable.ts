@@ -11,6 +11,7 @@ export const playableRoutes: Partial<
     | '/game/charades'
     | '/game/speed'
     | '/game/imposter'
+    | '/game/proverb'
   >
 > = {
   cards: '/game/cards',
@@ -21,4 +22,5 @@ export const playableRoutes: Partial<
   charades: '/game/charades',
   speed: '/game/speed',
   imposter: '/game/imposter',
+  proverb: '/game/proverb',
 };
