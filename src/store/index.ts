@@ -16,6 +16,7 @@ const defaults = (): SavedData => ({
     color: colors[i]!,
   })),
   settings: { sound: true, hold: true, family: false, largeText: false, clearColors: false, teams: false, surprises: false },
+  seasonOverride: null,
   config: {
     imposter: { time: 120 },
     cards: { cards: 8, time: 20 },

@@ -5,7 +5,7 @@ export const release = {
   sharing: true,
   tiebreak: true,
   surprises: true,
-  phase: 'm8',
+  phase: 'm9',
 } as const;
 export const enabledGameIds = [
   'imposter',

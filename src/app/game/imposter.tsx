@@ -36,7 +36,7 @@ export default function Imposter() {
 
   const pack = state.mode === 'undercover' ? undercoverPack : classicPack;
   const customWords = data.customDecks.imposter?.length ?? 0;
-  const classicItems = loadContent('imposter', data.settings.family, data.customDecks, activeSeason())
+  const classicItems = loadContent('imposter', data.settings.family, data.customDecks, activeSeason(new Date(), data.seasonOverride))
     .filter((item) => !item.pair && (item.source !== 'custom' || customWords >= 3));
   const availableCategories = [...new Set(classicItems.map((item) => item.category).filter(Boolean))] as string[];
   const word = [...packs.filter((p) => p.game === 'imposter').flatMap((p) => p.items),

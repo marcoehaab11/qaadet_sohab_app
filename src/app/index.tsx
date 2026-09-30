@@ -63,7 +63,7 @@ export default function Home() {
   const startStandaloneDraw = useSession((s) => s.startStandaloneDraw);
   const { fontScale } = useWindowDimensions();
   const expandedVibes = data.settings.largeText || fontScale > 1.1;
-  const season = activeSeason();
+  const season = activeSeason(new Date(), data.seasonOverride);
   useEffect(() => {
     if (!data.onboardingDone) router.replace('/onboarding');
   }, [data.onboardingDone]);

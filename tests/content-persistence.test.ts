@@ -5,6 +5,7 @@ const saved: SavedData = {
   schemaVersion: 1,
   players: ['one', 'two'].map((id) => ({ id, name: id, emoji: '🦊', color: '#ffffff' })),
   settings: { sound: true, hold: true, family: false, largeText: false, clearColors: false, teams: false, surprises: false },
+  seasonOverride: null,
   config: {},
   customDecks: {},
   used: { pack: ['item'] },
@@ -42,6 +43,12 @@ test('round trip keeps setup and used IDs, strips session scores and away flags'
   const result = JSON.parse(serializeSaved(data));
   expect(result).toEqual(saved);
   expect(migrateSaved(result).onboardingDone).toBe(true);
+});
+test('older local saves default to automatic season and chosen season survives serialization', () => {
+  const older: Record<string, unknown> = { ...saved };
+  delete older.seasonOverride;
+  expect(migrateSaved(older).seasonOverride).toBeNull();
+  expect(migrateSaved(JSON.parse(serializeSaved({ ...saved, seasonOverride: 'eid' }))).seasonOverride).toBe('eid');
 });
 test('future versions and duplicate player IDs are rejected without silent reset', () => {
   expect(() => migrateSaved({ ...saved, schemaVersion: 2 })).toThrow();

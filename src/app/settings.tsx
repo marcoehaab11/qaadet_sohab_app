@@ -6,6 +6,7 @@ import { ar } from '../i18n/ar-EG';
 import { theme } from '../theme';
 import { Button, Panel, Screen, styles, Text } from '../components/ui';
 import { GameId } from '../config/release';
+import { Season } from '../content/seasons';
 const configOptions: { game: GameId; key: string; choices: number[] }[] = [
   { game: 'imposter', key: 'time', choices: [60, 120, 180] },
   { game: 'cards', key: 'cards', choices: [5, 8, 12] },
@@ -33,6 +34,7 @@ export default function SettingsScreen() {
   const update = useApp((s) => s.update);
   const reshuffleTeams = useApp((s) => s.reshuffleTeams);
   const playerCount = useApp((s) => s.data.players.length);
+  const seasonOverride = useApp((s) => s.data.seasonOverride);
   return (
     <Screen>
       <Text style={styles.title}>{ar.settings}</Text>
@@ -56,6 +58,16 @@ export default function SettingsScreen() {
         {playerCount < 4 && <Text style={styles.muted}>{ar.teamsNeedFour}</Text>}
         <Button secondary label={ar.reshuffleTeams} onPress={reshuffleTeams} />
       </Panel>}
+      <Panel>
+        <Text style={{ fontFamily: theme.bold }}>{ar.seasonMode}</Text>
+        <Text style={styles.muted}>{ar.seasonModeHint}</Text>
+        <View style={styles.row}>
+          {([null, 'ramadan', 'eid', 'sahel', 'exams'] as const).map((season) => <View key={season ?? 'auto'} style={{ minWidth: 95, flexGrow: 1 }}>
+            <Button secondary={seasonOverride !== season} label={season ? ar.seasons[season] : ar.seasonAuto}
+              onPress={() => update((data) => ({ ...data, seasonOverride: season as Season | null }))} />
+          </View>)}
+        </View>
+      </Panel>
       <Text style={styles.title}>{ar.gameSettings}</Text>
       {configOptions.map(({ game, key, choices }) => (
         <Panel key={`${game}:${key}`}>

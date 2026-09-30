@@ -6,7 +6,7 @@ import { Button, Panel, Screen, styles, Text } from '../../components/ui';
 import { PassPhoneScreen } from '../../components/PassPhoneScreen';
 import { HoldToReveal } from '../../components/HoldToReveal';
 import { CountdownTimer } from '../../components/CountdownTimer';
-import { loadContent, packs } from '../../content/loader';
+import { activeSeason, loadContent, packs } from '../../content/loader';
 import { drawFromPack } from '../../content/draw';
 import { charadesReducer } from '../../games/charades/reducer';
 import { teamsActive } from '../../engine/teams';
@@ -45,7 +45,7 @@ export default function Charades() {
   };
   const showScene = () => {
     const pack = packs.find((p) => p.id === 'base-charades')!;
-    const result = drawFromPack({ ...pack, items: loadContent('charades', false, data.customDecks) }, state.seed);
+    const result = drawFromPack({ ...pack, items: loadContent('charades', false, data.customDecks, activeSeason(new Date(), data.seasonOverride)) }, state.seed);
     dispatch({ type: 'showScene', sceneId: result.item.id, seed: result.seed });
   };
   const skipTurn = () => {
@@ -61,7 +61,7 @@ export default function Charades() {
   };
   const actor = players.find((p) => p.id === state.actorId);
   const guesser = players.find((p) => p.id === state.guesserId);
-  const scene = loadContent('charades', false, data.customDecks)
+  const scene = loadContent('charades', false, data.customDecks, activeSeason(new Date(), data.seasonOverride))
     .find((item) => item.id === state.sceneId);
 
   return (

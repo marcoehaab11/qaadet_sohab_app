@@ -6,7 +6,7 @@ import { Button, Panel, Screen, styles, Text } from '../../components/ui';
 import { PassPhoneScreen } from '../../components/PassPhoneScreen';
 import { HoldToReveal } from '../../components/HoldToReveal';
 import { CountdownTimer } from '../../components/CountdownTimer';
-import { loadContent, packs } from '../../content/loader';
+import { activeSeason, loadContent, packs } from '../../content/loader';
 import { drawFromPack } from '../../content/draw';
 import { tabooReducer } from '../../games/taboo/reducer';
 import { theme } from '../../theme';
@@ -47,7 +47,7 @@ export default function Taboo() {
   const drawWord = (outcome?: 'guessed' | 'forbidden' | 'skip') => {
     const difficulty = data.config.taboo?.difficulty ?? 0;
     const pack = packs.find((p) => p.id === (difficulty === 1 ? 'base-taboo-hard' : 'base-taboo'))!;
-    const items = loadContent('taboo', data.settings.family, data.customDecks, undefined, difficulty);
+    const items = loadContent('taboo', data.settings.family, data.customDecks, activeSeason(new Date(), data.seasonOverride), difficulty);
     const result = drawFromPack({ ...pack, id: difficulty === 2 ? 'base-taboo-mix' : pack.id, items }, state.seed);
     if (outcome)
       dispatch({ type: 'resolve', outcome, nextWordId: result.item.id, seed: result.seed });
@@ -65,7 +65,7 @@ export default function Taboo() {
     setState(tabooReducer(state, { type: 'skipTurn' }, nextParticipants).state);
   };
   const actor = players.find((p) => p.id === state.actorId);
-  const word = loadContent('taboo', data.settings.family, data.customDecks, undefined, data.config.taboo?.difficulty ?? 0)
+  const word = loadContent('taboo', data.settings.family, data.customDecks, activeSeason(new Date(), data.seasonOverride), data.config.taboo?.difficulty ?? 0)
     .find((item) => item.id === state.wordId);
   const forbidden = word?.forbidden ?? [];
 

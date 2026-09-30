@@ -1,5 +1,8 @@
 import seed from './packs/seed.json';
 import ramadan from './packs/ramadan.json';
+import eid from './packs/eid.json';
+import sahel from './packs/sahel.json';
+import exams from './packs/exams.json';
 import proverbs from './packs/proverbs.json';
 import tabooHard from './packs/taboo-hard.json';
 import drawing from './packs/draw.json';
@@ -8,9 +11,9 @@ import { isPackAvailable } from '../entitlements';
 import { GameId } from '../config/release';
 import { CustomDecks, customContent } from './custom';
 import { detectSeason, Season } from './seasons';
-export const packs = packSchema.array().parse([...seed, ...ramadan, ...proverbs, ...tabooHard, ...drawing]);
-export function activeSeason(date = new Date()): Season | null {
-  const detected = detectSeason(date);
+export const packs = packSchema.array().parse([...seed, ...ramadan, ...eid, ...sahel, ...exams, ...proverbs, ...tabooHard, ...drawing]);
+export function activeSeason(date = new Date(), override: Season | null = null): Season | null {
+  const detected = override ?? detectSeason(date);
   return detected && packs.some((pack) => pack.season === detected) ? detected : null;
 }
 export function loadContent(game: GameId, family = false, customDecks: CustomDecks = {}, season: Season | null = activeSeason(), difficulty = 0) {

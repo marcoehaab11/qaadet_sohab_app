@@ -127,3 +127,9 @@ M2 screens and live-session coordination, integrating the already tested engine 
 - Result screen now shows a 9:16 card with date, standings, up to five awards and hashtag. Native capture requests a 1080×1920 PNG using the device pixel ratio and opens the system share sheet. WhatsApp text sharing opens the encoded result through wa.me. Both actions are optional and user-triggered.
 - Web cannot share the local PNG through expo-sharing; it shows a clear unavailable message. Native capture/share and WhatsApp handoff still need physical-device QA.
 - `npm run check` passed with 78 tests, strict TypeScript, ESLint and content lint. Expo Doctor passed 21/21; web and Android JavaScript exports succeeded. A format test covers absent players, stable tied order, awards and hashtag in the WhatsApp text.
+
+## M9 seasonal packs and override — 2026-09-30
+
+- Added draft packs for Eid, Sahel and Exams: each has 20 Imposter words and 15 prompts each for Likely, Charades and Taboo. The existing religious-first calendar detection now activates these packs, and Settings can force one season or return to automatic mode. A saved override survives restart; older saves default to automatic mode.
+- The pack parser and content lint validate IDs, fields, forbidden words and expected pack counts. All new text still requires two independent human editorial approvals before release.
+- `npm run check` passed with 82 tests, strict TypeScript, ESLint and content lint. Expo Doctor passed 21/21, and web/Android JavaScript exports succeeded. Browser preview showed the forced Eid badge on Home and its removal after returning Settings to automatic mode. Native season date/RTL behavior still needs device QA.

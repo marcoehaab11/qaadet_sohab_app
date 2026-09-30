@@ -6,7 +6,7 @@ import { useSession } from '../../store/session';
 import { ar } from '../../i18n/ar-EG';
 import { Button, Panel, Screen, styles, Text } from '../../components/ui';
 import { PassPhoneScreen } from '../../components/PassPhoneScreen';
-import { loadContent, packs } from '../../content/loader';
+import { activeSeason, loadContent, packs } from '../../content/loader';
 import { drawFromPack } from '../../content/draw';
 import { likelyReducer, voteCounts } from '../../games/likely/reducer';
 import { theme } from '../../theme';
@@ -39,7 +39,8 @@ function VoteBar({ percent }: { percent: number }) {
 }
 
 export default function Likely() {
-  const players = useApp((s) => s.data.players);
+  const data = useApp((s) => s.data);
+  const players = data.players;
   const session = useSession((s) => s.session);
   const state = useSession((s) => s.likelyGame);
   const setState = useSession((s) => s.setLikelyGame);
@@ -70,7 +71,7 @@ export default function Likely() {
   };
   const nextQuestion = () => {
     const pack = packs.find((p) => p.id === 'base-likely')!;
-    const items = loadContent('likely', false, useApp.getState().data.customDecks);
+    const items = loadContent('likely', false, data.customDecks, activeSeason(new Date(), data.seasonOverride));
     const result = drawFromPack({ ...pack, items }, state.seed);
     dispatch({ type: 'question', questionId: result.item.id, seed: result.seed });
   };
@@ -87,7 +88,7 @@ export default function Likely() {
     setState(result.state);
     if (result.changes.length || result.stats.length) award(result.changes, result.stats);
   };
-  const question = loadContent('likely', false, useApp.getState().data.customDecks)
+  const question = loadContent('likely', false, data.customDecks, activeSeason(new Date(), data.seasonOverride))
     .find((item) => item.id === state.questionId);
   const voter = players.find((p) => p.id === state.turnId);
   const counts = voteCounts(state.votes);

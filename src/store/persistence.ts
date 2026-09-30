@@ -28,6 +28,7 @@ export const savedSchema = z.object({
       'Duplicate player IDs',
     ),
   settings: settingsSchema,
+  seasonOverride: z.enum(['ramadan', 'eid', 'sahel', 'exams']).nullable().default(null),
   config: z.record(z.string(), z.record(z.string(), z.number())),
   customDecks: customDecksSchema,
   used: z.record(z.string(), z.array(z.string())),
