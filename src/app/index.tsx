@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Modal, Pressable, StyleSheet, View, useWindowDimensions } from 'react-native';
 import { router } from 'expo-router';
 import { enabledGameIds, GameId, minPlayers } from '../config/release';
@@ -7,6 +7,8 @@ import { useApp } from '../store';
 import { Button, Panel, Screen, styles, Text } from '../components/ui';
 import { theme, playerColor } from '../theme';
 import { Vibe } from '../engine/queue';
+import { useSession } from '../store/session';
+import { currentGame } from '../engine/session';
 const icons: Record<GameId, string> = {
   imposter: '🕵️',
   cards: '🃏',
@@ -38,8 +40,14 @@ export default function Home() {
   const data = useApp((s) => s.data);
   const update = useApp((s) => s.update);
   const [selected, setSelected] = useState<GameId | null>(null);
+  const session = useSession((s) => s.session);
+  const begin = useSession((s) => s.begin);
+  const startStandaloneCards = useSession((s) => s.startStandaloneCards);
   const { fontScale } = useWindowDimensions();
   const expandedVibes = data.settings.largeText || fontScale > 1.1;
+  useEffect(() => {
+    if (!data.onboardingDone) router.replace('/onboarding');
+  }, [data.onboardingDone]);
   return (
     <Screen>
       <View style={[styles.row, { justifyContent: 'space-between' }]}>
@@ -130,6 +138,20 @@ export default function Home() {
           ))}
         </View>
       </Panel>
+      <Button
+        label={session && !session.finished ? ar.resumeSession : ar.startSession}
+        onPress={() => {
+          if (!session || session.finished) {
+            begin();
+            router.push('/host');
+          } else
+            router.push(
+              session.phase === 'game' && currentGame(session) === 'cards'
+                ? '/game/cards'
+                : '/host',
+            );
+        }}
+      />
       <View>
         <Text style={styles.title}>{ar.table}</Text>
         <Text style={styles.muted}>{ar.tableHint}</Text>
@@ -140,7 +162,12 @@ export default function Home() {
             key={id}
             accessibilityRole="button"
             accessibilityLabel={ar.games[id].name}
-            onPress={() => setSelected(id)}
+            onPress={() => {
+              if (id === 'cards' && (!session || session.finished)) {
+                startStandaloneCards();
+                router.push('/game/cards');
+              } else setSelected(id);
+            }}
             style={[
               local.card,
               {

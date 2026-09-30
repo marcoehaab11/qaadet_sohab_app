@@ -16,3 +16,11 @@
 - Spec assumes a pre-Ramadan launch; that schedule is not inferred from today's date. Ramadan content remains an M6 requirement, with launch timing to be set later.
 - Store identifiers, signing, EAS account linkage and artwork remain unset/placeholders until the application is ready for its store-preparation milestone. No cloud build or store submission has been performed.
 - Home game cards currently open rules previews. There is no nonfunctional Start button. This is a foundation preview, not a playable v1. Screens from later releases are not imported or registered.
+
+## 2026-09-30 — session flow and first playable game
+
+- Added three-step onboarding, host queue, pass-phone flow, final scoreboard, player attendance, late join, game configuration controls, and a first playable cards game. Cards can launch standalone or from a queued session.
+- Seven remaining games have rules previews; their Start controls stay disabled. A mixed queue can be advanced past those games, so this is a reviewable development slice and not a complete v1 session.
+- Card turns are deterministic from a seed. A card draw persists its used ID; points and per-session stats remain in memory. Marking someone away skips their next turn without consuming a card; a late joiner enters the remaining turn order.
+- The original demo and spec are preserved as references. New UI follows the app architecture, rather than embedding the demo HTML.
+- Session state is intentionally ephemeral for now. Closing the app discards the active game and scores, while saved player names, settings, used card IDs, and completed-session count remain on device.
