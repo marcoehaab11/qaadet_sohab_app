@@ -162,3 +162,10 @@ M2 screens and live-session coordination, integrating the already tested engine 
 - Expanded easy Taboo to 200/200 with three distinct forbidden words per item, five Cards decks to 40 each (200 total), and Truth or Dare to 30 truth and 30 dare prompts at each of four levels (240 total). This brings the base v1 content draft to 1400/1400 across all required packs.
 - Count and schema validation is automated. All packs remain unapproved until two independent people review their exact hashes; v1.1 Proverbs remains at 16/120.
 - `npm run check` passed with 82 tests, strict TypeScript, ESLint and content lint. Expo Doctor passed 21/21, and Android/web JavaScript exports succeeded. The explicit release content lint still fails as intended on unreviewed packs and the 104 missing Proverbs.
+
+## Proverbs content count target — 2026-09-30
+
+- Added 104 draft proverb halves and endings to reach 120/120. Automated checks validate unique first halves and required endings. Exact Egyptian wording and cultural fit are pending independent human review; count alone is not approval.
+- Content lint now enforces the required distributions inside Imposter, Cards and Truth or Dare, as well as easy/hard Taboo separation. It catches a thin category or level even if a pack's total remains high enough.
+- `npm audit --omit=dev --audit-level=moderate` reports 15 moderate transitive advisories, including query-string/decode-uri-component and Expo config tooling. The proposed `--force` remediation would install incompatible major Expo packages, so no forced dependency change was applied; reassess with SDK-compatible upstream fixes before store release.
+- Final draft checkpoint: `npm run check` passed (82 Jest tests, strict TypeScript, ESLint and content lint), Expo Doctor passed 21/21, and web/Android JavaScript exports succeeded. Release content lint fails solely because no pack has the required two real reviewer approvals; every numerical target is now met.

@@ -1,23 +1,611 @@
 [
   {
-    "id": "base-proverb", "version": 1, "locale": "ar-EG", "game": "proverb", "tier": "free",
+    "id": "base-proverb",
+    "version": 1,
+    "locale": "ar-EG",
+    "game": "proverb",
+    "tier": "free",
     "items": [
-      {"id":"base-proverb-001","text":"اللي ميعرفش يقول","pair":"عدس"},
-      {"id":"base-proverb-002","text":"القرد في عين أمه","pair":"غزال"},
-      {"id":"base-proverb-003","text":"اللي فات","pair":"مات"},
-      {"id":"base-proverb-004","text":"يا بخت من بات مغلوب","pair":"ولا باتش غالب"},
-      {"id":"base-proverb-005","text":"اللي يحضّر العفريت","pair":"يصرفه"},
-      {"id":"base-proverb-006","text":"على قد لحافك","pair":"مد رجليك"},
-      {"id":"base-proverb-007","text":"اللي اختشوا","pair":"ماتوا"},
-      {"id":"base-proverb-008","text":"الباب اللي يجيلك منه الريح","pair":"سدّه واستريح"},
-      {"id":"base-proverb-009","text":"ابن الوز","pair":"عوّام"},
-      {"id":"base-proverb-010","text":"اكفي القدرة على فمها","pair":"تطلع البنت لأمها"},
-      {"id":"base-proverb-011","text":"اللي بيته من إزاز","pair":"ميحدفش الناس بالطوب"},
-      {"id":"base-proverb-012","text":"إن كان حبيبك عسل","pair":"متلحسهوش كله"},
-      {"id":"base-proverb-013","text":"الصبر","pair":"مفتاح الفرج"},
-      {"id":"base-proverb-014","text":"زي الأطرش","pair":"في الزفة"},
-      {"id":"base-proverb-015","text":"ياما في الجراب","pair":"يا حاوي"},
-      {"id":"base-proverb-016","text":"دخول الحمام مش زي","pair":"خروجه"}
+      {
+        "id": "base-proverb-001",
+        "text": "اللي ميعرفش يقول",
+        "pair": "عدس"
+      },
+      {
+        "id": "base-proverb-002",
+        "text": "القرد في عين أمه",
+        "pair": "غزال"
+      },
+      {
+        "id": "base-proverb-003",
+        "text": "اللي فات",
+        "pair": "مات"
+      },
+      {
+        "id": "base-proverb-004",
+        "text": "يا بخت من بات مغلوب",
+        "pair": "ولا باتش غالب"
+      },
+      {
+        "id": "base-proverb-005",
+        "text": "اللي يحضّر العفريت",
+        "pair": "يصرفه"
+      },
+      {
+        "id": "base-proverb-006",
+        "text": "على قد لحافك",
+        "pair": "مد رجليك"
+      },
+      {
+        "id": "base-proverb-007",
+        "text": "اللي اختشوا",
+        "pair": "ماتوا"
+      },
+      {
+        "id": "base-proverb-008",
+        "text": "الباب اللي يجيلك منه الريح",
+        "pair": "سدّه واستريح"
+      },
+      {
+        "id": "base-proverb-009",
+        "text": "ابن الوز",
+        "pair": "عوّام"
+      },
+      {
+        "id": "base-proverb-010",
+        "text": "اكفي القدرة على فمها",
+        "pair": "تطلع البنت لأمها"
+      },
+      {
+        "id": "base-proverb-011",
+        "text": "اللي بيته من إزاز",
+        "pair": "ميحدفش الناس بالطوب"
+      },
+      {
+        "id": "base-proverb-012",
+        "text": "إن كان حبيبك عسل",
+        "pair": "متلحسهوش كله"
+      },
+      {
+        "id": "base-proverb-013",
+        "text": "الصبر",
+        "pair": "مفتاح الفرج"
+      },
+      {
+        "id": "base-proverb-014",
+        "text": "زي الأطرش",
+        "pair": "في الزفة"
+      },
+      {
+        "id": "base-proverb-015",
+        "text": "ياما في الجراب",
+        "pair": "يا حاوي"
+      },
+      {
+        "id": "base-proverb-016",
+        "text": "دخول الحمام مش زي",
+        "pair": "خروجه"
+      },
+      {
+        "id": "base-proverb-017",
+        "text": "الجار",
+        "pair": "قبل الدار"
+      },
+      {
+        "id": "base-proverb-018",
+        "text": "الرفيق",
+        "pair": "قبل الطريق"
+      },
+      {
+        "id": "base-proverb-019",
+        "text": "الصديق",
+        "pair": "وقت الضيق"
+      },
+      {
+        "id": "base-proverb-020",
+        "text": "الإيد الواحدة",
+        "pair": "ما تصقفش"
+      },
+      {
+        "id": "base-proverb-021",
+        "text": "اسأل مجرب",
+        "pair": "ولا تسأل طبيب"
+      },
+      {
+        "id": "base-proverb-022",
+        "text": "كل تأخيرة",
+        "pair": "وفيها خيرة"
+      },
+      {
+        "id": "base-proverb-023",
+        "text": "رب صدفة",
+        "pair": "خير من ألف ميعاد"
+      },
+      {
+        "id": "base-proverb-024",
+        "text": "رب ضارة",
+        "pair": "نافعة"
+      },
+      {
+        "id": "base-proverb-025",
+        "text": "القناعة",
+        "pair": "كنز لا يفنى"
+      },
+      {
+        "id": "base-proverb-026",
+        "text": "الحاجة",
+        "pair": "أم الاختراع"
+      },
+      {
+        "id": "base-proverb-027",
+        "text": "خير الكلام",
+        "pair": "ما قل ودل"
+      },
+      {
+        "id": "base-proverb-028",
+        "text": "الكذب",
+        "pair": "مالوش رجلين"
+      },
+      {
+        "id": "base-proverb-029",
+        "text": "حبل الكذب",
+        "pair": "قصير"
+      },
+      {
+        "id": "base-proverb-030",
+        "text": "الصراحة",
+        "pair": "راحة"
+      },
+      {
+        "id": "base-proverb-031",
+        "text": "اللي على راسه بطحة",
+        "pair": "يحسس عليها"
+      },
+      {
+        "id": "base-proverb-032",
+        "text": "اللي يتلسع من الشوربة",
+        "pair": "ينفخ في الزبادي"
+      },
+      {
+        "id": "base-proverb-033",
+        "text": "اللي ما يطول العنب",
+        "pair": "يقول عليه حامض"
+      },
+      {
+        "id": "base-proverb-034",
+        "text": "اللي أوله شرط",
+        "pair": "آخره نور"
+      },
+      {
+        "id": "base-proverb-035",
+        "text": "اللي مالوش كبير",
+        "pair": "يشتري له كبير"
+      },
+      {
+        "id": "base-proverb-036",
+        "text": "اللي مالوش أول",
+        "pair": "مالوش آخر"
+      },
+      {
+        "id": "base-proverb-037",
+        "text": "اللي فاتك بليلة",
+        "pair": "فاتك بحيلة"
+      },
+      {
+        "id": "base-proverb-038",
+        "text": "اللي يعيش",
+        "pair": "ياما يشوف"
+      },
+      {
+        "id": "base-proverb-039",
+        "text": "اللي ما يعرفك",
+        "pair": "يجهلك"
+      },
+      {
+        "id": "base-proverb-040",
+        "text": "اللي على البر",
+        "pair": "عوام"
+      },
+      {
+        "id": "base-proverb-041",
+        "text": "كل مقام",
+        "pair": "وله مقال"
+      },
+      {
+        "id": "base-proverb-042",
+        "text": "كل عقدة",
+        "pair": "وليها حلال"
+      },
+      {
+        "id": "base-proverb-043",
+        "text": "الطمع",
+        "pair": "قل ما جمع"
+      },
+      {
+        "id": "base-proverb-044",
+        "text": "العتاب",
+        "pair": "صابون القلوب"
+      },
+      {
+        "id": "base-proverb-045",
+        "text": "الشمس",
+        "pair": "ما تتغطاش بغربال"
+      },
+      {
+        "id": "base-proverb-046",
+        "text": "المية",
+        "pair": "تكذب الغطاس"
+      },
+      {
+        "id": "base-proverb-047",
+        "text": "الغريق",
+        "pair": "يتعلق بقشاية"
+      },
+      {
+        "id": "base-proverb-048",
+        "text": "عصفور في الإيد",
+        "pair": "ولا عشرة على الشجرة"
+      },
+      {
+        "id": "base-proverb-049",
+        "text": "مش كل اللي يلمع",
+        "pair": "دهب"
+      },
+      {
+        "id": "base-proverb-050",
+        "text": "اللي يزرع",
+        "pair": "يحصد"
+      },
+      {
+        "id": "base-proverb-051",
+        "text": "من جد",
+        "pair": "وجد"
+      },
+      {
+        "id": "base-proverb-052",
+        "text": "ما ضاع حق",
+        "pair": "وراه مطالب"
+      },
+      {
+        "id": "base-proverb-053",
+        "text": "خيرها",
+        "pair": "في غيرها"
+      },
+      {
+        "id": "base-proverb-054",
+        "text": "يا خبر النهارده بفلوس",
+        "pair": "بكرة يبقى ببلاش"
+      },
+      {
+        "id": "base-proverb-055",
+        "text": "القرش الأبيض",
+        "pair": "ينفع في اليوم الأسود"
+      },
+      {
+        "id": "base-proverb-056",
+        "text": "الطيور",
+        "pair": "على أشكالها تقع"
+      },
+      {
+        "id": "base-proverb-057",
+        "text": "كتر العتاب",
+        "pair": "يفرق الأحباب"
+      },
+      {
+        "id": "base-proverb-058",
+        "text": "على نفسها",
+        "pair": "جنت براقش"
+      },
+      {
+        "id": "base-proverb-059",
+        "text": "رجعت ريما",
+        "pair": "لعادتها القديمة"
+      },
+      {
+        "id": "base-proverb-060",
+        "text": "ضربني وبكى",
+        "pair": "سبقني واشتكى"
+      },
+      {
+        "id": "base-proverb-061",
+        "text": "من حفر حفرة لأخيه",
+        "pair": "وقع فيها"
+      },
+      {
+        "id": "base-proverb-062",
+        "text": "لا يفل الحديد",
+        "pair": "إلا الحديد"
+      },
+      {
+        "id": "base-proverb-063",
+        "text": "في التأني السلامة",
+        "pair": "وفي العجلة الندامة"
+      },
+      {
+        "id": "base-proverb-064",
+        "text": "اللي يخاف من العفريت",
+        "pair": "يطلع له"
+      },
+      {
+        "id": "base-proverb-065",
+        "text": "يا جبل",
+        "pair": "ما يهزك ريح"
+      },
+      {
+        "id": "base-proverb-066",
+        "text": "الجواب",
+        "pair": "بيبان من عنوانه"
+      },
+      {
+        "id": "base-proverb-067",
+        "text": "اللي يسأل",
+        "pair": "ما يتوهش"
+      },
+      {
+        "id": "base-proverb-068",
+        "text": "الصاحب",
+        "pair": "ساحب"
+      },
+      {
+        "id": "base-proverb-069",
+        "text": "اعمل خير",
+        "pair": "وارميه البحر"
+      },
+      {
+        "id": "base-proverb-070",
+        "text": "ابعد عن الشر",
+        "pair": "وغنيله"
+      },
+      {
+        "id": "base-proverb-071",
+        "text": "لو دامت لغيرك",
+        "pair": "ما وصلتش ليك"
+      },
+      {
+        "id": "base-proverb-072",
+        "text": "دوام الحال",
+        "pair": "من المحال"
+      },
+      {
+        "id": "base-proverb-073",
+        "text": "أهل مكة",
+        "pair": "أدرى بشعابها"
+      },
+      {
+        "id": "base-proverb-074",
+        "text": "اللي في إيده المية",
+        "pair": "مش زي اللي في إيده النار"
+      },
+      {
+        "id": "base-proverb-075",
+        "text": "امشي عدل",
+        "pair": "يحتار عدوك فيك"
+      },
+      {
+        "id": "base-proverb-076",
+        "text": "إن غاب القط",
+        "pair": "العب يا فار"
+      },
+      {
+        "id": "base-proverb-077",
+        "text": "كل شيء",
+        "pair": "في وقته حلو"
+      },
+      {
+        "id": "base-proverb-078",
+        "text": "أول الغيث",
+        "pair": "قطرة"
+      },
+      {
+        "id": "base-proverb-079",
+        "text": "ما حك جلدك",
+        "pair": "مثل ظفرك"
+      },
+      {
+        "id": "base-proverb-080",
+        "text": "من شابه أباه",
+        "pair": "فما ظلم"
+      },
+      {
+        "id": "base-proverb-081",
+        "text": "من شب على شيء",
+        "pair": "شاب عليه"
+      },
+      {
+        "id": "base-proverb-082",
+        "text": "من طلب العلا",
+        "pair": "سهر الليالي"
+      },
+      {
+        "id": "base-proverb-083",
+        "text": "الوقت كالسيف",
+        "pair": "إن لم تقطعه قطعك"
+      },
+      {
+        "id": "base-proverb-084",
+        "text": "لا تؤجل عمل اليوم",
+        "pair": "إلى الغد"
+      },
+      {
+        "id": "base-proverb-085",
+        "text": "إذا زاد الشيء عن حده",
+        "pair": "انقلب إلى ضده"
+      },
+      {
+        "id": "base-proverb-086",
+        "text": "مافيش دخان",
+        "pair": "من غير نار"
+      },
+      {
+        "id": "base-proverb-087",
+        "text": "كل واحد",
+        "pair": "يرى الناس بعين طبعه"
+      },
+      {
+        "id": "base-proverb-088",
+        "text": "الطبع",
+        "pair": "يغلب التطبع"
+      },
+      {
+        "id": "base-proverb-089",
+        "text": "كل ممنوع",
+        "pair": "مرغوب"
+      },
+      {
+        "id": "base-proverb-090",
+        "text": "كتر الدق",
+        "pair": "يفك اللحام"
+      },
+      {
+        "id": "base-proverb-091",
+        "text": "كل إناء",
+        "pair": "بما فيه ينضح"
+      },
+      {
+        "id": "base-proverb-092",
+        "text": "العين بصيرة",
+        "pair": "والإيد قصيرة"
+      },
+      {
+        "id": "base-proverb-093",
+        "text": "المركب اللي ليها ريسين",
+        "pair": "تغرق"
+      },
+      {
+        "id": "base-proverb-094",
+        "text": "إحنا",
+        "pair": "في الهوا سوا"
+      },
+      {
+        "id": "base-proverb-095",
+        "text": "الحذر",
+        "pair": "لا يمنع القدر"
+      },
+      {
+        "id": "base-proverb-096",
+        "text": "لسانك حصانك",
+        "pair": "إن صنته صانك"
+      },
+      {
+        "id": "base-proverb-097",
+        "text": "اللسان",
+        "pair": "مالوش عضام"
+      },
+      {
+        "id": "base-proverb-098",
+        "text": "اللي ساب داره",
+        "pair": "قل مقداره"
+      },
+      {
+        "id": "base-proverb-099",
+        "text": "مافيش حلو",
+        "pair": "من غير مر"
+      },
+      {
+        "id": "base-proverb-100",
+        "text": "الكلام من فضة",
+        "pair": "والسكوت من ذهب"
+      },
+      {
+        "id": "base-proverb-101",
+        "text": "أكل العيش",
+        "pair": "يحب الخفية"
+      },
+      {
+        "id": "base-proverb-102",
+        "text": "اللي اتلدغ من التعبان",
+        "pair": "يخاف من الحبل"
+      },
+      {
+        "id": "base-proverb-103",
+        "text": "كلام الليل مدهون بزبدة",
+        "pair": "يطلع عليه النهار يسيح"
+      },
+      {
+        "id": "base-proverb-104",
+        "text": "العين",
+        "pair": "ما تعلاش على الحاجب"
+      },
+      {
+        "id": "base-proverb-105",
+        "text": "بين البايع والشاري",
+        "pair": "يفتح الله"
+      },
+      {
+        "id": "base-proverb-106",
+        "text": "التقل",
+        "pair": "صنعة"
+      },
+      {
+        "id": "base-proverb-107",
+        "text": "نقول ثور",
+        "pair": "يقول احلبوه"
+      },
+      {
+        "id": "base-proverb-108",
+        "text": "رايح يبيع المية",
+        "pair": "في حارة السقايين"
+      },
+      {
+        "id": "base-proverb-109",
+        "text": "اللي يدخل بين البصلة وقشرتها",
+        "pair": "ما ينوبش غير ريحتها"
+      },
+      {
+        "id": "base-proverb-110",
+        "text": "السكوت",
+        "pair": "علامة الرضا"
+      },
+      {
+        "id": "base-proverb-111",
+        "text": "العلم نور",
+        "pair": "والجهل ظلام"
+      },
+      {
+        "id": "base-proverb-112",
+        "text": "ما خاب",
+        "pair": "من استشار"
+      },
+      {
+        "id": "base-proverb-113",
+        "text": "اللي يقعد مع السعيد",
+        "pair": "يسعد"
+      },
+      {
+        "id": "base-proverb-114",
+        "text": "إذا أردت أن تطاع",
+        "pair": "فاطلب المستطاع"
+      },
+      {
+        "id": "base-proverb-115",
+        "text": "أبو بلاش",
+        "pair": "كتر منه"
+      },
+      {
+        "id": "base-proverb-116",
+        "text": "رب أخ لك",
+        "pair": "لم تلده أمك"
+      },
+      {
+        "id": "base-proverb-117",
+        "text": "صاحب الحق",
+        "pair": "عينه قوية"
+      },
+      {
+        "id": "base-proverb-118",
+        "text": "الغايب",
+        "pair": "حجته معاه"
+      },
+      {
+        "id": "base-proverb-119",
+        "text": "اللي يضحك أخيرًا",
+        "pair": "يضحك كثيرًا"
+      },
+      {
+        "id": "base-proverb-120",
+        "text": "من صبر",
+        "pair": "ظفر"
+      }
     ]
   }
 ]

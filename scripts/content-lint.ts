@@ -90,5 +90,34 @@ for (const [id, target] of Object.entries(targets)) {
   const count = parsed.data.find((pack) => pack.id === id)?.items.length ?? 0;
   if (process.argv.includes('--release') && count < target) invalid = true;
 }
+const imposter = parsed.data.find((pack) => pack.id === 'base-imposter');
+const imposterCategories = ['أكل مصري', 'أماكن', 'حاجات في البيت', 'حيوانات', 'مناسبات', 'مهن', 'رياضة', 'مواصلات'];
+if (!imposter || imposterCategories.some((category) =>
+  imposter.items.filter((item) => item.category === category).length < 25)) {
+  console.error('Imposter needs at least 25 words in each of its eight categories');
+  invalid = true;
+}
+const cards = parsed.data.find((pack) => pack.id === 'base-cards');
+const decks = ['friends', 'couples', 'crazy', 'deep', 'funny'];
+const cardKinds = ['tell', 'pick', 'dare', 'who', 'secret'];
+if (!cards || decks.some((deck) => cardKinds.some((kind) =>
+  cards.items.filter((item) => item.deck === deck && item.kind === kind).length < 8))) {
+  console.error('Cards needs at least eight of each kind in every deck');
+  invalid = true;
+}
+const tod = parsed.data.find((pack) => pack.id === 'base-tod');
+if (!tod || ['chill', 'funny', 'bold', 'chaos'].some((level) =>
+  ['truth', 'dare'].some((kind) =>
+    tod.items.filter((item) => item.level === level && item.kind === kind).length < 30))) {
+  console.error('Truth or Dare needs at least 30 of each kind at every level');
+  invalid = true;
+}
+const tabooEasy = parsed.data.find((pack) => pack.id === 'base-taboo');
+const tabooHard = parsed.data.find((pack) => pack.id === 'base-taboo-hard');
+if (!tabooEasy || !tabooHard || tabooEasy.items.some((item) => item.level !== 'easy') ||
+  tabooHard.items.some((item) => item.level !== 'hard')) {
+  console.error('Taboo base packs must keep their easy and hard levels separate');
+  invalid = true;
+}
 console.log('Release needs target counts and two distinct human reviewers for every current pack hash.');
 process.exitCode = invalid ? 1 : 0;
