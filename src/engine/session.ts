@@ -1,22 +1,26 @@
 import { GameId } from '../config/release';
 import { Ledger, PlayerId } from './types';
 import { buildQueue, Vibe } from './queue';
+import { planSurprises, Surprise } from './surprises';
 export type Session = {
   queue: GameId[];
   index: number;
   phase: 'host' | 'game' | 'results';
   seed: number;
   finished: boolean;
+  surprises: Record<number, Surprise>;
 };
 export function createSession(
   vibe: Vibe,
   length: 3 | 5,
   activeCount: number,
   seed: number,
+  surprisesEnabled = false,
 ): Session {
   const built = buildQueue(vibe, length, activeCount, seed);
   if (!built.queue.length) throw new Error('Not enough players');
-  return { queue: built.queue, index: 0, phase: 'host', seed: built.seed, finished: false };
+  return { queue: built.queue, index: 0, phase: 'host', seed: built.seed, finished: false,
+    surprises: planSurprises(built.queue.length, built.seed, surprisesEnabled) };
 }
 export const currentGame = (session: Session) => session.queue[session.index] ?? null;
 export function startCurrentGame(session: Session): Session {

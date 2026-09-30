@@ -15,7 +15,7 @@ const defaults = (): SavedData => ({
     emoji: avatars[i]!,
     color: colors[i]!,
   })),
-  settings: { sound: true, hold: true, family: false, largeText: false, clearColors: false, teams: false },
+  settings: { sound: true, hold: true, family: false, largeText: false, clearColors: false, teams: false, surprises: false },
   config: {
     imposter: { time: 120 },
     cards: { cards: 8, time: 20 },

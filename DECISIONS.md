@@ -77,3 +77,8 @@
 
 - Results now derive up to six awards from the session's in-memory stat counters, showing two names for a tie. The lowest active scorer receives a light punishment card from a validated 20-item local list; a redraw changes the card while keeping the same chosen player.
 - These results are shown only for a finished multi-game session. History and sharing are separate M8 work; no result is sent to another app yet.
+
+## 2026-09-30 — M8 surprises preview
+
+- Added an opt-in saved surprises setting. Events are planned deterministically from the session seed for host screens after the first, with a 45% chance per screen and a guaranteed event in five-game sessions.
+- The host applies steal/gift once per index through the normal score ledger and undo. Steal becomes a gift when first place is not ahead. Double multiplies all score changes in the next game, including negative points; stat counters stay unmultiplied. The event plan and applied indices remain in memory with the session.

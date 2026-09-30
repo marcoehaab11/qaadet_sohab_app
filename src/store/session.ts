@@ -22,12 +22,15 @@ import { ProverbState, createProverb } from '../games/proverb/reducer';
 import { MemoryState, createMemory } from '../games/memory/reducer';
 import { expandTeamPoints, teamsActive } from '../engine/teams';
 import { DrawState, createDraw } from '../games/draw/reducer';
+import { applyHostSurprise, eventScores, SurpriseProgress } from '../engine/surprises';
 import { useApp } from './index';
 // Ephemeral by design: scores, counters, undo and sit-out state never reach AsyncStorage.
 type SessionStore = {
   ledger: Ledger;
   away: string[];
   session: Session | null;
+  surpriseProgress: SurpriseProgress;
+  prepareHost: () => void;
   cardsGame: CardsState | null;
   setCardsGame: (state: CardsState | null) => void;
   startStandaloneCards: () => void;
@@ -73,6 +76,17 @@ export const useSession = create<SessionStore>((set, get) => ({
   ledger: emptyLedger(),
   away: [],
   session: null,
+  surpriseProgress: { applied: [] },
+  prepareHost: () => {
+    const { session, surpriseProgress, ledger, away } = get();
+    if (!session || session.phase !== 'host' || session.finished) return;
+    const activeIds = useApp.getState().data.players.filter((player) => !away.includes(player.id))
+      .map((player) => player.id);
+    const result = applyHostSurprise(surpriseProgress, session.index,
+      session.surprises[session.index], activeIds, ledger, session.seed);
+    if (result.progress !== surpriseProgress) set({ surpriseProgress: result.progress });
+    if (result.changes.length) get().award(result.changes);
+  },
   cardsGame: null,
   setCardsGame: (cardsGame) => set({ cardsGame }),
   todGame: null,
@@ -101,6 +115,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       ledger: emptyLedger(),
       away: [],
       session: null,
+      surpriseProgress: { applied: [] },
       todGame: null,
       likelyGame: null,
       knowMeGame: null,
@@ -124,6 +139,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       ledger: emptyLedger(),
       away: [],
       session: null,
+      surpriseProgress: { applied: [] },
       cardsGame: null,
       likelyGame: null,
       knowMeGame: null,
@@ -147,6 +163,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       ledger: emptyLedger(),
       away: [],
       session: null,
+      surpriseProgress: { applied: [] },
       cardsGame: null,
       todGame: null,
       knowMeGame: null,
@@ -170,6 +187,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       ledger: emptyLedger(),
       away: [],
       session: null,
+      surpriseProgress: { applied: [] },
       cardsGame: null,
       todGame: null,
       likelyGame: null,
@@ -193,6 +211,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       ledger: emptyLedger(),
       away: [],
       session: null,
+      surpriseProgress: { applied: [] },
       cardsGame: null,
       todGame: null,
       likelyGame: null,
@@ -217,6 +236,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       ledger: emptyLedger(),
       away: [],
       session: null,
+      surpriseProgress: { applied: [] },
       cardsGame: null,
       todGame: null,
       likelyGame: null,
@@ -240,6 +260,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       ledger: emptyLedger(),
       away: [],
       session: null,
+      surpriseProgress: { applied: [] },
       cardsGame: null,
       todGame: null,
       likelyGame: null,
@@ -258,6 +279,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       ledger: emptyLedger(),
       away: [],
       session: null,
+      surpriseProgress: { applied: [] },
       cardsGame: null,
       todGame: null,
       likelyGame: null,
@@ -274,7 +296,7 @@ export const useSession = create<SessionStore>((set, get) => ({
   startStandaloneProverb: () => {
     const data = useApp.getState().data;
     set({
-      ledger: emptyLedger(), away: [], session: null,
+      ledger: emptyLedger(), away: [], session: null, surpriseProgress: { applied: [] },
       cardsGame: null, todGame: null, likelyGame: null, knowMeGame: null,
       tabooGame: null, charadesGame: null, speedGame: null, imposterGame: null,
       proverbGame: createProverb(data.config.proverb?.rounds ?? 6, Date.now()),
@@ -285,14 +307,14 @@ export const useSession = create<SessionStore>((set, get) => ({
   startStandaloneMemory: () => {
     const data = useApp.getState().data;
     const config = data.config.memory;
-    set({ ledger: emptyLedger(), away: [], session: null,
+    set({ ledger: emptyLedger(), away: [], session: null, surpriseProgress: { applied: [] },
       cardsGame: null, todGame: null, likelyGame: null, knowMeGame: null,
       tabooGame: null, charadesGame: null, speedGame: null, imposterGame: null, proverbGame: null,
       memoryGame: createMemory(data.players.length * (config?.turns ?? 1), config?.difficulty ?? 9, Date.now()) });
   },
   startStandaloneDraw: () => {
     const data = useApp.getState().data;
-    set({ ledger: emptyLedger(), away: [], session: null,
+    set({ ledger: emptyLedger(), away: [], session: null, surpriseProgress: { applied: [] },
       cardsGame: null, todGame: null, likelyGame: null, knowMeGame: null,
       tabooGame: null, charadesGame: null, speedGame: null, imposterGame: null,
       proverbGame: null, memoryGame: null,
@@ -304,6 +326,7 @@ export const useSession = create<SessionStore>((set, get) => ({
     const { vibe, length } = useApp.getState().data.lastSetup;
     set({
       ledger: emptyLedger(),
+      surpriseProgress: { applied: [] },
       cardsGame: null,
       todGame: null,
       likelyGame: null,
@@ -316,7 +339,8 @@ export const useSession = create<SessionStore>((set, get) => ({
       memoryGame: null,
       drawGame: null,
       away: [],
-      session: createSession(vibe, length, players.length, Date.now()),
+      session: createSession(vibe, length, players.length, Date.now(),
+        useApp.getState().data.settings.surprises),
     });
   },
   play: () => {
@@ -398,6 +422,8 @@ export const useSession = create<SessionStore>((set, get) => ({
     return true;
   },
   award: (changes, stats = []) => {
+    const live = get().session;
+    if (live?.phase === 'game') changes = eventScores(changes, live.surprises[live.index]);
     const players = useApp.getState().data.players;
     const participants = players.map((player) => ({ ...player, away: get().away.includes(player.id) }));
     const game = get().session?.phase === 'game' ? currentGame(get().session!)
@@ -428,6 +454,7 @@ export const useSession = create<SessionStore>((set, get) => ({
   reset: () =>
     set({
       ledger: emptyLedger(),
+      surpriseProgress: { applied: [] },
       away: [],
       session: null,
       cardsGame: null,

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { router } from 'expo-router';
 import { useApp } from '../store';
 import { useSession } from '../store/session';
@@ -15,6 +16,8 @@ export default function Host() {
   const play = useSession((s) => s.play);
   const advance = useSession((s) => s.advance);
   const undo = useSession((s) => s.undo);
+  const prepareHost = useSession((s) => s.prepareHost);
+  useEffect(() => { prepareHost(); }, [session?.index, session?.phase, prepareHost]);
   if (!session || session.finished)
     return (
       <Screen>
@@ -25,6 +28,7 @@ export default function Host() {
   if (!id) return null;
   const eligible = players.length - away.length >= minPlayers[id];
   const route = playableRoutes[id];
+  const surprise = session.surprises[session.index];
   const skip = () => {
     advance();
     if (session.index + 1 >= session.queue.length) router.replace('/results');
@@ -33,6 +37,10 @@ export default function Host() {
     <Screen>
       <Text style={styles.title}>{ar.name}</Text>
       <Text style={styles.muted}>{ar.gameProgress(session.index + 1, session.queue.length)}</Text>
+      {surprise && <Panel>
+        <Text style={styles.title}>{ar.surpriseTitle}</Text>
+        <Text>{ar.surpriseDescriptions[surprise]}</Text>
+      </Panel>}
       <Panel>
         <Text style={styles.muted}>{ar.nextGame}</Text>
         <Text style={styles.title}>{ar.games[id].name}</Text>

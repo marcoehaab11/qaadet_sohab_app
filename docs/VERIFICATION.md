@@ -108,3 +108,7 @@ M2 screens and live-session coordination, integrating the already tested engine 
 ## M8 awards and punishment preview — 2026-09-30
 
 - Tests cover sorted awards, tied names, limit, empty counters and tied last place. `npm run check` passed with 69 Jest tests, strict TypeScript, ESLint, and content lint. The 20 local punishment cards pass length and banned-word validation.
+
+## M8 surprises preview — 2026-09-30
+
+- Tests cover the five-game event guarantee across 100 seeds, opt-out, host-event idempotency, steal/gift fallback, and ×2 on positive and negative points. `npm run check` passed with 72 Jest tests, strict TypeScript, ESLint and content lint.

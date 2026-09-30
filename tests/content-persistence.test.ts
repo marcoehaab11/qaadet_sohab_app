@@ -4,7 +4,7 @@ import { migrateSaved, serializeSaved, SavedData } from '../src/store/persistenc
 const saved: SavedData = {
   schemaVersion: 1,
   players: ['one', 'two'].map((id) => ({ id, name: id, emoji: '🦊', color: '#ffffff' })),
-  settings: { sound: true, hold: true, family: false, largeText: false, clearColors: false, teams: false },
+  settings: { sound: true, hold: true, family: false, largeText: false, clearColors: false, teams: false, surprises: false },
   config: {},
   customDecks: {},
   used: { pack: ['item'] },
