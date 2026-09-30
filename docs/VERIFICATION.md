@@ -168,4 +168,9 @@ M2 screens and live-session coordination, integrating the already tested engine 
 - Added 104 draft proverb halves and endings to reach 120/120. Automated checks validate unique first halves and required endings. Exact Egyptian wording and cultural fit are pending independent human review; count alone is not approval.
 - Content lint now enforces the required distributions inside Imposter, Cards and Truth or Dare, as well as easy/hard Taboo separation. It catches a thin category or level even if a pack's total remains high enough.
 - `npm audit --omit=dev --audit-level=moderate` reports 15 moderate transitive advisories, including query-string/decode-uri-component and Expo config tooling. The proposed `--force` remediation would install incompatible major Expo packages, so no forced dependency change was applied; reassess with SDK-compatible upstream fixes before store release.
-- Final draft checkpoint: `npm run check` passed (82 Jest tests, strict TypeScript, ESLint and content lint), Expo Doctor passed 21/21, and web/Android JavaScript exports succeeded. Release content lint fails solely because no pack has the required two real reviewer approvals; every numerical target is now met.
+- Final draft checkpoint: `npm run check` passed (82 Jest tests, strict TypeScript, ESLint and content lint), Expo Doctor passed 21/21, and web/Android JavaScript exports succeeded. Release content lint fails solely because no content group has the required two real reviewer approvals; every numerical target is now met.
+
+## Independent editorial packet — 2026-09-30
+
+- The release gate now checks the separate 20-card punishment list for two-person approval as well as all 28 game packs. A test verifies that editing a punishment invalidates its former approval.
+- `npm run content:review-export` produced two independent UTF-8 CSV copies with 2000 rows each and 15 consistent columns, including pack IDs, exact hashes, prompt text and blank decision/note fields. The generated `review-packets/` directory stays local and out of Git. `npm run check` passed after this change; the release gate remains intentionally red until genuine approvals are recorded.

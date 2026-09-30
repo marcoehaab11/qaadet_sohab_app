@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import { packSchema } from '../src/content/schema';
-import { Approval, approvedPack, packHash } from './content-review';
+import { Approval, approvedHash, approvedPack, contentHash, packHash } from './content-review';
 const raw: unknown = [
   ...JSON.parse(fs.readFileSync('src/content/packs/seed.json', 'utf8')),
   ...JSON.parse(fs.readFileSync('src/content/packs/ramadan.json', 'utf8')),
@@ -62,6 +62,10 @@ if (reviews.schemaVersion !== 1 || !reviews.packs || Array.isArray(reviews.packs
   process.exit(1);
 }
 let invalid = false;
+const punishmentHash = contentHash(punishments);
+const punishmentApproved = approvedHash(punishmentHash, reviews.packs.punishments);
+console.log(`punishments: ${punishments.length}/20; ${punishmentApproved ? 'reviewed' : 'review needed'}; sha256 ${punishmentHash}`);
+if (process.argv.includes('--release') && !punishmentApproved) invalid = true;
 const ids = new Set<string>();
 const itemIds = new Set<string>();
 for (const pack of parsed.data) {

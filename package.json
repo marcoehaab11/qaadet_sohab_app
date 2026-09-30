@@ -56,6 +56,7 @@
     "lint": "eslint src scripts tests",
     "test": "jest --runInBand",
     "content:lint": "tsx scripts/content-lint.ts",
+    "content:review-export": "npm run content:lint && tsx scripts/export-content-review.ts",
     "check": "npm run typecheck && npm run lint && npm test && npm run content:lint"
   },
   "private": true
