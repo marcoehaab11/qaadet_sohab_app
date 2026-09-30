@@ -72,3 +72,8 @@ M2 screens and live-session coordination, integrating the already tested engine 
 - Browser preview verified the privacy screen opens from Settings. PNG icon and monochrome Android asset were inspected locally. Native splash, adaptive icon, package permissions and store-review dialog still require a signed device build.
 - `eas config` could not be executed because no Expo account is authenticated here. EAS build/submit, Play Console metadata and Data safety declarations remain unverified.
 - Cards selection now falls back to Friends if Family mode hides Couples or a custom deck is deleted before the next draw; 54 tests, typecheck and lint pass after this edge-case fix.
+
+## Editorial release gate — 2026-09-30
+
+- Normal `npm run check` passes with 55 tests. The explicit release check fails as intended: all nine packs are below target and have no two-person approval.
+- Content lint now detects duplicate IDs across packs, reports full per-pack hashes, and invalidates an approval when pack contents change. The approval manifest is empty until two real reviewers complete the process in `docs/CONTENT_REVIEW.md`.

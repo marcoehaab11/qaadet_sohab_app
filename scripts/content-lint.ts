@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import { packSchema } from '../src/content/schema';
+import { Approval, approvedPack, packHash } from './content-review';
 const raw: unknown = JSON.parse(fs.readFileSync('src/content/packs/seed.json', 'utf8'));
 const parsed = packSchema.array().safeParse(raw);
 if (!parsed.success) {
@@ -18,8 +19,17 @@ const targets: Record<string, number> = {
   'base-knowme': 80,
   'base-speed': 60,
 };
+const reviews = JSON.parse(fs.readFileSync('docs/content-reviews.json', 'utf8')) as {
+  schemaVersion: number;
+  packs: Record<string, Approval>;
+};
+if (reviews.schemaVersion !== 1 || !reviews.packs || Array.isArray(reviews.packs)) {
+  console.error('Invalid editorial review manifest');
+  process.exit(1);
+}
 let invalid = false;
 const ids = new Set<string>();
+const itemIds = new Set<string>();
 for (const pack of parsed.data) {
   if (ids.has(pack.id)) {
     console.error(`Duplicate pack: ${pack.id}`);
@@ -27,20 +37,24 @@ for (const pack of parsed.data) {
   }
   ids.add(pack.id);
   for (const item of pack.items) {
+    if (itemIds.has(item.id)) {
+      console.error(`Duplicate content ID: ${item.id}`);
+      invalid = true;
+    }
+    itemIds.add(item.id);
     const allText = [item.text, item.pair, ...(item.forbidden ?? [])].filter(Boolean).join(' ');
     if (banned.some((word) => allText.includes(word))) {
       console.error(`Review blocked content: ${item.id}`);
       invalid = true;
     }
   }
-  console.log(`${pack.id}: ${pack.items.length}/${targets[pack.id] ?? 0}`);
+  const approved = approvedPack(pack, reviews.packs[pack.id]);
+  console.log(`${pack.id}: ${pack.items.length}/${targets[pack.id] ?? 0}; ${approved ? 'reviewed' : 'review needed'}; sha256 ${packHash(pack)}`);
+  if (process.argv.includes('--release') && !approved) invalid = true;
 }
-console.log(
-  'Seed validation only. Launch targets and two-person editorial review remain M6 release gates.',
-);
-if (
-  process.argv.includes('--release') &&
-  parsed.data.some((p) => p.items.length < (targets[p.id] ?? 0))
-)
-  invalid = true;
+for (const [id, target] of Object.entries(targets)) {
+  const count = parsed.data.find((pack) => pack.id === id)?.items.length ?? 0;
+  if (process.argv.includes('--release') && count < target) invalid = true;
+}
+console.log('Release needs target counts and two distinct human reviewers for every current pack hash.');
 process.exitCode = invalid ? 1 : 0;
