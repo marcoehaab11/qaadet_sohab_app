@@ -171,9 +171,8 @@ export default function Home() {
             router.push('/host');
           } else {
             const game = currentGame(session);
-            router.push(
-              session.phase === 'game' && game ? (playableRoutes[game] ?? '/host') : '/host',
-            );
+            router.push(session.phase === 'tiebreak' ? '/tiebreak'
+              : session.phase === 'game' && game ? (playableRoutes[game] ?? '/host') : '/host');
           }
         }}
       />

@@ -3,6 +3,7 @@ export const release = {
   teams: false,
   history: false,
   sharing: false,
+  tiebreak: true,
   surprises: false,
   phase: 'm7',
 } as const;

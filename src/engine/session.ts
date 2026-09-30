@@ -5,7 +5,7 @@ import { planSurprises, Surprise } from './surprises';
 export type Session = {
   queue: GameId[];
   index: number;
-  phase: 'host' | 'game' | 'results';
+  phase: 'host' | 'game' | 'tiebreak' | 'results';
   seed: number;
   finished: boolean;
   surprises: Record<number, Surprise>;
@@ -37,4 +37,9 @@ export function leaders(activeIds: readonly PlayerId[], ledger: Ledger): PlayerI
   if (!activeIds.length) return [];
   const maximum = Math.max(...activeIds.map((id) => ledger.scores[id] ?? 0));
   return activeIds.filter((id) => (ledger.scores[id] ?? 0) === maximum);
+}
+export function finishWithTie(session: Session, activeIds: readonly PlayerId[], ledger: Ledger): Session {
+  const next = finishCurrentGame(session);
+  return next.finished && leaders(activeIds, ledger).length >= 2
+    ? { ...next, phase: 'tiebreak', finished: false } : next;
 }

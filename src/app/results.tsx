@@ -26,6 +26,9 @@ export default function Results() {
   const askedVersion = useApp((s) => s.data.reviewAskedVersion);
   const update = useApp((s) => s.update);
   useEffect(() => {
+    if (session?.phase === 'tiebreak') router.replace('/tiebreak');
+  }, [session?.phase]);
+  useEffect(() => {
     const version = Constants.expoConfig?.version;
     if (__DEV__ || Platform.OS === 'web' || !version || reviewPending ||
       !eligibleForReview(completedSessions, askedVersion, version)) return;
@@ -55,6 +58,7 @@ export default function Results() {
   const losers = lowestScorers(activeIds, ledger);
   const loser = losers.length ? losers[Math.floor(random(session?.seed ?? 1).value * losers.length)] : null;
   const punishment = punishments[Math.floor(random((session?.seed ?? 1) + redraw + 997).value * punishments.length)];
+  if (session?.phase === 'tiebreak') return null;
   return (
     <Screen>
       <Text style={styles.title}>{ar.sessionDone}</Text>

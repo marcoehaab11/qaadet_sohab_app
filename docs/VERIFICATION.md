@@ -112,3 +112,7 @@ M2 screens and live-session coordination, integrating the already tested engine 
 ## M8 surprises preview — 2026-09-30
 
 - Tests cover the five-game event guarantee across 100 seeds, opt-out, host-event idempotency, steal/gift fallback, and ×2 on positive and negative points. `npm run check` passed with 72 Jest tests, strict TypeScript, ESLint and content lint.
+
+## M8 tie-break preview — 2026-09-30
+
+- Tests cover tied leaders after the final game, a clear winner, one remaining active player, wrong-claim exclusion and another player's successful claim. `npm run check` passed with 74 Jest tests, strict TypeScript, ESLint and content lint; web/Android JS export succeeded. Native route QA remains open.

@@ -82,3 +82,8 @@
 
 - Added an opt-in saved surprises setting. Events are planned deterministically from the session seed for host screens after the first, with a 45% chance per screen and a guaranteed event in five-game sessions.
 - The host applies steal/gift once per index through the normal score ledger and undo. Steal becomes a gift when first place is not ahead. Double multiplies all score changes in the next game, including negative points; stat counters stay unmultiplied. The event plan and applied indices remain in memory with the session.
+
+## 2026-09-30 — M8 tie-break preview
+
+- A final multi-game session with two or more active leaders enters a separate speed tie-break instead of finalizing immediately. Only tied players can buzz; wrong claims exclude that player for the current challenge, and a fresh challenge is available if no one answers. The group can choose co-stars instead.
+- Session completion count advances only after the tie-break is resolved. The tie-break awards normal points without team expansion or a previous game's ×2 event. It is ephemeral with the session, and a history record will be written only after resolution when history lands.
