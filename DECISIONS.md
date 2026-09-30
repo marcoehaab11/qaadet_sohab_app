@@ -87,3 +87,9 @@
 
 - A final multi-game session with two or more active leaders enters a separate speed tie-break instead of finalizing immediately. Only tied players can buzz; wrong claims exclude that player for the current challenge, and a fresh challenge is available if no one answers. The group can choose co-stars instead.
 - Session completion count advances only after the tie-break is resolved. The tie-break awards normal points without team expansion or a previous game's ×2 event. It is ephemeral with the session, and a history record will be written only after resolution when history lands.
+
+## 2026-09-30 — M8 local history and stats
+
+- Saved the last 40 completed session records with date, winners, game IDs and player score snapshots. Records are written once, only after the final game or resolved tie-break. Per-game play counts include queued and standalone launches.
+- Career totals and longest/current win streaks are stored separately so trimming the 40-record history does not lower all-time stats. Existing v1 local saves migrate through schema defaults for the new fields. Live scores, undo and away flags remain ephemeral.
+- The stats screen shows total completed sessions, current players' career wins/streaks, top five games and latest eight sessions. Clearing history requires an in-app confirmation and resets historical stats and play counts; it leaves player names, settings and review-asked version intact.

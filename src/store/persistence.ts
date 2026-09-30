@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { customDecksSchema } from '../content/custom';
+import { enabledGameIds } from '../config/release';
 export const playerSchema = z.object({
   id: z.string().min(1),
   name: z.string().trim().min(1).max(14),
@@ -31,6 +32,15 @@ export const savedSchema = z.object({
   customDecks: customDecksSchema,
   used: z.record(z.string(), z.array(z.string())),
   completedSessions: z.number().int().nonnegative(),
+  history: z.array(z.object({
+    id: z.string(), date: z.iso.datetime(), winnerIds: z.array(z.string()),
+    gameIds: z.array(z.enum(enabledGameIds)),
+    players: z.array(z.object({ id: z.string(), name: z.string(), emoji: z.string(), score: z.number() })),
+  })).max(40).default([]),
+  playCounts: z.partialRecord(z.enum(enabledGameIds), z.number().int().nonnegative()).default({}),
+  career: z.record(z.string(), z.object({ sessions: z.number().int().nonnegative(),
+    wins: z.number().int().nonnegative(), currentStreak: z.number().int().nonnegative(),
+    longestStreak: z.number().int().nonnegative() })).default({}),
   onboardingDone: z.boolean(),
   reviewAskedVersion: z.string().nullable(),
   lastSetup: z.object({

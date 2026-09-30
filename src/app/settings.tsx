@@ -85,6 +85,7 @@ export default function SettingsScreen() {
       <Text style={styles.muted}>{ar.localOnly}</Text>
       <Button secondary label="أسئلة الشلة 🫶" onPress={() => router.push('/custom')} />
       <Button secondary label="الخصوصية" onPress={() => router.push('/privacy')} />
+      <Button secondary label={ar.stats} onPress={() => router.push('/stats')} />
       <Button secondary label={ar.soon} onPress={() => router.push('/soon')} />
       <Button secondary label={ar.replayOnboarding} onPress={() => router.push('/onboarding')} />
       <Button label={ar.back} onPress={() => router.back()} />

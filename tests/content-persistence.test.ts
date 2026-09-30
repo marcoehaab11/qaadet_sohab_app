@@ -9,6 +9,7 @@ const saved: SavedData = {
   customDecks: {},
   used: { pack: ['item'] },
   completedSessions: 3,
+  history: [], playCounts: {}, career: {},
   onboardingDone: true,
   reviewAskedVersion: null,
   lastSetup: { vibe: 'laugh', length: 3 },

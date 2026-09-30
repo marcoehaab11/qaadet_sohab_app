@@ -7,6 +7,7 @@ export type Session = {
   index: number;
   phase: 'host' | 'game' | 'tiebreak' | 'results';
   seed: number;
+  startedAt: number;
   finished: boolean;
   surprises: Record<number, Surprise>;
 };
@@ -19,7 +20,7 @@ export function createSession(
 ): Session {
   const built = buildQueue(vibe, length, activeCount, seed);
   if (!built.queue.length) throw new Error('Not enough players');
-  return { queue: built.queue, index: 0, phase: 'host', seed: built.seed, finished: false,
+  return { queue: built.queue, index: 0, phase: 'host', seed: built.seed, startedAt: seed, finished: false,
     surprises: planSurprises(built.queue.length, built.seed, surprisesEnabled) };
 }
 export const currentGame = (session: Session) => session.queue[session.index] ?? null;

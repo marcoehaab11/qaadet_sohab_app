@@ -116,3 +116,8 @@ M2 screens and live-session coordination, integrating the already tested engine 
 ## M8 tie-break preview — 2026-09-30
 
 - Tests cover tied leaders after the final game, a clear winner, one remaining active player, wrong-claim exclusion and another player's successful claim. `npm run check` passed with 74 Jest tests, strict TypeScript, ESLint and content lint; web/Android JS export succeeded. Native route QA remains open.
+
+## M8 local history and stats — 2026-09-30
+
+- Tests cover record winners, duplicate prevention, 40-record retention, career wins and streaks, and migration defaults for existing saves. `npm run check` passed with 77 Jest tests, strict TypeScript, ESLint and content lint; Android/web JS export succeeded.
+- Browser preview opened the stats screen from Settings using existing saved data. Its prior completed-session count remained readable after migration; new history was empty as expected because the earlier version had not saved sessions.

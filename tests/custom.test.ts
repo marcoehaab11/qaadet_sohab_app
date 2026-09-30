@@ -32,7 +32,7 @@ test('saved custom decks reject malformed entries', () => {
     schemaVersion: 1,
     players: ['a', 'b'].map((id) => ({ id, name: id, emoji: '😀', color: '#ffffff' })),
     settings: { sound: true, hold: true, family: false, largeText: false, clearColors: false, teams: false, surprises: false },
-    config: {}, customDecks: decks, used: {}, completedSessions: 0, onboardingDone: true,
+    config: {}, customDecks: decks, used: {}, completedSessions: 0, history: [], playCounts: {}, career: {}, onboardingDone: true,
     reviewAskedVersion: null, lastSetup: { vibe: 'laugh', length: 3 },
   };
   expect(migrateSaved(saved).customDecks.cards).toEqual(decks.cards);

@@ -24,8 +24,25 @@ import { MemoryState, createMemory } from '../games/memory/reducer';
 import { expandTeamPoints, teamsActive } from '../engine/teams';
 import { DrawState, createDraw } from '../games/draw/reducer';
 import { applyHostSurprise, eventScores, SurpriseProgress } from '../engine/surprises';
+import { appendHistory, makeHistoryRecord, updateCareer } from '../engine/history';
+import { GameId } from '../config/release';
 import { useApp } from './index';
 // Ephemeral by design: scores, counters, undo and sit-out state never reach AsyncStorage.
+function recordCompletedSession(session: Session, ledger: Ledger, away: readonly string[]) {
+  const data = useApp.getState().data;
+  const activeIds = data.players.filter((player) => !away.includes(player.id)).map((player) => player.id);
+  const record = makeHistoryRecord(session, data.players, activeIds, ledger, Date.now());
+  useApp.getState().update((saved) => ({ ...saved,
+    completedSessions: saved.completedSessions + 1,
+    history: appendHistory(saved.history, record),
+    career: updateCareer(saved.career, activeIds, record.winnerIds),
+  }));
+}
+function countGamePlay(game: GameId) {
+  useApp.getState().update((data) => ({ ...data,
+    playCounts: { ...data.playCounts, [game]: (data.playCounts[game] ?? 0) + 1 },
+  }));
+}
 type SessionStore = {
   ledger: Ledger;
   away: string[];
@@ -88,7 +105,7 @@ export const useSession = create<SessionStore>((set, get) => ({
     const session = get().session;
     if (!session || session.phase !== 'tiebreak') return;
     set({ session: { ...session, phase: 'results', finished: true }, tieGame: null });
-    useApp.getState().update((data) => ({ ...data, completedSessions: data.completedSessions + 1 }));
+    recordCompletedSession(session, get().ledger, get().away);
   },
   surpriseProgress: { applied: [] },
   prepareHost: () => {
@@ -124,6 +141,7 @@ export const useSession = create<SessionStore>((set, get) => ({
   drawGame: null,
   setDrawGame: (drawGame) => set({ drawGame }),
   startStandaloneCards: () => {
+    countGamePlay('cards');
     const data = useApp.getState().data;
     set({
       ledger: emptyLedger(),
@@ -150,6 +168,7 @@ export const useSession = create<SessionStore>((set, get) => ({
     });
   },
   startStandaloneTod: () => {
+    countGamePlay('tod');
     const data = useApp.getState().data;
     set({
       ledger: emptyLedger(),
@@ -176,6 +195,7 @@ export const useSession = create<SessionStore>((set, get) => ({
     });
   },
   startStandaloneLikely: () => {
+    countGamePlay('likely');
     const data = useApp.getState().data;
     set({
       ledger: emptyLedger(),
@@ -202,6 +222,7 @@ export const useSession = create<SessionStore>((set, get) => ({
     });
   },
   startStandaloneKnowMe: () => {
+    countGamePlay('knowme');
     const data = useApp.getState().data;
     set({
       ledger: emptyLedger(),
@@ -228,6 +249,7 @@ export const useSession = create<SessionStore>((set, get) => ({
     });
   },
   startStandaloneTaboo: () => {
+    countGamePlay('taboo');
     const data = useApp.getState().data;
     set({
       ledger: emptyLedger(),
@@ -255,6 +277,7 @@ export const useSession = create<SessionStore>((set, get) => ({
     });
   },
   startStandaloneCharades: () => {
+    countGamePlay('charades');
     const data = useApp.getState().data;
     set({
       ledger: emptyLedger(),
@@ -281,6 +304,7 @@ export const useSession = create<SessionStore>((set, get) => ({
     });
   },
   startStandaloneSpeed: () => {
+    countGamePlay('speed');
     const data = useApp.getState().data;
     set({
       ledger: emptyLedger(),
@@ -303,6 +327,7 @@ export const useSession = create<SessionStore>((set, get) => ({
     });
   },
   startStandaloneImposter: () => {
+    countGamePlay('imposter');
     set({
       ledger: emptyLedger(),
       away: [],
@@ -324,6 +349,7 @@ export const useSession = create<SessionStore>((set, get) => ({
     });
   },
   startStandaloneProverb: () => {
+    countGamePlay('proverb');
     const data = useApp.getState().data;
     set({
       ledger: emptyLedger(), away: [], session: null,
@@ -337,6 +363,7 @@ export const useSession = create<SessionStore>((set, get) => ({
     });
   },
   startStandaloneMemory: () => {
+    countGamePlay('memory');
     const data = useApp.getState().data;
     const config = data.config.memory;
     set({ ledger: emptyLedger(), away: [], session: null,
@@ -347,6 +374,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       memoryGame: createMemory(data.players.length * (config?.turns ?? 1), config?.difficulty ?? 9, Date.now()) });
   },
   startStandaloneDraw: () => {
+    countGamePlay('draw');
     const data = useApp.getState().data;
     set({ ledger: emptyLedger(), away: [], session: null,
       tieGame: null,
@@ -383,7 +411,9 @@ export const useSession = create<SessionStore>((set, get) => ({
   },
   play: () => {
     const session = get().session;
-    if (!session) return;
+    if (!session || session.phase !== 'host') return;
+    const game = currentGame(session);
+    if (game) countGamePlay(game);
     const participants = useApp
       .getState()
       .data.players.map((p) => ({ ...p, away: get().away.includes(p.id) }));
@@ -450,10 +480,7 @@ export const useSession = create<SessionStore>((set, get) => ({
     const next = finishWithTie(session, activeIds, get().ledger);
     const tiedIds = next.phase === 'tiebreak' ? leaders(activeIds, get().ledger) : [];
     set({ session: next, tiedIds, tieGame: next.phase === 'tiebreak' ? createSpeed(1, next.seed) : null });
-    if (next.finished && !session.finished)
-      useApp
-        .getState()
-        .update((data) => ({ ...data, completedSessions: data.completedSessions + 1 }));
+    if (next.finished && !session.finished) recordCompletedSession(next, get().ledger, get().away);
   },
   setAway: (id) => {
     const away = get().away;
@@ -513,6 +540,7 @@ export const useSession = create<SessionStore>((set, get) => ({
       drawGame: null,
     }),
 }));
+
 
 
 
