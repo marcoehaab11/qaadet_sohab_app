@@ -1,16 +1,1011 @@
 [
-  {"id":"base-taboo-hard","version":1,"locale":"ar-EG","game":"taboo","tier":"free","items":[
-    {"id":"base-taboo-hard-001","text":"الحنين","level":"hard","forbidden":["ذكريات","زمان","اشتياق"]},
-    {"id":"base-taboo-hard-002","text":"الصدفة","level":"hard","forbidden":["اتفاق","فجأة","حظ"]},
-    {"id":"base-taboo-hard-003","text":"الفضول","level":"hard","forbidden":["معرفة","سؤال","تدخل"]},
-    {"id":"base-taboo-hard-004","text":"الهدوء","level":"hard","forbidden":["صمت","راحة","دوشة"]},
-    {"id":"base-taboo-hard-005","text":"الثقة","level":"hard","forbidden":["أمان","تصدق","شك"]},
-    {"id":"base-taboo-hard-006","text":"الوقت","level":"hard","forbidden":["ساعة","دقيقة","يمر"]},
-    {"id":"base-taboo-hard-007","text":"الفكرة","level":"hard","forbidden":["عقل","اختراع","جديدة"]},
-    {"id":"base-taboo-hard-008","text":"الخيال","level":"hard","forbidden":["حلم","تخيل","واقع"]},
-    {"id":"base-taboo-hard-009","text":"الطموح","level":"hard","forbidden":["هدف","نجاح","مستقبل"]},
-    {"id":"base-taboo-hard-010","text":"الغيرة","level":"hard","forbidden":["حسد","مقارنة","نجاح"]},
-    {"id":"base-taboo-hard-011","text":"التردد","level":"hard","forbidden":["قرار","اختيار","حيرة"]},
-    {"id":"base-taboo-hard-012","text":"الاعتذار","level":"hard","forbidden":["آسف","غلط","سامحني"]}
-  ]}
+  {
+    "id": "base-taboo-hard",
+    "version": 1,
+    "locale": "ar-EG",
+    "game": "taboo",
+    "tier": "free",
+    "items": [
+      {
+        "id": "base-taboo-hard-001",
+        "text": "الحنين",
+        "level": "hard",
+        "forbidden": [
+          "ذكريات",
+          "زمان",
+          "اشتياق"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-002",
+        "text": "الصدفة",
+        "level": "hard",
+        "forbidden": [
+          "اتفاق",
+          "فجأة",
+          "حظ"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-003",
+        "text": "الفضول",
+        "level": "hard",
+        "forbidden": [
+          "معرفة",
+          "سؤال",
+          "تدخل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-004",
+        "text": "الهدوء",
+        "level": "hard",
+        "forbidden": [
+          "صمت",
+          "راحة",
+          "دوشة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-005",
+        "text": "الثقة",
+        "level": "hard",
+        "forbidden": [
+          "أمان",
+          "تصدق",
+          "شك"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-006",
+        "text": "الوقت",
+        "level": "hard",
+        "forbidden": [
+          "ساعة",
+          "دقيقة",
+          "يمر"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-007",
+        "text": "الفكرة",
+        "level": "hard",
+        "forbidden": [
+          "عقل",
+          "اختراع",
+          "جديدة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-008",
+        "text": "الخيال",
+        "level": "hard",
+        "forbidden": [
+          "حلم",
+          "تخيل",
+          "واقع"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-009",
+        "text": "الطموح",
+        "level": "hard",
+        "forbidden": [
+          "هدف",
+          "نجاح",
+          "مستقبل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-010",
+        "text": "الغيرة",
+        "level": "hard",
+        "forbidden": [
+          "حسد",
+          "مقارنة",
+          "نجاح"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-011",
+        "text": "التردد",
+        "level": "hard",
+        "forbidden": [
+          "قرار",
+          "اختيار",
+          "حيرة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-012",
+        "text": "الاعتذار",
+        "level": "hard",
+        "forbidden": [
+          "آسف",
+          "غلط",
+          "سامحني"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-013",
+        "text": "الصبر",
+        "level": "hard",
+        "forbidden": [
+          "انتظار",
+          "تحمل",
+          "وقت"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-014",
+        "text": "الحماس",
+        "level": "hard",
+        "forbidden": [
+          "طاقة",
+          "نشاط",
+          "متحمس"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-015",
+        "text": "الدهشة",
+        "level": "hard",
+        "forbidden": [
+          "مفاجأة",
+          "عين",
+          "غريب"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-016",
+        "text": "الملل",
+        "level": "hard",
+        "forbidden": [
+          "زهق",
+          "تكرار",
+          "وقت"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-017",
+        "text": "الارتباك",
+        "level": "hard",
+        "forbidden": [
+          "تلخبط",
+          "توتر",
+          "كلام"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-018",
+        "text": "الشجاعة",
+        "level": "hard",
+        "forbidden": [
+          "خوف",
+          "جرأة",
+          "موقف"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-019",
+        "text": "القلق",
+        "level": "hard",
+        "forbidden": [
+          "توتر",
+          "بال",
+          "خايف"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-020",
+        "text": "الراحة",
+        "level": "hard",
+        "forbidden": [
+          "استرخاء",
+          "تعب",
+          "هدوء"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-021",
+        "text": "الفرحة",
+        "level": "hard",
+        "forbidden": [
+          "سعادة",
+          "ابتسامة",
+          "خبر"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-022",
+        "text": "الزعل",
+        "level": "hard",
+        "forbidden": [
+          "حزن",
+          "متضايق",
+          "دموع"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-023",
+        "text": "الندم",
+        "level": "hard",
+        "forbidden": [
+          "غلط",
+          "يا ريت",
+          "قرار"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-024",
+        "text": "الفخر",
+        "level": "hard",
+        "forbidden": [
+          "إنجاز",
+          "مبسوط",
+          "نفسك"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-025",
+        "text": "التواضع",
+        "level": "hard",
+        "forbidden": [
+          "غرور",
+          "بسيط",
+          "ناس"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-026",
+        "text": "الإصرار",
+        "level": "hard",
+        "forbidden": [
+          "محاولة",
+          "استمرار",
+          "هدف"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-027",
+        "text": "الإحباط",
+        "level": "hard",
+        "forbidden": [
+          "أمل",
+          "فشل",
+          "تعب"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-028",
+        "text": "التفاؤل",
+        "level": "hard",
+        "forbidden": [
+          "أمل",
+          "خير",
+          "بكرة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-029",
+        "text": "التشاؤم",
+        "level": "hard",
+        "forbidden": [
+          "سوداوي",
+          "خايف",
+          "متوقع"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-030",
+        "text": "الامتنان",
+        "level": "hard",
+        "forbidden": [
+          "شكر",
+          "فضل",
+          "جميل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-031",
+        "text": "الكسل",
+        "level": "hard",
+        "forbidden": [
+          "نوم",
+          "تأجيل",
+          "شغل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-032",
+        "text": "الخجل",
+        "level": "hard",
+        "forbidden": [
+          "كسوف",
+          "وجه",
+          "كلام"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-033",
+        "text": "الصداقة",
+        "level": "hard",
+        "forbidden": [
+          "صحاب",
+          "عشرة",
+          "علاقة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-034",
+        "text": "الوفاء",
+        "level": "hard",
+        "forbidden": [
+          "وعد",
+          "إخلاص",
+          "نسيان"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-035",
+        "text": "التعاون",
+        "level": "hard",
+        "forbidden": [
+          "مساعدة",
+          "فريق",
+          "سوا"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-036",
+        "text": "التسامح",
+        "level": "hard",
+        "forbidden": [
+          "عفو",
+          "غلط",
+          "زعل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-037",
+        "text": "المجاملة",
+        "level": "hard",
+        "forbidden": [
+          "كلام",
+          "لطيف",
+          "مدح"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-038",
+        "text": "الاحترام",
+        "level": "hard",
+        "forbidden": [
+          "تقدير",
+          "أدب",
+          "كبير"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-039",
+        "text": "الخصوصية",
+        "level": "hard",
+        "forbidden": [
+          "سر",
+          "شخصي",
+          "تدخل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-040",
+        "text": "المسؤولية",
+        "level": "hard",
+        "forbidden": [
+          "واجب",
+          "اعتماد",
+          "مهمة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-041",
+        "text": "الأمانة",
+        "level": "hard",
+        "forbidden": [
+          "صدق",
+          "وديعة",
+          "ثقة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-042",
+        "text": "المشاركة",
+        "level": "hard",
+        "forbidden": [
+          "تقسيم",
+          "سوا",
+          "حاجة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-043",
+        "text": "التركيز",
+        "level": "hard",
+        "forbidden": [
+          "انتباه",
+          "ذهن",
+          "تشتت"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-044",
+        "text": "الذاكرة",
+        "level": "hard",
+        "forbidden": [
+          "نسيان",
+          "افتكار",
+          "عقل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-045",
+        "text": "الذكاء",
+        "level": "hard",
+        "forbidden": [
+          "فهم",
+          "عقل",
+          "حل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-046",
+        "text": "الإبداع",
+        "level": "hard",
+        "forbidden": [
+          "ابتكار",
+          "فكرة",
+          "جديد"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-047",
+        "text": "التخطيط",
+        "level": "hard",
+        "forbidden": [
+          "خطة",
+          "قبل",
+          "ترتيب"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-048",
+        "text": "التنظيم",
+        "level": "hard",
+        "forbidden": [
+          "ترتيب",
+          "فوضى",
+          "وقت"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-049",
+        "text": "الانتباه",
+        "level": "hard",
+        "forbidden": [
+          "تركيز",
+          "لاحظ",
+          "غفلة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-050",
+        "text": "الملاحظة",
+        "level": "hard",
+        "forbidden": [
+          "عين",
+          "تفاصيل",
+          "شايف"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-051",
+        "text": "الاستنتاج",
+        "level": "hard",
+        "forbidden": [
+          "دليل",
+          "فهم",
+          "نتيجة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-052",
+        "text": "التوقع",
+        "level": "hard",
+        "forbidden": [
+          "مستقبل",
+          "تخمين",
+          "حصل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-053",
+        "text": "القرار",
+        "level": "hard",
+        "forbidden": [
+          "اختيار",
+          "حسم",
+          "بديل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-054",
+        "text": "الحل",
+        "level": "hard",
+        "forbidden": [
+          "مشكلة",
+          "إجابة",
+          "طريق"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-055",
+        "text": "الاحتمال",
+        "level": "hard",
+        "forbidden": [
+          "ممكن",
+          "فرصة",
+          "نسبة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-056",
+        "text": "المقارنة",
+        "level": "hard",
+        "forbidden": [
+          "فرق",
+          "تشابه",
+          "اتنين"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-057",
+        "text": "التفاصيل",
+        "level": "hard",
+        "forbidden": [
+          "صغير",
+          "دقيق",
+          "كل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-058",
+        "text": "البديهة",
+        "level": "hard",
+        "forbidden": [
+          "سرعة",
+          "فهم",
+          "رد"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-059",
+        "text": "الإلهام",
+        "level": "hard",
+        "forbidden": [
+          "فكرة",
+          "تشجيع",
+          "بداية"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-060",
+        "text": "التجربة",
+        "level": "hard",
+        "forbidden": [
+          "محاولة",
+          "اختبار",
+          "جديد"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-061",
+        "text": "التعلم",
+        "level": "hard",
+        "forbidden": [
+          "معرفة",
+          "درس",
+          "فهم"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-062",
+        "text": "الفضفضة",
+        "level": "hard",
+        "forbidden": [
+          "حكي",
+          "كلام",
+          "صاحب"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-063",
+        "text": "السر",
+        "level": "hard",
+        "forbidden": [
+          "مخفي",
+          "بقولك",
+          "كتمان"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-064",
+        "text": "الوعد",
+        "level": "hard",
+        "forbidden": [
+          "كلمة",
+          "وفاء",
+          "اتفاق"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-065",
+        "text": "المفاجأة",
+        "level": "hard",
+        "forbidden": [
+          "غير متوقع",
+          "هدية",
+          "فجأة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-066",
+        "text": "التشجيع",
+        "level": "hard",
+        "forbidden": [
+          "دعم",
+          "كمل",
+          "حماس"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-067",
+        "text": "النصيحة",
+        "level": "hard",
+        "forbidden": [
+          "رأي",
+          "مساعدة",
+          "قول"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-068",
+        "text": "النقاش",
+        "level": "hard",
+        "forbidden": [
+          "حوار",
+          "رأي",
+          "كلام"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-069",
+        "text": "الإقناع",
+        "level": "hard",
+        "forbidden": [
+          "رأي",
+          "حجة",
+          "وافق"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-070",
+        "text": "الاختلاف",
+        "level": "hard",
+        "forbidden": [
+          "رأي",
+          "مش زي",
+          "تشابه"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-071",
+        "text": "الاتفاق",
+        "level": "hard",
+        "forbidden": [
+          "رأي",
+          "نفس",
+          "موافقة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-072",
+        "text": "المنافسة",
+        "level": "hard",
+        "forbidden": [
+          "سباق",
+          "فوز",
+          "تحدي"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-073",
+        "text": "العدل",
+        "level": "hard",
+        "forbidden": [
+          "مساواة",
+          "حق",
+          "ظلم"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-074",
+        "text": "الدور",
+        "level": "hard",
+        "forbidden": [
+          "انتظار",
+          "ترتيب",
+          "طابور"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-075",
+        "text": "الاعتراف",
+        "level": "hard",
+        "forbidden": [
+          "حقيقة",
+          "أقول",
+          "إقرار"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-076",
+        "text": "الانطباع",
+        "level": "hard",
+        "forbidden": [
+          "أول",
+          "رأي",
+          "صورة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-077",
+        "text": "الشهرة",
+        "level": "hard",
+        "forbidden": [
+          "معروف",
+          "ناس",
+          "نجومية"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-078",
+        "text": "التميز",
+        "level": "hard",
+        "forbidden": [
+          "مختلف",
+          "أحسن",
+          "تفوق"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-079",
+        "text": "التقليد",
+        "level": "hard",
+        "forbidden": [
+          "محاكاة",
+          "زي",
+          "أصل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-080",
+        "text": "العفوية",
+        "level": "hard",
+        "forbidden": [
+          "تلقائي",
+          "من غير",
+          "تصنع"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-081",
+        "text": "الجدية",
+        "level": "hard",
+        "forbidden": [
+          "هزار",
+          "تركيز",
+          "شغل"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-082",
+        "text": "الانضباط",
+        "level": "hard",
+        "forbidden": [
+          "التزام",
+          "مواعيد",
+          "نظام"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-083",
+        "text": "المرونة",
+        "level": "hard",
+        "forbidden": [
+          "تغيير",
+          "تأقلم",
+          "ثابت"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-084",
+        "text": "الفرصة",
+        "level": "hard",
+        "forbidden": [
+          "مرة",
+          "حظ",
+          "باب"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-085",
+        "text": "البداية",
+        "level": "hard",
+        "forbidden": [
+          "أول",
+          "انطلاق",
+          "جديد"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-086",
+        "text": "النهاية",
+        "level": "hard",
+        "forbidden": [
+          "آخر",
+          "خلص",
+          "ختام"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-087",
+        "text": "التأجيل",
+        "level": "hard",
+        "forbidden": [
+          "بعدين",
+          "موعد",
+          "تأخير"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-088",
+        "text": "الاستعجال",
+        "level": "hard",
+        "forbidden": [
+          "سرعة",
+          "انتظار",
+          "دلوقتي"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-089",
+        "text": "الانتظار",
+        "level": "hard",
+        "forbidden": [
+          "دور",
+          "وقت",
+          "استنى"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-090",
+        "text": "الماضي",
+        "level": "hard",
+        "forbidden": [
+          "زمان",
+          "فات",
+          "ذكريات"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-091",
+        "text": "المستقبل",
+        "level": "hard",
+        "forbidden": [
+          "بكرة",
+          "جاي",
+          "قدام"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-092",
+        "text": "اللحظة",
+        "level": "hard",
+        "forbidden": [
+          "دلوقتي",
+          "ثانية",
+          "وقت"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-093",
+        "text": "العادة",
+        "level": "hard",
+        "forbidden": [
+          "تكرار",
+          "كل يوم",
+          "متعود"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-094",
+        "text": "التغيير",
+        "level": "hard",
+        "forbidden": [
+          "جديد",
+          "قديم",
+          "تحول"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-095",
+        "text": "المغامرة",
+        "level": "hard",
+        "forbidden": [
+          "جديد",
+          "رحلة",
+          "تجربة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-096",
+        "text": "الهدية",
+        "level": "hard",
+        "forbidden": [
+          "مفاجأة",
+          "علبة",
+          "مناسبة"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-097",
+        "text": "الضيافة",
+        "level": "hard",
+        "forbidden": [
+          "ضيف",
+          "استقبال",
+          "بيت"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-098",
+        "text": "الكرم",
+        "level": "hard",
+        "forbidden": [
+          "عطاء",
+          "بخل",
+          "ناس"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-099",
+        "text": "الذوق",
+        "level": "hard",
+        "forbidden": [
+          "اختيار",
+          "جميل",
+          "أسلوب"
+        ]
+      },
+      {
+        "id": "base-taboo-hard-100",
+        "text": "الهدنة",
+        "level": "hard",
+        "forbidden": [
+          "خلاف",
+          "وقف",
+          "راحة"
+        ]
+      }
+    ]
+  }
 ]

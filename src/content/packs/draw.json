@@ -1,24 +1,811 @@
 [
-  {"id":"base-draw","version":1,"locale":"ar-EG","game":"draw","tier":"free","items":[
-    {"id":"base-draw-001","text":"أتوبيس"},
-    {"id":"base-draw-002","text":"فانوس"},
-    {"id":"base-draw-003","text":"كوب شاي"},
-    {"id":"base-draw-004","text":"مظلة"},
-    {"id":"base-draw-005","text":"قطار"},
-    {"id":"base-draw-006","text":"قطة"},
-    {"id":"base-draw-007","text":"مركب"},
-    {"id":"base-draw-008","text":"طائرة ورق"},
-    {"id":"base-draw-009","text":"قهوة"},
-    {"id":"base-draw-010","text":"شجرة"},
-    {"id":"base-draw-011","text":"تليفزيون"},
-    {"id":"base-draw-012","text":"دراجة"},
-    {"id":"base-draw-013","text":"سلم"},
-    {"id":"base-draw-014","text":"نظارة"},
-    {"id":"base-draw-015","text":"تاج"},
-    {"id":"base-draw-016","text":"مفتاح"},
-    {"id":"base-draw-017","text":"ساعة"},
-    {"id":"base-draw-018","text":"كورة"},
-    {"id":"base-draw-019","text":"هرم"},
-    {"id":"base-draw-020","text":"طبل"}
-  ]}
+  {
+    "id": "base-draw",
+    "version": 1,
+    "locale": "ar-EG",
+    "game": "draw",
+    "tier": "free",
+    "items": [
+      {
+        "id": "base-draw-001",
+        "text": "أتوبيس"
+      },
+      {
+        "id": "base-draw-002",
+        "text": "فانوس"
+      },
+      {
+        "id": "base-draw-003",
+        "text": "كوب شاي"
+      },
+      {
+        "id": "base-draw-004",
+        "text": "مظلة"
+      },
+      {
+        "id": "base-draw-005",
+        "text": "قطار"
+      },
+      {
+        "id": "base-draw-006",
+        "text": "قطة"
+      },
+      {
+        "id": "base-draw-007",
+        "text": "مركب"
+      },
+      {
+        "id": "base-draw-008",
+        "text": "طائرة ورق"
+      },
+      {
+        "id": "base-draw-009",
+        "text": "قهوة"
+      },
+      {
+        "id": "base-draw-010",
+        "text": "شجرة"
+      },
+      {
+        "id": "base-draw-011",
+        "text": "تليفزيون"
+      },
+      {
+        "id": "base-draw-012",
+        "text": "دراجة"
+      },
+      {
+        "id": "base-draw-013",
+        "text": "سلم"
+      },
+      {
+        "id": "base-draw-014",
+        "text": "نظارة"
+      },
+      {
+        "id": "base-draw-015",
+        "text": "تاج"
+      },
+      {
+        "id": "base-draw-016",
+        "text": "مفتاح"
+      },
+      {
+        "id": "base-draw-017",
+        "text": "ساعة"
+      },
+      {
+        "id": "base-draw-018",
+        "text": "كورة"
+      },
+      {
+        "id": "base-draw-019",
+        "text": "هرم"
+      },
+      {
+        "id": "base-draw-020",
+        "text": "طبل"
+      },
+      {
+        "id": "base-draw-021",
+        "text": "كلب"
+      },
+      {
+        "id": "base-draw-022",
+        "text": "أرنب"
+      },
+      {
+        "id": "base-draw-023",
+        "text": "سلحفاة"
+      },
+      {
+        "id": "base-draw-024",
+        "text": "سمكة"
+      },
+      {
+        "id": "base-draw-025",
+        "text": "عصفور"
+      },
+      {
+        "id": "base-draw-026",
+        "text": "فراشة"
+      },
+      {
+        "id": "base-draw-027",
+        "text": "نحلة"
+      },
+      {
+        "id": "base-draw-028",
+        "text": "حصان"
+      },
+      {
+        "id": "base-draw-029",
+        "text": "جمل"
+      },
+      {
+        "id": "base-draw-030",
+        "text": "فيل"
+      },
+      {
+        "id": "base-draw-031",
+        "text": "زرافة"
+      },
+      {
+        "id": "base-draw-032",
+        "text": "أسد"
+      },
+      {
+        "id": "base-draw-033",
+        "text": "نمر"
+      },
+      {
+        "id": "base-draw-034",
+        "text": "دب"
+      },
+      {
+        "id": "base-draw-035",
+        "text": "قرد"
+      },
+      {
+        "id": "base-draw-036",
+        "text": "بطريق"
+      },
+      {
+        "id": "base-draw-037",
+        "text": "دولفين"
+      },
+      {
+        "id": "base-draw-038",
+        "text": "تمساح"
+      },
+      {
+        "id": "base-draw-039",
+        "text": "بومة"
+      },
+      {
+        "id": "base-draw-040",
+        "text": "ديك"
+      },
+      {
+        "id": "base-draw-041",
+        "text": "دجاجة"
+      },
+      {
+        "id": "base-draw-042",
+        "text": "بطة"
+      },
+      {
+        "id": "base-draw-043",
+        "text": "خروف"
+      },
+      {
+        "id": "base-draw-044",
+        "text": "بقرة"
+      },
+      {
+        "id": "base-draw-045",
+        "text": "ماعز"
+      },
+      {
+        "id": "base-draw-046",
+        "text": "حمار"
+      },
+      {
+        "id": "base-draw-047",
+        "text": "ثعلب"
+      },
+      {
+        "id": "base-draw-048",
+        "text": "فأر"
+      },
+      {
+        "id": "base-draw-049",
+        "text": "قنفذ"
+      },
+      {
+        "id": "base-draw-050",
+        "text": "أخطبوط"
+      },
+      {
+        "id": "base-draw-051",
+        "text": "تفاحة"
+      },
+      {
+        "id": "base-draw-052",
+        "text": "موزة"
+      },
+      {
+        "id": "base-draw-053",
+        "text": "برتقالة"
+      },
+      {
+        "id": "base-draw-054",
+        "text": "فراولة"
+      },
+      {
+        "id": "base-draw-055",
+        "text": "بطيخة"
+      },
+      {
+        "id": "base-draw-056",
+        "text": "عنب"
+      },
+      {
+        "id": "base-draw-057",
+        "text": "أناناس"
+      },
+      {
+        "id": "base-draw-058",
+        "text": "مانجا"
+      },
+      {
+        "id": "base-draw-059",
+        "text": "ليمونة"
+      },
+      {
+        "id": "base-draw-060",
+        "text": "كرزة"
+      },
+      {
+        "id": "base-draw-061",
+        "text": "بيتزا"
+      },
+      {
+        "id": "base-draw-062",
+        "text": "ساندوتش"
+      },
+      {
+        "id": "base-draw-063",
+        "text": "برجر"
+      },
+      {
+        "id": "base-draw-064",
+        "text": "آيس كريم"
+      },
+      {
+        "id": "base-draw-065",
+        "text": "كعكة"
+      },
+      {
+        "id": "base-draw-066",
+        "text": "دونات"
+      },
+      {
+        "id": "base-draw-067",
+        "text": "بيضة"
+      },
+      {
+        "id": "base-draw-068",
+        "text": "جزرة"
+      },
+      {
+        "id": "base-draw-069",
+        "text": "كوز ذرة"
+      },
+      {
+        "id": "base-draw-070",
+        "text": "طبق مكرونة"
+      },
+      {
+        "id": "base-draw-071",
+        "text": "كوب عصير"
+      },
+      {
+        "id": "base-draw-072",
+        "text": "زجاجة مياه"
+      },
+      {
+        "id": "base-draw-073",
+        "text": "إبريق"
+      },
+      {
+        "id": "base-draw-074",
+        "text": "ملعقة"
+      },
+      {
+        "id": "base-draw-075",
+        "text": "شوكة"
+      },
+      {
+        "id": "base-draw-076",
+        "text": "سكينة"
+      },
+      {
+        "id": "base-draw-077",
+        "text": "طبق"
+      },
+      {
+        "id": "base-draw-078",
+        "text": "حلة"
+      },
+      {
+        "id": "base-draw-079",
+        "text": "مقلاة"
+      },
+      {
+        "id": "base-draw-080",
+        "text": "فرن"
+      },
+      {
+        "id": "base-draw-081",
+        "text": "ثلاجة"
+      },
+      {
+        "id": "base-draw-082",
+        "text": "غسالة"
+      },
+      {
+        "id": "base-draw-083",
+        "text": "مروحة"
+      },
+      {
+        "id": "base-draw-084",
+        "text": "مصباح"
+      },
+      {
+        "id": "base-draw-085",
+        "text": "سرير"
+      },
+      {
+        "id": "base-draw-086",
+        "text": "كنبة"
+      },
+      {
+        "id": "base-draw-087",
+        "text": "كرسي"
+      },
+      {
+        "id": "base-draw-088",
+        "text": "ترابيزة"
+      },
+      {
+        "id": "base-draw-089",
+        "text": "مكتبة"
+      },
+      {
+        "id": "base-draw-090",
+        "text": "خزانة"
+      },
+      {
+        "id": "base-draw-091",
+        "text": "باب"
+      },
+      {
+        "id": "base-draw-092",
+        "text": "شباك"
+      },
+      {
+        "id": "base-draw-093",
+        "text": "مرآة"
+      },
+      {
+        "id": "base-draw-094",
+        "text": "سجادة"
+      },
+      {
+        "id": "base-draw-095",
+        "text": "وسادة"
+      },
+      {
+        "id": "base-draw-096",
+        "text": "بطانية"
+      },
+      {
+        "id": "base-draw-097",
+        "text": "ستارة"
+      },
+      {
+        "id": "base-draw-098",
+        "text": "شماعة"
+      },
+      {
+        "id": "base-draw-099",
+        "text": "جرس الباب"
+      },
+      {
+        "id": "base-draw-100",
+        "text": "مقبس كهرباء"
+      },
+      {
+        "id": "base-draw-101",
+        "text": "مدرسة"
+      },
+      {
+        "id": "base-draw-102",
+        "text": "مستشفى"
+      },
+      {
+        "id": "base-draw-103",
+        "text": "مخبز"
+      },
+      {
+        "id": "base-draw-104",
+        "text": "مطعم"
+      },
+      {
+        "id": "base-draw-105",
+        "text": "محطة قطار"
+      },
+      {
+        "id": "base-draw-106",
+        "text": "مطار"
+      },
+      {
+        "id": "base-draw-107",
+        "text": "منارة"
+      },
+      {
+        "id": "base-draw-108",
+        "text": "قلعة"
+      },
+      {
+        "id": "base-draw-109",
+        "text": "كوخ"
+      },
+      {
+        "id": "base-draw-110",
+        "text": "برج ساعة"
+      },
+      {
+        "id": "base-draw-111",
+        "text": "مسجد"
+      },
+      {
+        "id": "base-draw-112",
+        "text": "مكتبة عامة"
+      },
+      {
+        "id": "base-draw-113",
+        "text": "محل ورد"
+      },
+      {
+        "id": "base-draw-114",
+        "text": "سينما"
+      },
+      {
+        "id": "base-draw-115",
+        "text": "متحف"
+      },
+      {
+        "id": "base-draw-116",
+        "text": "سوبر ماركت"
+      },
+      {
+        "id": "base-draw-117",
+        "text": "ملعب"
+      },
+      {
+        "id": "base-draw-118",
+        "text": "حمام سباحة"
+      },
+      {
+        "id": "base-draw-119",
+        "text": "حديقة"
+      },
+      {
+        "id": "base-draw-120",
+        "text": "جسر"
+      },
+      {
+        "id": "base-draw-121",
+        "text": "سيارة"
+      },
+      {
+        "id": "base-draw-122",
+        "text": "تاكسي"
+      },
+      {
+        "id": "base-draw-123",
+        "text": "موتوسيكل"
+      },
+      {
+        "id": "base-draw-124",
+        "text": "شاحنة"
+      },
+      {
+        "id": "base-draw-125",
+        "text": "عربية إسعاف"
+      },
+      {
+        "id": "base-draw-126",
+        "text": "عربية إطفاء"
+      },
+      {
+        "id": "base-draw-127",
+        "text": "طائرة"
+      },
+      {
+        "id": "base-draw-128",
+        "text": "هليكوبتر"
+      },
+      {
+        "id": "base-draw-129",
+        "text": "صاروخ"
+      },
+      {
+        "id": "base-draw-130",
+        "text": "غواصة"
+      },
+      {
+        "id": "base-draw-131",
+        "text": "سفينة"
+      },
+      {
+        "id": "base-draw-132",
+        "text": "زورق"
+      },
+      {
+        "id": "base-draw-133",
+        "text": "ميكروباص"
+      },
+      {
+        "id": "base-draw-134",
+        "text": "مترو"
+      },
+      {
+        "id": "base-draw-135",
+        "text": "عربة أطفال"
+      },
+      {
+        "id": "base-draw-136",
+        "text": "عربة تسوق"
+      },
+      {
+        "id": "base-draw-137",
+        "text": "تلفريك"
+      },
+      {
+        "id": "base-draw-138",
+        "text": "جرار"
+      },
+      {
+        "id": "base-draw-139",
+        "text": "لوح تزلج"
+      },
+      {
+        "id": "base-draw-140",
+        "text": "سكوتر"
+      },
+      {
+        "id": "base-draw-141",
+        "text": "شمس"
+      },
+      {
+        "id": "base-draw-142",
+        "text": "قمر"
+      },
+      {
+        "id": "base-draw-143",
+        "text": "نجمة"
+      },
+      {
+        "id": "base-draw-144",
+        "text": "سحابة"
+      },
+      {
+        "id": "base-draw-145",
+        "text": "قوس قزح"
+      },
+      {
+        "id": "base-draw-146",
+        "text": "جبل"
+      },
+      {
+        "id": "base-draw-147",
+        "text": "نهر"
+      },
+      {
+        "id": "base-draw-148",
+        "text": "بحيرة"
+      },
+      {
+        "id": "base-draw-149",
+        "text": "شلال"
+      },
+      {
+        "id": "base-draw-150",
+        "text": "جزيرة"
+      },
+      {
+        "id": "base-draw-151",
+        "text": "بركان"
+      },
+      {
+        "id": "base-draw-152",
+        "text": "صحراء"
+      },
+      {
+        "id": "base-draw-153",
+        "text": "غابة"
+      },
+      {
+        "id": "base-draw-154",
+        "text": "زهرة"
+      },
+      {
+        "id": "base-draw-155",
+        "text": "نخلة"
+      },
+      {
+        "id": "base-draw-156",
+        "text": "ورقة شجر"
+      },
+      {
+        "id": "base-draw-157",
+        "text": "فطر"
+      },
+      {
+        "id": "base-draw-158",
+        "text": "صخرة"
+      },
+      {
+        "id": "base-draw-159",
+        "text": "موجة"
+      },
+      {
+        "id": "base-draw-160",
+        "text": "صدفة"
+      },
+      {
+        "id": "base-draw-161",
+        "text": "فرشاة أسنان"
+      },
+      {
+        "id": "base-draw-162",
+        "text": "معجون أسنان"
+      },
+      {
+        "id": "base-draw-163",
+        "text": "مشط"
+      },
+      {
+        "id": "base-draw-164",
+        "text": "سيشوار"
+      },
+      {
+        "id": "base-draw-165",
+        "text": "منشفة"
+      },
+      {
+        "id": "base-draw-166",
+        "text": "صابونة"
+      },
+      {
+        "id": "base-draw-167",
+        "text": "حوض غسيل"
+      },
+      {
+        "id": "base-draw-168",
+        "text": "دش"
+      },
+      {
+        "id": "base-draw-169",
+        "text": "سلة غسيل"
+      },
+      {
+        "id": "base-draw-170",
+        "text": "علبة مناديل"
+      },
+      {
+        "id": "base-draw-171",
+        "text": "قلم"
+      },
+      {
+        "id": "base-draw-172",
+        "text": "براية"
+      },
+      {
+        "id": "base-draw-173",
+        "text": "ممحاة"
+      },
+      {
+        "id": "base-draw-174",
+        "text": "مسطرة"
+      },
+      {
+        "id": "base-draw-175",
+        "text": "كشكول"
+      },
+      {
+        "id": "base-draw-176",
+        "text": "كتاب"
+      },
+      {
+        "id": "base-draw-177",
+        "text": "شنطة مدرسة"
+      },
+      {
+        "id": "base-draw-178",
+        "text": "مقص"
+      },
+      {
+        "id": "base-draw-179",
+        "text": "شريط لاصق"
+      },
+      {
+        "id": "base-draw-180",
+        "text": "دباسة"
+      },
+      {
+        "id": "base-draw-181",
+        "text": "موبايل"
+      },
+      {
+        "id": "base-draw-182",
+        "text": "لابتوب"
+      },
+      {
+        "id": "base-draw-183",
+        "text": "سماعات"
+      },
+      {
+        "id": "base-draw-184",
+        "text": "كاميرا"
+      },
+      {
+        "id": "base-draw-185",
+        "text": "ريموت"
+      },
+      {
+        "id": "base-draw-186",
+        "text": "ماوس"
+      },
+      {
+        "id": "base-draw-187",
+        "text": "كيبورد"
+      },
+      {
+        "id": "base-draw-188",
+        "text": "شاحن"
+      },
+      {
+        "id": "base-draw-189",
+        "text": "ميكروفون"
+      },
+      {
+        "id": "base-draw-190",
+        "text": "روبوت"
+      },
+      {
+        "id": "base-draw-191",
+        "text": "جيتار"
+      },
+      {
+        "id": "base-draw-192",
+        "text": "كمان"
+      },
+      {
+        "id": "base-draw-193",
+        "text": "بيانو"
+      },
+      {
+        "id": "base-draw-194",
+        "text": "ناي"
+      },
+      {
+        "id": "base-draw-195",
+        "text": "عجلة حظ"
+      },
+      {
+        "id": "base-draw-196",
+        "text": "هدية"
+      },
+      {
+        "id": "base-draw-197",
+        "text": "بالونة"
+      },
+      {
+        "id": "base-draw-198",
+        "text": "شمعة"
+      },
+      {
+        "id": "base-draw-199",
+        "text": "ميدالية"
+      },
+      {
+        "id": "base-draw-200",
+        "text": "بوصلة"
+      }
+    ]
+  }
 ]

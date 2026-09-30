@@ -133,3 +133,12 @@ M2 screens and live-session coordination, integrating the already tested engine 
 - Added draft packs for Eid, Sahel and Exams: each has 20 Imposter words and 15 prompts each for Likely, Charades and Taboo. The existing religious-first calendar detection now activates these packs, and Settings can force one season or return to automatic mode. A saved override survives restart; older saves default to automatic mode.
 - The pack parser and content lint validate IDs, fields, forbidden words and expected pack counts. All new text still requires two independent human editorial approvals before release.
 - `npm run check` passed with 82 tests, strict TypeScript, ESLint and content lint. Expo Doctor passed 21/21, and web/Android JavaScript exports succeeded. Browser preview showed the forced Eid badge on Home and its removal after returning Settings to automatic mode. Native season date/RTL behavior still needs device QA.
+
+## Drawing content expansion — 2026-09-30
+
+- Expanded the drawing prompt draft from 20 to its 200-item target across objects, animals, food, places and nature. Content lint verifies unique IDs and texts within the pack. Human editorial approval and native touch QA remain open.
+
+## Taboo hard content expansion — 2026-09-30
+
+- Expanded the hard abstract-word pool from 12 to its 100-item target. Each item has three distinct forbidden terms and passes schema validation. Human editorial review remains open.
+- After both content expansions, `npm run check` passed (82 tests, strict TypeScript, ESLint and content lint) and web/Android JavaScript exports succeeded.
