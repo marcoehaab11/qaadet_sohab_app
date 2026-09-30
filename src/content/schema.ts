@@ -7,7 +7,7 @@ export const itemSchema = z.object({
   category: text.optional(),
   level: z.enum(['easy', 'hard', 'chill', 'funny', 'bold', 'chaos']).optional(),
   kind: z.enum(['truth', 'dare', 'tell', 'pick', 'who', 'secret']).optional(),
-  deck: z.enum(['friends', 'couples', 'crazy', 'deep', 'funny']).optional(),
+  deck: z.enum(['friends', 'couples', 'crazy', 'deep', 'funny', 'custom']).optional(),
   forbidden: z.array(text).length(3).optional(),
   pair: text.optional(),
   tags: z.array(text).optional(),

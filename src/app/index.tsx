@@ -75,6 +75,9 @@ export default function Home() {
       <View style={local.badge}>
         <Text style={{ color: theme.gold, fontSize: 12 }}>{ar.offline}</Text>
       </View>
+      {data.settings.family && <View style={local.badge}>
+        <Text style={{ color: theme.gold, fontSize: 12 }}>👨‍👩‍👧 قعدة عائلية</Text>
+      </View>}
       <Text style={styles.muted}>{ar.preview}</Text>
       <View>
         <Text style={styles.title}>{ar.welcome}</Text>

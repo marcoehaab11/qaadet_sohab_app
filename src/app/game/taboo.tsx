@@ -44,7 +44,7 @@ export default function Taboo() {
   };
   const drawWord = (outcome?: 'guessed' | 'forbidden' | 'skip') => {
     const pack = packs.find((p) => p.id === 'base-taboo')!;
-    const result = drawFromPack({ ...pack, items: loadContent('taboo') }, state.seed);
+    const result = drawFromPack({ ...pack, items: loadContent('taboo', false, data.customDecks) }, state.seed);
     if (outcome)
       dispatch({ type: 'resolve', outcome, nextWordId: result.item.id, seed: result.seed });
     else dispatch({ type: 'showWord', wordId: result.item.id, seed: result.seed });
@@ -61,9 +61,8 @@ export default function Taboo() {
     setState(tabooReducer(state, { type: 'skipTurn' }, nextParticipants).state);
   };
   const actor = players.find((p) => p.id === state.actorId);
-  const word = packs
-    .find((p) => p.id === 'base-taboo')
-    ?.items.find((item) => item.id === state.wordId);
+  const word = loadContent('taboo', false, data.customDecks)
+    .find((item) => item.id === state.wordId);
   const forbidden = word?.forbidden ?? [];
 
   return (

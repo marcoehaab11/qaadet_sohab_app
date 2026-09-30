@@ -46,7 +46,7 @@ export default function TruthOrDare() {
     family && (state.level === 'bold' || state.level === 'chaos') ? 'chill' : state.level;
   const choose = (kind: Kind) => {
     const pack = packs.find((p) => p.id === 'base-tod')!;
-    const items = loadContent('tod', family).filter(
+    const items = loadContent('tod', family, useApp.getState().data.customDecks).filter(
       (item) => item.level === level && item.kind === kind,
     );
     const scopedPack = { ...pack, id: `${pack.id}:${level}:${kind}`, items };
@@ -65,9 +65,8 @@ export default function TruthOrDare() {
     setState(todReducer(state, { type: 'skipTurn' }, nextParticipants).state);
   };
   const player = players.find((p) => p.id === state.turnId);
-  const prompt = packs
-    .find((p) => p.id === 'base-tod')
-    ?.items.find((item) => item.id === state.promptId);
+  const prompt = loadContent('tod', family, useApp.getState().data.customDecks)
+    .find((item) => item.id === state.promptId);
 
   return (
     <Screen>

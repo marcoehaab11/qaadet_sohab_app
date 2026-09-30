@@ -1,7 +1,7 @@
 import { Participant, PlayerId, ScoreChange, StatChange } from '../../engine/types';
 import { nextPlayer } from '../../engine/players';
 import { shuffle } from '../../engine/random';
-export type DeckId = 'friends' | 'couples' | 'crazy' | 'deep' | 'funny';
+export type DeckId = 'friends' | 'couples' | 'crazy' | 'deep' | 'funny' | 'custom';
 export type CardsState = {
   deck: DeckId;
   step: 'deck' | 'pass' | 'back' | 'face';

@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { customDecksSchema } from '../content/custom';
 export const playerSchema = z.object({
   id: z.string().min(1),
   name: z.string().trim().min(1).max(14),
@@ -25,7 +26,7 @@ export const savedSchema = z.object({
     ),
   settings: settingsSchema,
   config: z.record(z.string(), z.record(z.string(), z.number())),
-  customDecks: z.record(z.string(), z.array(z.unknown())),
+  customDecks: customDecksSchema,
   used: z.record(z.string(), z.array(z.string())),
   completedSessions: z.number().int().nonnegative(),
   onboardingDone: z.boolean(),

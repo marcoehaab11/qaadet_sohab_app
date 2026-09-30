@@ -43,7 +43,7 @@ export const ar = {
   fontError: 'الخط مش جاهز. هنكمّل بخط الموبايل.',
   previewRules: 'إزاي نلعب؟',
   close: 'تمام، فهمنا',
-  previewNotice: 'بعض الألعاب لسه بيتجهّز. جرّب الألعاب المتاحة على الترابيزة.',
+  previewNotice: 'دي نسخة تجربة. محتوى الألعاب لسه بيتراجع وبيتزوّد.',
   onboardNext: 'يلا نكمل',
   onboardSkip: 'تخطّي',
   onboardConcept: 'موبايل واحد بيلف عليكم، والتطبيق يدير القعدة.',
@@ -69,7 +69,7 @@ export const ar = {
   cardsSkip: 'عدّي',
   cardsNext: 'الكارت اللي بعده',
   cardsKinds: { tell: 'احكي', pick: 'اختار', dare: 'تحدي', who: 'مين؟', secret: 'سر' },
-  cardsDecks: { friends: 'أصحاب', couples: 'كابلز', crazy: 'مجانين', deep: 'عميقة', funny: 'ضحك' },
+  cardsDecks: { friends: 'أصحاب', couples: 'كابلز', crazy: 'مجانين', deep: 'عميقة', funny: 'ضحك', custom: '🫶 الشلة' },
   gameSettings: 'إعدادات الألعاب',
   settingsOptions: {
     imposter: { time: 'وقت النقاش' },

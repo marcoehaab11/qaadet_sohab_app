@@ -7,6 +7,7 @@ import { PassPhoneScreen } from '../../components/PassPhoneScreen';
 import { HoldToReveal } from '../../components/HoldToReveal';
 import { CountdownTimer } from '../../components/CountdownTimer';
 import { packs } from '../../content/loader';
+import { customContent } from '../../content/custom';
 import { drawFromPack } from '../../content/draw';
 import { shuffle } from '../../engine/random';
 import { imposterReducer } from '../../games/imposter/reducer';
@@ -37,7 +38,12 @@ export default function Imposter() {
     );
 
   const pack = state.mode === 'undercover' ? undercoverPack : classicPack;
-  const word = pack.items.find((item) => item.id === state.wordId);
+  const customWords = data.customDecks.imposter?.length ?? 0;
+  const classicItems = [...classicPack.items,
+    ...(customWords >= 3 ? customContent('imposter', data.customDecks) : [])];
+  const availableCategories = customWords >= 3 ? [...categories, '🫶 كلمات الشلة'] : categories;
+  const word = (state.mode === 'undercover' ? undercoverPack.items : classicItems)
+    .find((item) => item.id === state.wordId);
   const finish = () => {
     advance();
     setState(null);
@@ -50,7 +56,8 @@ export default function Imposter() {
     if (result.changes.length || result.stats.length) award(result.changes, result.stats);
   };
   const begin = () => {
-    const items = pack.items.filter(
+    const source = state.mode === 'undercover' ? pack.items : classicItems;
+    const items = source.filter(
       (item) => state.mode === 'undercover' || !state.category || item.category === state.category,
     );
     const drawn = drawFromPack(
@@ -58,7 +65,7 @@ export default function Imposter() {
       state.seed,
     );
     const distractors = shuffle(
-      pack.items.map((item) => item.text).filter((text) => text !== drawn.item.text),
+      source.map((item) => item.text).filter((text) => text !== drawn.item.text),
       drawn.seed,
     );
     const options = shuffle([drawn.item.text, ...distractors.items.slice(0, 3)], distractors.seed);
@@ -120,7 +127,7 @@ export default function Imposter() {
                 label={ar.imposterRandom}
                 onPress={() => dispatch({ type: 'category', category: null })}
               />
-              {categories.map((category) => (
+              {availableCategories.map((category) => (
                 <Button
                   key={category}
                   secondary={state.category !== category}

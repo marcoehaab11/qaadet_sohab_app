@@ -44,7 +44,7 @@ export default function Cards() {
   };
   const flip = () => {
     const pack = packs.find((p) => p.id === 'base-cards')!;
-    const deckItems = loadContent('cards', family).filter((item) => item.deck === state.deck);
+    const deckItems = loadContent('cards', family, useApp.getState().data.customDecks).filter((item) => item.deck === state.deck);
     const scopedPack = { ...pack, id: `${pack.id}:${state.deck}`, items: deckItems };
     const result = drawFromPack(scopedPack, state.seed);
     dispatch({ type: 'flip', cardId: result.item.id, seed: result.seed });
@@ -61,9 +61,8 @@ export default function Cards() {
     }
     setState(cardsReducer(state, { type: 'skipTurn' }, nextParticipants).state);
   };
-  const card = packs
-    .find((p) => p.id === 'base-cards')
-    ?.items.find((item) => item.id === state.cardId);
+  const card = loadContent('cards', family, useApp.getState().data.customDecks)
+    .find((item) => item.id === state.cardId);
   return (
     <Screen>
       <Text style={styles.title}>{ar.games.cards.name}</Text>
@@ -81,6 +80,11 @@ export default function Cards() {
                 onPress={() => dispatch({ type: 'choose', deck: id })}
               />
             ))}
+          {(useApp.getState().data.customDecks.cards?.length ?? 0) > 0 && <Button
+            secondary={state.deck !== 'custom'}
+            label={ar.cardsDecks.custom}
+            onPress={() => dispatch({ type: 'choose', deck: 'custom' })}
+          />}
           <Button label={ar.playGame} onPress={() => dispatch({ type: 'start' })} />
         </Panel>
       )}

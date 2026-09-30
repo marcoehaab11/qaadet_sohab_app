@@ -70,7 +70,7 @@ export default function Likely() {
   };
   const nextQuestion = () => {
     const pack = packs.find((p) => p.id === 'base-likely')!;
-    const items = loadContent('likely');
+    const items = loadContent('likely', false, useApp.getState().data.customDecks);
     const result = drawFromPack({ ...pack, items }, state.seed);
     dispatch({ type: 'question', questionId: result.item.id, seed: result.seed });
   };
@@ -87,9 +87,8 @@ export default function Likely() {
     setState(result.state);
     if (result.changes.length || result.stats.length) award(result.changes, result.stats);
   };
-  const question = packs
-    .find((p) => p.id === 'base-likely')
-    ?.items.find((item) => item.id === state.questionId);
+  const question = loadContent('likely', false, useApp.getState().data.customDecks)
+    .find((item) => item.id === state.questionId);
   const voter = players.find((p) => p.id === state.turnId);
   const counts = voteCounts(state.votes);
   const most = Math.max(0, ...Object.values(counts));
