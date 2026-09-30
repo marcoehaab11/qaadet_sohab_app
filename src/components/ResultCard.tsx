@@ -1,6 +1,5 @@
 import { forwardRef } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Text } from './ui';
+import { StyleSheet, Text as NativeText, TextProps, View } from 'react-native';
 import { theme } from '../theme';
 import { Award } from '../engine/awards';
 import { Player, PlayerId } from '../engine/types';
@@ -14,6 +13,11 @@ type Props = {
   awards: readonly Award[];
   date: Date;
 };
+
+// Keep the exported image at a predictable layout regardless of the viewer's font-size setting.
+function Text({ style, ...props }: TextProps) {
+  return <NativeText {...props} allowFontScaling={false} style={[card.text, style]} />;
+}
 
 export const ResultCard = forwardRef<View, Props>(function ResultCard({ players, activeIds, scores, awards, date }, ref) {
   const ranked = rankedResults(players, activeIds, scores);
@@ -49,6 +53,7 @@ export const ResultCard = forwardRef<View, Props>(function ResultCard({ players,
 });
 
 const card = StyleSheet.create({
+  text: { color: theme.cream, fontFamily: theme.body, writingDirection: 'rtl', textAlign: 'center' },
   frame: { width: '100%', aspectRatio: 9 / 16, backgroundColor: theme.night, borderRadius: 20,
     borderWidth: 2, borderColor: theme.gold, padding: 18, overflow: 'hidden', justifyContent: 'space-between' },
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
