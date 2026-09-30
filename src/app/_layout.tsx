@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
+import { Platform } from 'react-native';
 import { Stack } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
 import { Cairo_400Regular } from '@expo-google-fonts/cairo/400Regular';
@@ -10,6 +12,7 @@ import { Screen, Text } from '../components/ui';
 import { Toast } from '../components/Toast';
 import { ar } from '../i18n/ar-EG';
 import { theme } from '../theme';
+if (Platform.OS !== 'web') void SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [fontsReady, fontError] = useFonts({ Cairo_400Regular, Cairo_700Bold, Lalezar_400Regular });
   const ready = useApp((s) => s.ready);
@@ -17,6 +20,10 @@ export default function RootLayout() {
   useEffect(() => {
     void hydrate();
   }, [hydrate]);
+  useEffect(() => {
+    if (ready && (fontsReady || fontError) && Platform.OS !== 'web')
+      void SplashScreen.hideAsync();
+  }, [ready, fontsReady, fontError]);
   if (!ready || (!fontsReady && !fontError))
     return (
       <Screen>

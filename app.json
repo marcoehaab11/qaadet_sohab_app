@@ -11,8 +11,10 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.marcoehaab11.qaadetsohab",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#21152f",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -30,7 +32,13 @@
       "expo-router",
       [
         "expo-localization",
-        { "supportsRTL": true, "forcesRTL": true, "supportedLocales": ["ar-EG"] }
+        {
+          "supportsRTL": true,
+          "forcesRTL": true,
+          "supportedLocales": [
+            "ar-EG"
+          ]
+        }
       ],
       "expo-font",
       [
@@ -42,7 +50,15 @@
           "enableBackgroundPlayback": false
         }
       ],
-      "expo-asset"
+      "expo-asset",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#21152f",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200
+        }
+      ]
     ]
   }
 }

@@ -64,3 +64,10 @@ M2 screens and live-session coordination, integrating the already tested engine 
 - Browser preview: added a custom likely question, saw it persist after reload; rejected a Taboo item with only two forbidden words, then saved one with three and confirmed persistence; added a custom card and played it from the new «🫶 الشلة» deck.
 - Family badge is implemented. Unit tests cover custom merging, family filtering, validation and review eligibility at the third session, once per app version.
 - Native store review still needs verification in a distributed Android build; store OS policies may suppress the dialog. No signed AAB or physical-device test yet.
+
+## Android release preparation checkpoint — 2026-09-30
+
+- Added Android application ID and first version code, EAS APK/AAB profiles, local privacy screen and public privacy-policy draft, and original app/adaptive/splash artwork.
+- `npm run check`: 53 Jest tests, strict TypeScript, ESLint and seed lint passed. `npx expo-doctor`: 21/21. `npx expo config --type public --json` resolves the Android ID, icon and splash config. Web/Android JavaScript exports succeeded.
+- Browser preview verified the privacy screen opens from Settings. PNG icon and monochrome Android asset were inspected locally. Native splash, adaptive icon, package permissions and store-review dialog still require a signed device build.
+- `eas config` could not be executed because no Expo account is authenticated here. EAS build/submit, Play Console metadata and Data safety declarations remain unverified.
