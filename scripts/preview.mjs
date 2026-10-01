@@ -2,6 +2,9 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 const root = path.resolve('dist');
+const port = Number(process.env.PREVIEW_PORT ?? 4173);
+if (!Number.isInteger(port) || port < 1 || port > 65535)
+  throw new Error('PREVIEW_PORT must be a valid TCP port');
 const types = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript',
@@ -41,6 +44,6 @@ http
       response.writeHead(404).end();
     }
   })
-  .listen(4173, '127.0.0.1', () =>
-    console.log('Preview: http://127.0.0.1:4173; original: /prototype'),
+  .listen(port, '127.0.0.1', () =>
+    console.log(`Preview: http://127.0.0.1:${port}; original: /prototype`),
   );

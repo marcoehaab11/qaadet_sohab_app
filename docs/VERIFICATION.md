@@ -174,3 +174,9 @@ M2 screens and live-session coordination, integrating the already tested engine 
 
 - The release gate now checks the separate 20-card punishment list for two-person approval as well as all 28 game packs. A test verifies that editing a punishment invalidates its former approval.
 - `npm run content:review-export` produced two independent UTF-8 CSV copies with 2000 rows each and 15 consistent columns, including pack IDs, exact hashes, prompt text and blank decision/note fields. The generated `review-packets/` directory stays local and out of Git. `npm run check` passed after this change; the release gate remains intentionally red until genuine approvals are recorded.
+
+## Result screen browser QA — 2026-10-01
+
+- An isolated local preview on port 4174 completed a three-game session, skipped its last two games, resolved the four-way tie as a draw, and reached the results screen.
+- The 9:16 result card rendered the date, ranked players, scores, award fallback and hashtag. The image-share button displayed the expected unavailable message on web. WhatsApp handoff was left for a user-triggered action, and native PNG capture/share still requires physical-device QA.
+- The preview server accepts an optional `PREVIEW_PORT` so QA can use a separate browser origin without changing existing local preview data.
