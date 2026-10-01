@@ -180,3 +180,9 @@ M2 screens and live-session coordination, integrating the already tested engine 
 - An isolated local preview on port 4174 completed a three-game session, skipped its last two games, resolved the four-way tie as a draw, and reached the results screen.
 - The 9:16 result card rendered the date, ranked players, scores, award fallback and hashtag. The image-share button displayed the expected unavailable message on web. WhatsApp handoff was left for a user-triggered action, and native PNG capture/share still requires physical-device QA.
 - The preview server accepts an optional `PREVIEW_PORT` so QA can use a separate browser origin without changing existing local preview data.
+
+## Installable Android preview APK — 2026-10-01
+
+- GitHub Actions run [36821625072](https://github.com/marcoehaab11/qaadet_sohab_app/actions/runs/36821625072) passed the 83-test project check, generated Android with Expo Prebuild and completed `:app:assembleRelease` from commit `aa15257`.
+- Downloaded the APK locally. `aapt` reports package `com.marcoehaab11.qaadetsohab`, version `0.1.0` (`versionCode` 1), min SDK 24, target SDK 36 and Arabic app label. File size: 107,639,703 bytes; SHA-256: `b667baa87534e70a5e889f30a745af76e7e223481f1669afa312968f09e8674d`.
+- `apksigner verify` passed with v2 signing. The generated preview uses an Android Debug certificate, so it is for direct installation and testing, not Play submission. `adb devices` found no connected phone; launch/runtime behavior still needs device QA. Content still needs two independent reviewers before store release.
