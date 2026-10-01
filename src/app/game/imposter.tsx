@@ -4,6 +4,8 @@ import { useSession } from '../../store/session';
 import { ar } from '../../i18n/ar-EG';
 import { Button, Panel, Screen, styles, Text } from '../../components/ui';
 import { GameControls } from '../../components/GameControls';
+import { AnswerFeedback } from '../../components/AnswerFeedback';
+import { useAnswerFeedback } from '../../hooks/useAnswerFeedback';
 import { PassPhoneScreen } from '../../components/PassPhoneScreen';
 import { HoldToReveal } from '../../components/HoldToReveal';
 import { CountdownTimer } from '../../components/CountdownTimer';
@@ -17,6 +19,7 @@ const classicPack = packs.find((p) => p.id === 'base-imposter')!;
 const undercoverPack = packs.find((p) => p.id === 'base-undercover')!;
 
 export default function Imposter() {
+  const playAnswerFeedback = useAnswerFeedback();
   const data = useApp((s) => s.data);
   const players = data.players;
   const session = useSession((s) => s.session);
@@ -51,6 +54,8 @@ export default function Imposter() {
   };
   const dispatch = (action: Parameters<typeof imposterReducer>[1]) => {
     const result = imposterReducer(state, action, participants, word?.text ?? null);
+    if (action.type === 'guess' && state.step === 'guess' && state.options.includes(action.word))
+      playAnswerFeedback(action.word === word?.text);
     setState(result.state);
     if (result.changes.length || result.stats.length) award(result.changes, result.stats);
   };
@@ -207,6 +212,8 @@ export default function Imposter() {
       {state.step === 'result' && (
         <Panel>
           <Text style={styles.title}>{ar.imposterResult}</Text>
+          {state.guessedWord && <AnswerFeedback correct={state.guessedWord === word?.text}
+            detail={state.guessedWord === word?.text ? ar.answerPoint : ar.answerNoPoint} />}
           <Text>
             {ar.imposterWere}:{' '}
             {state.imposters.map((id) => players.find((p) => p.id === id)?.name).join('، ')}

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Pressable, View } from 'react-native';
 import { router } from 'expo-router';
 import { useApp } from '../../store';
@@ -6,6 +7,8 @@ import { ar } from '../../i18n/ar-EG';
 import { Button, Panel, Screen, styles, Text } from '../../components/ui';
 import { GameControls } from '../../components/GameControls';
 import { CountdownTimer } from '../../components/CountdownTimer';
+import { AnswerFeedback } from '../../components/AnswerFeedback';
+import { useAnswerFeedback } from '../../hooks/useAnswerFeedback';
 import { loadContent, packs } from '../../content/loader';
 import { drawFromPack } from '../../content/draw';
 import { speedReducer } from '../../games/speed/reducer';
@@ -13,6 +16,8 @@ import { playerColor, theme } from '../../theme';
 import { teamsActive } from '../../engine/teams';
 
 export default function Speed() {
+  const [wrongAttempt, setWrongAttempt] = useState(false);
+  const playAnswerFeedback = useAnswerFeedback();
   const data = useApp((s) => s.data);
   const players = data.players;
   const session = useSession((s) => s.session);
@@ -40,6 +45,12 @@ export default function Speed() {
   };
   const dispatch = (action: Parameters<typeof speedReducer>[1]) => {
     const result = speedReducer(state, action, participants, teamMode);
+    if (action.type === 'confirm' && state.step === 'confirm' && state.buzzedId) {
+      playAnswerFeedback(action.correct);
+      setWrongAttempt(!action.correct);
+    } else if (action.type === 'buzz' || action.type === 'challenge' || action.type === 'next') {
+      setWrongAttempt(false);
+    }
     setState(result.state);
     if (result.changes.length || result.stats.length) award(result.changes, result.stats);
     if (result.finished) finish();
@@ -78,6 +89,7 @@ export default function Speed() {
       )}
       {state.step === 'buzz' && challenge && (
         <>
+          {wrongAttempt && <AnswerFeedback correct={false} detail={ar.answerTryAgain} />}
           <Panel>
             <Text style={styles.title}>{challenge.text}</Text>
             <Text style={styles.muted}>{ar.speedTap}</Text>
@@ -135,6 +147,7 @@ export default function Speed() {
       )}
       {state.step === 'result' && (
         <Panel>
+          {winner && <AnswerFeedback correct detail={ar.answerPoint} />}
           <Text style={styles.title}>{winner ? ar.speedWinner(teamMode ? ar.teamNames[winner.team!] : winner.name) : ar.speedNobody}</Text>
           <Button label={ar.speedNext} onPress={() => dispatch({ type: 'next' })} />
         </Panel>

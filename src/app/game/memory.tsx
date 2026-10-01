@@ -6,6 +6,8 @@ import { ar } from '../../i18n/ar-EG';
 import { Button, Panel, Screen, styles, Text } from '../../components/ui';
 import { GameControls } from '../../components/GameControls';
 import { CountdownTimer } from '../../components/CountdownTimer';
+import { AnswerFeedback } from '../../components/AnswerFeedback';
+import { useAnswerFeedback } from '../../hooks/useAnswerFeedback';
 import { memoryReducer } from '../../games/memory/reducer';
 import { theme } from '../../theme';
 
@@ -18,6 +20,7 @@ export default function Memory() {
   const award = useSession((s) => s.award);
   const undo = useSession((s) => s.undo);
   const advance = useSession((s) => s.advance);
+  const playAnswerFeedback = useAnswerFeedback();
   const participants = data.players.map((p) => ({ ...p, away: away.includes(p.id) }));
   if (!state) return <Screen><Button label={ar.back} onPress={() => router.replace('/host')} /></Screen>;
   const finish = () => {
@@ -27,6 +30,11 @@ export default function Memory() {
   };
   const dispatch = (action: Parameters<typeof memoryReducer>[1]) => {
     const result = memoryReducer(state, action, participants);
+    if (action.type === 'answer' && state.step === 'ask') {
+      const correctIndex = state.mode === 'where' ? state.target
+        : state.options.indexOf(state.sequence[state.target]!);
+      playAnswerFeedback(action.index === correctIndex);
+    }
     setState(result.state);
     if (result.changes.length || result.stats.length) award(result.changes, result.stats);
     if (result.finished) finish();
@@ -65,7 +73,8 @@ export default function Memory() {
       </View>
     </Panel>}
     {state.step === 'result' && <Panel>
-      <Text style={styles.title}>{state.selected === correct ? ar.memoryCorrect : ar.memoryWrong}</Text>
+      <AnswerFeedback correct={state.selected === correct}
+        detail={state.selected === correct ? ar.answerPoint : ar.answerNoPoint} />
       <Text>{ar.memoryAnswer}: {answer}</Text>
       <NativeText style={{ fontSize: 26, lineHeight: 50, textAlign: 'center', color: theme.cream }}>{state.sequence.join('  ')}</NativeText>
       <Text>{player?.emoji} {player?.name}</Text>
