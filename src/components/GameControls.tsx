@@ -11,13 +11,13 @@ export function GameControls({ onUndo, onPlayers, onSkip, onHome, playersDisable
   playersDisabled?: boolean;
 }) {
   const actions = [
-    { icon: '↶', label: ar.undo, onPress: onUndo, disabled: false, tint: '#d9b1ff', background: '#44315c' },
+    { icon: '↶', label: ar.undo, onPress: onUndo, disabled: false, tint: '#f3d9ff', background: '#634080' },
     { icon: '👥', label: ar.players, onPress: onPlayers, disabled: playersDisabled,
-      tint: theme.cyan, background: '#174e50' },
+      tint: '#a7fff6', background: '#176b68' },
     { icon: '⏭', label: ar.skipGame, onPress: onSkip, disabled: false,
-      tint: '#ff9999', background: '#57313e' },
+      tint: '#ffd1ce', background: '#803d50' },
     { icon: '⌂', label: ar.exitGame, onPress: onHome, disabled: false,
-      tint: theme.cream, background: '#303447' },
+      tint: theme.cream, background: '#46506d' },
   ];
   return <View style={local.wrap}>
     {actions.map((action) => <Pressable key={action.label} accessibilityRole="button"
@@ -40,5 +40,5 @@ const local = StyleSheet.create({
   disabled: { opacity: 0.4 },
   pressed: { backgroundColor: '#ffffff25' },
   icon: { color: theme.gold, fontSize: 21, lineHeight: 29, textAlign: 'center' },
-  label: { color: theme.muted, fontFamily: theme.bold, fontSize: 13, textAlign: 'center' },
+  label: { color: theme.cream, fontFamily: theme.bold, fontSize: 14, textAlign: 'center' },
 });

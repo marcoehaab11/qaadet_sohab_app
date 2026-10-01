@@ -4,7 +4,7 @@ export const theme = {
   surface: '#261c34',
   line: '#493a56',
   cream: '#fff5e1',
-  muted: '#b7aacb',
+  muted: '#d7cbe4',
   gold: '#ffc83d',
   goldShadow: '#c98a00',
   coral: '#ff5d5d',

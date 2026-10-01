@@ -138,10 +138,10 @@ export const styles = StyleSheet.create({
   },
   buttonText: { fontFamily: theme.bold, fontSize: 18, textAlign: 'center', color: theme.ink },
   secondary: {
-    backgroundColor: '#50396f',
+    backgroundColor: '#694790',
     borderWidth: 1,
-    borderColor: '#8762a9',
-    borderBottomColor: '#241337',
+    borderColor: '#a77ecb',
+    borderBottomColor: '#362046',
   },
   success: { backgroundColor: theme.cyan, borderBottomColor: '#16847e' },
   danger: { backgroundColor: theme.coral, borderBottomColor: '#b43c40' },

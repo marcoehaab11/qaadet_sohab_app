@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { Text as NativeText, View } from 'react-native';
 import { router } from 'expo-router';
 import { useApp } from '../../store';
 import { useSession } from '../../store/session';
@@ -46,8 +46,8 @@ export default function Memory() {
     {state.step === 'look' && <>
       <Text style={styles.title}>{ar.memoryLook}</Text>
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
-        {state.sequence.map((symbol, index) => <View key={index} style={{ width: '30%', minHeight: 70, alignItems: 'center', justifyContent: 'center', borderRadius: 12, backgroundColor: theme.surface }}>
-          <Text style={{ fontSize: 34 }}>{symbol}</Text>
+        {state.sequence.map((symbol, index) => <View key={index} style={{ width: '30%', minHeight: 86, paddingVertical: 8, alignItems: 'center', justifyContent: 'center', borderRadius: 12, backgroundColor: theme.surface }}>
+          <NativeText style={{ fontSize: 36, lineHeight: 60, textAlign: 'center' }}>{symbol}</NativeText>
         </View>)}
       </View>
       <CountdownTimer key={state.completed} seconds={data.config.memory?.time ?? 5} controls={false}
@@ -55,9 +55,9 @@ export default function Memory() {
     </>}
     {state.step === 'ask' && <Panel>
       <Text style={styles.title}>{state.mode === 'where' ? ar.memoryWhere(state.sequence[state.target]!) : ar.memoryMissing}</Text>
-      {state.mode === 'missing' && <Text style={{ fontSize: 25, lineHeight: 46, textAlign: 'center' }}>
+      {state.mode === 'missing' && <NativeText style={{ fontSize: 28, lineHeight: 52, textAlign: 'center', color: theme.cream }}>
         {state.sequence.map((symbol, index) => index === state.target ? '❓' : symbol).join('  ')}
-      </Text>}
+      </NativeText>}
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
         {choices.map((choice, index) => <View key={index} style={{ width: state.mode === 'where' ? '30%' : '47%' }}>
           <Button secondary label={choice} onPress={() => dispatch({ type: 'answer', index })} />
@@ -67,7 +67,7 @@ export default function Memory() {
     {state.step === 'result' && <Panel>
       <Text style={styles.title}>{state.selected === correct ? ar.memoryCorrect : ar.memoryWrong}</Text>
       <Text>{ar.memoryAnswer}: {answer}</Text>
-      <Text style={{ fontSize: 24, lineHeight: 42, textAlign: 'center' }}>{state.sequence.join('  ')}</Text>
+      <NativeText style={{ fontSize: 26, lineHeight: 50, textAlign: 'center', color: theme.cream }}>{state.sequence.join('  ')}</NativeText>
       <Text>{player?.emoji} {player?.name}</Text>
       <Button label={ar.memoryNext} onPress={() => dispatch({ type: 'next' })} />
     </Panel>}

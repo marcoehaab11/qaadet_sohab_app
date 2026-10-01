@@ -19,6 +19,7 @@ export default function Onboarding() {
   const data = useApp((s) => s.data);
   const update = useApp((s) => s.update);
   const add = useApp((s) => s.addPlayer);
+  const remove = useApp((s) => s.removePlayer);
   const begin = useSession((s) => s.begin);
   const finish = (start: boolean) => {
     update((d) => ({ ...d, onboardingDone: true }));
@@ -58,7 +59,7 @@ export default function Onboarding() {
           <Text style={local.subheading}>ضيفوا الشلة واختاروا صورة لكل واحد</Text>
         </View>
         {data.players.map((p) => <PlayerEditor key={p.id} player={p}
-          canRemove={data.players.length > 2} />)}
+          canRemove={data.players.length > 2} onRemove={() => remove(p.id)} />)}
         <Button secondary disabled={data.players.length >= 8} label={ar.addPlayer} onPress={add} />
       </>}
       {step === 2 && <>

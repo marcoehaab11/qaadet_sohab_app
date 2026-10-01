@@ -7,6 +7,7 @@ import { PlayerEditor } from '../components/PlayerEditor';
 export default function Players() {
   const players = useApp((s) => s.data.players);
   const add = useApp((s) => s.addPlayer);
+  const remove = useApp((s) => s.removePlayer);
   const notify = useApp((s) => s.notify);
   const session = useSession((s) => s.session);
   const away = useSession((s) => s.away);
@@ -16,6 +17,7 @@ export default function Players() {
   const teams = useApp((s) => s.data.settings.teams);
   const reshuffleTeams = useApp((s) => s.reshuffleTeams);
   const live = !!session && !session.finished;
+  const activeCount = players.filter((player) => !away.includes(player.id)).length;
   const addJoiningPlayer = () => {
     const active = players.filter((p) => !away.includes(p.id));
     const scores = active.map((p) => ledger.scores[p.id] ?? 0);
@@ -38,7 +40,16 @@ export default function Players() {
         <PlayerEditor
           key={player.id}
           player={player}
-          canRemove={players.length > 2 && session?.phase !== 'game'}
+          canRemove={players.length > 2 && session?.phase !== 'game' &&
+            (!live || away.includes(player.id) || activeCount > 2)}
+          away={away.includes(player.id)}
+          onToggleAway={live ? () => {
+            if (!setAway(player.id)) notify(ar.needTwo);
+          } : undefined}
+          onRemove={() => {
+            if (away.includes(player.id)) setAway(player.id);
+            remove(player.id);
+          }}
         />
       ))}
       {teams && <>
@@ -48,17 +59,6 @@ export default function Players() {
         </Text>)}
         <Button secondary label={ar.reshuffleTeams} onPress={reshuffleTeams} />
       </>}
-      {live &&
-        players.map((player) => (
-          <Button
-            key={player.id}
-            secondary
-            label={`${player.emoji} ${player.name}: ${away.includes(player.id) ? ar.away : ar.present}`}
-            onPress={() => {
-              if (!setAway(player.id)) notify(ar.needTwo);
-            }}
-          />
-        ))}
       <Button
         secondary
         disabled={players.length >= 8}
