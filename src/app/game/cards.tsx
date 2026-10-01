@@ -109,7 +109,7 @@ export default function Cards() {
         <Panel>
           <PromptCard emoji="🃏" label={ar.cardsKinds[(card.kind ?? 'tell') as keyof typeof ar.cardsKinds]}
             text={card.text} />
-          <Button label={ar.cardsDone} onPress={() => dispatch({ type: 'complete', done: true })} />
+          <Button tone="success" label={ar.cardsDone} onPress={() => dispatch({ type: 'complete', done: true })} />
           <Button
             secondary
             label={ar.cardsSkip}

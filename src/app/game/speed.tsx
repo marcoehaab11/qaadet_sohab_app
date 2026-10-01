@@ -122,11 +122,12 @@ export default function Speed() {
           </Text>
           <Text>{ar.speedConfirm}</Text>
           <Button
+            tone="success"
             label={ar.speedCorrect}
             onPress={() => dispatch({ type: 'confirm', correct: true })}
           />
           <Button
-            secondary
+            tone="danger"
             label={ar.speedWrong}
             onPress={() => dispatch({ type: 'confirm', correct: false })}
           />

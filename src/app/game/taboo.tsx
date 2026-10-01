@@ -112,8 +112,8 @@ export default function Taboo() {
                 {item}
               </Text>
             ))}
-            <Button label={ar.tabooGuessed} onPress={() => drawWord('guessed')} />
-            <Button secondary label={ar.tabooSaidForbidden} onPress={() => drawWord('forbidden')} />
+            <Button tone="success" label={ar.tabooGuessed} onPress={() => drawWord('guessed')} />
+            <Button tone="danger" label={ar.tabooSaidForbidden} onPress={() => drawWord('forbidden')} />
             <Button secondary label={ar.cardsSkip} onPress={() => drawWord('skip')} />
           </Panel>
         </>

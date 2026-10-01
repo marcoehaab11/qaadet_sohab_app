@@ -24,13 +24,14 @@ export function Text({ style, ...props }: TextProps) {
     />
   );
 }
-export function Screen({ children }: PropsWithChildren) {
+export function Screen({ children, scrollEnabled = true }: PropsWithChildren<{ scrollEnabled?: boolean }>) {
   return (
     <SafeAreaView style={styles.safe}>
       <LinearGradient pointerEvents="none" colors={['#241631', theme.night, '#1b1026']} style={StyleSheet.absoluteFill} />
       <LinearGradient pointerEvents="none" colors={['#67428b66', '#67428b00']} style={styles.glowTop} />
       <LinearGradient pointerEvents="none" colors={['#a4374a30', '#a4374a00']} style={styles.glowBottom} />
-      <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={styles.screen}>
+      <ScrollView keyboardShouldPersistTaps="handled" scrollEnabled={scrollEnabled}
+        contentContainerStyle={styles.screen}>
         <View style={styles.content}>{children}</View>
       </ScrollView>
     </SafeAreaView>
@@ -53,12 +54,14 @@ export function Button({
   label,
   onPress,
   secondary = false,
+  tone = 'default',
   disabled = false,
   accessibilityLabel,
 }: {
   label: string;
   onPress: () => void;
   secondary?: boolean;
+  tone?: 'default' | 'success' | 'danger';
   disabled?: boolean;
   accessibilityLabel?: string;
 }) {
@@ -71,12 +74,14 @@ export function Button({
       onPress={onPress}
       style={({ pressed }) => [
         styles.button,
-        secondary && styles.secondary,
+        secondary && tone === 'default' && styles.secondary,
+        tone === 'success' && styles.success,
+        tone === 'danger' && styles.danger,
         disabled && { opacity: 0.45 },
         pressed && { transform: [{ translateY: 3 }], borderBottomWidth: 2 },
       ]}
     >
-      <Text style={[styles.buttonText, secondary && { color: theme.cream }]}>{label}</Text>
+      <Text style={[styles.buttonText, secondary && tone === 'default' && { color: theme.cream }]}>{label}</Text>
     </Pressable>
   );
 }
@@ -133,9 +138,11 @@ export const styles = StyleSheet.create({
   },
   buttonText: { fontFamily: theme.bold, fontSize: 18, textAlign: 'center', color: theme.ink },
   secondary: {
-    backgroundColor: '#2a2038',
+    backgroundColor: '#50396f',
     borderWidth: 1,
-    borderColor: '#ffffff26',
-    borderBottomColor: '#09050f',
+    borderColor: '#8762a9',
+    borderBottomColor: '#241337',
   },
+  success: { backgroundColor: theme.cyan, borderBottomColor: '#16847e' },
+  danger: { backgroundColor: theme.coral, borderBottomColor: '#b43c40' },
 });

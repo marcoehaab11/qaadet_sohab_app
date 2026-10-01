@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { router } from 'expo-router';
 import { useApp } from '../../store';
 import { useSession } from '../../store/session';
@@ -13,6 +14,7 @@ import { drawFromPack } from '../../content/draw';
 import { drawReducer } from '../../games/draw/reducer';
 
 export default function Draw() {
+  const [drawingTouch, setDrawingTouch] = useState(false);
   const data = useApp((s) => s.data);
   const session = useSession((s) => s.session);
   const state = useSession((s) => s.drawGame);
@@ -24,12 +26,14 @@ export default function Draw() {
   const participants = data.players.map((player) => ({ ...player, away: away.includes(player.id) }));
   if (!state) return <Screen><Button label={ar.back} onPress={() => router.replace('/host')} /></Screen>;
   const finish = () => {
+    setDrawingTouch(false);
     advance(); setState(null);
     if (session && session.index + 1 < session.queue.length) router.replace('/host');
     else router.replace('/results');
   };
   const dispatch = (action: Parameters<typeof drawReducer>[1]) => {
     const result = drawReducer(state, action, participants);
+    if (result.state.step !== 'drawing') setDrawingTouch(false);
     setState(result.state);
     if (result.changes.length || result.stats.length) award(result.changes, result.stats);
     if (result.finished) finish();
@@ -50,7 +54,7 @@ export default function Draw() {
   const artist = data.players.find((player) => player.id === state.artistId);
   const guesser = data.players.find((player) => player.id === state.guesserId);
   const word = loadContent('draw').find((item) => item.id === state.wordId);
-  return <Screen>
+  return <Screen scrollEnabled={state.step !== 'drawing' || !drawingTouch}>
     <Text style={styles.title}>{ar.games.draw.name}</Text>
     <Text style={styles.muted}>{ar.turnProgress(state.completed + 1, state.maximum)}</Text>
     {state.step === 'pass' && artist && <PassPhoneScreen player={artist}
@@ -65,7 +69,7 @@ export default function Draw() {
       <Text style={styles.muted}>{ar.drawHidden}</Text>
       <CountdownTimer key={state.completed} seconds={data.config.draw?.time ?? 60}
         onEnd={() => dispatch({ type: 'timeUp' })} />
-      <DrawingCanvas key={state.completed} />
+      <DrawingCanvas key={state.completed} onDrawingChange={setDrawingTouch} />
       <Panel>
         <Text style={styles.title}>{ar.drawGuess}</Text>
         {participants.filter((player) => !player.away && player.id !== state.artistId)

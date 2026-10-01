@@ -6,7 +6,7 @@ import { Button, Text } from './ui';
 
 type Stroke = { path: string; color: string; width: number };
 const colors = ['#2c2730', '#f26b38', '#2b88c6', '#469d58'] as const;
-export function DrawingCanvas() {
+export function DrawingCanvas({ onDrawingChange }: { onDrawingChange?: (drawing: boolean) => void }) {
   const [strokes, setStrokes] = useState<Stroke[]>([]);
   const [current, setCurrent] = useState<Stroke | null>(null);
   const [color, setColor] = useState<string>(colors[0]);
@@ -21,9 +21,12 @@ export function DrawingCanvas() {
     <View style={{ width: '100%', aspectRatio: 1, maxHeight: 390, backgroundColor: '#ffffff',
       borderRadius: 18, overflow: 'hidden', direction: 'ltr' }}
       onLayout={(event) => { width.current = event.nativeEvent.layout.width; }}
+      onStartShouldSetResponderCapture={() => true}
       onStartShouldSetResponder={() => true}
       onMoveShouldSetResponder={() => true}
+      onResponderTerminationRequest={() => false}
       onResponderGrant={(event) => {
+      onDrawingChange?.(true);
       const colorValue = selected.current;
       const point = toPoint(event.nativeEvent.locationX, event.nativeEvent.locationY);
       draft.current = { path: `M ${point} L ${point}`,
@@ -37,12 +40,16 @@ export function DrawingCanvas() {
       setCurrent(draft.current);
     }}
       onResponderRelease={() => {
+      onDrawingChange?.(false);
       const stroke = draft.current;
       if (stroke) setStrokes((value) => [...value, stroke]);
       draft.current = null;
       setCurrent(null);
     }}
-      onResponderTerminate={() => { draft.current = null; setCurrent(null); }}>
+    onResponderTerminate={() => {
+      onDrawingChange?.(false);
+      draft.current = null; setCurrent(null);
+    }}>
       <Svg pointerEvents="none" width="100%" height="100%" viewBox="0 0 320 320">
         {[...strokes, ...(current ? [current] : [])].map((stroke, index) =>
           <Path key={index} d={stroke.path} stroke={stroke.color} strokeWidth={stroke.width}

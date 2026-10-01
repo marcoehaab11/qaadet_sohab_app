@@ -11,18 +11,22 @@ export function GameControls({ onUndo, onPlayers, onSkip, onHome, playersDisable
   playersDisabled?: boolean;
 }) {
   const actions = [
-    { icon: '↶', label: ar.undo, onPress: onUndo, disabled: false },
-    { icon: '👥', label: ar.players, onPress: onPlayers, disabled: playersDisabled },
-    { icon: '⏭', label: ar.skipGame, onPress: onSkip, disabled: false },
-    { icon: '⌂', label: ar.exitGame, onPress: onHome, disabled: false },
+    { icon: '↶', label: ar.undo, onPress: onUndo, disabled: false, tint: '#d9b1ff', background: '#44315c' },
+    { icon: '👥', label: ar.players, onPress: onPlayers, disabled: playersDisabled,
+      tint: theme.cyan, background: '#174e50' },
+    { icon: '⏭', label: ar.skipGame, onPress: onSkip, disabled: false,
+      tint: '#ff9999', background: '#57313e' },
+    { icon: '⌂', label: ar.exitGame, onPress: onHome, disabled: false,
+      tint: theme.cream, background: '#303447' },
   ];
   return <View style={local.wrap}>
     {actions.map((action) => <Pressable key={action.label} accessibilityRole="button"
       accessibilityLabel={action.label} accessibilityState={{ disabled: action.disabled }}
       disabled={action.disabled} onPress={action.onPress}
-      style={({ pressed }) => [local.action, action.disabled && local.disabled,
+      style={({ pressed }) => [local.action, { backgroundColor: action.background },
+        action.disabled && local.disabled,
         pressed && local.pressed]}>
-      <Text style={local.icon}>{action.icon}</Text>
+      <Text style={[local.icon, { color: action.tint }]}>{action.icon}</Text>
       <Text style={local.label}>{action.label}</Text>
     </Pressable>)}
   </View>;
@@ -30,7 +34,7 @@ export function GameControls({ onUndo, onPlayers, onSkip, onHome, playersDisable
 
 const local = StyleSheet.create({
   wrap: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 8 },
-  action: { width: '48%', minHeight: 51, borderRadius: 14, backgroundColor: '#ffffff10',
+  action: { width: '48%', minHeight: 51, borderRadius: 14,
     borderWidth: 1, borderColor: '#ffffff21', flexDirection: 'row', alignItems: 'center',
     justifyContent: 'center', gap: 6, paddingHorizontal: 6 },
   disabled: { opacity: 0.4 },

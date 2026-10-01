@@ -111,7 +111,7 @@ export default function TruthOrDare() {
           <PromptCard emoji={state.kind === 'dare' ? '🔥' : '💬'}
             label={ar.todKinds[state.kind ?? 'truth']} text={prompt.text}
             accent={state.kind === 'dare' ? '#ff5d5d' : '#9b6bff'} />
-          <Button label={ar.cardsDone} onPress={() => dispatch({ type: 'complete', done: true })} />
+          <Button tone="success" label={ar.cardsDone} onPress={() => dispatch({ type: 'complete', done: true })} />
           <Button
             secondary
             label={ar.cardsSkip}

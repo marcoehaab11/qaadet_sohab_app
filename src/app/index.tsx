@@ -74,22 +74,24 @@ export default function Home() {
       useApp.getState().notify(ar.minPlayers(minPlayers[id]));
       return;
     }
-    if (session && !session.finished) {
-      setSelected(id);
-      return;
-    }
+    setSelected(id);
+  };
+
+  const startSelectedGame = () => {
+    if (!selected) return;
     const starters: Partial<Record<GameId, () => void>> = {
       cards: startStandaloneCards, tod: startStandaloneTod, likely: startStandaloneLikely,
       knowme: startStandaloneKnowMe, taboo: startStandaloneTaboo, charades: startStandaloneCharades,
       speed: startStandaloneSpeed, imposter: startStandaloneImposter, proverb: startStandaloneProverb,
       memory: startStandaloneMemory, draw: startStandaloneDraw,
     };
-    const start = starters[id];
-    const route = playableRoutes[id];
+    const start = starters[selected];
+    const route = playableRoutes[selected];
     if (start && route) {
+      setSelected(null);
       start();
       router.push(route);
-    } else setSelected(id);
+    }
   };
 
   return (
@@ -207,7 +209,10 @@ export default function Home() {
               <Text style={local.sheetIntro}>{ar.previewRules}</Text>
               {ar.games[selected].rules.map((line, i) =>
                 <Text key={line} style={local.sheetRule}>{i + 1}. {line}</Text>)}
-              <Button label={ar.close} onPress={() => setSelected(null)} />
+              {session && !session.finished &&
+                <Text style={local.sheetWarning}>{ar.previewActiveWarning}</Text>}
+              <Button label={ar.previewStart} onPress={startSelectedGame} />
+              <Button secondary label={ar.previewBack} onPress={() => setSelected(null)} />
             </>}
           </View>
         </View>
@@ -284,4 +289,6 @@ const local = StyleSheet.create({
   sheetTitle: { color: theme.ink, fontFamily: theme.display, fontSize: 31, lineHeight: 40, textAlign: 'center' },
   sheetIntro: { color: '#8a4b00', fontFamily: theme.bold, fontSize: 16 },
   sheetRule: { color: theme.ink, fontSize: 15, lineHeight: 26 },
+  sheetWarning: { color: '#963b35', fontFamily: theme.bold, fontSize: 13,
+    backgroundColor: '#ff5d5d1c', padding: 10, borderRadius: 10 },
 });
