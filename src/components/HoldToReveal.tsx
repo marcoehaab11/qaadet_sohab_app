@@ -26,21 +26,26 @@ export function HoldToReveal({ secret, enabled = true }: { secret: string; enabl
       onResponderTerminate={() => setHeld(false)}
       onBlur={() => setHeld(false)}
       style={{
-        minHeight: 180,
+        minHeight: 190,
         justifyContent: 'center',
-        backgroundColor: theme.surface,
-        borderColor: theme.gold,
+        backgroundColor: theme.cream,
+        borderColor: theme.coral,
         borderWidth: 2,
         borderStyle: 'dashed',
         borderRadius: 24,
         padding: 20,
+        shadowColor: '#000',
+        shadowOpacity: 0.25,
+        shadowRadius: 14,
+        shadowOffset: { width: 0, height: 9 },
+        elevation: 5,
       }}
     >
       <View pointerEvents="none">
-        <Text selectable={false} style={[styles.title, { textAlign: 'center' }]}>
+        <Text selectable={false} style={[styles.title, { textAlign: 'center', color: theme.ink }]}>
           {visible ? secret : ar.hidden}
         </Text>
-        <Text style={[styles.muted, { textAlign: 'center' }]}>{ar.holdLabel}</Text>
+        <Text style={[styles.muted, { textAlign: 'center', color: '#6f5f84' }]}>{ar.holdLabel}</Text>
       </View>
     </Pressable>
   );

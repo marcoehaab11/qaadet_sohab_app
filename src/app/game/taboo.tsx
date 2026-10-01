@@ -3,6 +3,7 @@ import { useApp } from '../../store';
 import { useSession } from '../../store/session';
 import { ar } from '../../i18n/ar-EG';
 import { Button, Panel, Screen, styles, Text } from '../../components/ui';
+import { GameControls } from '../../components/GameControls';
 import { PassPhoneScreen } from '../../components/PassPhoneScreen';
 import { HoldToReveal } from '../../components/HoldToReveal';
 import { CountdownTimer } from '../../components/CountdownTimer';
@@ -123,15 +124,9 @@ export default function Taboo() {
           <Button label={ar.knowmeNext} onPress={() => dispatch({ type: 'nextTurn' })} />
         </Panel>
       )}
-      <Button secondary label={ar.undo} onPress={undo} />
-      <Button
-        secondary
-        label={ar.players}
-        disabled={state.step === 'playing'}
-        onPress={() => router.push('/players')}
-      />
-      <Button secondary label={ar.skipGame} onPress={finish} />
-      <Button secondary label={ar.exitGame} onPress={() => router.replace('/')} />
+      <GameControls onUndo={undo} onPlayers={() => router.push('/players')}
+        onSkip={finish} onHome={() => router.replace('/')}
+        playersDisabled={state.step === 'playing'} />
     </Screen>
   );
 }

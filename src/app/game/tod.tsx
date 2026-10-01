@@ -2,7 +2,8 @@ import { router } from 'expo-router';
 import { useApp } from '../../store';
 import { useSession } from '../../store/session';
 import { ar } from '../../i18n/ar-EG';
-import { Button, Panel, Screen, styles, Text } from '../../components/ui';
+import { Button, Panel, PromptCard, Screen, styles, Text } from '../../components/ui';
+import { GameControls } from '../../components/GameControls';
 import { PassPhoneScreen } from '../../components/PassPhoneScreen';
 import { loadContent, packs } from '../../content/loader';
 import { drawFromPack } from '../../content/draw';
@@ -107,8 +108,9 @@ export default function TruthOrDare() {
       )}
       {state.step === 'prompt' && prompt && (
         <Panel>
-          <Text style={styles.muted}>{ar.todKinds[state.kind ?? 'truth']}</Text>
-          <Text style={{ fontSize: 25, lineHeight: 42 }}>{prompt.text}</Text>
+          <PromptCard emoji={state.kind === 'dare' ? '🔥' : '💬'}
+            label={ar.todKinds[state.kind ?? 'truth']} text={prompt.text}
+            accent={state.kind === 'dare' ? '#ff5d5d' : '#9b6bff'} />
           <Button label={ar.cardsDone} onPress={() => dispatch({ type: 'complete', done: true })} />
           <Button
             secondary
@@ -117,10 +119,8 @@ export default function TruthOrDare() {
           />
         </Panel>
       )}
-      <Button secondary label={ar.undo} onPress={undo} />
-      <Button secondary label={ar.players} onPress={() => router.push('/players')} />
-      <Button secondary label={ar.skipGame} onPress={finish} />
-      <Button secondary label={ar.exitGame} onPress={() => router.replace('/')} />
+      <GameControls onUndo={undo} onPlayers={() => router.push('/players')}
+        onSkip={finish} onHome={() => router.replace('/')} />
     </Screen>
   );
 }

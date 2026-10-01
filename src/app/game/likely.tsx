@@ -4,7 +4,8 @@ import { router } from 'expo-router';
 import { useApp } from '../../store';
 import { useSession } from '../../store/session';
 import { ar } from '../../i18n/ar-EG';
-import { Button, Panel, Screen, styles, Text } from '../../components/ui';
+import { Button, Panel, PromptCard, Screen, styles, Text } from '../../components/ui';
+import { GameControls } from '../../components/GameControls';
 import { PassPhoneScreen } from '../../components/PassPhoneScreen';
 import { activeSeason, loadContent, packs } from '../../content/loader';
 import { drawFromPack } from '../../content/draw';
@@ -116,7 +117,7 @@ export default function Likely() {
       )}
       {state.step === 'vote' && question && (
         <Panel>
-          <Text style={styles.title}>{question.text}</Text>
+          <PromptCard emoji="😂" label={ar.likelyReady} text={question.text} accent={theme.gold} />
           <Text style={styles.muted}>{ar.likelyPrivacy}</Text>
           {voter && away.includes(voter.id) ? (
             <Button label={ar.skipTurn} onPress={skipVoter} />
@@ -136,7 +137,7 @@ export default function Likely() {
       )}
       {state.step === 'results' && question && (
         <Panel>
-          <Text style={styles.title}>{question.text}</Text>
+          <PromptCard emoji="😂" label={ar.likelyResults} text={question.text} accent={theme.gold} />
           <Text style={styles.muted}>{ar.likelyResults}</Text>
           {participants
             .filter((p) => !p.away)
@@ -155,10 +156,8 @@ export default function Likely() {
           <Button label={ar.likelyNext} onPress={() => dispatch({ type: 'next' })} />
         </Panel>
       )}
-      <Button secondary label={ar.undo} onPress={undo} />
-      <Button secondary label={ar.players} onPress={() => router.push('/players')} />
-      <Button secondary label={ar.skipGame} onPress={finish} />
-      <Button secondary label={ar.exitGame} onPress={() => router.replace('/')} />
+      <GameControls onUndo={undo} onPlayers={() => router.push('/players')}
+        onSkip={finish} onHome={() => router.replace('/')} />
     </Screen>
   );
 }

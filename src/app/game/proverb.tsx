@@ -2,7 +2,8 @@ import { router } from 'expo-router';
 import { useApp } from '../../store';
 import { useSession } from '../../store/session';
 import { ar } from '../../i18n/ar-EG';
-import { Button, Panel, Screen, styles, Text } from '../../components/ui';
+import { Button, Panel, PromptCard, Screen, styles, Text } from '../../components/ui';
+import { GameControls } from '../../components/GameControls';
 import { loadContent, packs } from '../../content/loader';
 import { drawFromPack } from '../../content/draw';
 import { proverbReducer } from '../../games/proverb/reducer';
@@ -48,12 +49,12 @@ export default function Proverb() {
       <Button label={ar.proverbDraw} onPress={draw} />
     </Panel>}
     {state.step === 'show' && item && <Panel>
-      <Text style={styles.title}>{item.text}…</Text>
+      <PromptCard emoji="📜" label={ar.games.proverb.name} text={`${item.text}…`} accent="#ffc83d" />
       <Text style={styles.muted}>{ar.proverbSay}</Text>
       <Button label={ar.proverbReveal} onPress={() => dispatch({ type: 'reveal' })} />
     </Panel>}
     {state.step === 'revealed' && item && <Panel>
-      <Text style={styles.title}>{item.text} {item.pair}</Text>
+      <PromptCard emoji="📜" label={ar.games.proverb.name} text={`${item.text} ${item.pair}`} accent="#ffc83d" />
       <Text style={styles.muted}>{ar.proverbWho}</Text>
       {participants.filter((player) => !player.away).map((player) =>
         <Button key={player.id} secondary label={`${player.emoji} ${player.name}`}
@@ -65,9 +66,7 @@ export default function Proverb() {
       <Text style={styles.title}>{winner ? ar.proverbWinner(winner.name) : ar.proverbNobody}</Text>
       <Button label={ar.proverbNext} onPress={() => dispatch({ type: 'next' })} />
     </Panel>}
-    <Button secondary label={ar.undo} onPress={undo} />
-    <Button secondary label={ar.players} onPress={() => router.push('/players')} />
-    <Button secondary label={ar.skipGame} onPress={finish} />
-    <Button secondary label={ar.exitGame} onPress={() => router.replace('/')} />
+    <GameControls onUndo={undo} onPlayers={() => router.push('/players')}
+      onSkip={finish} onHome={() => router.replace('/')} />
   </Screen>;
 }

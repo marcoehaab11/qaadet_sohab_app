@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { StyleSheet, View } from 'react-native';
 import { router } from 'expo-router';
 import { useApp } from '../store';
 import { useSession } from '../store/session';
@@ -8,6 +9,11 @@ import { playableRoutes } from '../config/playable';
 import { ar } from '../i18n/ar-EG';
 import { Button, Panel, Screen, styles, Text } from '../components/ui';
 import { Scoreboard } from '../components/Scoreboard';
+import { theme } from '../theme';
+const gameEmoji: Record<string, string> = {
+  imposter: '🕵️', cards: '🃏', memory: '🧠', likely: '😂', taboo: '🎤',
+  speed: '⚡', knowme: '👀', tod: '🔥', charades: '🎭', proverb: '📜', draw: '🎨',
+};
 export default function Host() {
   const players = useApp((s) => s.data.players);
   const session = useSession((s) => s.session);
@@ -35,21 +41,29 @@ export default function Host() {
   };
   return (
     <Screen>
-      <Text style={styles.title}>{ar.name}</Text>
-      <Text style={styles.muted}>{ar.gameProgress(session.index + 1, session.queue.length)}</Text>
+      <View style={local.header}>
+        <Text style={local.kicker}>قعدة صحاب ✦</Text>
+        <Text style={styles.title}>{ar.gameProgress(session.index + 1, session.queue.length)}</Text>
+        <View style={local.progressTrack}><View style={[local.progressFill,
+          { width: `${((session.index + 1) / session.queue.length) * 100}%` }]} /></View>
+      </View>
       {surprise && <Panel>
-        <Text style={styles.title}>{ar.surpriseTitle}</Text>
+        <Text style={local.surpriseTitle}>{ar.surpriseTitle}</Text>
         <Text>{ar.surpriseDescriptions[surprise]}</Text>
       </Panel>}
-      <Panel>
-        <Text style={styles.muted}>{ar.nextGame}</Text>
-        <Text style={styles.title}>{ar.games[id].name}</Text>
-        <Text>{ar.games[id].desc}</Text>
-        {ar.games[id].rules.map((line) => (
-          <Text key={line}>• {line}</Text>
-        ))}
-      </Panel>
-      <Text style={styles.muted}>{ar.passPhone}</Text>
+      <View style={local.gameFrame}>
+        <View style={local.card}>
+          <Text style={local.gameEmoji}>{gameEmoji[id]}</Text>
+          <Text style={local.next}>{ar.nextGame}</Text>
+          <Text style={local.gameName}>{ar.games[id].name}</Text>
+          <Text style={local.gameDesc}>{ar.games[id].desc}</Text>
+          <View style={local.divider} />
+          {ar.games[id].rules.map((line, index) => (
+            <Text key={line} style={local.rule}>{index + 1}. {line}</Text>
+          ))}
+        </View>
+      </View>
+      <Text style={local.passHint}>📱 {ar.passPhone}</Text>
       <Button
         label={
           route && eligible ? ar.playGame : route ? ar.minPlayers(minPlayers[id]) : ar.gamePreparing
@@ -75,3 +89,22 @@ export default function Host() {
     </Screen>
   );
 }
+const local = StyleSheet.create({
+  header: { alignItems: 'center', gap: 6, paddingVertical: 8 },
+  kicker: { color: theme.gold, fontFamily: theme.bold, fontSize: 14 },
+  progressTrack: { width: '100%', height: 7, backgroundColor: '#ffffff20', borderRadius: 7, overflow: 'hidden' },
+  progressFill: { height: 7, backgroundColor: theme.gold, borderRadius: 7 },
+  surpriseTitle: { color: theme.gold, fontFamily: theme.display, fontSize: 26 },
+  gameFrame: { backgroundColor: theme.wood, borderColor: theme.woodLight, borderWidth: 6,
+    borderRadius: 28, padding: 15, shadowColor: '#000', shadowOpacity: 0.3, shadowRadius: 18,
+    shadowOffset: { width: 0, height: 10 }, elevation: 8 },
+  card: { backgroundColor: theme.cream, borderRadius: 19, borderTopWidth: 8,
+    borderTopColor: theme.coral, padding: 20, alignItems: 'center', gap: 7 },
+  gameEmoji: { fontSize: 63, lineHeight: 76 },
+  next: { color: '#74627c', fontSize: 13 },
+  gameName: { color: theme.ink, fontFamily: theme.display, fontSize: 36, lineHeight: 48, textAlign: 'center' },
+  gameDesc: { color: '#6a536d', textAlign: 'center' },
+  divider: { height: 1, backgroundColor: '#d9cfc2', width: '100%', marginVertical: 7 },
+  rule: { color: theme.ink, alignSelf: 'stretch', fontSize: 14 },
+  passHint: { color: theme.muted, textAlign: 'center', fontSize: 14 },
+});

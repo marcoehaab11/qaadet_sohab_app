@@ -4,6 +4,7 @@ import { useApp } from '../../store';
 import { useSession } from '../../store/session';
 import { ar } from '../../i18n/ar-EG';
 import { Button, Panel, Screen, styles, Text } from '../../components/ui';
+import { GameControls } from '../../components/GameControls';
 import { CountdownTimer } from '../../components/CountdownTimer';
 import { loadContent, packs } from '../../content/loader';
 import { drawFromPack } from '../../content/draw';
@@ -137,15 +138,9 @@ export default function Speed() {
           <Button label={ar.speedNext} onPress={() => dispatch({ type: 'next' })} />
         </Panel>
       )}
-      <Button secondary label={ar.undo} onPress={undo} />
-      <Button
-        secondary
-        label={ar.players}
-        disabled={state.step === 'countdown'}
-        onPress={() => router.push('/players')}
-      />
-      <Button secondary label={ar.skipGame} onPress={finish} />
-      <Button secondary label={ar.exitGame} onPress={() => router.replace('/')} />
+      <GameControls onUndo={undo} onPlayers={() => router.push('/players')}
+        onSkip={finish} onHome={() => router.replace('/')}
+        playersDisabled={state.step === 'countdown'} />
     </Screen>
   );
 }

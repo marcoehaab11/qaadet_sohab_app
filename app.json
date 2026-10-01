@@ -14,10 +14,9 @@
       "package": "com.marcoehaab11.qaadetsohab",
       "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#21152f",
+        "backgroundColor": "#140d1f",
         "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundImage": "./assets/android-icon-background.png"
       },
       "predictiveBackGestureEnabled": false
     },
@@ -54,7 +53,7 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#21152f",
+          "backgroundColor": "#140d1f",
           "image": "./assets/splash-icon.png",
           "imageWidth": 200
         }
