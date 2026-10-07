@@ -1,11 +1,12 @@
 # تجهيز Google Play — مسودة العمل
 
-الحالة الحالية **غير جاهزة للنشر العام**. بناء AAB موقّع للإنتاج قيد التنفيذ على EAS، ولم يحدث رفع إلى Play Console أو اختبار على جهاز Android فعلي. يمكن تجهيز مسار اختبار داخلي أولًا.
+الحالة الحالية **غير جاهزة للنشر العام**. اكتمل بناء AAB موقّع للإنتاج على EAS، ولم يحدث رفع إلى Play Console أو اختبار على جهاز Android فعلي. الخطوة التالية هي الرفع إلى مسار الاختبار الداخلي بعد دخول حساب المطوّر.
 
 ## الموجود في المشروع
 
 - معرّف Android المقترح: `com.marcoehaab11.qaadetsohab`، و`versionCode` الأول 1. تحقّق من الاسم النهائي وملكية الحساب قبل أول رفع؛ معرّف الحزمة لا يمكن تغييره للتطبيق نفسه بعد نشره.
 - `eas.json`: ملف `preview` ينتج APK للتجربة على الهاتف، و`production` ينتج AAB. إعداد الإرسال الداخلي محفوظ كـ draft لتجنّب النشر المباشر. المشروع مربوط بـ [حساب Expo الشخصي](https://expo.dev/accounts/marcoehab12/projects/qaadet-sohab) ومعه مفتاح توقيع Android محفوظ في EAS.
+- [بناء AAB رقم 1](https://expo.dev/accounts/marcoehab12/projects/qaadet-sohab/builds/8629c7e4-62b0-413d-85bb-00826a4d035a) اكتمل. نسخة التحميل المحلية `release/qaadet-sohab-v0.1.0-1.aab` (77,425,720 بايت، SHA-256: `E9E0EE227397BDD7825FE710F275682C55707876224F514FA710E2D9257F0869`) لا تُرفع إلى Git. أكد فحص bundletool أن الحزمة سليمة، ومعرّفها `com.marcoehaab11.qaadetsohab`، ونسختها `0.1.0`/`versionCode 1`، وتستهدف Android API 36.
 - أيقونة أصلية ورسمة splash جاهزتان في `assets/`؛ يلزم فحص ظهورهما في نسخة Android فعلية واعتماد الهوية النهائية.
 - [مسودة بيانات صفحة المتجر](PLAY_LISTING.md) بالعربية جاهزة للمراجعة وإضافة بريد دعم عام. أيقونة المتجر والصورة المميزة في `store-assets/`، وثلاث لقطات حقيقية من APK التجريبي في `store-assets/screenshots/`.
 - [سياسة الخصوصية العربية](PRIVACY.md) ومسار «الخصوصية» داخل التطبيق. رابط GitHub العام للسياسة بعد رفع الملف: `https://github.com/marcoehaab11/qaadet_sohab_app/blob/main/docs/PRIVACY.md`.
