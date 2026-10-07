@@ -8,17 +8,26 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "ExpoLocalization_supportsRTL": true,
+        "ExpoLocalization_forcesRTL": true,
+        "CFBundleLocalizations": [
+          "ar-EG"
+        ]
+      }
     },
     "android": {
       "package": "com.marcoehaab11.qaadetsohab",
-      "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#140d1f",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -59,6 +68,12 @@
         }
       ],
       "expo-sharing"
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "e61c3fb9-0b8f-45c5-ab39-c5265989566a"
+      }
+    }
   }
 }
