@@ -12,6 +12,7 @@ import { Screen, Text } from '../components/ui';
 import { Toast } from '../components/Toast';
 import { ar } from '../i18n/ar-EG';
 import { theme } from '../theme';
+import { startAds } from '../ads/interstitial';
 if (Platform.OS !== 'web') void SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [fontsReady, fontError] = useFonts({ Cairo_400Regular, Cairo_700Bold, Lalezar_400Regular });
@@ -20,6 +21,9 @@ export default function RootLayout() {
   useEffect(() => {
     void hydrate();
   }, [hydrate]);
+  useEffect(() => {
+    void startAds();
+  }, []);
   useEffect(() => {
     if (ready && (fontsReady || fontError) && Platform.OS !== 'web')
       void SplashScreen.hideAsync();

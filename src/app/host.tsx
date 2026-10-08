@@ -10,6 +10,7 @@ import { ar } from '../i18n/ar-EG';
 import { Button, Panel, Screen, styles, Text } from '../components/ui';
 import { Scoreboard } from '../components/Scoreboard';
 import { theme } from '../theme';
+import { useBetweenGamesAd } from '../ads/useBetweenGamesAd';
 const gameEmoji: Record<string, string> = {
   imposter: '🕵️', cards: '🃏', memory: '🧠', likely: '😂', taboo: '🎤',
   speed: '⚡', knowme: '👀', tod: '🔥', charades: '🎭', proverb: '📜', draw: '🎨',
@@ -23,7 +24,9 @@ export default function Host() {
   const advance = useSession((s) => s.advance);
   const undo = useSession((s) => s.undo);
   const prepareHost = useSession((s) => s.prepareHost);
+  const adBreak = useBetweenGamesAd(session);
   useEffect(() => { prepareHost(); }, [session?.index, session?.phase, prepareHost]);
+  if (adBreak) return <Screen><Text style={styles.title}>فاصل قصير ✦</Text></Screen>;
   if (!session || session.finished)
     return (
       <Screen>
