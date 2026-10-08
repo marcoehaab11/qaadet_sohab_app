@@ -42,3 +42,4 @@ yarn-error.*
 review-packets/
 /release/*.aab
 /release/*.apk
+/release/*.png
