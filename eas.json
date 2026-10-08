@@ -10,7 +10,11 @@
     },
     "production": {
       "autoIncrement": true,
-      "env": { "ADS_BUILD_MODE": "production" },
+      "env": {
+        "ADS_BUILD_MODE": "production",
+        "ADMOB_ANDROID_APP_ID": "ca-app-pub-8422233130766792~6033907292",
+        "ADMOB_ANDROID_INTERSTITIAL_ID": "ca-app-pub-8422233130766792/6659226270"
+      },
       "android": { "buildType": "app-bundle" }
     }
   },

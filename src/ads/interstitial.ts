@@ -78,3 +78,27 @@ export async function showBetweenGames(): Promise<void> {
     }
   });
 }
+
+export async function adPrivacyOptionsRequired(): Promise<boolean> {
+  if (Platform.OS === 'web') return false;
+  try {
+    await startAds();
+    const { AdsConsent, AdsConsentPrivacyOptionsRequirementStatus } =
+      await import('react-native-google-mobile-ads');
+    const info = await AdsConsent.getConsentInfo();
+    return info.privacyOptionsRequirementStatus === AdsConsentPrivacyOptionsRequirementStatus.REQUIRED;
+  } catch {
+    return false;
+  }
+}
+
+export async function openAdPrivacyOptions(): Promise<void> {
+  const { AdsConsent } = await import('react-native-google-mobile-ads');
+  await AdsConsent.showPrivacyOptionsForm();
+  // Discard the previously loaded ad so the next request uses the latest choice.
+  ad?.destroy();
+  ad = null;
+  loaded = false;
+  startPromise = null;
+  await startAds();
+}

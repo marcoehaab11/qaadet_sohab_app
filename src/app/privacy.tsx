@@ -1,7 +1,18 @@
+import { useEffect, useState } from 'react';
 import { router } from 'expo-router';
 import { Button, Panel, Screen, styles, Text } from '../components/ui';
+import { adPrivacyOptionsRequired, openAdPrivacyOptions } from '../ads/interstitial';
 
 export default function PrivacyScreen() {
+  const [showAdOptions, setShowAdOptions] = useState(false);
+  const [adOptionsError, setAdOptionsError] = useState(false);
+  useEffect(() => {
+    let active = true;
+    void adPrivacyOptionsRequired().then((required) => {
+      if (active) setShowAdOptions(required);
+    });
+    return () => { active = false; };
+  }, []);
   return <Screen>
     <Text style={styles.title}>الخصوصية</Text>
     <Panel>
@@ -13,6 +24,11 @@ export default function PrivacyScreen() {
       <Text>تقدر تمسح أسئلتك من شاشة «أسئلة الشلة». ولمسح كل البيانات المحلية، احذف التطبيق وبياناته من إعدادات الموبايل.</Text>
       <Text>للتواصل بخصوص الخصوصية: devmarcoehab@gmail.com</Text>
     </Panel>
+    {showAdOptions && <Button secondary label="إدارة خيارات الإعلانات" onPress={() => {
+      setAdOptionsError(false);
+      void openAdPrivacyOptions().catch(() => setAdOptionsError(true));
+    }} />}
+    {adOptionsError && <Text accessibilityRole="alert">تعذر فتح خيارات الإعلانات. حاول مرة أخرى لاحقًا.</Text>}
     <Button secondary label="رجوع" onPress={() => router.back()} />
   </Screen>;
 }
