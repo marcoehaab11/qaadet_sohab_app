@@ -19,6 +19,10 @@ export function PlayerEditor({ player, canRemove, away, onToggleAway, onRemove }
     setName(value);
     update(player.id, { name: value });
   };
+  const changeName = (value: string) => {
+    setName(value);
+    if (value.trim()) update(player.id, { name: value.trim() });
+  };
   return (
     <Panel style={local.panel}>
       <View style={local.row}>
@@ -37,7 +41,7 @@ export function PlayerEditor({ player, canRemove, away, onToggleAway, onRemove }
         <TextInput
           accessibilityLabel={ar.nameHint}
           value={name}
-          onChangeText={setName}
+          onChangeText={changeName}
           onBlur={save}
           onSubmitEditing={save}
           maxLength={14}

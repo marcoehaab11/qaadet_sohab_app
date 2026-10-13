@@ -6,10 +6,11 @@ import { avatars, colors } from '../theme';
 import { Player } from '../engine/types';
 import { assignTeams } from '../engine/teams';
 import { SavedData, Settings, migrateSaved, serializeSaved, storageKey } from './persistence';
+import { removeUnusedPlayers } from './playerSetup';
 
 const defaults = (): SavedData => ({
   schemaVersion: 1,
-  players: Array.from({ length: 4 }, (_, i) => ({
+  players: Array.from({ length: 2 }, (_, i) => ({
     id: Crypto.randomUUID(),
     name: ar.playerName(i + 1),
     emoji: avatars[i]!,
@@ -52,6 +53,7 @@ type Store = {
   updatePlayer: (id: string, change: Partial<Pick<Player, 'name' | 'emoji'>>) => void;
   addPlayer: () => void;
   removePlayer: (id: string) => void;
+  finishPlayerSetup: () => void;
   notify: (text: string | null) => void;
 };
 let saveQueue: Promise<void> = Promise.resolve();
@@ -120,5 +122,10 @@ export const useApp = create<Store>((set, get) => ({
         return { ...data, players: data.settings.teams ? assignTeams(players, Date.now()) : players };
       });
   },
+  finishPlayerSetup: () => get().update((data) => {
+    const players = removeUnusedPlayers(data.players);
+    if (players.length === data.players.length) return data;
+    return { ...data, players: data.settings.teams ? assignTeams(players, Date.now()) : players };
+  }),
   notify: (toast) => set({ toast }),
 }));

@@ -20,6 +20,7 @@ export default function Onboarding() {
   const update = useApp((s) => s.update);
   const add = useApp((s) => s.addPlayer);
   const remove = useApp((s) => s.removePlayer);
+  const finishPlayerSetup = useApp((s) => s.finishPlayerSetup);
   const begin = useSession((s) => s.begin);
   const finish = (start: boolean) => {
     update((d) => ({ ...d, onboardingDone: true }));
@@ -99,7 +100,13 @@ export default function Onboarding() {
         </Panel>
       </>}
       <Button label={step === 2 ? ar.startSession : ar.onboardNext}
-        onPress={() => (step === 2 ? finish(true) : setStep(step + 1))} />
+        onPress={() => {
+          if (step === 2) finish(true);
+          else {
+            if (step === 1) finishPlayerSetup();
+            setStep(step + 1);
+          }
+        }} />
       <Pressable accessibilityRole="button" onPress={() => finish(false)} style={local.skip}>
         <Text style={local.skipText}>{ar.onboardSkip}</Text>
       </Pressable>

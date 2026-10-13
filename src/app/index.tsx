@@ -36,6 +36,7 @@ const vibeIcons: Record<Vibe, string> = {
 export default function Home() {
   const data = useApp((s) => s.data);
   const update = useApp((s) => s.update);
+  const finishPlayerSetup = useApp((s) => s.finishPlayerSetup);
   const [selected, setSelected] = useState<GameId | null>(null);
   const session = useSession((s) => s.session);
   const begin = useSession((s) => s.begin);
@@ -60,6 +61,7 @@ export default function Home() {
 
   const startSession = () => {
     if (!session || session.finished) {
+      finishPlayerSetup();
       begin();
       router.push('/host');
     } else {
@@ -70,7 +72,8 @@ export default function Home() {
   };
 
   const launchGame = (id: GameId) => {
-    if (data.players.length < minPlayers[id]) {
+    if (!session || session.finished) finishPlayerSetup();
+    if (useApp.getState().data.players.length < minPlayers[id]) {
       useApp.getState().notify(ar.minPlayers(minPlayers[id]));
       return;
     }
@@ -79,6 +82,7 @@ export default function Home() {
 
   const startSelectedGame = () => {
     if (!selected) return;
+    if (!session || session.finished) finishPlayerSetup();
     const starters: Partial<Record<GameId, () => void>> = {
       cards: startStandaloneCards, tod: startStandaloneTod, likely: startStandaloneLikely,
       knowme: startStandaloneKnowMe, taboo: startStandaloneTaboo, charades: startStandaloneCharades,
@@ -129,7 +133,9 @@ export default function Home() {
         onPress={() => router.push('/players')} style={local.playerStrip}>
         <View style={local.playerCopy}>
           <Text style={local.playerTitle}>مين قاعدين؟ 👤 {data.players.length}</Text>
-          <Text style={local.playerSubtitle}>{data.players.length} لاعبين · دوس للتعديل</Text>
+          <Text numberOfLines={2} style={local.playerSubtitle}>
+            {data.players.map((player) => player.name).join('، ')} · دوس للتعديل
+          </Text>
         </View>
         <View style={local.avatarStack}>
           {data.players.slice(0, 4).map((p) => <View key={p.id} style={[

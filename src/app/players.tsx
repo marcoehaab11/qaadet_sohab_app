@@ -8,6 +8,7 @@ export default function Players() {
   const players = useApp((s) => s.data.players);
   const add = useApp((s) => s.addPlayer);
   const remove = useApp((s) => s.removePlayer);
+  const finishPlayerSetup = useApp((s) => s.finishPlayerSetup);
   const notify = useApp((s) => s.notify);
   const session = useSession((s) => s.session);
   const away = useSession((s) => s.away);
@@ -36,6 +37,7 @@ export default function Players() {
     <Screen>
       <Text style={styles.title}>{ar.players}</Text>
       <Text style={styles.muted}>{ar.localOnly}</Text>
+      {!live && <Text style={styles.muted}>سمّي اللي هيلعبوا بس؛ الأسماء الافتراضية الزيادة هتتشال لما تدوس «تمام».</Text>}
       {players.map((player) => (
         <PlayerEditor
           key={player.id}
@@ -65,7 +67,10 @@ export default function Players() {
         label={players.length >= 8 ? ar.maxPlayers : ar.addPlayer}
         onPress={addJoiningPlayer}
       />
-      <Button label={ar.done} onPress={() => router.back()} />
+      <Button label={ar.done} onPress={() => {
+        if (!live) finishPlayerSetup();
+        router.back();
+      }} />
     </Screen>
   );
 }
